@@ -1,6 +1,4 @@
 import pandas as pd
-from rich.console import Console
-from rich.table import Table
 import string
 import nltk
 from nltk.tokenize import word_tokenize
@@ -103,6 +101,9 @@ def format_list_as_string(token_list):
     return str(token_list).replace("'", '"')
 
 def print_table(data, title="Table", num_samples=5):
+    from rich.console import Console
+    from rich.table import Table
+    
     table = Table(title=title)
     
     # Add columns
@@ -118,37 +119,3 @@ def print_table(data, title="Table", num_samples=5):
     # Print the table using Rich
     console = Console()
     console.print(table)
-
-# Example usage:
-file_path = './backend/sample_dataset.csv'
-data = load_dataset(file_path)
-
-if data is not None:
-    # Print the initial data
-    print_table(data, title="Original Data")
-
-    # Convert to lowercase
-    convert_to_lowercase(data)
-    print_table(data, title="Data After Lowercase Conversion")
-
-    # Remove punctuation
-    remove_punctuation(data)
-    print_table(data, title="Data After Punctuation Removal")
-
-    # Remove numbers
-    remove_numbers(data)
-    print_table(data, title="Data After Numbers Removal")
-
-    # Tokenize sentences
-    tokenize_sentences(data)
-    print_table(data, title="Data After Tokenization")
-
-    # Remove stopwords
-    remove_stopwords(data)
-    print_table(data, title="Data After Stopwords Removal")
-
-    # Lemmatize tokens
-    lemmatize_tokens(data)
-    print_table(data, title="Data After Lemmatization")
-
-# lemmatization takes too much time like around 10 minutes and it's only for english language
