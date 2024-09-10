@@ -38,12 +38,16 @@ def load_dataset(file_path):
     except Exception as e:
         print(f"An error occurred: {e}")
 
-def convert_to_lowercase(data):
+def convert_to_lowercase(data, file_path='./backend/data/lowercased_data.csv'):
     if 'sentence' in data.columns:
         # Convert sentence to lowercase
         data['sentence'] = data['sentence'].str.lower()
+        
+        # Save the updated DataFrame to a new CSV file
+        data.to_csv(file_path, index=False)
+        
         print('-' * 120)
-        print("Sentence has been converted to lowercase.")
+        print("Sentence has been converted to lowercase and saved to:", file_path)
     else:
         print("Column 'sentence' not found in the DataFrame.")
 
