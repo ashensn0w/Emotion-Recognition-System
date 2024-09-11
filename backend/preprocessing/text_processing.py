@@ -4,6 +4,7 @@ import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import spacy
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Download NLTK data (only needed once)
 nltk.download('punkt')
@@ -97,6 +98,28 @@ def lemmatize_tokens(data):
         data['sentence'] = data['sentence'].apply(lambda tokens: [nlp(token)[0].lemma_ for token in tokens])
         print('-' * 120)
         print("Tokens have been lemmatized.")
+    else:
+        print("Column 'sentence' not found in the DataFrame.")
+
+def join_tokens(data):
+    if 'sentence' in data.columns:
+        # Join tokens back into a string
+        data['sentence'] = data['sentence'].apply(lambda tokens: ' '.join(tokens))
+        print('-' * 120)
+        print("Tokens have been joined back into sentences.\n")
+    else:
+        print("Column 'sentence' not found in the DataFrame.")
+
+def vectorize_with_tfidf(data):
+    if 'sentence' in data.columns:
+        # Initialize TF-IDF Vectorizer
+        vectorizer = TfidfVectorizer()
+
+        # Transform the data into TF-IDF vectors
+        tfidf_matrix = vectorizer.fit_transform(data['sentence'])
+
+        print("TF-IDF Vectorization complete.")
+        return tfidf_matrix, vectorizer
     else:
         print("Column 'sentence' not found in the DataFrame.")
 

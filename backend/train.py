@@ -1,4 +1,7 @@
-from preprocessing.text_processing import load_dataset, convert_to_lowercase, remove_punctuation, remove_numbers, tokenize_sentences, remove_stopwords, lemmatize_tokens, print_table
+from preprocessing.text_processing import (load_dataset, convert_to_lowercase, remove_punctuation, 
+                                           remove_numbers, tokenize_sentences, remove_stopwords, 
+                                           lemmatize_tokens, join_tokens, vectorize_with_tfidf, print_table)
+import pandas as pd
 
 file_path = './backend/data/sample_dataset.csv'
 data = load_dataset(file_path)
@@ -19,7 +22,7 @@ if data is not None:
     remove_numbers(data)
     print_table(data, title="Data After Numbers Removal")
 
-    # Tokenize sentences
+    # Tokenize sentences (Now done AFTER all string-based steps)
     tokenize_sentences(data)
     print_table(data, title="Data After Tokenization")
 
@@ -30,3 +33,22 @@ if data is not None:
     # Lemmatize tokens
     lemmatize_tokens(data)
     print_table(data, title="Data After Lemmatization")
+
+    # Join tokens back into sentences
+    join_tokens(data)
+    print_table(data, title="Data After Joining Tokens")
+
+    # Vectorize the processed text using TF-IDF
+    tfidf_matrix, vectorizer = vectorize_with_tfidf(data)
+
+    # Get feature names (i.e., the words)
+    feature_names = vectorizer.get_feature_names_out()
+
+    # Create a DataFrame from the TF-IDF matrix
+    tfidf_df = pd.DataFrame(tfidf_matrix.toarray(), columns=feature_names)
+
+    # Add the 'emotion' column to the TF-IDF DataFrame
+    tfidf_df['emotion'] = data['emotion'].values
+
+    # Display the resulting DataFrame
+    print(tfidf_df.head())
