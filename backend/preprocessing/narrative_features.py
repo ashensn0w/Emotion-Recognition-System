@@ -1,4 +1,3 @@
-import pandas as pd
 import numpy as np
 import re
 
@@ -283,24 +282,3 @@ def create_feature_matrix(sentences):
         features = extract_narrative_features(sentence)
         feature_list.append([features[feature] for feature in sorted(features.keys())])
     return np.array(feature_list)
-
-# Load dataset
-file_path = './backend/data/lowercased_data.csv'
-data = pd.read_csv(file_path)
-
-# Extract sentences
-sentences = data['sentence'].tolist()
-
-# Print the first 10 sentences and their feature vectors
-print("First 10 Sentences and their Feature Vectors:")
-for i, sentence in enumerate(sentences[:10]):
-    features = extract_narrative_features(sentence)
-    feature_vector = [features[feature] for feature in sorted(features.keys())]
-    print(f"Sentence {i+1}: {sentence}")
-    print(f"Feature Vector: {feature_vector}")
-    print()
-
-# Generate and print the feature matrix for the entire dataset
-feature_matrix = create_feature_matrix(sentences)
-print("Feature Matrix:")
-print(feature_matrix)

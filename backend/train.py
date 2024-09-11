@@ -1,12 +1,28 @@
-from preprocessing.text_processing import (load_dataset, convert_to_lowercase, remove_punctuation, 
-                                           remove_numbers, tokenize_sentences, remove_stopwords, 
-                                           lemmatize_tokens, join_tokens, vectorize_with_tfidf, print_table)
+from preprocessing.text_processing import *
+from preprocessing.narrative_features import *
 import pandas as pd
 
 file_path = './backend/data/sample_dataset.csv'
 data = load_dataset(file_path)
 
+# Extract sentences
+sentences = data['sentence'].tolist()
+
 if data is not None:
+    # Print the first 10 sentences and their feature vectors
+    print("First 10 Sentences and their Feature Vectors:")
+    for i, sentence in enumerate(sentences[:10]):
+        features = extract_narrative_features(sentence)
+        feature_vector = [features[feature] for feature in sorted(features.keys())]
+        print(f"Sentence {i+1}: {sentence}")
+        print(f"Feature Vector: {feature_vector}")
+        print()
+
+    # Generate and print the feature matrix for the entire dataset
+    feature_matrix = create_feature_matrix(sentences)
+    print("Feature Matrix:")
+    print(feature_matrix)
+
     # Print the initial data
     print_table(data, title="Original Data")
 
