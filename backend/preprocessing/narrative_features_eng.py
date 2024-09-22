@@ -4,50 +4,51 @@ nlp = spacy.load("en_core_web_sm")
 
 def extract_mode(text):
     doc = nlp(text)
-    mode_features = []
+    has_mode = False  # Initialize a flag to check for mode features
 
     for token in doc:
-        # Modal verbs
-        if token.pos_ == "VERB" and token.lemma_ in ["can", "could", "may", "might", "must", "shall", "should", "will", "would"]:
-            mode_features.append(token.text)
-
-        # Auxiliary verbs (e.g., 'do', 'have', 'be')
-        elif token.pos_ == "AUX":
-            mode_features.append(token.text)
+        # Modal verbs and auxiliary verbs
+        if token.pos_ == "AUX" or (token.pos_ == "VERB" and token.lemma_ in ["can", "could", "may", "might", "must", "shall", "should", "will", "would"]):
+            has_mode = True
 
         # Adverbs of necessity or possibility
-        elif token.pos_ == "ADV" and token.lemma_ in ["necessarily", "probably", "possibly", "perhaps"]:
-            mode_features.append(token.text)
+        elif token.pos_ == "ADV" and token.lemma_ in ["necessarily", "probably", "possibly", "perhaps", "certainly"]:
+            has_mode = True
 
-        # Imperative mood (verb at the beginning of a sentence) but exclude other non-modal root verbs
-        elif token.pos_ == "VERB" and token.dep_ == "ROOT" and token.lemma_ in ["can", "could", "may", "might", "must", "shall", "should", "will", "would"]:
-            mode_features.append(token.text)
+        # Imperative mood: Root verb at the beginning of the sentence
+        elif token.pos_ == "VERB" and token.dep_ == "ROOT" and token.i == 0:  # Checking if it's the first word
+            has_mode = True
 
-    return mode_features
+    # Return 1 if any mode feature was detected, else return 0
+    return 1 if has_mode else 0
 
 def extract_intention(text):
     doc = nlp(text)
-    intention_features = []
+    has_intention = False  # Initialize a flag to check for intention features
 
     for token in doc:
         # Verbs of intention or desire
-        if token.pos_ == "VERB" and token.lemma_ in ["want", "need", "desire", "intend", "wish"]:
-            intention_features.append(token.text)
+        if token.pos_ == "VERB" and token.lemma_ in ["want", "need", "desire", "intend", "wish", "plan", "aim", "decide", "hope"]:
+            has_intention = True
 
         # Infinitive phrases ('to' + verb)
-        elif token.text == "to" and token.head.pos_ == "VERB":
-            intention_features.append(f"Infinitive: {token.head.text}")
+        elif token.text == "to" and token.head.pos_ == "VERB" and token.dep_ == "aux":
+            has_intention = True
 
-        # Subordinate clauses of purpose ('to' indicating purpose) tied to the head verb (e.g., 'want')
-        elif token.text == "to" and token.dep_ == "aux" and token.head.pos_ == "VERB":
-            intention_features.append(f"Purpose: {token.head.head.text}")
+        # Subordinate clauses of purpose (e.g., 'want to go', 'so that', 'in order to', 'so as to')
+        elif token.text in ["so", "that", "order", "as"] and token.dep_ in ["mark", "advmod"]:
+            # Check the head of the clause for verbs that indicate purpose
+            if token.head.dep_ == "advcl" and token.head.head.pos_ == "VERB":
+                has_intention = True
 
         # Auxiliary verbs indicating future actions
         elif token.pos_ == "AUX" and token.lemma_ in ["will", "shall"]:
-            intention_features.append(token.text)
+            has_intention = True
 
-    return intention_features
-
+    # Return 1 if any intention feature was detected, else return 0
+    return 1 if has_intention else 0
+# -----------------------------------------------------------------------------------------------------
+# does not capture the "painted red" yet when the sentence "She painted the wall red." is used as an example NOT FINISHED, TRY NER
 def extract_result(text):
     doc = nlp(text)
     result_features = []
@@ -57,133 +58,173 @@ def extract_result(text):
         if token.lemma_ in ["have", "has", "had"] and token.dep_ == "aux" and token.head.tag_ == "VBN":
             result_features.append(f"Perfect Tense: {token.head.text}")
 
-        # Resultative constructions (verb + resultative complement)
-        elif token.pos_ == "VERB" and token.dep_ == "xcomp" and token.head.pos_ == "VERB":
-            result_features.append(f"Resultative: {token.head.text} {token.text}")
+        # Resultative constructions (verb + resultative complement - adjective or particle)
+        elif token.pos_ == "VERB":
+            for child in token.children:
+                # Check for adjective or particle indicating a result (e.g., "wiped clean", "painted red")
+                if child.pos_ in ["ADJ", "PART"]:
+                    result_features.append(f"Resultative: {token.text} {child.text}")
 
         # Conjunctions of result (e.g., "so", "therefore")
         elif token.pos_ == "CCONJ" and token.lemma_ in ["so", "therefore"]:
             result_features.append(f"Conjunction: {token.text}")
 
-        # Causal and sequential structures (e.g., "because", "since", "as a result")
-        elif token.pos_ == "SCONJ" and token.lemma_ in ["because", "since", "as", "as a result"]:
+        # Causal and sequential structures (e.g., "because", "since", "as", multi-word expression "as a result")
+        elif token.pos_ == "SCONJ" and token.lemma_ in ["because", "since", "as"]:
             result_features.append(f"Structure: {token.text}")
+        
+        # Special case for multi-word "as a result"
+        if "as a result" in text:
+            result_features.append("Structure: as a result")
 
     return result_features
-
+# -----------------------------------------------------------------------------------------------------
 def extract_manner(text):
     doc = nlp(text)
-    manner_features = []
+    has_manner = False
 
+    # Check for adverbs of manner
     for token in doc:
-        # Adverbs of manner
         if token.pos_ == "ADV" and token.dep_ == "advmod":
-            manner_features.append(token.text)
+            has_manner = True
+            break  # Exit early if we find at least one
 
-        # Prepositional phrases of manner (e.g., "in a hurry", "with care")
-        elif token.pos_ == "ADP" and token.dep_ == "prep":
-            manner_features.append(f"Prepositional Phrase: {token.text} {token.children[0].text}")
+    # Check for prepositional phrases of manner
+    if has_manner == 0:  # Only continue checking if not already found
+        for token in doc:
+            if token.pos_ == "ADP" and token.dep_ == "prep":
+                for child in token.children:
+                    if child.dep_ in ["pobj", "obj"]:
+                        has_manner = True
+                        break  # Exit early if we find at least one
+                if has_manner:
+                    break  # Exit early if we find at least one
 
-        # Intensifiers or modifiers (e.g., "very", "extremely")
-        elif token.pos_ == "ADV" and token.dep_ == "advmod" and token.head.pos_ == "ADV":
-            manner_features.append(f"Modifier: {token.text} {token.head.text}")
+    # Check for intensifiers or modifiers
+    if has_manner == 0:  # Only continue checking if not already found
+        for token in doc:
+            if token.pos_ == "ADV" and token.dep_ == "advmod":
+                if token.head.pos_ == "ADV":
+                    has_manner = True
+                    break  # Exit early if we find at least one
 
-    return manner_features
+    return 1 if has_manner else 0
 
 def extract_aspect(text):
     doc = nlp(text)
-    aspect_features = []
+    has_aspect = False
 
     for token in doc:
         # Aspectual verbs (e.g., "start", "finish", "continue")
         if token.pos_ == "VERB" and token.lemma_ in ["start", "finish", "continue", "begin", "stop"]:
-            aspect_features.append(token.text)
+            has_aspect = True
 
         # Perfect tenses (have/has/had + past participle)
-        elif token.lemma_ in ["have", "has", "had"] and token.tag_.startswith("VBN"):
-            aspect_features.append(f"Perfect Tense: {token.head.text}")
+        if token.lemma_ in ["have", "has", "had"] and token.dep_ == "aux" and token.head.tag_ == "VBN":
+            has_aspect = True
 
         # Progressive tenses (be + present participle)
-        elif token.lemma_ in ["be"] and token.tag_.startswith("VBG"):
-            aspect_features.append(f"Progressive Tense: {token.head.text}")
+        if token.lemma_ in ["be"] and token.dep_ == "aux" and token.head.tag_.startswith("VBG"):
+            has_aspect = True
 
         # Aspectual adverbs or particles (e.g., "already", "yet", "still")
-        elif token.pos_ == "ADV" and token.lemma_ in ["already", "yet", "still"]:
-            aspect_features.append(token.text)
+        if token.pos_ == "ADV" and token.lemma_ in ["already", "yet", "still"]:
+            has_aspect = True
 
         # Auxiliary verbs indicating aspect (e.g., "will", "have", "be")
-        elif token.pos_ == "AUX" and token.lemma_ in ["will", "have", "be"]:
-            aspect_features.append(token.text)
+        if token.pos_ == "AUX" and token.lemma_ in ["will", "have", "be"]:
+            has_aspect = True
 
-    return aspect_features
+    return 1 if has_aspect else 0
 
 def extract_status(text):
     doc = nlp(text)
-    status_features = []
+    has_status = False
+    
+    # Convert the document to a list of tokens
+    tokens = [token.text for token in doc]
 
-    for token in doc:
-        # Negation words (e.g., "not", "never", "no")
-        if token.lemma_ in ["not", "never", "no"]:
-            status_features.append(token.text)
+    # Define common multi-word negation phrases
+    multi_word_negations = [
+        "no longer", "not at all", "never again", "not really", "not yet", "not sure", "don't know"
+    ]
 
-        # Negation phrases (e.g., "do not", "can't", "won't")
-        elif token.lemma_ in ["do not", "cannot", "would not", "don't", "can't", "won't"]:
-            status_features.append(token.text)
+    # Check for multi-word negation phrases
+    for phrase in multi_word_negations:
+        if phrase in text:
+            has_status = True
+            break  # No need to check further if a phrase is found
 
-        # Dependency relations involving negation (e.g., "neg")
-        elif token.dep_ == "neg":
-            status_features.append(token.text)
+    # Check for other negation features
+    if not has_status:  # Only check if not already found
+        for token in doc:
+            # Negation words (e.g., "not", "never", "no")
+            if token.lemma_ in ["not", "never", "no"]:
+                has_status = True
+                break  # No need to check further if a negation word is found
 
-        # Auxiliary verbs with negation
-        elif token.pos_ == "AUX" and token.lemma_ in ["not", "never", "no"]:
-            status_features.append(token.text)
+            # Negation phrases involving auxiliary or verb
+            if token.dep_ == "neg" and token.head.pos_ in ["AUX", "VERB"]:
+                has_status = True
+                break  # No need to check further if a negation phrase is found
 
-    return status_features
+            # Dependency relations involving negation
+            if token.dep_ == "neg":
+                has_status = True
+                break  # No need to check further if a negation dependency is found
 
-# -----------------------------------------------------------------------------------------------------
+    return 1 if has_status else 0
 
 def extract_appearance(text):
     doc = nlp(text)
-    appearance_features = []
+    has_appearance = False
 
+    # Check for conjunctions and linking words
     for token in doc:
-        # Conjunctions and linking words (e.g., "and", "but", "instead", "however", "which")
-        if token.pos_ == "CCONJ" or token.pos_ == "PRON" and token.lemma_ in ["which", "that"]:
-            appearance_features.append(token.text)
+        if token.pos_ == "CCONJ" or (token.pos_ == "PRON" and token.lemma_ in ["which", "that"]):
+            has_appearance = True
+            break  # Stop checking once the feature is found
 
-        # Transformational verbs or phrases (e.g., "become", "turn into")
-        if token.pos_ == "VERB" and token.lemma_ in ["become", "turn"]:
-            appearance_features.append(token.text)
+    # Check for transformational verbs or phrases
+    if not has_appearance:
+        for token in doc:
+            if token.pos_ == "VERB" and token.lemma_ in ["become", "turn", "transform", "change"]:
+                has_appearance = True
+                break  # Stop checking once the feature is found
 
-        # Dependency relations indicating change with negation (make sure to use correct lemmas)
-        if token.dep_ == "neg" and token.head.pos_ == "VERB" and token.head.lemma_ in ["become", "turn"]:
-            appearance_features.append(f"Negated Change: {token.head.text} {token.text}")
+    # Check for negated transformational verbs
+    if not has_appearance:
+        for token in doc:
+            if token.dep_ == "neg" and token.head.pos_ == "VERB" and token.head.lemma_ in ["become", "turn", "transform", "change"]:
+                has_appearance = True
+                break  # Stop checking once the feature is found
 
-    return appearance_features
+    return 1 if has_appearance else 0
 
 def extract_knowledge(text):
     doc = nlp(text)
-    knowledge_features = []
-    
+    has_knowledge = False  # Initialize as False
+
     # Define verbs related to knowledge
-    knowledge_verbs = {"know", "understand", "believe", "think", "see", "hear", "feel", "notice", "say", "tell", "report"}
+    knowledge_verbs = {"know", "realize", "remember", "learn", "recognize", "understand", "believe", "think", "see", "hear", "feel", "notice", "say", "tell", "inform", "report", "observe"}
     
     for token in doc:
         # Check if token is a verb related to knowledge
         if token.pos_ == "VERB" and token.lemma_ in knowledge_verbs:
-            knowledge_features.append(token.text)
+            has_knowledge = True
+            break  # No need to check further once a knowledge verb is found
         
         # Capture clauses starting with conjunctions related to knowledge
-        if token.dep_ in ["mark"] and token.text.lower() in ["that"]:
-            # Extract the clause following the conjunction
-            clause = ' '.join([t.text for t in token.subtree])
-            knowledge_features.append(f"Clause: {clause}")
+        if token.dep_ == "mark" and token.text.lower() in ["that"]:
+            has_knowledge = True
+            break  # No need to check further once a knowledge clause is found
 
         # Capture direct objects of knowledge verbs
-        elif token.dep_ == "dobj" and token.head.pos_ == "VERB" and token.head.lemma_ in knowledge_verbs:
-            knowledge_features.append(f"Object: {token.head.text} {token.text}")
+        if token.dep_ == "dobj" and token.head.pos_ == "VERB" and token.head.lemma_ in knowledge_verbs:
+            has_knowledge = True
+            break  # No need to check further once a knowledge direct object is found
 
-    return knowledge_features
+    return 1 if has_knowledge else 0
 
 # -----------------------------------------------------------------------------------------------------
 # # Example usage
@@ -204,32 +245,32 @@ def extract_knowledge(text):
 # # MODE
 # text = "You must finish your homework before watching TV."
 # mode_features = extract_mode(text)
-# print(mode_features)  # Output: ['must']
+# print(mode_features)
 
 # # INTENTION
 # text = "I want to go to the beach tomorrow."
 # intention_features = extract_intention(text)
-# print(intention_features)  # Output: ['want', 'Infinitive: go', 'Purpose: want']
+# print(intention_features)
 
 # # RESULT
 # text = "He had finished his work before the deadline."
 # result_features = extract_result(text)
-# print(result_features)  # Output: ['Perfect Tense: finished']
+# print(result_features)
 
 # # MANNER
 # text = "He ran very quickly."
 # manner_features = extract_manner(text)
-# print(manner_features)  # Output: ['quickly', 'very quickly']
+# print(manner_features)
 
 # # ASPECT
 # text = "I have already finished my homework."
 # aspect_features = extract_aspect(text)
-# print(aspect_features)  # Output: ['have', 'already', 'finished']
+# print(aspect_features)
 
 # # STATUS
 # text = "He did not go to the party."
 # status_features = extract_status(text)
-# print(status_features)  # Output: ['not', 'did not']
+# print(status_features)
 
 # # APPEARANCE
 # text = "He wore a suit which made him look professional."
