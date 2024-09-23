@@ -47,8 +47,8 @@ def extract_intention(text):
 
     # Return 1 if any intention feature was detected, else return 0
     return 1 if has_intention else 0
-# -----------------------------------------------------------------------------------------------------
-# does not capture the "painted red" yet when the sentence "She painted the wall red." is used as an example NOT FINISHED, TRY NER
+
+# # Resultative constructions <- to fix
 def extract_result(text):
     doc = nlp(text)
     result_features = []
@@ -78,7 +78,7 @@ def extract_result(text):
             result_features.append("Structure: as a result")
 
     return result_features
-# -----------------------------------------------------------------------------------------------------
+
 def extract_manner(text):
     doc = nlp(text)
     has_manner = False
@@ -226,21 +226,199 @@ def extract_knowledge(text):
 
     return 1 if has_knowledge else 0
 
-# -----------------------------------------------------------------------------------------------------
-# # Example usage
-# text = "I have already finished my homework."
+def extract_description(text):
+    doc = nlp(text)
+    has_description = False  # Initialize flag for description features
 
-# mode_features = extract_mode(text)
-# intention_features = extract_intention(text)
-# result_features = extract_result(text)
-# manner_features = extract_manner(text)
-# aspect_features = extract_aspect(text)
-# status_features = extract_status(text)
-# appearance_features = extract_appearance(text)
-# knowledge_features = extract_knowledge(text)
+    for token in doc:
+        # Reporting verbs
+        if token.pos_ == "VERB" and token.lemma_ in ["say", "tell", "explain", "describe", "report", "narrate", "inform"]:
+            has_description = True
 
-# print(mode_features, intention_features, result_features, manner_features, aspect_features, status_features, appearance_features,
-# knowledge_features)
+        # Speech or thought clauses
+        if token.dep_ == "ccomp" and token.head.pos_ == "VERB" and token.head.lemma_ in ["say", "tell", "explain", "describe", "report", "narrate", "inform"]:
+            has_description = True
+
+        # Quoted speech or dialogue
+        if token.pos_ == "VERB" and token.lemma_ in ["say", "tell", "explain", "describe", "report", "narrate", "inform"] and token.dep_ == "ROOT":
+            for child in token.children:
+                if child.pos_ == "NOUN" and child.text.startswith('"'):
+                    has_description = True
+
+        # Indirect speech
+        if token.pos_ == "VERB" and token.lemma_ in ["tell", "inform", "narrate"] and token.dep_ == "ROOT":
+            for child in token.children:
+                if child.dep_ == "ccomp":
+                    has_description = True
+
+        # Dependency relations
+        if (token.dep_ == "ccomp" or token.dep_ == "xcomp") and token.head.pos_ == "VERB" and token.head.lemma_ in ["say", "tell", "explain", "describe", "report", "narrate", "inform"]:
+            has_description = True
+
+        # Modifier relations
+        if (token.dep_ == "amod" or token.dep_ == "advmod") and token.head.pos_ == "VERB" and token.head.lemma_ in ["say", "tell", "explain", "describe", "report", "narrate", "inform"]:
+            has_description = True
+
+    return 1 if has_description else 0
+
+def extract_supposition(text):
+    doc = nlp(text)
+    has_supposition = False  # Initialize flag for supposition features
+
+    for token in doc:
+        # Modal verbs indicating uncertainty or future possibility
+        if token.lemma_ in ["will", "would", "might", "may", "could", "should"]:
+            has_supposition = True
+
+        # Conditional sentences (e.g., "if" as subordinating conjunction)
+        if token.pos_ == "SCONJ" and token.lemma_ == "if":
+            has_supposition = True
+
+        # Verbs of prediction or expectation
+        if token.pos_ == "VERB" and token.lemma_ in ["expect", "predict", "assume", "suppose", "anticipate"]:
+            has_supposition = True
+
+        # Epistemic adverbs and phrases (indicating likelihood or uncertainty)
+        if token.pos_ == "ADV" and token.lemma_ in ["probably", "possibly", "maybe", "likely"]:
+            has_supposition = True
+
+        # Dependency relations (Auxiliary verbs or adverbs related to modality)
+        if token.dep_ in ["aux", "advmod", "ccomp"]:
+            has_supposition = True
+
+    return 1 if has_supposition else 0
+
+# # Subjective adjectives (adjectives modifying pronouns) <- to fix
+def extract_subjectivation(text):
+    doc = nlp(text)
+    has_subjectivation = False
+
+    for token in doc:
+        # Personal pronouns
+        if token.pos_ == "PRON" and token.lemma_.lower() in ["i", "you", "he", "she", "it", "we", "they"]:
+            has_subjectivation = True
+
+        # Cognitive verbs related to perception
+        if token.pos_ == "VERB" and token.lemma_ in ["think", "believe", "feel", "perceive", "consider"]:
+            has_subjectivation = True
+            # Sentences expressing judgments or opinions (root verbs)
+            if token.dep_ == "ROOT":
+                has_subjectivation = True
+
+        # Subject-verb agreement (more general than just checking "He")
+        if token.pos_ == "VERB" and token.dep_ == "ROOT" and token.tag_ == "VBZ":
+            for child in token.children:
+                if child.dep_ == "nsubj" and child.pos_ == "PRON":
+                    has_subjectivation = True
+
+        # Subjective adjectives (adjectives modifying pronouns)
+        if token.pos_ == "ADJ" and token.dep_ == "amod" and token.head.pos_ == "PRON":
+            has_subjectivation = True
+
+        # Dependency relations involving subject
+        if token.dep_ in ["nsubj", "csubj"]:
+            has_subjectivation = True
+
+    return 1 if has_subjectivation else 0
+
+# # Adverbial modifiers of emotional verbs AND # Dependency relations <- to fix
+def extract_attitude(text):
+    doc = nlp(text)
+    has_attitude = False
+
+# Define verbs related to emotions or attitudes
+    emotion_verbs = {
+        "feel", "love", "hate", "enjoy", "fear", "worry", 
+        "regret", "like", "dislike", "admire", "appreciate", 
+        "resent", "cherish", "despise", "adore", "savor", 
+        "lament", "yearn", "long"}
+
+    # Define adjectives indicating emotions or attitudes
+    emotion_adjectives = {
+        "happy", "sad", "angry", "excited", "anxious", 
+        "disappointed", "elated", "frustrated", "content", 
+        "nervous", "guilty", "hopeful", "relieved", 
+        "pleased", "joyful", "upset", "bored", 
+        "embarrassed", "pessimistic", "optimistic", 
+        "euphoric", "distraught", "jubilant", 
+        "melancholic", "overjoyed"
+    }
+    
+    for token in doc:
+        # Emotion or psychological verbs
+        if token.pos_ == "VERB" and token.lemma_ in emotion_verbs:
+            has_attitude = True
+        
+        # Adjectives indicating emotions or attitudes
+        if token.pos_ == "ADJ" and token.lemma_ in emotion_adjectives:
+            has_attitude = True
+        
+        # Adverbial modifiers of emotional verbs
+        if token.pos_ == "ADV" and token.dep_ == "advmod" and token.head.pos_ == "VERB" and token.head.lemma_ in emotion_verbs:
+            has_attitude = True
+        
+        # Perception or sensory verbs with emotion (e.g., feel + adjective)
+        if token.pos_ == "VERB" and token.lemma_ in ["see", "hear", "feel"] and token.head.pos_ == "ADJ":
+            has_attitude = True
+        
+        # Exclamations or interjections
+        if token.pos_ == "INTJ":
+            has_attitude = True
+        
+        # Dependency relations
+        if token.dep_ in ["nsubj", "amod", "advmod"]:
+            has_attitude = True
+
+    return 1 if has_attitude else 0
+
+def extract_comparative(text):
+    doc = nlp(text)
+    has_comparative = False
+
+    # Define a more comprehensive list of comparative and superlative phrases
+    comparative_phrases = [
+        "than", "compared to", "in comparison with", "versus", "in relation to",
+        "as opposed to", "more than", "less than", "greater than", "smaller than",
+        "better than", "worse than", "superior to", "inferior to", "like", "unlike",
+        "rather than", "instead of"
+    ]
+    
+    # Define comparative and superlative words
+    comparative_words = {"more", "less", "better", "worse"}
+    superlative_words = {"most", "least", "best", "worst"}
+
+    for token in doc:
+        # Comparative adjectives and adverbs
+        if (token.pos_ == "ADJ" or token.pos_ == "ADV") and token.lemma_.endswith("er"):
+            has_comparative = True
+
+        # Superlative adjectives and adverbs
+        if (token.pos_ == "ADJ" or token.pos_ == "ADV") and token.lemma_.endswith("est"):
+            has_comparative = True
+
+        # Superlative words
+        if token.text.lower() in superlative_words:
+            has_comparative = True
+
+        # Comparative words
+        if token.text.lower() in comparative_words:
+            has_comparative = True
+
+        # Comparative constructions
+        if token.text.lower() in comparative_phrases:
+            has_comparative = True
+
+        # Dependency relations related to comparatives
+        if token.dep_ in ["amod", "advmod"]:
+            # Check if the head token is comparative or superlative
+            if token.head.pos_ in ["ADJ", "ADV"]:
+                if token.head.lemma_.endswith("er") or token.head.text.lower() in comparative_words:
+                    has_comparative = True
+                elif token.head.lemma_.endswith("est") or token.head.text.lower() in superlative_words:
+                    has_comparative = True
+
+    return 1 if has_comparative else 0
+
 # -----------------------------------------------------------------------------------------------------
 # # MODE
 # text = "You must finish your homework before watching TV."
@@ -281,3 +459,28 @@ def extract_knowledge(text):
 # text = "She knows that the project is complete"
 # knowledge_features = extract_knowledge(text)
 # print(knowledge_features)
+
+# # DESCRIPTION
+# text = "John told Sarah about the new plan."
+# description_features = extract_description(text)
+# print(description_features)
+
+# # SUPPOSITION
+# text = "If I say I'm sorry, would you forgive me?"
+# supposition_features = extract_supposition(text)
+# print(supposition_features)
+
+# # SUBJECTIVATION
+# text = "He feels the situation is under control."
+# subjectivation_features = extract_subjectivation(text)
+# print(subjectivation_features)
+
+# # ATTITUDE
+# text = "She was disappointed by the news."
+# attitude_features = extract_attitude(text)
+# print(attitude_features)
+
+# # COMPARATIVE
+# text = "The new restaurant is much better than the old one."
+# comparative_features = extract_comparative(text)
+# print(comparative_features)
