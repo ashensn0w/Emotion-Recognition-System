@@ -419,6 +419,109 @@ def extract_comparative(text):
 
     return 1 if has_comparative else 0
 
+def extract_quantifier(text):
+    doc = nlp(text)
+    has_quantifier = False
+
+    # Define lists for degree expressions and proportional phrases
+    degree_expressions = ["a lot of", "a little", "enough", "plenty of"]
+    proportional_phrases = ["half", "most", "majority of", "part of", "fraction of"]
+
+    for token in doc:
+        # Quantifiers (determiners)
+        if (token.pos_ == "DET" or token.pos_ == "ADJ") and token.lemma_ in ["all", "some", "many", "few", "several", "much", "little", "none"]:
+            has_quantifier = True
+
+        # Numerical expressions
+        if token.pos_ == "NUM":
+            has_quantifier = True
+
+        # Expressions of degree (multi-word expressions)
+        if token.text in ["a", "lot", "little", "plenty", "majority"]:
+            span = " ".join([w.text for w in token.subtree])
+            if span in degree_expressions:
+                has_quantifier = True
+
+        # Proportional phrases (multi-word expressions)
+        if token.text in proportional_phrases:
+            has_quantifier = True
+
+        # Dependency relations related to quantifiers
+        if token.dep_ in ["nummod", "det"]:
+            has_quantifier = True
+
+        # Adverbs indicating quantification
+        if token.pos_ == "ADV" and token.lemma_ in ["almost", "nearly", "approximately", "about"]:
+            has_quantifier = True
+
+    return 1 if has_quantifier else 0
+
+def extract_qualification(text):
+    doc = nlp(text)
+    has_qualification = False
+
+    for token in doc:
+        # Qualifying adjectives
+        if token.pos_ == "ADJ" and token.dep_ == "amod":
+            has_qualification = True
+
+        # Intensifying adverbs
+        if token.pos_ == "ADV" and token.dep_ == "advmod" and token.head.pos_ == "ADJ":
+            has_qualification = True
+
+        # Adjectival phrases
+        if token.pos_ == "ADJ" and token.dep_ == "amod" and token.head.pos_ == "NOUN":
+            has_qualification = True
+
+        # Participial adjectives
+        if token.pos_ == "ADJ" and token.tag_ in {"VBN", "VBG", "VBP"}:
+            has_qualification = True
+
+        # Dependency relations
+        if token.dep_ in ["amod", "advmod"]:
+            has_qualification = True
+
+        # Qualifying clauses (relative clauses)
+        if token.dep_ == "relcl":
+            has_qualification = True
+
+    return 1 if has_qualification else 0
+
+def extract_explanation(text):
+    doc = nlp(text)
+    has_explanation = False
+
+    # Define phrases and conjunctions related to explanations
+    explanatory_conjunctions = ["because", "since", "therefore", "so"]
+    explicative_phrases = ["in other words", "namely"]
+
+    # Check for explanatory clauses
+    for token in doc:
+        if token.dep_ in ["acl", "relcl"]:
+            span = list(token.subtree)
+            has_explanation = True
+
+        # Check for parenthetical phrases
+        if token.dep_ == "punct" and token.text in ["(", ")"]:
+            parenthetical_span = list(token.subtree)
+            if len(parenthetical_span) > 1:  # Ensure there's content within parentheses
+                has_explanation = True
+
+        # Check for explanatory conjunctions
+        if token.pos_ == "SCONJ" and token.lemma_ in explanatory_conjunctions:
+            has_explanation = True
+
+        # Check for appositive phrases
+        if token.dep_ == "appos":
+            span = list(token.subtree)
+            has_explanation = True
+
+        # Check for explicative phrases
+        if token.text.lower() in explicative_phrases:
+            has_explanation = True
+
+    return 1 if has_explanation else 0
+
 # -----------------------------------------------------------------------------------------------------
 # # MODE
 # text = "You must finish your homework before watching TV."
@@ -484,3 +587,18 @@ def extract_comparative(text):
 # text = "The new restaurant is much better than the old one."
 # comparative_features = extract_comparative(text)
 # print(comparative_features)
+
+# # QUANTIFIER
+# text = "She almost finished the task."
+# quantifier_features = extract_quantifier(text)
+# print(quantifier_features)
+
+# # QUALIFICATION
+# text = "The book, which was published last year, is a bestseller."
+# qualification_features = extract_qualification(text)
+# print(qualification_features)
+
+# # EXPLANATION
+# text = "He is an excellent chef, namely, a master of French cuisine."
+# explanation_features = extract_explanation(text)
+# print(explanation_features)
