@@ -1,6 +1,10 @@
 import spacy
+import pandas as pd
 
 nlp = spacy.load("en_core_web_sm")
+
+# FOR DEBUGGING
+# print(f"Token: {token.text}, POS: {token.pos_}, Dependency: {token.dep_}, Children: {[child.text for child in token.children]}")
 
 def extract_mode(text):
     doc = nlp(text)
@@ -48,36 +52,42 @@ def extract_intention(text):
     # Return 1 if any intention feature was detected, else return 0
     return 1 if has_intention else 0
 
-# # Resultative constructions <- to fix
 def extract_result(text):
     doc = nlp(text)
-    result_features = []
+    has_result = False
 
     for token in doc:
         # Perfect tenses (have/has/had + past participle)
         if token.lemma_ in ["have", "has", "had"] and token.dep_ == "aux" and token.head.tag_ == "VBN":
-            result_features.append(f"Perfect Tense: {token.head.text}")
+            has_result = True
 
-        # Resultative constructions (verb + resultative complement - adjective or particle)
-        elif token.pos_ == "VERB":
+        # Check if the token is a verb (for resultative constructions)
+        if token.pos_ == "VERB":
             for child in token.children:
-                # Check for adjective or particle indicating a result (e.g., "wiped clean", "painted red")
+                # Check for adjectives and particles indicating resultative constructions
                 if child.pos_ in ["ADJ", "PART"]:
-                    result_features.append(f"Resultative: {token.text} {child.text}")
+                    has_result = True
+                
+                # Check for proper nouns that could be resultative complements based on context
+                elif child.pos_ == "PROPN" and (child.dep_ in ["attr", "dobj", "acomp", "oprd"] or child.head == token):
+                    # Dependency relations and syntactic positions (e.g., "attr", "dobj") help identify resultative complements.
+                    has_result = True
 
-        # Conjunctions of result (e.g., "so", "therefore")
-        elif token.pos_ == "CCONJ" and token.lemma_ in ["so", "therefore"]:
-            result_features.append(f"Conjunction: {token.text}")
+        # Check for resultative conjunctions or adverbs introducing result clauses
+        if token.pos_ == "ADV" and token.lemma_ in ["so", "therefore", "thus", "hence"]:
+            # Ensure the token is acting as a coordinating conjunction (introducing the result clause)
+            if token.dep_ == "cc" or token.head.dep_ == "conj":
+                has_result = True
 
-        # Causal and sequential structures (e.g., "because", "since", "as", multi-word expression "as a result")
-        elif token.pos_ == "SCONJ" and token.lemma_ in ["because", "since", "as"]:
-            result_features.append(f"Structure: {token.text}")
+        # Causal and sequential structures
+        elif token.pos_ == "SCONJ" and token.lemma_ in ["after", "because", "since", "as"]:
+            has_result = True
         
         # Special case for multi-word "as a result"
         if "as a result" in text:
-            result_features.append("Structure: as a result")
+            has_result = True
 
-    return result_features
+    return 1 if has_result else 0
 
 def extract_manner(text):
     doc = nlp(text)
@@ -288,7 +298,6 @@ def extract_supposition(text):
 
     return 1 if has_supposition else 0
 
-# # Subjective adjectives (adjectives modifying pronouns) <- to fix
 def extract_subjectivation(text):
     doc = nlp(text)
     has_subjectivation = False
@@ -311,7 +320,11 @@ def extract_subjectivation(text):
                 if child.dep_ == "nsubj" and child.pos_ == "PRON":
                     has_subjectivation = True
 
-        # Subjective adjectives (adjectives modifying pronouns)
+        # Check for adjectives in complement position that reflect the subject's perception
+        if token.pos_ == "ADJ" and token.dep_ == "ccomp":
+            has_subjectivation = True
+
+        # Also handle adjectives modifying pronouns (the original check)
         if token.pos_ == "ADJ" and token.dep_ == "amod" and token.head.pos_ == "PRON":
             has_subjectivation = True
 
@@ -321,7 +334,6 @@ def extract_subjectivation(text):
 
     return 1 if has_subjectivation else 0
 
-# # Adverbial modifiers of emotional verbs AND # Dependency relations <- to fix
 def extract_attitude(text):
     doc = nlp(text)
     has_attitude = False
@@ -331,7 +343,7 @@ def extract_attitude(text):
         "feel", "love", "hate", "enjoy", "fear", "worry", 
         "regret", "like", "dislike", "admire", "appreciate", 
         "resent", "cherish", "despise", "adore", "savor", 
-        "lament", "yearn", "long"}
+        "lament", "yearn", "long", "speak", "disappoint"}
 
     # Define adjectives indicating emotions or attitudes
     emotion_adjectives = {
@@ -345,6 +357,7 @@ def extract_attitude(text):
     }
     
     for token in doc:
+        # print(f"Token: {token.text}, POS: {token.pos_}, Dependency: {token.dep_}, Children: {[child.text for child in token.children]}")
         # Emotion or psychological verbs
         if token.pos_ == "VERB" and token.lemma_ in emotion_verbs:
             has_attitude = True
@@ -365,7 +378,17 @@ def extract_attitude(text):
         if token.pos_ == "INTJ":
             has_attitude = True
         
-        # Dependency relations
+        # Check if the token is an emotional verb and linked to the subject via 'nsubj'
+        if token.pos_ == "VERB" and token.lemma_ in emotion_verbs:
+            for child in token.children:
+                if child.dep_ == "nsubj":  # Subject is linked via nominal subject (nsubj)
+                    has_attitude = True
+
+        # Handle attitude adjectives linked to the subject via nominal subject (nsubj)
+        if token.pos_ == "ADJ" and token.dep_ == "amod" and token.head.dep_ == "nsubj":
+            has_attitude = True
+
+        # Dependency relations related to attitude
         if token.dep_ in ["nsubj", "amod", "advmod"]:
             has_attitude = True
 
@@ -522,83 +545,42 @@ def extract_explanation(text):
 
     return 1 if has_explanation else 0
 
-# -----------------------------------------------------------------------------------------------------
-# # MODE
-# text = "You must finish your homework before watching TV."
-# mode_features = extract_mode(text)
-# print(mode_features)
+def create_feature_vector(text):
+    mode_feature = extract_mode(text)
+    intention_feature = extract_intention(text)
+    result_feature = extract_result(text)
+    manner_feature = extract_manner(text)
+    aspect_feature = extract_aspect(text)
+    status_feature = extract_status(text)
+    appearance_feature = extract_appearance(text)
+    knowledge_feature = extract_knowledge(text)
+    description_feature = extract_description(text)
+    supposition_feature = extract_supposition(text)
+    subjectivation_feature = extract_subjectivation(text)
+    attitude_feature = extract_attitude(text)
+    comparative_feature = extract_comparative(text)
+    quantifier_feature = extract_quantifier(text)
+    qualification_feature = extract_qualification(text)
+    explanation_feature = extract_explanation(text)
+    return [
+        mode_feature, intention_feature, result_feature, manner_feature,
+        aspect_feature, status_feature, appearance_feature, knowledge_feature,
+        description_feature, supposition_feature, subjectivation_feature, attitude_feature,
+        comparative_feature, quantifier_feature, qualification_feature, explanation_feature
+        ]
 
-# # INTENTION
-# text = "I want to go to the beach tomorrow."
-# intention_features = extract_intention(text)
-# print(intention_features)
+# Load the dataset
+df = pd.read_csv('backend/data/sample_dataset.csv')
 
-# # RESULT
-# text = "He had finished his work before the deadline."
-# result_features = extract_result(text)
-# print(result_features)
+# Create feature vectors
+df['features'] = df['sentence'].apply(create_feature_vector)
 
-# # MANNER
-# text = "He ran very quickly."
-# manner_features = extract_manner(text)
-# print(manner_features)
+# Separate the features into columns
+features_df = pd.DataFrame(df['features'].tolist(), columns=['mode', 'intention', 'result', 'manner',
+                                                             'aspect', 'status', 'appearance', 'knowledge',
+                                                             'description', 'supposition', 'subjectivation', 'attitude',
+                                                             'comparative', 'quantifier', 'qualification', 'explanation'])
 
-# # ASPECT
-# text = "I have already finished my homework."
-# aspect_features = extract_aspect(text)
-# print(aspect_features)
-
-# # STATUS
-# text = "He did not go to the party."
-# status_features = extract_status(text)
-# print(status_features)
-
-# # APPEARANCE
-# text = "He wore a suit which made him look professional."
-# appearance_features = extract_appearance(text)
-# print(appearance_features)
-
-# # KNOWLEDGE
-# text = "She knows that the project is complete"
-# knowledge_features = extract_knowledge(text)
-# print(knowledge_features)
-
-# # DESCRIPTION
-# text = "John told Sarah about the new plan."
-# description_features = extract_description(text)
-# print(description_features)
-
-# # SUPPOSITION
-# text = "If I say I'm sorry, would you forgive me?"
-# supposition_features = extract_supposition(text)
-# print(supposition_features)
-
-# # SUBJECTIVATION
-# text = "He feels the situation is under control."
-# subjectivation_features = extract_subjectivation(text)
-# print(subjectivation_features)
-
-# # ATTITUDE
-# text = "She was disappointed by the news."
-# attitude_features = extract_attitude(text)
-# print(attitude_features)
-
-# # COMPARATIVE
-# text = "The new restaurant is much better than the old one."
-# comparative_features = extract_comparative(text)
-# print(comparative_features)
-
-# # QUANTIFIER
-# text = "She almost finished the task."
-# quantifier_features = extract_quantifier(text)
-# print(quantifier_features)
-
-# # QUALIFICATION
-# text = "The book, which was published last year, is a bestseller."
-# qualification_features = extract_qualification(text)
-# print(qualification_features)
-
-# # EXPLANATION
-# text = "He is an excellent chef, namely, a master of French cuisine."
-# explanation_features = extract_explanation(text)
-# print(explanation_features)
+print(features_df)
+# Save the feature vectors to a new CSV file
+features_df.to_csv('backend/data/feature_vectors.csv', index=False)
