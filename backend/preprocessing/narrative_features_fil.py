@@ -8,10 +8,10 @@ def extract_mode(text):
     
     # Define keywords for each mode
     mode_keywords = {
-        'Possibility': ['maaari', 'pwedeng'],
-        'Impossibility': ['hindi', 'walang'],
+        'Possibility': ['maaari', 'pwedeng','pwede'],
+        'Impossibility': ['hindi', 'walang','wala'],
         'Necessity': ['dapat', 'kailangan'],
-        'Prohibition': ['bawal']
+        'Prohibition': ['bawal','hindi pwede']
     }
     
     detected_modes = {
@@ -47,8 +47,23 @@ def extract_intention(text):
     # Define keywords for each intention feature
     intention_keywords = {
         'Infinitive Verbs': ['mag-aaral', 'pumunta'],
+
         'Modal Verbs': ['nais', 'gusto', 'hangad'],
-        'Purpose Clauses': ['upang', 'para sa'],
+
+        'Purpose Clauses': ['upang', 
+        'para', 'sa layuning', 'upang mapanatili', 'para sa', 'upang makamit', 
+        'upang maabot', 'sa kagustuhang', 'para makuha', 'para maging', 
+        'para magtagumpay', 'para maiwasan', 'para maprotektahan', 'upang magturo', 
+        'para magpaliwanag', 'para magbigay', 'para makatulong', 'upang maipakita', 
+        'para mabigyan', 'para maghanda', 'upang maghanda', 'upang magplano', 
+        'para magsimula', 'para magwagi', 'upang masiguro', 'para mangyari', 
+        'upang mangyari', 'upang umunlad', 'upang sumulong', 'para umasenso', 
+        'para mapaganda', 'upang mapabilis', 'upang maglakas-loob', 'upang magpayo', 
+        'upang mag-alok', 'para makapagbigay', 'para magdulot', 'upang magdulot', 
+        'para sa ikabubuti', 'upang mapaganda', 'para mapanatili', 'para maprotektahan', 
+        'para magdulot', 'para magturo', 'upang magbigay', 'upang makatulong', 
+        'upang masiguro', 'upang mag-ambag'],
+
         'Auxiliary Verbs': ['babalik', 'magiging']
     }
     
@@ -84,8 +99,18 @@ def extract_result(text):
     
     # Define keywords for result feature
     result_keywords = {
-        'Completed Actions': ['natapos', 'nagawa', 'nakuha'],
-        'Perfect Aspect Verbs': ['nagkaroon', 'nagawa']
+        'Completed Actions': ['natapos', 'nagawa', 'nakuha','nagresulta', 'humantong', 'nagdulot', 
+        'nagbunga', 'naghatid', 'nagbigay-daan', 'naging', 'naging sanhi', 
+        'nagbunga', 'natamo', 'nakuha', 'nakamit', 'nagtagumpay', 
+        'nakasama', 'nakatulong', 'naranasan', 'nakapagbigay', 'nakabuo', 
+        'nakapagdulot', 'napunta', 'napatunayan', 'naabot', 'nakamtan', 
+        'natupad', 'nagbunga', 'nag-dulot', ],
+
+        'Perfect Aspect Verbs': ['nagkaroon', 'nagawa', 'umunlad', 'sumulong', 'nag-asenso', 
+        'naglaho', 'naganap', 'nangyari', 'nasaksihan', 'naipakita', 
+        'naipamalas', 'napagtagumpayan', 'naibalik', 'naipasa', 'naiwasan', 
+        'naabot', 'nadama', 'nalaman', 'naramdaman', 
+        'nakapagbago', 'napagpasyahan']
     }
     
     detected_results = {
@@ -114,8 +139,15 @@ def extract_manner(text):
     
     # Define keywords for manner feature
     manner_keywords = {
-        'Adverbs': ['maayos', 'mabilis', 'mahigpit'],  # Add more as needed
-        'Adjectives as Adverbs': ['maganda']  # Add more as needed
+        'Adverbs': ['maingat', 'maayos', 'mabilis', 'tahimik', 'malumanay', 
+        'mahinahon', 'masinsin', 'magaan', 'mabagal', 'matapang', 
+        'malakas', 'masigla', 'puspusan', 'paggalang', 'matiyaga', 
+        'tapat', 'malasakit', 'mabait', 'matapang', 'mahinahon','masinsinan', 'mapanuri', 'masusing'],  # Add more as needed
+
+        'Adjectives as Adverbs': ['maganda','masikap', 'pagsisikap', 'masigasig', 'masinop', 'masipag', 
+        'kakayahan', 'tiwala', 'kalooban', 'pag-asa', 'pagmamahal', 'respeto', 'malakas', 'maisip', 
+        'pagkilala', 'pagsasaalang-alang', 'madamdamin', 'pagsusumikap', 'pagnanais', 'kasiglahan', 'kalakasan', 
+        'kasipagan', 'pangarap',]  # Add more as needed
     }
     
     detected_manners = {
@@ -144,8 +176,12 @@ def extract_aspect(text):
     
     # Define keywords for aspect feature
     aspect_keywords = {
-        'Aspectual Markers': ['nag-', 'naka-', 'nagsa-'],  # Add more as needed
-        'Verbal Affixes': ['nag-aaral', 'natapos']  # Add more as needed
+        'Aspectual Markers': ['nag', 'naka', 'nagsa'],  # Add more as needed
+        'Verbal Affixes': ['nag-aaral', 'natapos','patuloy','nagpatuloy', 'patuloy na nangyayari', 
+        'nangyayari', 'nagpapatuloy', 'nagsimula', 'nagwakas', 
+        'nagsisimula', 'natatapos', 'nagaganap', 'patuloy na', 'nangyayari pa', 
+        'nagsisimula pa lang', 'nagsimula na', 'patuloy na nagaganap', 
+        'nagtatapos', 'nagsimula', 'natapos na', ]  # Add more as needed
     }
     
     detected_aspects = {
@@ -198,7 +234,11 @@ def extract_appearance(text):
     
     # Define keywords for appearance feature
     appearance_keywords = {
-        'Transition Words': ['naging', 'pinalitan', 'nagbago']
+        'Transition Words': ['naging', 'pinalitan', 'nagbago','nagpakita', 
+        'nagsilbing', 'nagmumungkahi', 'nagpakita', 'nagpamalas', 'nagpahayag', 
+        'nagbubukas', 'nagbibigay', 'nagsasalita', 'nag-aalok', 'naglalaman', 'nagsasabi', 
+        'nagsusumpa', 'nag-aangkin', 'nagpapakita ng', 'nagpapahayag ng','naglalantad ng', 
+        'nagsasalita ng', 'nag-aalok ng', 'naglalaman ng','nagpapatunay ng']
     }
     
     detected_appearance = {
@@ -222,7 +262,11 @@ def extract_knowledge(text):
     
     # Define keywords for knowledge feature
     knowledge_keywords = {
-        'Knowledge Verbs': ['alam', 'nagpapakita', 'nalaman']
+        'Knowledge Verbs': ['alam', 'nauunawaan','nalaman','nalalaman', 
+        'napagtanto', 'natutunan', 'kilala', 'nalaman', 'nasusundan', 'nauunawaan', 
+        'nagkakaroon','nagtuturo', 'nagbibigay ng kaalaman', 'nagtuturo ng', 'nagpapaliwanag ng', 'nagsasalita ng', 
+        'nagbibigay ng impormasyon', 'nagpapahayag ng', 'nagsusuri ng', 'nagtuturo ng', 
+        'nagbibigay-diin', 'nagpapahayag ng','nagbibigay-alam']
     }
     
     detected_knowledge = {
@@ -246,7 +290,10 @@ def extract_description(text):
     
     # Define keywords for description feature
     description_keywords = {
-        'Descriptive Phrases': ['sinabi', 'nasabi', 'sinasabi']
+        'Descriptive Phrases': ['sinabi', 'nasabi', 'sinasabi','naglarawan','inilarawan', 
+        'nagsalaysay', 'nagdetalye','nagpaliwanag', 'nagpapakita', 
+        'nagpahayag', 'nagbibigay', 'nagpapaliwanag ', 'nagbigay', 
+        'nagbibigay-diin', 'nagpapahayag', 'nagpapaliwanag']
     }
     
     detected_descriptions = {
@@ -269,7 +316,11 @@ def extract_supposition(text):
     
     # Define keywords for supposition feature
     supposition_keywords = {
-        'Supposition Modal Verbs': ['maaaring', 'baka', 'sana']
+        'Supposition Modal Verbs': ['maaaring', 'baka', 'sana','akala', 'pagpapalagay', 'kumpiyansa', 'hinuha', 
+        'palagay', 'imahinasyon', 'halimbawa', 'sabi', 'tulad', 
+        'sakaling', 'halimbawang', 'nagpapalagay', 'akalang', 
+        'nagpapalagay', 'nag-aakala ', 'nag-iisip', 
+        'nagpapalagay', 'nag-aakalang','sakali']
     }
     
     detected_suppositions = {
@@ -293,7 +344,9 @@ def extract_subjectivation(text):
     
     # Define keywords for subjectivation feature
     subjectivation_keywords = {
-        'Perception Verbs': ['nakikita', 'nararamdaman', 'iniisip']
+        'Perception Verbs': ['nagbigay','nagpakita', 'nagsalaysay', 'naglarawan', 
+        'nagsalita', 'nagsabi', 'naikwento', 'nagsasalaysay ', 'nagbigay', 
+        'nagsasabi','nakikita', 'nararamdaman', 'iniisip']
     }
     
     detected_subjectivation = {
@@ -317,7 +370,14 @@ def extract_attitude(text):
     
     # Define keywords for attitude feature
     attitude_keywords = {
-        'Emotion-related Adjectives': ['masaya', 'nalungkot', 'nagulat']
+        'Emotion-related Adjectives': ['masaya', 'nalungkot', 'nagulat',
+        'nagustuhan', 'hindi nagustuhan', 'pabor', 'hindi pabor', 
+        'sumasang-ayon', 'hindi sumasang-ayon', 'natuwa', 'nainis', 
+        'nagalit', 'nagagalit', 'masaya', 'malungkot', 'nakakaawa', 
+        'nag-aalala', 'natuwa', 'nabahala', 'nag-alala', 'nagagalit', 
+        'nag-iba ng pananaw', 'nagiging positibo', 'nagiging negatibo', 
+        'nagiging neutral', 'nagiging maasahin', 'nagiging pesimista', 
+        'nagiging nag-aalala', 'nagiging masaya', 'nagiging malungkot']
     }
     
     detected_attitudes = {
@@ -341,7 +401,11 @@ def extract_comparative(text):
     
     # Define keywords for comparative feature
     comparative_keywords = {
-        'Comparative Adjectives': ['mas', 'higit', 'kaysa']
+        'Comparative Adjectives': ['mas', 'higit','higit na' 'kaysa','mas mabuti', 
+        'mas masama', 'mas mataas', 'mas mababa', 'mas mabilis', 'mas mabagal', 'mas matanda', 
+        'mas bata', 'mas malaki', 'mas maliit', 'mas malakas', 'mas mahina', 'mas magaan', 'mas mabigat', 'mas maganda', 
+        'mas pangit', 'mas malakas', 'mas mahina', 'mas mataas', 'mas mababa', 'mas bago', 'mas luma', 'mas makabago', 
+        'mas konserbatibo']
     }
     
     detected_comparative = {
@@ -365,7 +429,11 @@ def extract_quantifier(text):
     
     # Define keywords for quantifier feature
     quantifier_keywords = {
-        'Quantifiers': ['marami', 'mas', 'ilan' , 'lahat']
+        'Quantifiers': ['ang lahat', 'ilan', 'wala', 'marami', 'konti',
+        'ilan', 'karamihan', 'kaunti', 'kalahatan', 
+        'iba', 'madami', 'mas marami', 'pinaka marami', 'kaunti', 
+        'ilan', 'wala', 'marami', 'konti', 'kaunti', 'lahat', 
+        'marami sa', 'konti sa', 'ang lahat', 'ilang','mas']
     }
     
     detected_quantifiers = {
@@ -389,7 +457,10 @@ def extract_qualification(text):
     
     # Define keywords for qualification feature
     qualification_keywords = {
-        'Qualifying Adjectives/Adverbs': ['napaka', 'sobra', 'talaga']
+        'Qualifying Adjectives/Adverbs': ['napaka', 'sobra', 'talaga','mas mahusay', 
+        'hindi mahusay', 'magaling', 'hindi magaling', 'kasanayan', 'hindi kasanayan', 'sanay', 'hindi sanay', 
+        'mahusay', 'hindi mahusay', 'dalubhasa', 'baguhan', 'bago', 'karanasan', 'walang karanasan', 
+        'mas magaling', 'hindi magaling','kwalipikado', 'hindi kwalipikado']
     }
     
     detected_qualifications = {
@@ -413,7 +484,8 @@ def extract_explanation(text):
     
     # Define keywords for explanation feature
     explanation_keywords = {
-        'Explanation Phrases': ['dahil sa', 'upang', 'sapagkat']
+        'Explanation Phrases': ['dahil', 'upang', 'sapagkat','nagpaliwanag','nagpapaliwanag', 'nangatwiran', 
+        'nagdiin', 'nagpakita', 'nagpapahayag', 'nagbibigay']
     }
     
     detected_explanations = {
@@ -432,75 +504,74 @@ def extract_explanation(text):
     return 1 if any(detected_explanations.values()) else 0
 
 
-
 # -----------------------------------------------------------------------------------------------------
 # MODE
-text = "Maaari kong gawin ito"
+text = "Kailangan ko maging mapanuri."
 mode_features = extract_mode(text)
 print(mode_features)
 
 # INTENTION
-text = "Nais kong maging ako"
+text = "Narito siya upang magpayo."
 intention_features = extract_intention(text)
 print(intention_features)
 
 # RESULT
-text = "Ang proyekto ay natapos na"
+text = "Nalaman ko na siya ay isang alipin."
 result_features = extract_result(text)
 print(result_features)  
 
 # MANNER
-text = "Ang pagsayaw ng maayos ay maganda"
+text = "Puspusan siya kung mag-ensayo."
 result_features = extract_manner(text)
 print(result_features) 
 
 # ASPECT
-text = "Natapos ko na ang proyekto"
+text = "Nag-aaral ako ng aming proyekto."
 result_features = extract_aspect(text)
 print(result_features) 
 
 # STATUS
-text = "Hindi ko magagawa ito."
+text = "Wala akong magagawa."
 result_features = extract_status(text)
 print(result_features) 
 
 # APPEARANCE
-text = "Naging masaya siya pagkatapos ng lahat."
+text = "Nagbago siya pagkatapos ng lahat."
 result_features = extract_appearance(text)
 print(result_features) 
 
 # KNOWLEDGE
-text = "Alam niya ang mga detalye."
+text = "Nalaman niya ang mga detalye."
 result_features = extract_knowledge(text)
 print(result_features) 
 
 # DESCRIPTION
-text = "Sinabi nya na maaaring umulan bukas."
+text = "Inilarawan nya ang mga nangyari."
 result_features = extract_description(text)
 print(result_features) 
 
 # SUPPOSITION
-text = "Maaaring umulan bukas."
+text = "Akala ko umulan kahapon sainyo."
 result_features = extract_supposition(text)
 print(result_features) 
 
 # SUBJECTIVATION
-text = "Nakikita ko na mabuti siya."
+text = "Nagpakita ako para sa kanya."
 result_features = extract_subjectivation(text)
 print(result_features) 
 
 # ATTITUDE
-text = "Nagulat ako sa kanyang ginawa."
+text = "Ang kanyang ginawa ay hindi nagustuhan ng marami."
 result_features = extract_attitude(text)
 print(result_features) 
 
 # COMPARATIVE
-text = "Mas maganda ang bagong modelo kaysa sa lumang isa."
+text = "Higit na modelo ang kanya kaysa sa akin."
 result_features = extract_comparative(text)
 print(result_features) 
 
 # QUANTIFIER
-text = "Ang kanyang bahay ay mas malaki kaysa sa aking bahay."
+text = "Ang lahat ay kailangan sa proseso."
 result_features = extract_quantifier(text)
 print(result_features) 
 
@@ -510,7 +581,6 @@ result_features = extract_qualification(text)
 print(result_features) 
 
 # EXPLANATION
-text = "Sumali siya sa club upang matuto ng bagong kasanayan."
+text = "Siya ay nangatwiran sa nangyari."
 result_features = extract_explanation(text)
 print(result_features) 
-
