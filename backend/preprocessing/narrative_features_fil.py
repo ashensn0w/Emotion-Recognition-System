@@ -1,4 +1,5 @@
 import spacy
+import pandas as pd
 
 # Load the language model
 nlp = spacy.load("xx_ent_wiki_sm")
@@ -504,83 +505,42 @@ def extract_explanation(text):
     return 1 if any(detected_explanations.values()) else 0
 
 
-# -----------------------------------------------------------------------------------------------------
-# MODE
-text = "Kailangan ko maging mapanuri."
-mode_features = extract_mode(text)
-print(mode_features)
+def create_feature_vector(text):
+    mode_feature = extract_mode(text)
+    intention_feature = extract_intention(text)
+    result_feature = extract_result(text)
+    manner_feature = extract_manner(text)
+    aspect_feature = extract_aspect(text)
+    status_feature = extract_status(text)
+    appearance_feature = extract_appearance(text)
+    knowledge_feature = extract_knowledge(text)
+    description_feature = extract_description(text)
+    supposition_feature = extract_supposition(text)
+    subjectivation_feature = extract_subjectivation(text)
+    attitude_feature = extract_attitude(text)
+    comparative_feature = extract_comparative(text)
+    quantifier_feature = extract_quantifier(text)
+    qualification_feature = extract_qualification(text)
+    explanation_feature = extract_explanation(text)
+    return [
+        mode_feature, intention_feature, result_feature, manner_feature,
+        aspect_feature, status_feature, appearance_feature, knowledge_feature,
+        description_feature, supposition_feature, subjectivation_feature, attitude_feature,
+        comparative_feature, quantifier_feature, qualification_feature, explanation_feature
+        ]
 
-# INTENTION
-text = "Narito siya upang magpayo."
-intention_features = extract_intention(text)
-print(intention_features)
+# Load the dataset
+df = pd.read_csv('backend/data/sample_dataset.csv')
 
-# RESULT
-text = "Nalaman ko na siya ay isang alipin."
-result_features = extract_result(text)
-print(result_features)  
+# Create feature vectors
+df['features'] = df['sentence'].apply(create_feature_vector)
 
-# MANNER
-text = "Puspusan siya kung mag-ensayo."
-result_features = extract_manner(text)
-print(result_features) 
+# Separate the features into columns
+features_df = pd.DataFrame(df['features'].tolist(), columns=['mode', 'intention', 'result', 'manner',
+                                                             'aspect', 'status', 'appearance', 'knowledge',
+                                                             'description', 'supposition', 'subjectivation', 'attitude',
+                                                             'comparative', 'quantifier', 'qualification', 'explanation'])
 
-# ASPECT
-text = "Nag-aaral ako ng aming proyekto."
-result_features = extract_aspect(text)
-print(result_features) 
-
-# STATUS
-text = "Wala akong magagawa."
-result_features = extract_status(text)
-print(result_features) 
-
-# APPEARANCE
-text = "Nagbago siya pagkatapos ng lahat."
-result_features = extract_appearance(text)
-print(result_features) 
-
-# KNOWLEDGE
-text = "Nalaman niya ang mga detalye."
-result_features = extract_knowledge(text)
-print(result_features) 
-
-# DESCRIPTION
-text = "Inilarawan nya ang mga nangyari."
-result_features = extract_description(text)
-print(result_features) 
-
-# SUPPOSITION
-text = "Akala ko umulan kahapon sainyo."
-result_features = extract_supposition(text)
-print(result_features) 
-
-# SUBJECTIVATION
-text = "Nagpakita ako para sa kanya."
-result_features = extract_subjectivation(text)
-print(result_features) 
-
-# ATTITUDE
-text = "Ang kanyang ginawa ay hindi nagustuhan ng marami."
-result_features = extract_attitude(text)
-print(result_features) 
-
-# COMPARATIVE
-text = "Higit na modelo ang kanya kaysa sa akin."
-result_features = extract_comparative(text)
-print(result_features) 
-
-# QUANTIFIER
-text = "Ang lahat ay kailangan sa proseso."
-result_features = extract_quantifier(text)
-print(result_features) 
-
-# QUALIFICATION
-text = "Napaka-ganda ng kanyang painting."
-result_features = extract_qualification(text)
-print(result_features) 
-
-# EXPLANATION
-text = "Siya ay nangatwiran sa nangyari."
-result_features = extract_explanation(text)
-print(result_features) 
+print(features_df)
+# Save the feature vectors to a new CSV file
+features_df.to_csv('backend/data/feature_vectors_fil.csv', index=False)
