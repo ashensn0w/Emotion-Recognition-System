@@ -1,0 +1,22 @@
+{
+    "lemma_dict":
+    {
+        "sira": ["nasira"],
+        "habol": ["habulin"],
+        "takas": ["makatakas"],
+        "lungkot": ["nakakalungkot"],
+        "tago": ["magtago"],
+        "patay": ["pumatay", "pagkamatay", "namamatay"],
+        "hayop": ["hayup"],
+        "sisi": ["sinisisi"],
+        "hina": ["napakahina", "kahinaan"],
+        "alala": ["naaalala"],
+        "sabi": ["sinabi"],
+        "noon": ["nung", "nun"],
+        "lakas": ["lumalakas"],
+        "siya": ["siyang"],
+        "kita": ["pinakitang"],
+        "dami": ["andaming"],
+        "ngiti": ["napangiti"]
+    }
+}

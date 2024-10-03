@@ -4,22 +4,17 @@ import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import spacy
+import json
 from sklearn.feature_extraction.text import TfidfVectorizer
+import stopwordsiso as stopwords
 
 nltk.download('punkt')
+nltk.download('punkt_tab')
 nltk.download('stopwords')
 
 nlp = spacy.load("en_core_web_trf")
 
-filipino_stopwords = [
-    "a", "ako", "ang", "ano", "at", "ay", "ibang", "ito", "iyon", "ka",
-    "kami", "kanila", "kanya", "kayo", "laki", "mga", "na", "ng", "ni",
-    "nito", "nang", "sa", "sila", "tayo", "walang", "yung", "si", "bawat",
-    "kung", "hindi", "para", "dahil", "doon", "baka", "kapag", "saan",
-    "sino", "siya", "tama", "yan", "o", "pala", "pero", "wala", "huwag",
-    "muna", "na", "naman", "pag", "sana", "tulad", "upang", "bago", 
-    "dati", "iba", "madami", "nakita", "pagkatapos", "pati", "sabi", "sana"
-]
+filipino_stopwords = stopwords.stopwords('tl')
 
 def load_dataset(file_path):
     try:
@@ -57,9 +52,6 @@ def print_table(data, title="Table", num_samples=10):
 def convert_to_lowercase(data):
     if 'sentence' in data.columns:
         data['sentence'] = data['sentence'].str.lower()
-        
-        data.to_csv(index=False)
-        
         print("Sentence has been converted to lowercase.")
     else:
         print("Column 'sentence' not found in the DataFrame.")
@@ -89,7 +81,7 @@ def tokenize_sentences(data):
 
 def remove_stopwords(data):
     if 'sentence' in data.columns:
-        english_stopwords = set(stopwords.words('english'))
+        english_stopwords = set(stopwords.stopwords('english'))
         all_stopwords = english_stopwords.union(set(filipino_stopwords))
         
         data['sentence'] = data['sentence'].apply(lambda tokens: [word for word in tokens if word.lower() not in all_stopwords])
@@ -98,9 +90,14 @@ def remove_stopwords(data):
     else:
         print("Column 'sentence' not found in the DataFrame.")
 
-def lemmatize_tokens(data):
+def load_custom_lemmatizer(json_file):
+    with open(json_file, 'r', encoding='utf-8') as file:
+        lemmatizer_data = json.load(file)
+    return lemmatizer_data
+
+def lemmatize_tokens(data, lemmatizer_data):
     if 'sentence' in data.columns:
-        data['sentence'] = data['sentence'].apply(lambda tokens: [nlp(token)[0].lemma_ for token in tokens])
+        data['sentence'] = data['sentence'].apply(lambda tokens: [lemmatizer_data.get(token, token) for token in tokens])
         print('-' * 120)
         print("Tokens have been lemmatized.")
     else:

@@ -4,6 +4,10 @@ import pandas as pd
 file_path = './backend/data/training_data_fil_sample.csv'
 data = load_dataset(file_path)
 
+# Load custom lemmatizer
+lemmatizer_json_file = 'filipino_lemmatizer.json'  # Path to your custom lemmatizer JSON file
+lemmatizer_data = load_custom_lemmatizer(lemmatizer_json_file)
+
 # Extract sentences
 sentences = data['sentence'].tolist()
 
@@ -31,8 +35,8 @@ if data is not None:
     remove_stopwords(data)
     print_table(data, title="Data After Stopwords Removal")
 
-    # Lemmatize tokens
-    lemmatize_tokens(data)
+    # Lemmatize tokens after stopwords removal
+    lemmatize_tokens(data, lemmatizer_data)
     print_table(data, title="Data After Lemmatization")
 
     # Join tokens back into sentences
