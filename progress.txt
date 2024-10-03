@@ -1,10 +1,12 @@
-DATASET
+54% / 100%
+
+DATASET (10% / 10%)
 [/] Filipino Novellas with Literary Fiction Genre (7 Erityian Tribes Novellas)
 
-DATA AUGMENTATION
+DATA AUGMENTATION (0% / 10%)
 [x] Back Translation
 
-DATA CLEANING
+DATA CLEANING (8% / 10%)
 [/] Lowercase Conversion
 [/] Punctuation Removal
 [/] Numbers Removal
@@ -13,10 +15,10 @@ DATA CLEANING
 [/] Lemmatization (English)
 [x] Lemmatization (Filipino)
 
-FEATURE EXTRACTION
+FEATURE EXTRACTION (5% / 5%)
 [/] Term Frequency-Inverse Document Frequency (TF-IDF) Vectorization
 
-FEATURE ENGINEERING (English and Filipino) <- TO POLISH
+FEATURE ENGINEERING (English and Filipino) <- TO POLISH (20% / 30%)
 [/] Mode 
 [/] Intention
 [/] Result
@@ -34,8 +36,15 @@ FEATURE ENGINEERING (English and Filipino) <- TO POLISH
 [/] Qualification
 [/] Explanation
 
-UPSCALING AND DOWNSCALING SAMPLING
+UPSCALING AND DOWNSCALING SAMPLING (0% / 10%)
 [x] Random Resampling
 
-CLASSIFICATION
+CLASSIFICATION (0% / 10%)
 [x] Generalized Linear Model (GLM - Multinomial Logistic Regression)
+
+TESTING CODE (5% / 5%)
+
+GUI (6% / 10%)
+[/] loading the novella
+[/] display number of sentences per emotion
+[/] display sentences per emotion
