@@ -1,5 +1,4 @@
 from preprocessing.text_processing import *
-from preprocessing.narrative_features import *
 import pandas as pd
 
 file_path = './backend/data/training_data_fil_sample.csv'
