@@ -1,91 +1,94 @@
 import spacy
 import pandas as pd
 
-nlp = spacy.load("en_core_web_sm")
-
-# FOR DEBUGGING
-# print(f"Token: {token.text}, POS: {token.pos_}, Dependency: {token.dep_}, Children: {[child.text for child in token.children]}")
+nlp = spacy.load("en_core_web_md")
 
 def extract_mode(text):
     doc = nlp(text)
-    has_mode = False  # Initialize a flag to check for mode features
+    has_mode = False
 
     for token in doc:
-        # Modal verbs and auxiliary verbs
+        # Check for modal verbs or auxiliary verbs indicating mode
         if token.pos_ == "AUX" or (token.pos_ == "VERB" and token.lemma_ in ["can", "could", "may", "might", "must", "shall", "should", "will", "would"]):
             has_mode = True
+            break
 
-        # Adverbs of necessity or possibility
+        # Check for adverbs indicating possibility or necessity
         elif token.pos_ == "ADV" and token.lemma_ in ["necessarily", "probably", "possibly", "perhaps", "certainly"]:
             has_mode = True
+            break
 
-        # Imperative mood: Root verb at the beginning of the sentence
-        elif token.pos_ == "VERB" and token.dep_ == "ROOT" and token.i == 0:  # Checking if it's the first word
+        # Check if the main verb (root) is at the beginning of the sentence, indicating modality
+        elif token.pos_ == "VERB" and token.dep_ == "ROOT" and token.i == 0:
             has_mode = True
+            break
 
-    # Return 1 if any mode feature was detected, else return 0
     return 1 if has_mode else 0
 
 def extract_intention(text):
     doc = nlp(text)
-    has_intention = False  # Initialize a flag to check for intention features
+    has_intention = False
 
     for token in doc:
-        # Verbs of intention or desire
+        # Check for verbs indicating intention
         if token.pos_ == "VERB" and token.lemma_ in ["want", "need", "desire", "intend", "wish", "plan", "aim", "decide", "hope"]:
             has_intention = True
+            break
 
-        # Infinitive phrases ('to' + verb)
+        # Check for "to" followed by a verb (infinitive form)
         elif token.text == "to" and token.head.pos_ == "VERB" and token.dep_ == "aux":
             has_intention = True
+            break
 
-        # Subordinate clauses of purpose (e.g., 'want to go', 'so that', 'in order to', 'so as to')
+        # Check for conjunctions indicating purpose with a verb
         elif token.text in ["so", "that", "order", "as"] and token.dep_ in ["mark", "advmod"]:
-            # Check the head of the clause for verbs that indicate purpose
             if token.head.dep_ == "advcl" and token.head.head.pos_ == "VERB":
                 has_intention = True
+                break
 
-        # Auxiliary verbs indicating future actions
+        # Check for auxiliary verbs indicating future intention
         elif token.pos_ == "AUX" and token.lemma_ in ["will", "shall"]:
             has_intention = True
+            break
 
-    # Return 1 if any intention feature was detected, else return 0
     return 1 if has_intention else 0
 
 def extract_result(text):
     doc = nlp(text)
     has_result = False
 
-    for token in doc:
-        # Perfect tenses (have/has/had + past participle)
+    for token in doc:   
+        # Check for auxiliary verbs with past participle indicating result
         if token.lemma_ in ["have", "has", "had"] and token.dep_ == "aux" and token.head.tag_ == "VBN":
             has_result = True
+            break
 
-        # Check if the token is a verb (for resultative constructions)
+        # Check for verbs with adjectives or particles indicating result
         if token.pos_ == "VERB":
             for child in token.children:
-                # Check for adjectives and particles indicating resultative constructions
                 if child.pos_ in ["ADJ", "PART"]:
                     has_result = True
+                    break
                 
-                # Check for proper nouns that could be resultative complements based on context
                 elif child.pos_ == "PROPN" and (child.dep_ in ["attr", "dobj", "acomp", "oprd"] or child.head == token):
-                    # Dependency relations and syntactic positions (e.g., "attr", "dobj") help identify resultative complements.
                     has_result = True
+                    break
 
-        # Check for resultative conjunctions or adverbs introducing result clauses
+        # Check for adverbs indicating result
         if token.pos_ == "ADV" and token.lemma_ in ["so", "therefore", "thus", "hence"]:
-            # Ensure the token is acting as a coordinating conjunction (introducing the result clause)
             if token.dep_ == "cc" or token.head.dep_ == "conj":
                 has_result = True
+                break
 
-        # Causal and sequential structures
+        # Check for subordinating conjunctions indicating result
         elif token.pos_ == "SCONJ" and token.lemma_ in ["after", "because", "since", "as"]:
             has_result = True
+            break
         
-        # Special case for multi-word "as a result"
+        # Check if the phrase "as a result" is in the text
         if "as a result" in text:
             has_result = True
+            break
 
     return 1 if has_result else 0
 
@@ -93,30 +96,30 @@ def extract_manner(text):
     doc = nlp(text)
     has_manner = False
 
-    # Check for adverbs of manner
     for token in doc:
+        # Check for adverbs (ADV) used as adverbial modifiers (advmod)
         if token.pos_ == "ADV" and token.dep_ == "advmod":
             has_manner = True
-            break  # Exit early if we find at least one
+            break
 
-    # Check for prepositional phrases of manner
-    if has_manner == 0:  # Only continue checking if not already found
+    # If no manner found, check for prepositions (ADP) with objects
+    if not has_manner:
         for token in doc:
             if token.pos_ == "ADP" and token.dep_ == "prep":
                 for child in token.children:
                     if child.dep_ in ["pobj", "obj"]:
                         has_manner = True
-                        break  # Exit early if we find at least one
+                        break
                 if has_manner:
-                    break  # Exit early if we find at least one
+                    break
 
-    # Check for intensifiers or modifiers
-    if has_manner == 0:  # Only continue checking if not already found
+    # If still no manner found, check for adverbs (ADV) modifying other adverbs
+    if not has_manner:
         for token in doc:
             if token.pos_ == "ADV" and token.dep_ == "advmod":
                 if token.head.pos_ == "ADV":
                     has_manner = True
-                    break  # Exit early if we find at least one
+                    break
 
     return 1 if has_manner else 0
 
@@ -125,25 +128,30 @@ def extract_aspect(text):
     has_aspect = False
 
     for token in doc:
-        # Aspectual verbs (e.g., "start", "finish", "continue")
+        # Check for specific verbs indicating aspect
         if token.pos_ == "VERB" and token.lemma_ in ["start", "finish", "continue", "begin", "stop"]:
             has_aspect = True
+            break
 
-        # Perfect tenses (have/has/had + past participle)
+        # Check for auxiliary verbs with past participles indicating aspect
         if token.lemma_ in ["have", "has", "had"] and token.dep_ == "aux" and token.head.tag_ == "VBN":
             has_aspect = True
+            break
 
-        # Progressive tenses (be + present participle)
+        # Check for auxiliary verbs with gerunds indicating aspect
         if token.lemma_ in ["be"] and token.dep_ == "aux" and token.head.tag_.startswith("VBG"):
             has_aspect = True
+            break
 
-        # Aspectual adverbs or particles (e.g., "already", "yet", "still")
+        # Check for adverbs indicating aspect
         if token.pos_ == "ADV" and token.lemma_ in ["already", "yet", "still"]:
             has_aspect = True
+            break
 
-        # Auxiliary verbs indicating aspect (e.g., "will", "have", "be")
+        # Check for auxiliary verbs indicating future or continuous aspect
         if token.pos_ == "AUX" and token.lemma_ in ["will", "have", "be"]:
             has_aspect = True
+            break
 
     return 1 if has_aspect else 0
 
@@ -151,37 +159,34 @@ def extract_status(text):
     doc = nlp(text)
     has_status = False
     
-    # Convert the document to a list of tokens
-    tokens = [token.text for token in doc]
-
-    # Define common multi-word negation phrases
+    # List of multi-word phrases indicating negation or status
     multi_word_negations = [
         "no longer", "not at all", "never again", "not really", "not yet", "not sure", "don't know"
     ]
 
-    # Check for multi-word negation phrases
+    # Check if any multi-word negation phrases are present in the text
     for phrase in multi_word_negations:
         if phrase in text:
             has_status = True
-            break  # No need to check further if a phrase is found
+            break
 
-    # Check for other negation features
-    if not has_status:  # Only check if not already found
+    # If no multi-word negations, check for single-word negations and dependency-based negations
+    if not has_status:
         for token in doc:
-            # Negation words (e.g., "not", "never", "no")
+            # Check for single-word negations
             if token.lemma_ in ["not", "never", "no"]:
                 has_status = True
-                break  # No need to check further if a negation word is found
+                break
 
-            # Negation phrases involving auxiliary or verb
+            # Check for negation dependency with verbs or auxiliaries
             if token.dep_ == "neg" and token.head.pos_ in ["AUX", "VERB"]:
                 has_status = True
-                break  # No need to check further if a negation phrase is found
+                break
 
-            # Dependency relations involving negation
+            # Check for general negation dependency
             if token.dep_ == "neg":
                 has_status = True
-                break  # No need to check further if a negation dependency is found
+                break
 
     return 1 if has_status else 0
 
@@ -189,112 +194,123 @@ def extract_appearance(text):
     doc = nlp(text)
     has_appearance = False
 
-    # Check for conjunctions and linking words
     for token in doc:
+        # Check for coordinating conjunctions (CCONJ) or specific pronouns
         if token.pos_ == "CCONJ" or (token.pos_ == "PRON" and token.lemma_ in ["which", "that"]):
             has_appearance = True
-            break  # Stop checking once the feature is found
+            break
 
-    # Check for transformational verbs or phrases
+    # If no appearance found, check for verbs indicating change
     if not has_appearance:
         for token in doc:
             if token.pos_ == "VERB" and token.lemma_ in ["become", "turn", "transform", "change"]:
                 has_appearance = True
-                break  # Stop checking once the feature is found
+                break
 
-    # Check for negated transformational verbs
+    # If still no appearance found, check for negation with verbs indicating change
     if not has_appearance:
         for token in doc:
             if token.dep_ == "neg" and token.head.pos_ == "VERB" and token.head.lemma_ in ["become", "turn", "transform", "change"]:
                 has_appearance = True
-                break  # Stop checking once the feature is found
+                break
 
     return 1 if has_appearance else 0
 
 def extract_knowledge(text):
     doc = nlp(text)
-    has_knowledge = False  # Initialize as False
+    has_knowledge = False
 
-    # Define verbs related to knowledge
+    # Set of verbs associated with knowledge and perception
     knowledge_verbs = {"know", "realize", "remember", "learn", "recognize", "understand", "believe", "think", "see", "hear", "feel", "notice", "say", "tell", "inform", "report", "observe"}
     
     for token in doc:
-        # Check if token is a verb related to knowledge
+        # Check for verbs associated with knowledge
         if token.pos_ == "VERB" and token.lemma_ in knowledge_verbs:
             has_knowledge = True
-            break  # No need to check further once a knowledge verb is found
-        
-        # Capture clauses starting with conjunctions related to knowledge
+            break
+
+        # Check for the conjunction "that" as a marker for knowledge
         if token.dep_ == "mark" and token.text.lower() in ["that"]:
             has_knowledge = True
-            break  # No need to check further once a knowledge clause is found
+            break
 
-        # Capture direct objects of knowledge verbs
+        # Check for direct objects (dobj) of verbs associated with knowledge
         if token.dep_ == "dobj" and token.head.pos_ == "VERB" and token.head.lemma_ in knowledge_verbs:
             has_knowledge = True
-            break  # No need to check further once a knowledge direct object is found
+            break
 
     return 1 if has_knowledge else 0
 
 def extract_description(text):
     doc = nlp(text)
-    has_description = False  # Initialize flag for description features
+    has_description = False
 
     for token in doc:
-        # Reporting verbs
+        # Check for verbs associated with description
         if token.pos_ == "VERB" and token.lemma_ in ["say", "tell", "explain", "describe", "report", "narrate", "inform"]:
             has_description = True
+            break
 
-        # Speech or thought clauses
+        # Check for complement clauses (ccomp) with description verbs
         if token.dep_ == "ccomp" and token.head.pos_ == "VERB" and token.head.lemma_ in ["say", "tell", "explain", "describe", "report", "narrate", "inform"]:
             has_description = True
+            break
 
-        # Quoted speech or dialogue
+        # Check for direct speech with description verbs (ROOT position)
         if token.pos_ == "VERB" and token.lemma_ in ["say", "tell", "explain", "describe", "report", "narrate", "inform"] and token.dep_ == "ROOT":
             for child in token.children:
                 if child.pos_ == "NOUN" and child.text.startswith('"'):
                     has_description = True
+                    break
 
-        # Indirect speech
+        # Check for complement clauses (ccomp) with specific verbs in ROOT position
         if token.pos_ == "VERB" and token.lemma_ in ["tell", "inform", "narrate"] and token.dep_ == "ROOT":
             for child in token.children:
                 if child.dep_ == "ccomp":
                     has_description = True
+                    break
 
-        # Dependency relations
+        # Check for description verbs with complement or open clausal complements
         if (token.dep_ == "ccomp" or token.dep_ == "xcomp") and token.head.pos_ == "VERB" and token.head.lemma_ in ["say", "tell", "explain", "describe", "report", "narrate", "inform"]:
             has_description = True
+            break
 
-        # Modifier relations
+        # Check for adjectives or adverbs modifying description verbs
         if (token.dep_ == "amod" or token.dep_ == "advmod") and token.head.pos_ == "VERB" and token.head.lemma_ in ["say", "tell", "explain", "describe", "report", "narrate", "inform"]:
             has_description = True
+            break
 
     return 1 if has_description else 0
 
 def extract_supposition(text):
     doc = nlp(text)
-    has_supposition = False  # Initialize flag for supposition features
+    has_supposition = False
 
     for token in doc:
-        # Modal verbs indicating uncertainty or future possibility
+        # Check for modal verbs indicating supposition
         if token.lemma_ in ["will", "would", "might", "may", "could", "should"]:
             has_supposition = True
+            break
 
-        # Conditional sentences (e.g., "if" as subordinating conjunction)
+        # Check for subordinating conjunction "if" indicating conditionality
         if token.pos_ == "SCONJ" and token.lemma_ == "if":
             has_supposition = True
+            break
 
-        # Verbs of prediction or expectation
+        # Check for verbs related to expectation or prediction
         if token.pos_ == "VERB" and token.lemma_ in ["expect", "predict", "assume", "suppose", "anticipate"]:
             has_supposition = True
+            break
 
-        # Epistemic adverbs and phrases (indicating likelihood or uncertainty)
+        # Check for adverbs indicating probability or possibility
         if token.pos_ == "ADV" and token.lemma_ in ["probably", "possibly", "maybe", "likely"]:
             has_supposition = True
+            break
 
-        # Dependency relations (Auxiliary verbs or adverbs related to modality)
+         # Check for dependency labels that may indicate supposition
         if token.dep_ in ["aux", "advmod", "ccomp"]:
             has_supposition = True
+            break
 
     return 1 if has_supposition else 0
 
@@ -303,34 +319,39 @@ def extract_subjectivation(text):
     has_subjectivation = False
 
     for token in doc:
-        # Personal pronouns
+        # Check for pronouns indicating subjectivity
         if token.pos_ == "PRON" and token.lemma_.lower() in ["i", "you", "he", "she", "it", "we", "they"]:
             has_subjectivation = True
+            break
 
-        # Cognitive verbs related to perception
+        # Check for verbs related to thinking or perceiving with ROOT dependency
         if token.pos_ == "VERB" and token.lemma_ in ["think", "believe", "feel", "perceive", "consider"]:
             has_subjectivation = True
-            # Sentences expressing judgments or opinions (root verbs)
             if token.dep_ == "ROOT":
                 has_subjectivation = True
+                break
 
-        # Subject-verb agreement (more general than just checking "He")
+        # Check for ROOT verbs with "VBZ" tag and subject pronouns
         if token.pos_ == "VERB" and token.dep_ == "ROOT" and token.tag_ == "VBZ":
             for child in token.children:
                 if child.dep_ == "nsubj" and child.pos_ == "PRON":
                     has_subjectivation = True
+                    break
 
-        # Check for adjectives in complement position that reflect the subject's perception
+        # Check for adjectives in complement or modifier positions related to subjectivity
         if token.pos_ == "ADJ" and token.dep_ == "ccomp":
             has_subjectivation = True
+            break
 
-        # Also handle adjectives modifying pronouns (the original check)
+        # Check if an adjective modifying a pronoun indicates subjectivation
         if token.pos_ == "ADJ" and token.dep_ == "amod" and token.head.pos_ == "PRON":
             has_subjectivation = True
+            break
 
-        # Dependency relations involving subject
+        # Check for subject and clausal subject dependencies
         if token.dep_ in ["nsubj", "csubj"]:
             has_subjectivation = True
+            break
 
     return 1 if has_subjectivation else 0
 
@@ -338,14 +359,13 @@ def extract_attitude(text):
     doc = nlp(text)
     has_attitude = False
 
-# Define verbs related to emotions or attitudes
+    # Define sets of emotion-related verbs and adjectives
     emotion_verbs = {
         "feel", "love", "hate", "enjoy", "fear", "worry", 
         "regret", "like", "dislike", "admire", "appreciate", 
         "resent", "cherish", "despise", "adore", "savor", 
         "lament", "yearn", "long", "speak", "disappoint"}
 
-    # Define adjectives indicating emotions or attitudes
     emotion_adjectives = {
         "happy", "sad", "angry", "excited", "anxious", 
         "disappointed", "elated", "frustrated", "content", 
@@ -357,40 +377,47 @@ def extract_attitude(text):
     }
     
     for token in doc:
-        # print(f"Token: {token.text}, POS: {token.pos_}, Dependency: {token.dep_}, Children: {[child.text for child in token.children]}")
-        # Emotion or psychological verbs
+        # Check if the verb indicates an emotional state
         if token.pos_ == "VERB" and token.lemma_ in emotion_verbs:
             has_attitude = True
+            break
         
-        # Adjectives indicating emotions or attitudes
+        # Check if the adjective indicates an emotional state
         if token.pos_ == "ADJ" and token.lemma_ in emotion_adjectives:
             has_attitude = True
+            break
         
-        # Adverbial modifiers of emotional verbs
+        # Check if the adverb modifies a verb indicating emotion
         if token.pos_ == "ADV" and token.dep_ == "advmod" and token.head.pos_ == "VERB" and token.head.lemma_ in emotion_verbs:
             has_attitude = True
+            break
         
-        # Perception or sensory verbs with emotion (e.g., feel + adjective)
+        # Check if a verb related to perception is modifying an adjective
         if token.pos_ == "VERB" and token.lemma_ in ["see", "hear", "feel"] and token.head.pos_ == "ADJ":
             has_attitude = True
+            break
         
-        # Exclamations or interjections
+        # Check for interjections indicating emotional reactions
         if token.pos_ == "INTJ":
             has_attitude = True
+            break
         
-        # Check if the token is an emotional verb and linked to the subject via 'nsubj'
+        # Check if an emotional verb has a subject
         if token.pos_ == "VERB" and token.lemma_ in emotion_verbs:
             for child in token.children:
-                if child.dep_ == "nsubj":  # Subject is linked via nominal subject (nsubj)
+                if child.dep_ == "nsubj":
                     has_attitude = True
+                    break
 
-        # Handle attitude adjectives linked to the subject via nominal subject (nsubj)
+        # Check if an adjective modifying a subject indicates attitude
         if token.pos_ == "ADJ" and token.dep_ == "amod" and token.head.dep_ == "nsubj":
             has_attitude = True
+            break
 
-        # Dependency relations related to attitude
+        # Check for various dependency labels indicating emotional content
         if token.dep_ in ["nsubj", "amod", "advmod"]:
             has_attitude = True
+            break
 
     return 1 if has_attitude else 0
 
@@ -398,7 +425,7 @@ def extract_comparative(text):
     doc = nlp(text)
     has_comparative = False
 
-    # Define a more comprehensive list of comparative and superlative phrases
+    # Define comparative and superlative phrases and words
     comparative_phrases = [
         "than", "compared to", "in comparison with", "versus", "in relation to",
         "as opposed to", "more than", "less than", "greater than", "smaller than",
@@ -406,39 +433,45 @@ def extract_comparative(text):
         "rather than", "instead of"
     ]
     
-    # Define comparative and superlative words
     comparative_words = {"more", "less", "better", "worse"}
     superlative_words = {"most", "least", "best", "worst"}
 
     for token in doc:
-        # Comparative adjectives and adverbs
+        # Check if the token is an adjective or adverb with comparative suffix
         if (token.pos_ == "ADJ" or token.pos_ == "ADV") and token.lemma_.endswith("er"):
             has_comparative = True
+            break
 
-        # Superlative adjectives and adverbs
+        # Check if the token is an adjective or adverb with superlative suffix
         if (token.pos_ == "ADJ" or token.pos_ == "ADV") and token.lemma_.endswith("est"):
             has_comparative = True
+            break
 
-        # Superlative words
+        # Check if the token is a known superlative word
         if token.text.lower() in superlative_words:
             has_comparative = True
+            break
 
-        # Comparative words
+        # Check if the token is a known comparative word
         if token.text.lower() in comparative_words:
             has_comparative = True
+            break
 
-        # Comparative constructions
+        # Check if the token is part of a comparative phrase
         if token.text.lower() in comparative_phrases:
             has_comparative = True
+            break
 
-        # Dependency relations related to comparatives
+        # Check if an adjective or adverb modifying another adjective or adverb indicates comparison
         if token.dep_ in ["amod", "advmod"]:
-            # Check if the head token is comparative or superlative
             if token.head.pos_ in ["ADJ", "ADV"]:
+                # Check if the head token is a comparative or superlative word
                 if token.head.lemma_.endswith("er") or token.head.text.lower() in comparative_words:
                     has_comparative = True
+                    break
                 elif token.head.lemma_.endswith("est") or token.head.text.lower() in superlative_words:
                     has_comparative = True
+                    break
 
     return 1 if has_comparative else 0
 
@@ -446,36 +479,42 @@ def extract_quantifier(text):
     doc = nlp(text)
     has_quantifier = False
 
-    # Define lists for degree expressions and proportional phrases
+    # Define expressions and phrases that indicate quantity or proportion
     degree_expressions = ["a lot of", "a little", "enough", "plenty of"]
     proportional_phrases = ["half", "most", "majority of", "part of", "fraction of"]
 
     for token in doc:
-        # Quantifiers (determiners)
+        # Check if the token is a determiner (DET) or adjective (ADJ) that denotes quantity
         if (token.pos_ == "DET" or token.pos_ == "ADJ") and token.lemma_ in ["all", "some", "many", "few", "several", "much", "little", "none"]:
             has_quantifier = True
+            break
 
-        # Numerical expressions
+        # Check if the token is a numeral (NUM), which indicates a quantity
         if token.pos_ == "NUM":
             has_quantifier = True
+            break
 
-        # Expressions of degree (multi-word expressions)
+        # Check if the token's subtree forms a known degree expression
         if token.text in ["a", "lot", "little", "plenty", "majority"]:
             span = " ".join([w.text for w in token.subtree])
             if span in degree_expressions:
                 has_quantifier = True
+                break
 
-        # Proportional phrases (multi-word expressions)
+        # Check if the token is part of a proportional phrase
         if token.text in proportional_phrases:
             has_quantifier = True
+            break
 
-        # Dependency relations related to quantifiers
+        # Check if the token is part of a quantity modifier (nummod) or determiner (det)
         if token.dep_ in ["nummod", "det"]:
             has_quantifier = True
+            break
 
-        # Adverbs indicating quantification
+        # Check if the token is an adverb indicating an approximate quantity
         if token.pos_ == "ADV" and token.lemma_ in ["almost", "nearly", "approximately", "about"]:
             has_quantifier = True
+            break
 
     return 1 if has_quantifier else 0
 
@@ -484,29 +523,35 @@ def extract_qualification(text):
     has_qualification = False
 
     for token in doc:
-        # Qualifying adjectives
+        # Check if the token is an adjective (ADJ) that modifies a noun (amod)
         if token.pos_ == "ADJ" and token.dep_ == "amod":
             has_qualification = True
+            break
 
-        # Intensifying adverbs
+        # Check if the token is an adverb (ADV) modifying an adjective (advmod)
         if token.pos_ == "ADV" and token.dep_ == "advmod" and token.head.pos_ == "ADJ":
             has_qualification = True
+            break
 
-        # Adjectival phrases
+        # Check if the token is an adjective (ADJ) modifying a noun (amod)
         if token.pos_ == "ADJ" and token.dep_ == "amod" and token.head.pos_ == "NOUN":
             has_qualification = True
+            break
 
-        # Participial adjectives
+        # Check if the token is an adjective (ADJ) with a tag indicating past participle or gerund
         if token.pos_ == "ADJ" and token.tag_ in {"VBN", "VBG", "VBP"}:
             has_qualification = True
+            break
 
-        # Dependency relations
+        # Check if the token is an adjective or adverb in a modifying relation (amod, advmod)
         if token.dep_ in ["amod", "advmod"]:
             has_qualification = True
+            break
 
-        # Qualifying clauses (relative clauses)
+        # Check if the token is a relative clause modifier (relcl)
         if token.dep_ == "relcl":
             has_qualification = True
+            break
 
     return 1 if has_qualification else 0
 
@@ -514,34 +559,38 @@ def extract_explanation(text):
     doc = nlp(text)
     has_explanation = False
 
-    # Define phrases and conjunctions related to explanations
     explanatory_conjunctions = ["because", "since", "therefore", "so"]
     explicative_phrases = ["in other words", "namely"]
 
-    # Check for explanatory clauses
     for token in doc:
+        # Check if the token is part of a relative clause (acl) or a relative clause (relcl)
         if token.dep_ in ["acl", "relcl"]:
             span = list(token.subtree)
             has_explanation = True
+            break
 
-        # Check for parenthetical phrases
+        # Check if the token is a punctuation mark that could indicate a parenthetical explanation
         if token.dep_ == "punct" and token.text in ["(", ")"]:
             parenthetical_span = list(token.subtree)
-            if len(parenthetical_span) > 1:  # Ensure there's content within parentheses
+            if len(parenthetical_span) > 1:
                 has_explanation = True
+                break
 
-        # Check for explanatory conjunctions
+        # Check if the token is a subordinating conjunction (SCONJ) used for explanations
         if token.pos_ == "SCONJ" and token.lemma_ in explanatory_conjunctions:
             has_explanation = True
+            break
 
-        # Check for appositive phrases
+        # Check if the token is part of an appositive phrase (appos)
         if token.dep_ == "appos":
             span = list(token.subtree)
             has_explanation = True
+            break
 
-        # Check for explicative phrases
+        # Check if the token is part of an explicative phrase
         if token.text.lower() in explicative_phrases:
             has_explanation = True
+            break
 
     return 1 if has_explanation else 0
 
@@ -569,18 +618,14 @@ def create_feature_vector(text):
         comparative_feature, quantifier_feature, qualification_feature, explanation_feature
         ]
 
-# Load the dataset
-df = pd.read_csv('backend/data/sample_dataset.csv')
+def extract_features_from_dataframe(df):
+    df['features'] = df['sentence'].apply(create_feature_vector)
 
-# Create feature vectors
-df['features'] = df['sentence'].apply(create_feature_vector)
+    features_df = pd.DataFrame(df['features'].tolist(), columns=[
+        'mode', 'intention', 'result', 'manner',
+        'aspect', 'status', 'appearance', 'knowledge',
+        'description', 'supposition', 'subjectivation', 'attitude',
+        'comparative', 'quantifier', 'qualification', 'explanation'
+    ])
 
-# Separate the features into columns
-features_df = pd.DataFrame(df['features'].tolist(), columns=['mode', 'intention', 'result', 'manner',
-                                                             'aspect', 'status', 'appearance', 'knowledge',
-                                                             'description', 'supposition', 'subjectivation', 'attitude',
-                                                             'comparative', 'quantifier', 'qualification', 'explanation'])
-
-print(features_df)
-# Save the feature vectors to a new CSV file
-features_df.to_csv('backend/data/feature_vectors.csv', index=False)
+    return features_df
