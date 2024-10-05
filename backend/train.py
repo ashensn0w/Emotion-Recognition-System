@@ -1,5 +1,7 @@
 from preprocessing.text_processing import *
 from preprocessing.narrative_features_eng import *
+from utils.tfidf_vectorizer import *
+from utils.save_load import *
 from rich.console import Console
 from rich.table import Table
 import pandas as pd
@@ -57,7 +59,7 @@ if filipino_data is not None and english_data is not None:
     print("Both datasets loaded successfully!\n")
     print_table(filipino_data, title="Original Filipino Data")
     print_table(english_data, title="Original English Data")
-
+# <-------------------------------------------------------------------------------------------------------------->
     # LOWERCASE CONVERSION
     convert_to_lowercase(filipino_data, dataset_name="Filipino Data")
     convert_to_lowercase(english_data, dataset_name="English Data")
@@ -67,64 +69,155 @@ if filipino_data is not None and english_data is not None:
     print_table(filipino_data, title="Filipino Data After Lowercase Conversion")
     print("\nEnglish Data After Lowercase Conversion:")
     print_table(english_data, title="English Data After Lowercase Conversion")
-
+# <-------------------------------------------------------------------------------------------------------------->
     # PUNCTUATION REMOVAL
     remove_punctuation(filipino_data, dataset_name="Filipino Data")
     remove_punctuation(english_data, dataset_name="English Data")
+
     # Print both datasets after punctuation removal
     print("Filipino Data After Punctuation Removal:")
     print_table(filipino_data, title="Filipino Data After Punctuation Removal")
     print("\nEnglish Data After Punctuation Removal:")
     print_table(english_data, title="English Data After Punctuation Removal")
-
+# <-------------------------------------------------------------------------------------------------------------->
     # NUMBERS REMOVAL
     remove_numbers(filipino_data, dataset_name="Filipino Data")
     remove_numbers(english_data, dataset_name="English Data")
+
     # Print both datasets after number removal
     print("Filipino Data After Numbers Removal:")
     print_table(filipino_data, title="Filipino Data After Numbers Removal")
     print("\nEnglish Data After Numbers Removal:")
     print_table(english_data, title="English Data After Numbers Removal")
-
+# <-------------------------------------------------------------------------------------------------------------->
     # TOKENIZATION
     tokenize_sentences(filipino_data, dataset_name="Filipino Data")
     tokenize_sentences(english_data, dataset_name="English Data")
+
     # Print both datasets after tokenization
     print("Filipino Data After Tokenization:")
     print_table(filipino_data, title="Filipino Data After Tokenization")
     print("\nEnglish Data After Tokenization:")
     print_table(english_data, title="English Data After Tokenization")
-
+# <-------------------------------------------------------------------------------------------------------------->
     # STOPWORDS REMOVAL
     remove_stopwords(filipino_data, dataset_name="Filipino Data", stopwords_list=filipino_stopwords)
     # Remove stopwords from the English dataset using NLTK's English stopwords list
     remove_stopwords(english_data, dataset_name="English Data", stopwords_list=english_stopwords)
+
     # Print both datasets after stopword removal
     print("Filipino Data After Stopwords Removal:")
     print_table(filipino_data, title="Filipino Data After Stopwords Removal")
     print("\nEnglish Data After Stopwords Removal:")
     print_table(english_data, title="English Data After Stopwords Removal")
-
+# <-------------------------------------------------------------------------------------------------------------->
     # LEMMATIZATION
     lemmatize_filo(filipino_data, dataset_name="Filipino Data")
     lemmatize_eng(english_data, dataset_name="English Data")
+
     # Print both datasets after lemmatization
     print("Filipino Data After Lemmatization:")
     print_table(filipino_data, title="Filipino Data After Lemmatization")
     print("\nEnglish Data After Lemmatization:")
     print_table(english_data, title="English Data After Lemmatization")
+# <-------------------------------------------------------------------------------------------------------------->
+    # JOIN TOKENS
+    join_tokens(filipino_data, dataset_name="Filipino Data")
+    join_tokens(english_data, dataset_name="English Data")
 
+    # Print both datasets after joining back the tokens
+    print("Filipino Data After Joining Back the Tokens:")
+    print_table(filipino_data, title="Filipino Data After Joining Back the Tokens")
+    print("\nEnglish Data After Joining Back the Tokens:")
+    print_table(english_data, title="English Data After Joining Back the Tokens")
+# <-------------------------------------------------------------------------------------------------------------->
+    #TF-IDF VECTORIZER
+
+    # Vectorize the Filipino dataset
+    filipino_tfidf_matrix, filipino_vectorizer = vectorize_with_tfidf(filipino_data)
+    filipino_feature_names = filipino_vectorizer.get_feature_names_out()
+    filipino_tfidf_df = pd.DataFrame(filipino_tfidf_matrix.toarray(), columns=filipino_feature_names)
+    filipino_tfidf_df['emotion'] = filipino_data['emotion'].values
+
+    # Save the Filipino TF-IDF DataFrame to a CSV file
+    filipino_tfidf_df.to_csv('./backend/data/feature vectors/filipino_tfidf_vectorized_data.csv', index=False)
+    print(filipino_tfidf_df.head())
+
+    # Save the Filipino vectorizer model
+    save_model_with_name(filipino_vectorizer, "filipino_tfidf_vectorizer_model.pkl")
+
+    # Vectorize the English dataset
+    english_tfidf_matrix, english_vectorizer = vectorize_with_tfidf(english_data)
+    english_feature_names = english_vectorizer.get_feature_names_out()
+    english_tfidf_df = pd.DataFrame(english_tfidf_matrix.toarray(), columns=english_feature_names)
+    english_tfidf_df['emotion'] = english_data['emotion'].values
+
+    # Save the English TF-IDF DataFrame to a CSV file
+    english_tfidf_df.to_csv('./backend/data/feature vectors/english_tfidf_vectorized_data.csv', index=False)
+    print(english_tfidf_df.head())
+
+    # Save the English vectorizer model
+    save_model_with_name(english_vectorizer, "english_tfidf_vectorizer_model.pkl")
+# <-------------------------------------------------------------------------------------------------------------->
+    # Define file path for Filipino dataset
+    filipino_narrative_file_path = './backend/data/training_data_sample_fil.csv'
+
+    # Load the Filipino dataset again
+    filipino_data_narrative = load_dataset(filipino_narrative_file_path)
+
+    # Convert the 'sentence' column from Filipino dataset to a list of sentences
+    filipino_sentences = filipino_data_narrative['sentence'].tolist()
+
+    # GENERATE FEATURE VECTORS FROM FILIPINO NARRATIVE FEATURES
+    fil_features_df = extract_features_from_dataframe(filipino_data_narrative)
+
+    # Print the features DataFrame
+    print(fil_features_df)
+
+    # Save the features DataFrame to CSV
+    fil_features_df.to_csv('./backend/data/feature vectors/filipino_narratives_vectorized_data.csv.csv', index=False)
+# <-------------------------------------------------------------------------------------------------------------->
     # Define file path for English dataset
     english_narrative_file_path = './backend/data/training_data_sample_eng.csv'
-    print("\n")
+
     # Load the English dataset again
     english_data_narrative = load_dataset(english_narrative_file_path)
+
     # Convert the 'sentence' column from English dataset to a list of sentences
     english_sentences = english_data_narrative['sentence'].tolist()
 
     # GENERATE FEATURE VECTORS FROM ENGLISH NARRATIVE FEATURES
-    features_df = extract_features_from_dataframe(english_data_narrative)
+    eng_features_df = extract_features_from_dataframe(english_data_narrative)
+
     # Print the features DataFrame
-    print(features_df)
+    print(eng_features_df)
+
     # Save the features DataFrame to CSV
-    features_df.to_csv('./backend/data/feature_vectors_eng.csv', index=False)
+    eng_features_df.to_csv('./backend/data/feature vectors/english_narratives_vectorized_data.csv', index=False)
+# <-------------------------------------------------------------------------------------------------------------->
+    # Combine TF-IDF and Narrative Feature Vectors for Filipino Dataset
+    fil_combined_feature_vectors = pd.concat([filipino_tfidf_df.drop(columns='emotion'), fil_features_df], axis=1)
+    fil_combined_feature_vectors['emotion'] = filipino_tfidf_df['emotion'].values
+
+    # Save the combined Filipino feature vectors to CSV
+    fil_combined_feature_vectors.to_csv('./backend/data/feature vectors/fil_combined_feature_vectors.csv', index=False)
+    print(fil_combined_feature_vectors.head())
+
+    # Combine TF-IDF and Narrative Feature Vectors for English Dataset
+    eng_combined_feature_vectors = pd.concat([english_tfidf_df.drop(columns='emotion'), eng_features_df], axis=1)
+    eng_combined_feature_vectors['emotion'] = english_tfidf_df['emotion'].values
+
+    # Save the combined English feature vectors to CSV
+    eng_combined_feature_vectors.to_csv('./backend/data/feature vectors/eng_combined_feature_vectors.csv', index=False)
+    print(eng_combined_feature_vectors.head())
+
+    # Combine Filipino and English Combined Feature Vectors into a Single DataFrame
+    combined_feature_vectors = pd.concat([fil_combined_feature_vectors, eng_combined_feature_vectors], ignore_index=True)
+
+    # Fill empty cells with 0.0
+    combined_feature_vectors.fillna(0.0, inplace=True)
+
+    # Save the combined feature vectors to a single CSV file
+    combined_feature_vectors.to_csv('./backend/data/feature vectors/combined_feature_vectors.csv', index=False)
+    print(combined_feature_vectors.head())
+# <-------------------------------------------------------------------------------------------------------------->

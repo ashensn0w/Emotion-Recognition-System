@@ -1,13 +1,11 @@
 import spacy
 import pandas as pd
 
-# Load the language model
 nlp = spacy.load("xx_ent_wiki_sm")
 
 def extract_mode(text):
     doc = nlp(text)
     
-    # Define keywords for each mode
     mode_keywords = {
         'Possibility': ['maaari', 'pwedeng','pwede'],
         'Impossibility': ['hindi', 'walang','wala'],
@@ -21,8 +19,7 @@ def extract_mode(text):
         'Necessity': False,
         'Prohibition': False
     }
-    
-    # Check for mode keywords in the text
+
     for token in doc:
         if token.text.lower() in mode_keywords['Possibility']:
             detected_modes['Possibility'] = True
@@ -33,7 +30,6 @@ def extract_mode(text):
         elif token.text.lower() in mode_keywords['Prohibition']:
             detected_modes['Prohibition'] = True
         
-        # Additional dependency parsing checks for modal verbs
         if token.dep_ in ['acomp', 'xcomp', 'ccomp'] and token.head.text.lower() in mode_keywords['Possibility']:
             detected_modes['Possibility'] = True
         elif token.dep_ in ['acomp', 'xcomp', 'ccomp'] and token.head.text.lower() in mode_keywords['Impossibility']:
@@ -41,11 +37,9 @@ def extract_mode(text):
 
     return 1 if any(detected_modes.values()) else 0
 
-
 def extract_intention(text):
     doc = nlp(text)
     
-    # Define keywords for each intention feature
     intention_keywords = {
         'Infinitive Verbs': ['mag-aaral', 'pumunta'],
 
@@ -75,7 +69,6 @@ def extract_intention(text):
         'Auxiliary Verbs': False
     }
     
-    # Check for intention keywords in the text
     for token in doc:
         if token.text.lower() in intention_keywords['Infinitive Verbs']:
             detected_intentions['Infinitive Verbs'] = True
@@ -86,7 +79,6 @@ def extract_intention(text):
         elif token.text.lower() in intention_keywords['Auxiliary Verbs']:
             detected_intentions['Auxiliary Verbs'] = True
         
-        # Additional dependency parsing checks for intention-related verbs
         if token.dep_ in ['acl', 'amod', 'xcomp'] and token.head.text.lower() in intention_keywords['Modal Verbs']:
             detected_intentions['Modal Verbs'] = True
         elif token.dep_ in ['acl', 'xcomp'] and token.text.lower() in intention_keywords['Infinitive Verbs']:
@@ -94,11 +86,9 @@ def extract_intention(text):
 
     return 1 if any(detected_intentions.values()) else 0
 
-
 def extract_result(text):
     doc = nlp(text)
     
-    # Define keywords for result feature
     result_keywords = {
         'Completed Actions': ['natapos', 'nagawa', 'nakuha','nagresulta', 'humantong', 'nagdulot', 
         'nagbunga', 'naghatid', 'nagbigay-daan', 'naging', 'naging sanhi', 
@@ -119,14 +109,12 @@ def extract_result(text):
         'Perfect Aspect Verbs': False
     }
     
-    # Check for result keywords in the text
     for token in doc:
         if token.text.lower() in result_keywords['Completed Actions']:
             detected_results['Completed Actions'] = True
         elif token.text.lower() in result_keywords['Perfect Aspect Verbs']:
             detected_results['Perfect Aspect Verbs'] = True
         
-        # Additional dependency parsing checks for result-related verbs
         if token.dep_ in ['attr', 'ccomp', 'acomp'] and token.head.text.lower() in result_keywords['Completed Actions']:
             detected_results['Completed Actions'] = True
         elif token.dep_ in ['attr', 'xcomp'] and token.text.lower() in result_keywords['Perfect Aspect Verbs']:
@@ -134,21 +122,19 @@ def extract_result(text):
 
     return 1 if any(detected_results.values()) else 0
 
-
 def extract_manner(text):
     doc = nlp(text)
     
-    # Define keywords for manner feature
     manner_keywords = {
         'Adverbs': ['maingat', 'maayos', 'mabilis', 'tahimik', 'malumanay', 
         'mahinahon', 'masinsin', 'magaan', 'mabagal', 'matapang', 
         'malakas', 'masigla', 'puspusan', 'paggalang', 'matiyaga', 
-        'tapat', 'malasakit', 'mabait', 'matapang', 'mahinahon','masinsinan', 'mapanuri', 'masusing'],  # Add more as needed
+        'tapat', 'malasakit', 'mabait', 'matapang', 'mahinahon','masinsinan', 'mapanuri', 'masusing'],
 
         'Adjectives as Adverbs': ['maganda','masikap', 'pagsisikap', 'masigasig', 'masinop', 'masipag', 
         'kakayahan', 'tiwala', 'kalooban', 'pag-asa', 'pagmamahal', 'respeto', 'malakas', 'maisip', 
         'pagkilala', 'pagsasaalang-alang', 'madamdamin', 'pagsusumikap', 'pagnanais', 'kasiglahan', 'kalakasan', 
-        'kasipagan', 'pangarap',]  # Add more as needed
+        'kasipagan', 'pangarap',]
     }
     
     detected_manners = {
@@ -156,14 +142,12 @@ def extract_manner(text):
         'Adjectives as Adverbs': False
     }
     
-    # Check for manner keywords in the text
     for token in doc:
         if token.text.lower() in manner_keywords['Adverbs']:
             detected_manners['Adverbs'] = True
         elif token.text.lower() in manner_keywords['Adjectives as Adverbs']:
             detected_manners['Adjectives as Adverbs'] = True
         
-        # Additional dependency parsing checks for manner
         if token.dep_ in ['advmod'] and token.text.lower() in manner_keywords['Adverbs']:
             detected_manners['Adverbs'] = True
         elif token.dep_ in ['amod'] and token.text.lower() in manner_keywords['Adjectives as Adverbs']:
@@ -171,18 +155,17 @@ def extract_manner(text):
 
     return 1 if any(detected_manners.values()) else 0
 
-
 def extract_aspect(text):
     doc = nlp(text)
     
-    # Define keywords for aspect feature
     aspect_keywords = {
-        'Aspectual Markers': ['nag', 'naka', 'nagsa'],  # Add more as needed
+        'Aspectual Markers': ['nag', 'naka', 'nagsa'],
+        
         'Verbal Affixes': ['nag-aaral', 'natapos','patuloy','nagpatuloy', 'patuloy na nangyayari', 
         'nangyayari', 'nagpapatuloy', 'nagsimula', 'nagwakas', 
         'nagsisimula', 'natatapos', 'nagaganap', 'patuloy na', 'nangyayari pa', 
         'nagsisimula pa lang', 'nagsimula na', 'patuloy na nagaganap', 
-        'nagtatapos', 'nagsimula', 'natapos na', ]  # Add more as needed
+        'nagtatapos', 'nagsimula', 'natapos na', ]
     }
     
     detected_aspects = {
@@ -190,14 +173,12 @@ def extract_aspect(text):
         'Verbal Affixes': False
     }
     
-    # Check for aspect keywords in the text
     for token in doc:
         if token.text.lower() in aspect_keywords['Aspectual Markers']:
             detected_aspects['Aspectual Markers'] = True
         elif token.text.lower() in aspect_keywords['Verbal Affixes']:
             detected_aspects['Verbal Affixes'] = True
         
-        # Additional dependency parsing checks for aspect
         if token.dep_ in ['acl', 'amod'] and any(affix in token.text.lower() for affix in aspect_keywords['Aspectual Markers']):
             detected_aspects['Aspectual Markers'] = True
         elif token.dep_ in ['acl', 'xcomp'] and any(affix in token.text.lower() for affix in aspect_keywords['Verbal Affixes']):
@@ -205,11 +186,9 @@ def extract_aspect(text):
 
     return 1 if any(detected_aspects.values()) else 0
 
-
 def extract_status(text):
     doc = nlp(text)
     
-    # Define keywords for status feature
     status_keywords = {
         'Negation Words': ['hindi', 'wala', 'huwag']
     }
@@ -218,25 +197,21 @@ def extract_status(text):
         'Negation Words': False
     }
     
-    # Check for status keywords in the text
     for token in doc:
         if token.text.lower() in status_keywords['Negation Words']:
             detected_status['Negation Words'] = True
         
-        # Additional dependency parsing checks for negation
         if token.dep_ in ['neg'] and token.text.lower() in status_keywords['Negation Words']:
             detected_status['Negation Words'] = True
 
     return 1 if any(detected_status.values()) else 0
 
-
 def extract_appearance(text):
     doc = nlp(text)
     
-    # Define keywords for appearance feature
     appearance_keywords = {
         'Transition Words': ['naging', 'pinalitan', 'nagbago','nagpakita', 
-        'nagsilbing', 'nagmumungkahi', 'nagpakita', 'nagpamalas', 'nagpahayag', 
+        'nagsilbing', 'nagmumungkahi', 'nagpamalas', 'nagpahayag', 
         'nagbubukas', 'nagbibigay', 'nagsasalita', 'nag-aalok', 'naglalaman', 'nagsasabi', 
         'nagsusumpa', 'nag-aangkin', 'nagpapakita ng', 'nagpapahayag ng','naglalantad ng', 
         'nagsasalita ng', 'nag-aalok ng', 'naglalaman ng','nagpapatunay ng']
@@ -246,22 +221,18 @@ def extract_appearance(text):
         'Transition Words': False
     }
     
-    # Check for appearance keywords in the text
     for token in doc:
         if token.text.lower() in appearance_keywords['Transition Words']:
             detected_appearance['Transition Words'] = True
         
-        # Additional dependency parsing checks for appearance
         if token.dep_ in ['ccomp', 'acl'] and token.text.lower() in appearance_keywords['Transition Words']:
             detected_appearance['Transition Words'] = True
 
     return 1 if any(detected_appearance.values()) else 0
 
-
 def extract_knowledge(text):
     doc = nlp(text)
     
-    # Define keywords for knowledge feature
     knowledge_keywords = {
         'Knowledge Verbs': ['alam', 'nauunawaan','nalaman','nalalaman', 
         'napagtanto', 'natutunan', 'kilala', 'nalaman', 'nasusundan', 'nauunawaan', 
@@ -274,22 +245,18 @@ def extract_knowledge(text):
         'Knowledge Verbs': False
     }
     
-    # Check for knowledge keywords in the text
     for token in doc:
         if token.text.lower() in knowledge_keywords['Knowledge Verbs']:
             detected_knowledge['Knowledge Verbs'] = True
         
-        # Additional dependency parsing checks for knowledge
         if token.dep_ in ['ccomp', 'acl'] and token.text.lower() in knowledge_keywords['Knowledge Verbs']:
             detected_knowledge['Knowledge Verbs'] = True
 
     return 1 if any(detected_knowledge.values()) else 0
 
-
 def extract_description(text):
     doc = nlp(text)
     
-    # Define keywords for description feature
     description_keywords = {
         'Descriptive Phrases': ['sinabi', 'nasabi', 'sinasabi','naglarawan','inilarawan', 
         'nagsalaysay', 'nagdetalye','nagpaliwanag', 'nagpapakita', 
@@ -301,12 +268,10 @@ def extract_description(text):
         'Descriptive Phrases': False
     }
     
-    # Check for description keywords in the text
     for token in doc:
         if token.text.lower() in description_keywords['Descriptive Phrases']:
             detected_descriptions['Descriptive Phrases'] = True
         
-        # Additional dependency parsing checks for description
         if token.dep_ in ['amod', 'acomp'] and token.text.lower() in description_keywords['Descriptive Phrases']:
             detected_descriptions['Descriptive Phrases'] = True
 
@@ -315,7 +280,6 @@ def extract_description(text):
 def extract_supposition(text):
     doc = nlp(text)
     
-    # Define keywords for supposition feature
     supposition_keywords = {
         'Supposition Modal Verbs': ['maaaring', 'baka', 'sana','akala', 'pagpapalagay', 'kumpiyansa', 'hinuha', 
         'palagay', 'imahinasyon', 'halimbawa', 'sabi', 'tulad', 
@@ -328,22 +292,18 @@ def extract_supposition(text):
         'Supposition Modal Verbs': False
     }
     
-    # Check for supposition keywords in the text
     for token in doc:
         if token.text.lower() in supposition_keywords['Supposition Modal Verbs']:
             detected_suppositions['Supposition Modal Verbs'] = True
         
-        # Additional dependency parsing checks for supposition
         if token.dep_ in ['xcomp', 'acl'] and token.text.lower() in supposition_keywords['Supposition Modal Verbs']:
             detected_suppositions['Supposition Modal Verbs'] = True
 
     return 1 if any(detected_suppositions.values()) else 0
 
-
 def extract_subjectivation(text):
     doc = nlp(text)
     
-    # Define keywords for subjectivation feature
     subjectivation_keywords = {
         'Perception Verbs': ['nagbigay','nagpakita', 'nagsalaysay', 'naglarawan', 
         'nagsalita', 'nagsabi', 'naikwento', 'nagsasalaysay ', 'nagbigay', 
@@ -354,27 +314,23 @@ def extract_subjectivation(text):
         'Perception Verbs': False
     }
     
-    # Check for subjectivation keywords in the text
     for token in doc:
         if token.text.lower() in subjectivation_keywords['Perception Verbs']:
             detected_subjectivation['Perception Verbs'] = True
         
-        # Additional dependency parsing checks for subjectivation
         if token.dep_ in ['ccomp', 'xcomp'] and token.text.lower() in subjectivation_keywords['Perception Verbs']:
             detected_subjectivation['Perception Verbs'] = True
 
     return 1 if any(detected_subjectivation.values()) else 0
 
-
 def extract_attitude(text):
     doc = nlp(text)
     
-    # Define keywords for attitude feature
     attitude_keywords = {
         'Emotion-related Adjectives': ['masaya', 'nalungkot', 'nagulat',
         'nagustuhan', 'hindi nagustuhan', 'pabor', 'hindi pabor', 
         'sumasang-ayon', 'hindi sumasang-ayon', 'natuwa', 'nainis', 
-        'nagalit', 'nagagalit', 'masaya', 'malungkot', 'nakakaawa', 
+        'nagalit', 'nagagalit', 'malungkot', 'nakakaawa', 
         'nag-aalala', 'natuwa', 'nabahala', 'nag-alala', 'nagagalit', 
         'nag-iba ng pananaw', 'nagiging positibo', 'nagiging negatibo', 
         'nagiging neutral', 'nagiging maasahin', 'nagiging pesimista', 
@@ -385,22 +341,18 @@ def extract_attitude(text):
         'Emotion-related Adjectives': False
     }
     
-    # Check for attitude keywords in the text
     for token in doc:
         if token.text.lower() in attitude_keywords['Emotion-related Adjectives']:
             detected_attitudes['Emotion-related Adjectives'] = True
         
-        # Additional dependency parsing checks for attitude
         if token.dep_ in ['amod', 'acomp'] and token.text.lower() in attitude_keywords['Emotion-related Adjectives']:
             detected_attitudes['Emotion-related Adjectives'] = True
 
     return 1 if any(detected_attitudes.values()) else 0
 
-
 def extract_comparative(text):
     doc = nlp(text)
     
-    # Define keywords for comparative feature
     comparative_keywords = {
         'Comparative Adjectives': ['mas', 'higit','higit na' 'kaysa','mas mabuti', 
         'mas masama', 'mas mataas', 'mas mababa', 'mas mabilis', 'mas mabagal', 'mas matanda', 
@@ -413,50 +365,41 @@ def extract_comparative(text):
         'Comparative Adjectives': False
     }
     
-    # Check for comparative keywords in the text
     for token in doc:
         if token.text.lower() in comparative_keywords['Comparative Adjectives']:
             detected_comparative['Comparative Adjectives'] = True
         
-        # Additional dependency parsing checks for comparative
         if token.dep_ in ['amod', 'acomp'] and token.text.lower() in comparative_keywords['Comparative Adjectives']:
             detected_comparative['Comparative Adjectives'] = True
 
     return 1 if any(detected_comparative.values()) else 0
 
-
 def extract_quantifier(text):
     doc = nlp(text)
     
-    # Define keywords for quantifier feature
     quantifier_keywords = {
         'Quantifiers': ['ang lahat', 'ilan', 'wala', 'marami', 'konti',
-        'ilan', 'karamihan', 'kaunti', 'kalahatan', 
-        'iba', 'madami', 'mas marami', 'pinaka marami', 'kaunti', 
-        'ilan', 'wala', 'marami', 'konti', 'kaunti', 'lahat', 
-        'marami sa', 'konti sa', 'ang lahat', 'ilang','mas']
+        'karamihan', 'kaunti', 'kalahatan', 
+        'iba', 'madami', 'mas marami', 'pinaka marami',
+        'lahat', 'marami sa', 'konti sa', 'ang lahat', 'ilang','mas']
     }
     
     detected_quantifiers = {
         'Quantifiers': False
     }
     
-    # Check for quantifier keywords in the text
     for token in doc:
         if token.text.lower() in quantifier_keywords['Quantifiers']:
             detected_quantifiers['Quantifiers'] = True
         
-        # Additional dependency parsing checks for quantifiers
         if token.dep_ in ['amod', 'nummod'] and token.text.lower() in quantifier_keywords['Quantifiers']:
             detected_quantifiers['Quantifiers'] = True
 
     return 1 if any(detected_quantifiers.values()) else 0
 
-
 def extract_qualification(text):
     doc = nlp(text)
     
-    # Define keywords for qualification feature
     qualification_keywords = {
         'Qualifying Adjectives/Adverbs': ['napaka', 'sobra', 'talaga','mas mahusay', 
         'hindi mahusay', 'magaling', 'hindi magaling', 'kasanayan', 'hindi kasanayan', 'sanay', 'hindi sanay', 
@@ -468,22 +411,18 @@ def extract_qualification(text):
         'Qualifying Adjectives/Adverbs': False
     }
     
-    # Check for qualification keywords in the text
     for token in doc:
         if token.text.lower() in qualification_keywords['Qualifying Adjectives/Adverbs']:
             detected_qualifications['Qualifying Adjectives/Adverbs'] = True
         
-        # Additional dependency parsing checks for qualification
         if token.dep_ in ['amod', 'advmod'] and token.text.lower() in qualification_keywords['Qualifying Adjectives/Adverbs']:
             detected_qualifications['Qualifying Adjectives/Adverbs'] = True
 
     return 1 if any(detected_qualifications.values()) else 0
 
-
 def extract_explanation(text):
     doc = nlp(text)
     
-    # Define keywords for explanation feature
     explanation_keywords = {
         'Explanation Phrases': ['dahil', 'upang', 'sapagkat','nagpaliwanag','nagpapaliwanag', 'nangatwiran', 
         'nagdiin', 'nagpakita', 'nagpapahayag', 'nagbibigay']
@@ -493,17 +432,14 @@ def extract_explanation(text):
         'Explanation Phrases': False
     }
     
-    # Check for explanation keywords in the text
     for token in doc:
         if token.text.lower() in explanation_keywords['Explanation Phrases']:
             detected_explanations['Explanation Phrases'] = True
         
-        # Additional dependency parsing checks for explanation
         if token.dep_ in ['mark', 'ccomp'] and token.text.lower() in explanation_keywords['Explanation Phrases']:
             detected_explanations['Explanation Phrases'] = True
 
     return 1 if any(detected_explanations.values()) else 0
-
 
 def create_feature_vector(text):
     mode_feature = extract_mode(text)
@@ -529,18 +465,14 @@ def create_feature_vector(text):
         comparative_feature, quantifier_feature, qualification_feature, explanation_feature
         ]
 
-# Load the dataset
-df = pd.read_csv('backend/data/sample_dataset.csv')
+def extract_features_from_dataframe(df):
+    df['features'] = df['sentence'].apply(create_feature_vector)
 
-# Create feature vectors
-df['features'] = df['sentence'].apply(create_feature_vector)
+    features_df = pd.DataFrame(df['features'].tolist(), columns=[
+        'mode', 'intention', 'result', 'manner',
+        'aspect', 'status', 'appearance', 'knowledge',
+        'description', 'supposition', 'subjectivation', 'attitude',
+        'comparative', 'quantifier', 'qualification', 'explanation'
+    ])
 
-# Separate the features into columns
-features_df = pd.DataFrame(df['features'].tolist(), columns=['mode', 'intention', 'result', 'manner',
-                                                             'aspect', 'status', 'appearance', 'knowledge',
-                                                             'description', 'supposition', 'subjectivation', 'attitude',
-                                                             'comparative', 'quantifier', 'qualification', 'explanation'])
-
-print(features_df)
-# Save the feature vectors to a new CSV file
-features_df.to_csv('backend/data/feature_vectors_fil.csv', index=False)
+    return features_df
