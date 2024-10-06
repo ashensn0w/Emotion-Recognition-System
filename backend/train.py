@@ -2,6 +2,7 @@ from preprocessing.text_processing import *
 from preprocessing.narrative_features_eng import *
 from utils.tfidf_vectorizer import *
 from utils.save_load import *
+from utils.resampling import *
 from rich.console import Console
 from rich.table import Table
 import pandas as pd
@@ -223,3 +224,26 @@ if filipino_data is not None and english_data is not None:
 
     # Preview the first few rows of the final combined DataFrame
     print(combined_df.head())
+# <-------------------------------------------------------------------------------------------------------------->
+    # RANDOM RESAMPLING
+
+    # Separate features (X) and target (y)
+    X = combined_df.drop(columns=['emotion'])
+    y = combined_df['emotion']
+
+    print("Class distribution before resampling:")
+    print(y.value_counts())
+    print("\nData before resampling:")
+    print(combined_df.head())
+
+    # Call the resampling function from resampling.py
+    X_resampled, y_resampled = resample_data(X, y)
+
+    # Create the resampled DataFrame
+    resampled_df = pd.concat([pd.DataFrame(X_resampled, columns=X.columns), pd.DataFrame(y_resampled, columns=['emotion'])], axis=1)
+
+    # Save the resampled DataFrame to a CSV file
+    resampled_df.to_csv('./backend/data/resampled_combined_df.csv', index=False)
+
+    print("\nData after resampling:")
+    print(resampled_df.head())
