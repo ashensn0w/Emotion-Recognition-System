@@ -141,7 +141,7 @@ if data is not None:
     print(final_combined_df.head())
 
     # Save the final combined features DataFrame to CSV
-    final_combined_df.to_csv('./backend/data/feature vectors/complete_vectorized_data.csv', index=False)
+    final_combined_df.to_csv('./backend/data/feature vectors/trained_complete_vectorized_data.csv', index=False)
 # <-------------------------------------------------------------------------------------------------------------->
     # RANDOM RESAMPLING
 
