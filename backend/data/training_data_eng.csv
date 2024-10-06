@@ -2,7 +2,7 @@
 """Your tibialis anterior is damaged.""",fear
 """Sadly, he's in the West.""",sadness
 """Sorry.""",sadness
-"""It’s just a joke.""",joy
+"""It's just a joke.""",joy
 """It's nice to see you again, Rainie.""",joy
 Uh oh. I smell trouble.,fear
 "Then all of a sudden, I sensed an incredible amount of pressure and all of us summoned and drew our weapons, pointing them to each other, then the table and chairs were suddenly frozen.",fear
@@ -244,8 +244,7 @@ I felt guilty and sorry because I could've done something to save them yet I was
 """You will never be forgotten, Vince.""",sadness
 """Obviously, she's not listening.""",anger
 "Since the four of you already completed your core subjects, you only need to do that thing to graduate. I'm expecting good results from you.",joy
-"""Stop feeding her lies, Kana,"" Hayate retorted, ""or she'll believe in everything you say.""
-",anger
+"""Stop feeding her lies, Kana,"" Hayate retorted, ""or she'll believe in everything you say.""",anger
 """Excuse me? I don't lie.""",anger
 """Are you sure?"" Hiroshi butted in while adjusting his glasses. ""Do you want me to enumerate the lies you have said since you started living here?""",anger
 """Stop it, you idiots!"" I said while glaring at those two.",anger
@@ -291,10 +290,9 @@ Why? Are you shy? Aren't you a cute kid?,joy
 """Not really,"" he retorted. ""But hey, no need to worry. This school is actually a chakushoku.""",joy
 """Who are you?"" I asked using my inner voice and I saw a student who turned her head to our direction with an uneasy expression. ""Found you.""",fear
 """But I remember feeling something odd when I looked at his daughters,"" sagot niya. ""Their skin were quite bluish.""",sadness
-"""What happened? Why aren't you moving?"" "" I asked, worried and distraught about his condition.",fear
+"""What happened? Why aren't you moving?"" I asked, worried and distraught about his condition.",fear
 """N-neuromuscular blocker,"" he said with difficulty. ""P-paralyzing agent.""",fear
-"""This man is a nut job,"" Kana remarked while digging her nail on her skin.
-",anger
+"""This man is a nut job,"" Kana remarked while digging her nail on her skin.",anger
 """Agreed. How should we take him down?""",fear
 """Hayate said we should be careful. This guy has medical knowledge and can use it to his advantage just like what happened to Hayate.""",fear
 """Should we kill him? He's a psycho,"" Kana suggested but I disagreed.",anger
@@ -310,11 +308,9 @@ It did but it was already too late.,fear
 """A-Anyway . . ."" I said, breaking the silence. ""What happened to the weapons? Where are they?""",fear
 """You idiot!"" I yelled after giving him a punch in the head.",anger
 """Would it matter? You'd still summon your weapons if a Shinigami appears,"" he argued.",anger
-"""Old man? Hey, have some respect! Sir Aiwa is your grandfather!""
-",anger
+"""Old man? Hey, have some respect! Sir Aiwa is your grandfather!""",anger
 """He said I can only have access to the restricted rooms and laboratories in the Technology department when I'm already a graduate. He didn't even retract his order after his death. What kind of nonsense is that?""",anger
-"""Why are you even reminiscing that?"" Hayate asked. Oh. So he decided to read my mind.
-",anger
+"""Why are you even reminiscing that?"" Hayate asked. Oh. So he decided to read my mind.",anger
 Heh. Are you embarrassed? How cute.,joy
 "What do you want, Shinigami?"" I boldly asked while gripping my swords.",anger
 """Shinigamis . . . are the people I despise the most,"" she muttered. Her green eyes gleamed with hatred as she threw the arm to the ground. ""I will hunt them down. All of them.""",anger
@@ -423,16 +419,13 @@ I don't know what to do anymore. I should've killed myself the moment they have 
 """I wish I can stay here a bit longer,"" she mumbled while looking at those two. ",sadness
 I can't. You know that I only stayed here because of my personal matters.,sadness
 """I've been staying here for more than a year, and honestly, I have enjoyed my time here that I almost forgot I have a life outside this campus.""",sadness
-"""I know that sending off a friend is hard, even unbearable for some,"" he said and I don't know if my eyes were just playing tricks on me but I could see the sadness on his face. ""But there are times that you have to.""
-",sadness
+"""I know that sending off a friend is hard, even unbearable for some,"" he said and I don't know if my eyes were just playing tricks on me but I could see the sadness on his face. ""But there are times that you have to.""",sadness
 """Well, I guess this is goodbye,"" she said.",sadness
 """Well, I'll be returning the name Kana since it's only an alternative name, but you can still call me that,"" she said.",joy
 """Besides fragrance, one of the kanjis means flowing and living,"" he explained. ""You should live your life and let your time flow from now on.""",joy
 """I like that,"" she remarked as she extended her hand to him. ""I'll miss our fights.""",joy
-"It's been more than a decade since that dreadful night. Seeing my parents die in front of me was enough to give me nightmares every single day, but what I regretted the most was failing to protect my sister.
-",sadness
-"""Do you think Mom and Dad are okay?"" six-year old Krystal would ask 
-every time there were commotions outside our house.",sadness
+"It's been more than a decade since that dreadful night. Seeing my parents die in front of me was enough to give me nightmares every single day, but what I regretted the most was failing to protect my sister.",sadness
+"""Do you think Mom and Dad are okay?"" six-year old Krystal would ask every time there were commotions outside our house.",sadness
 "I would force a smile and say, ""of course. They are strong. Really strong.""",sadness
 """Don't worry. If anything happens, I'll protect you with all my life and I'll always be by your side. Is that okay with you?""",joy
 "She would nod enthusiastically and during those moments, I felt assured. At least, I had her with me. I wasn't alone.",joy
@@ -967,10 +960,10 @@ Ah . . . I think it's time . . .' she muttered.,fear
 "Mitsuo coughed blood but he remained looking in the sky, the rain falling down his face.",sadness
 "His eyes were already closed but I could still hear his faint voice in my head. Run away, Nathalie,' he mumbled, a smile of resignation on his face. Please don't look back. Save yourself. Save yourself . . . Don't worry . . . I . . . I will always remember you . . . N-Nathalie . . .",fear
 """Assist Naomi!"" shouted Mayu.",anger
-"Don't look back,' Akira said, repeating Mitsuo's words. 'Go forward and leave this place, Naomi.'",fear
+"""Don't look back,"" Akira said, repeating Mitsuo's words. ""Go forward and leave this place, Naomi.""",fear
 Please be safe.,fear
-"Protect everyone,' he ordered in a blood-chilling tone. I don't want to lose another life tonight.",anger
-"We will,' I replied. 'So please, end this war, Hideo.'",fear
+"""Protect everyone,"" he ordered in a blood-chilling tone. I don't want to lose another life tonight.",anger
+"""We will,"" I replied. ""So please, end this war, Hideo.""",fear
 """They are safe,"" I whispered as I tapped his shoulder. Don't worry. Naomi is strong and Hideo will take care of your son . . . My voice faltered and tears started streaming down my face. You will stay alive in our memories. You can rest now.",sadness
 """This is the only time we can honor their death,"" he said, his voice filled with grief.",sadness
 The Council will surely question their ties and loyalty.,fear
@@ -993,7 +986,7 @@ Is . . . is she . . . alive . . .,fear
 Y-you . . .,sadness
 """Just tell me!"" he cried in anger.",sadness
 "I stifled a sob and slowly shook my head. ""Akemi . . . s-she's . . . she's . . . dead.""",fear
-"""No . . ."" he muttered, a pained expression on his face. That can't be true . . . s-she . . .",sadness
+"""No . . ."" he muttered, a pained expression on his face. ""That can't be true . . . s-she . . .""",sadness
 He tried to stand despite the amount of blood he had lost and grabbed me by my shirt's collar. You . . . d-don't lie to me or I'll fucking kill you.,anger
 He was bleeding too much. I was physically and emotionally drained but I had to help him.,fear
 """This would conceal her presence even to trackers,"" Mayu said after I suggested to let Akemi live in my cabin, ""though hers is too strong to be masked completely.""",sadness
@@ -1014,7 +1007,7 @@ I don't care. I'll kill them if I have to—,anger
 "I didn't want anyone to 
 see me crying anymore. ""Was she happy here?"" he suddenly asked.",fear
 """She was,"" I muttered, reminiscing the times we were still with her.",sadness
-Save me . . . please . . .' Rielle cried while clutching my arm. One of her eyes was missing and blood was gushing from her eyes socket. 'I want to live . . . Michiko . . .',fear
+"""Save me . . . please . . ."" Rielle cried while clutching my arm. One of her eyes was missing and blood was gushing from her eyes socket. ""I want to live . . . Michiko . . .""",fear
 """Yeah. I don't need another patient,"" she said, a hint of melancholy in her voice.",anger
 """She needs rest,"" she replied. After . . . after what happened, she lost control over her sixth sense. Hearing everything and everyone around her must have been too much.",sadness
 "She smiled. ""Mayu is quite busy. Take care of him.""",sadness
@@ -1039,7 +1032,7 @@ And did he just call someone an old man? Was he referring to the head of Shima?,
 How dare you dishonor his death. How dare all of you to reject his existence in this place.,anger
 I wondered if that was his sixth sense. What exactly did he do for them to act like that?,anger
 I'll let you feel the wrath of the Jikko clan. I will make sure you will never see the peace you're yearning for.,anger
-"""I will kill the Shinigamis who made him suffer,"" he seethed in anger, and I will tear this place down. Call us traitors, I don't care. You are all traitors to our eyes. The Jikko is now your enemies.",anger
+"""I will kill the Shinigamis who made him suffer,"" he seethed in anger, ""and I will tear this place down. Call us traitors, I don't care. You are all traitors to our eyes. The Jikko is now your enemies.""",anger
 """Thank you for acknowledging my grandson,"" he said and I saw Hideo's shoulders flinch.",sadness
 """If it weren't for you and his . . . friends, this place would already be in ruins,"" the old guy said.",sadness
 I'll give you a chance. Listen to this young lad.,sadness
@@ -1066,14 +1059,14 @@ Not until I'm confident enough to let you go.,sadness
 "Thank you,' he said and I smiled upon hearing that.",joy
 """W-why . . ."" he asked with difficulty, ""can't I . . . m-move my body . . .""",fear
 """It wasn't,"" I murmured, trying hard not to cry.",sadness
-"We're enemies,' he suddenly said. 'You don't have to act nice. I hate you, too, for what you did to her.'",anger
-"Huminga ako nang malalim at sinarado ang isip ko. 'My enemies are those who made her suffer,' I replied. 'You helped her. You're her friend.'",sadness
-He scoffed. 'Friend? What bullshit is that?,anger
+"We're enemies,' he suddenly said. ""You don't have to act nice. I hate you, too, for what you did to her.""",anger
+"Huminga ako nang malalim at sinarado ang isip ko. ""My enemies are those who made her suffer,"" I replied. ""You helped her. You're her friend.""",sadness
+"He scoffed. ""Friend? What bullshit is that?""",anger
 "Ah, right. You don't use terms like that.",sadness
-"He glared at me, which was kind of scary. 'I am her Elite. Her subordinate. I just did what I had to do.'",anger
+"He glared at me, which was kind of scary. ""I am her Elite. Her subordinate. I just did what I had to do.""",anger
 "Piss off, Senshin. You don't fucking know anything.",anger
 I said fuck off.,anger
-Could you shut up?' he growled. 'What an ugly laugh.' Wow. Gwapo? Ugly ka rin.,anger
+"""Could you shut up?"" he growled. ""What an ugly laugh."" Wow. Gwapo? Ugly ka rin.",anger
 """Protect, huh?"" he muttered while we were searching for books in the shop.",anger
 "Yup. First, protect him. I mean, I think that's what a parent does first. Then, take care of them?",sadness
 """Shit,"" I cursed under my breath as the tigers lingered below the tree where I was.",anger
@@ -1101,10 +1094,10 @@ I won't be a teacher!,anger
 """I hope you can walk soon,"" I murmured.",sadness
 """Oh, wow, I'm scared,"" I flatly commented.",fear
 """I'm going to kill you one of these days,"" he murmured.",anger
-"I hope I won't come back dead,' I chuckled.",fear
-"You won't,' she replied. 'I'm here.'",sadness
-"Don't worry, I won't do that yet.",sadness
-Weakling?' he snapped. 'You—',fear
+"""I hope I won't come back dead,"" I chuckled.",fear
+"""You won't,"" she replied. ""I'm here.""",sadness
+"""Don't worry, I won't do that yet.""",sadness
+"""Weakling?"" he snapped. ""You—""",fear
 Who's the weakling now?,fear
 "I sighed and smiled. ""Finally.""",joy
 What the he—why did you use your hand?!,anger
@@ -1114,7 +1107,7 @@ You're going to be a great instructor.,joy
 I was about to open the door when I felt something strange.,fear
 "Five years after the tragedy, another wave of devastation plowed through us, but this time, I crumbled and wished death was the better option.",sadness
 """Ma'am Michiko!"" she beamed while waving her hands excitedly.",joy
-Sorry if I can't take you,sadness
+"""Sorry if I can't take you.""",sadness
 """She just broke down,"" I remembered her saying.",sadness
 """Should we wait for you?"" the pilot asked. ""Alright. I hope I'd be done by tomorrow,"" I replied",fear
 """Sorry, can't understand Russian,"" I replied, shifting my gaze back to the humdrum.",sadness
@@ -1132,14 +1125,14 @@ The daughter of that damned Aiwa is dead.,sadness
 """How did you find me?"" I asked, trying to distract myself from my devastating thoughts",fear
 """I felt that way before, too,"" he suddenly said. ""I wanted to kill the people 
 who made her that way.""",sadness
-M-Michiko . . .' she sobbed. No . . . don't show yourself . . . please . . . Vivien . . . my daughter is coming . . . please . . . save her . . . d-don't let her . . . see this . . . please . . .,sadness
-Don't come here . . . Vivien . . . please . . .' Akira repeatedly mumbled and that broke my heart into pieces,fear
-I'm . . . sorry . . . I'm sorry . . . Michiko . . . please t-take care of her . . .,sadness
+"""M-Michiko . . ."" she sobbed. No . . . don't show yourself . . . please . . . Vivien . . . my daughter is coming . . . please . . . save her . . . d-don't let her . . . see this . . . please . . .",sadness
+"""Don't come here . . . Vivien . . . please . . ."" Akira repeatedly mumbled and that broke my heart into pieces.",fear
+"""I'm . . . sorry . . . I'm sorry . . . Michiko . . . please t-take care of her . . .""",sadness
 """No, no, no. Come one, Akira, please . . ."" he mumbled. This isn't the time to joke around . . . come on, open your eyes.",sadness
-Please . . . your daughter is here . . . don't do this . . . please . . .,fear
-Please . . . leave us alone first . . .,fear
-"Hideo,' I softly called. 'Stop it.'",fear
-She will!' he snapped as silent tears fell from his eyes. 'She has to . . .',anger
+"""Please . . . your daughter is here . . . don't do this . . . please . . .""",fear
+"""Please . . . leave us alone first . . .""",fear
+"""Hideo,"" I softly called. ""Stop it.""",fear
+"""She will!"" he snapped as silent tears fell from his eyes. ""She has to . . .""",anger
 Let me go.,anger
 Just stay here . . . please . . . don't go . . .,fear
 """I . . ."" His hug got tighter. ""I can't lose you, too . . ."" he sobbed.",sadness
@@ -1169,20 +1162,20 @@ Why are you curious?,fear
 """Hey,"" I called, and this time, he turned around. ""I saved your life, so please don't die.""",sadness
 "I saved yours, too, so you're not allowed to die, unless I'm the one doing it.",fear
 """Yeah,"" he mumbled. ""What should I do?""",fear
-"There,' he said and I inhaled sharply when I saw Naomi emerging from the forest with a teenager who looked like Akemi.",sadness
-"Welcome back,' Hideo and I both greeted.",joy
+"""There,"" he said and I inhaled sharply when I saw Naomi emerging from the forest with a teenager who looked like Akemi.",sadness
+"""Welcome back,"" Hideo and I both greeted.",joy
 """Yes. Please let me,"" she replied. ""Besides, I have a debt to pay.""",sadness
 Of course. I'll find Haruka.,anger
 """Worried?"" he asked",sadness
 "I scoffed. ""Why would I?""",anger
 """Where the hell are you?"" I mumbled, wondering if he would ever come back . . . if he would stay true to his words that he wouldn't die.",anger
-"Rainie . . ."" The mention of her name made Hideo's presence stronger. ""she was taken by some Reapers.",fear
+"""Rainie . . ."" The mention of her name made Hideo's presence stronger. ""she was taken by some Reapers.""",fear
 """Michiko,"" he called in a controlled tone. ""Gather everyone.""",sadness
 "His eyes were burning with rage. ""A council of war,"" he replied.",anger
 "I can't bear losing her, too.",sadness
-"Napabuntong-hininga na lang ako.""Okay. Just tell me if you're ready,"" I added. ""We need you here.""",sadness
+"I sighed, ""Okay. Just tell me if you're ready,"" I added. ""We need you here.""",sadness
 """Yeah."" There was a hint of pain in her voice. ""This time, I won't run away.""",fear
-"Don't worry about them,' I said as I exchanged blows with Shinigamis along the way",fear
+"""Don't worry about them,"" I said as I exchanged blows with Shinigamis along the way",fear
 """No,"" I muttered. ""I'm not dying anyway.""",anger
 Who's dying?,sadness
 """Wow,"" I scoffed. ""Now I'm hallucinating.""",sadness
@@ -1214,7 +1207,7 @@ Why don't you just tell him directly that you don't want to be part of the rebel
 Do you think that brat won't be?,anger
 """I see,"" I muttered. ""Then, goodbye, I guess?""",sadness
 There was a hint of fear on her face. M-Ma'am Michiko?,fear
-"I'll be going,' he said. 'If you miss me, you know where to find me.'",sadness
+"""I'll be going,"" he said. ""If you miss me, you know where to find me.""",sadness
 Thinking about him again?,sadness
 Wait—!,anger
 """Hideo,"" Naomi called in a controlled manner. Calm down.",anger
@@ -1236,7 +1229,7 @@ What? We were practically living together when you took care of me—,sadness
 That's definitely scary.,fear
 Damn brat.,anger
 """I broke his arm,"" he muttered, earning a frown from me. ""Accidentally.""",sadness
-"What are you doing?' he groggily asked, his eyes still closed.",fear
+"""What are you doing?"" he groggily asked, his eyes still closed.",fear
 """Ah, shit, I forgot that I'm meeting Keith,"" he cursed under his breath.",anger
 Such a liar.,anger
 "Humans are creature of change and among the living, they have the best abilities to adapt.",joy
@@ -1248,25 +1241,25 @@ You shall never talk about our eyes' peculiarity to anybody. Hear me?,fear
 "But those people are also throwing hate to us, aren't they? Why can I not do the same, brother?",anger
 "I know it is hard, but father told us not to hate them. Father is a kind man, and he wants us to be like that, too.",joy
 "Too much and the greedy and the wicked will take advantage of it. Father is kind, but also naïve.",anger
-"""Quick,"" he said, cutting off Ryō. ""Leave this place.""",anger
+"""Quick,"" he said, cutting off Ryo. ""Leave this place.""",anger
 Father! Why are you—,fear
 """F-father,"" he called. ""People . . . there are people heading here.""",fear
 "The truth is, I have always hated humans, but I do not want you to share the same sentiment because not all of them are bad.",anger
-"No matter how hard it is, live well, Shō, Ryō. Live and prove that it is not a sin to be alive just because we are different.",joy
-"""W-what happened—"" Ryō's body stiffened when he recalled what had transpired before passing out. ""Father!""",fear
+"No matter how hard it is, live well, Sho, Ryo. Live and prove that it is not a sin to be alive just because we are different.",joy
+"""W-what happened—"" Ryo's body stiffened when he recalled what had transpired before passing out. ""Father!""",fear
 Father! No!,fear
-"""Father!"" cried Ryō as he ran toward Shotarō.",sadness
-"""We cannot allow them to see this,"" Shō remarked",fear
+"""Father!"" cried Ryo as he ran toward Shotaro.",sadness
+"""We cannot allow them to see this,"" Sho remarked",fear
 Perhaps we really are monsters. Father's eyes. Your eyes. Even the mystery surrounding mother's death and our clan.,sadness
 """And what if there are, brother?"" he returned. ""Do you think they are treated differently from us? People who are different from the normal will always be regarded as outcasts. As freaks. As monsters.""",anger
-"What . . . what did you do, Ryō?",fear
+"What . . . what did you do, Ryo?",fear
 I continued father's unfinished business.,anger
-"Ryo, tell me . . . how many did you . . .",fear
+"""Ryo, tell me . . . how many did you . . .""",fear
 I only killed those who attacked us first.,anger
-"We need to leave this village, Ryō,",fear
+"We need to leave this village, Ryo.",fear
 They said our clan was once a proud lineage of samurais.,joy
 We should quietly leave the house.,fear
-"Do not soak your hands in more blood, brother,",fear
+"Do not soak your hands in more blood, brother.",fear
 But how? We are already surrounded.,fear
 I cannot let you die here.,anger
 "See the world by yourself. I am staying here, and I will take back what they have stolen from us: our clan's honor, our wealth, and father's pride. Farewell, brother.",anger
@@ -1279,7 +1272,7 @@ I cannot let you die here.,anger
 """So you need not to hide your eyes anymore,"" he added",joy
 "I have never experienced summer, but the warmth of your presence must feel like it. From now on, you are Natsue.",joy
 "She reached for his hand and smiled. ""I'm happy . . . thank you . . .""",joy
-"Farewell, brother,",sadness
+"Farewell, brother.",sadness
 "I will return, and I will see you again.",sadness
 """S-spare me!"" the next guy pleaded.",fear
 Now you're asking for mercy.,anger
@@ -1291,16 +1284,16 @@ Are you going to stand there all night?,anger
 "M-my apologies, lord, this—",fear
 "Even with this power, someone like me will remain as a burakumin until death.",sadness
 Such is the fate of those who were born in the lowest class.,sadness
-"Apologies, my lord,",sadness
+"Apologies, my lord.",sadness
 "One day, the great powers of the natural elements will be passed onto those who are worthy, as what our great ancestor Czeslav has foreknown.",joy
-"S-stay away,",fear
+S-stay away.,fear
 """Yllka,"" her mother softly called, cupping her face. "" Look at me. Are you hurt?",fear
 Hold it firmly!,anger
 They're marching here! Be ready!,fear
 "You're going to burn the forest, too!",fear
 Douse the fire!,anger
 """Your eyes,"" he murmured. ""They've become lighter in color.""",fear
-"Well done, Yllka,",joy
+"Well done, Yllka.",joy
 Being an espion . . . is it hard?,fear
 They must be strong enough to infiltrate and escape bases; and have the wits to gather information and conduct counterintelligence against enemies.,fear
 Why does the country you serve forsake you once the enemies tracked you down?,sadness
@@ -1326,22 +1319,22 @@ Get me out of here!,fear
 M-monster! Kill him! Now!,anger
 "Now, pay the price with your life.",anger
 "Announce your appellation and purpose, intruder.",anger
-"The rivers are in our territory,",anger
+The rivers are in our territory.,anger
 But Chief—,fear
-"I must disembark here,",sadness
+I must disembark here.,sadness
 "How did you do this, Chief?",fear
 Why must it be here?!,anger
 "Edda's stare was enough to silence the crew. I shall only bring Hagen and Morgan. The rest of you must survive if things do not go well. Now, go!",anger
 Is this truly the center of the world?,fear
 "Edda grinned as soon as she saw the people onboard. ""The green-eyed ones are participating.""",joy
 I am pleased to finally meet you.,joy
-"Pardon me if I was late,",fear
+Pardon me if I was late.,fear
 "However, your attendant seems to harbor animosity toward us.",anger
-"Ishida, remember your verdict,",anger
+"Ishida, remember your verdict.",anger
 I am just worried about my lord's safety.,fear
 """Brother,"" he returned with a glower on his face.",sadness
 I want to get back home as soon as possible.,joy
-"Your agents must be good that they can infiltrate even the farthest lands,",anger
+Your agents must be good that they can infiltrate even the farthest lands.,anger
 "Yllka clenched her fist. ""Are there intruders in our villages? What are you planning?""",anger
 "The powers we possess can change the world, Edda stated.",joy
 "They are incredible but terrifying, hence I chose to stay in the shadows. I suppose you have done the same.",fear
@@ -1355,25 +1348,25 @@ How about building a new nation?,joy
 "Instead of hiding from the world, we can create a safe place for people like us, and from here, we can observe the world from a distance.",joy
 As I have suspected. This meeting is futile.,anger
 "I do not wish to join hands with people who do not share the same beliefs. Besides, I already have a land to rule.",anger
-"Please, Ryō. May we talk?",sadness
+"Please, Ryo. May we talk?",sadness
 Farewell. I hope we do not see each other again.,anger
-"That did not go well, Chief,",sadness
-"We should go back as well, Chief,",fear
+"That did not go well, Chief.",sadness
+"We should go back as well, Chief.",fear
 It is not safe here.,fear
 Let's go home.,anger
-"I hate real winter,",anger
+I hate real winter.,anger
 "Hey, careful!",fear
 You'll slip!,fear
-"T-Thank y-you,",joy
-"How's the Huntres tribe doing? I heard there are groups of agitators on the rise again,",fear
+T-Thank y-you.,joy
+How's the Huntres tribe doing? I heard there are groups of agitators on the rise again.,fear
 You three are late.,anger
 "Still the nosy outsider, aren't you?",anger
 "Given that my tribe is an intelligence agency, don't you think it'll be stranger if I don't know?",anger
 "Rainie smiled. ""Oh, he is, though I'm starting to take over some of his works.""",joy
 """Good,"" Krystal commented. This summit will not be official if everyone isn't a leader.",joy
 Hatred is something that cannot be quelled easily. I am sure we all know that.,anger
-"But I hope we can pave the path toward that dream, at least, Rainie continued.",sadness
+"""But I hope we can pave the path toward that dream,"" at least, Rainie continued.",sadness
 "Everyone fell silent for a few seconds, but Nel's laugh broke the tension. Despite being the youngest and quite a timid one, you have a way with words.",joy
 """I cannot wait for you to be the leader. You're definitely more mature than this one,""",joy
-"Just say you are short-tempered, Nel retorted.",joy
+"""Just say you are short-tempered,"" Nel retorted.",joy
 A smile escaped her lips upon seeing the three.,joy
