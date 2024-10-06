@@ -1,4 +1,5 @@
 from preprocessing.text_processing import *
+from preprocessing.narrative_features_fil import *
 from preprocessing.narrative_features_eng import *
 from utils.tfidf_vectorizer import *
 from utils.save_load import *
@@ -170,7 +171,7 @@ if filipino_data is not None and english_data is not None:
     filipino_sentences = filipino_data_narrative['sentence'].tolist()
 
     # GENERATE FEATURE VECTORS FROM FILIPINO NARRATIVE FEATURES
-    fil_features_df = extract_features_from_dataframe(filipino_data_narrative)
+    fil_features_df = extract_fil_features_from_dataframe(filipino_data_narrative)
 
     # Print the features DataFrame
     print(fil_features_df)
@@ -188,7 +189,7 @@ if filipino_data is not None and english_data is not None:
     english_sentences = english_data_narrative['sentence'].tolist()
 
     # GENERATE FEATURE VECTORS FROM ENGLISH NARRATIVE FEATURES
-    eng_features_df = extract_features_from_dataframe(english_data_narrative)
+    eng_features_df = extract_eng_features_from_dataframe(english_data_narrative)
 
     # Print the features DataFrame
     print(eng_features_df)
@@ -247,3 +248,4 @@ if filipino_data is not None and english_data is not None:
 
     print("\nData after resampling:")
     print(resampled_df.head())
+# <-------------------------------------------------------------------------------------------------------------->

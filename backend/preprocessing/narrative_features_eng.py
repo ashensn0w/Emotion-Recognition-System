@@ -618,7 +618,7 @@ def create_feature_vector(text):
         comparative_feature, quantifier_feature, qualification_feature, explanation_feature
         ]
 
-def extract_features_from_dataframe(df):
+def extract_eng_features_from_dataframe(df):
     df['features'] = df['sentence'].apply(create_feature_vector)
 
     features_df = pd.DataFrame(df['features'].tolist(), columns=[
