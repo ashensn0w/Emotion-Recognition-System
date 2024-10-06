@@ -140,7 +140,7 @@ if filipino_data is not None and english_data is not None:
     filipino_tfidf_df['emotion'] = filipino_data['emotion'].values
 
     # Save the Filipino TF-IDF DataFrame to a CSV file
-    filipino_tfidf_df.to_csv('./backend/data/feature vectors/filipino_tfidf_vectorized_data.csv', index=False)
+    # filipino_tfidf_df.to_csv('./backend/data/feature vectors/filipino_tfidf_vectorized_data.csv', index=False)
     print(filipino_tfidf_df.head())
 
     # Save the Filipino vectorizer model
@@ -152,8 +152,8 @@ if filipino_data is not None and english_data is not None:
     english_tfidf_df = pd.DataFrame(english_tfidf_matrix.toarray(), columns=english_feature_names)
     english_tfidf_df['emotion'] = english_data['emotion'].values
 
-    # Save the English TF-IDF DataFrame to a CSV file
-    english_tfidf_df.to_csv('./backend/data/feature vectors/english_tfidf_vectorized_data.csv', index=False)
+    # # Save the English TF-IDF DataFrame to a CSV file
+    # english_tfidf_df.to_csv('./backend/data/feature vectors/english_tfidf_vectorized_data.csv', index=False)
     print(english_tfidf_df.head())
 
     # Save the English vectorizer model
@@ -175,7 +175,7 @@ if filipino_data is not None and english_data is not None:
     print(fil_features_df)
 
     # Save the features DataFrame to CSV
-    fil_features_df.to_csv('./backend/data/feature vectors/filipino_narratives_vectorized_data.csv.csv', index=False)
+    # fil_features_df.to_csv('./backend/data/feature vectors/filipino_narratives_vectorized_data.csv', index=False)
 # <-------------------------------------------------------------------------------------------------------------->
     # Define file path for English dataset
     english_narrative_file_path = './backend/data/training_data_sample_eng.csv'
@@ -193,31 +193,33 @@ if filipino_data is not None and english_data is not None:
     print(eng_features_df)
 
     # Save the features DataFrame to CSV
-    eng_features_df.to_csv('./backend/data/feature vectors/english_narratives_vectorized_data.csv', index=False)
+    # eng_features_df.to_csv('./backend/data/feature vectors/english_narratives_vectorized_data.csv', index=False)
 # <-------------------------------------------------------------------------------------------------------------->
-    # Combine TF-IDF and Narrative Feature Vectors for Filipino Dataset
-    fil_combined_feature_vectors = pd.concat([filipino_tfidf_df.drop(columns='emotion'), fil_features_df], axis=1)
-    fil_combined_feature_vectors['emotion'] = filipino_tfidf_df['emotion'].values
+    # Merge Filipino and English TF-IDF tokens alphabetically
+    all_token_columns = sorted(set(filipino_tfidf_df.columns) | set(english_tfidf_df.columns))
 
-    # Save the combined Filipino feature vectors to CSV
-    fil_combined_feature_vectors.to_csv('./backend/data/feature vectors/fil_combined_feature_vectors.csv', index=False)
-    print(fil_combined_feature_vectors.head())
+    # Reindex Filipino TF-IDF to have all tokens and fill missing ones with 0
+    filipino_tfidf_df = filipino_tfidf_df.reindex(columns=all_token_columns, fill_value=0.0)
 
-    # Combine TF-IDF and Narrative Feature Vectors for English Dataset
-    eng_combined_feature_vectors = pd.concat([english_tfidf_df.drop(columns='emotion'), eng_features_df], axis=1)
-    eng_combined_feature_vectors['emotion'] = english_tfidf_df['emotion'].values
+    # Reindex English TF-IDF to have all tokens and fill missing ones with 0
+    english_tfidf_df = english_tfidf_df.reindex(columns=all_token_columns, fill_value=0.0)
 
-    # Save the combined English feature vectors to CSV
-    eng_combined_feature_vectors.to_csv('./backend/data/feature vectors/eng_combined_feature_vectors.csv', index=False)
-    print(eng_combined_feature_vectors.head())
+    # Align Narrative Features with the merged tokens
+    narrative_feature_columns = fil_features_df.columns  # Narrative feature columns (same for both)
 
-    # Combine Filipino and English Combined Feature Vectors into a Single DataFrame
-    combined_feature_vectors = pd.concat([fil_combined_feature_vectors, eng_combined_feature_vectors], ignore_index=True)
+    # Reindex the Filipino and English narrative features to match TF-IDF token columns (adding narrative features after tokens)
+    fil_combined_df = pd.concat([filipino_tfidf_df, fil_features_df], axis=1)
+    eng_combined_df = pd.concat([english_tfidf_df, eng_features_df], axis=1)
 
-    # Fill empty cells with 0.0
-    combined_feature_vectors.fillna(0.0, inplace=True)
+    # Combine both Filipino and English datasets row-wise
+    combined_df = pd.concat([fil_combined_df, eng_combined_df], ignore_index=True)
 
-    # Save the combined feature vectors to a single CSV file
-    combined_feature_vectors.to_csv('./backend/data/feature vectors/combined_feature_vectors.csv', index=False)
-    print(combined_feature_vectors.head())
-# <-------------------------------------------------------------------------------------------------------------->
+    # Ensure the 'emotion' column is at the end of the DataFrame
+    emotion_column = combined_df.pop('emotion')
+    combined_df['emotion'] = emotion_column
+
+    # Save the final combined DataFrame to CSV
+    combined_df.to_csv('./backend/data/combined_final_feature_vectors.csv', index=False)
+
+    # Preview the first few rows of the final combined DataFrame
+    print(combined_df.head())
