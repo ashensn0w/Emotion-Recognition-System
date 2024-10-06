@@ -22,7 +22,7 @@ def extract_mode(text):
         elif token.pos_ == "VERB" and token.dep_ == "ROOT" and token.i == 0:
             has_mode = True
             break
-
+        
     return 1 if has_mode else 0
 
 def extract_intention(text):

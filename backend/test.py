@@ -214,10 +214,21 @@ if data is not None:
     # Save the final combined features DataFrame to CSV
     final_combined_df.to_csv('./backend/data/feature vectors/tested_complete_vectorized_data.csv', index=False)
     # <-------------------------------------------------------------------------------------------------------------->
+    # Load the original dataset and make sure the 'emotion' column is intact
+    file_path = './backend/data/sample.csv'
+    data = load_dataset(file_path)
+
+    # Check if the 'emotion' column is present in the original data
+    if 'emotion' in data.columns:
+        # Add the original 'emotion' column from the data to final_combined_df
+        final_combined_df['emotion'] = data['emotion']
+    else:
+        print("The 'emotion' column is missing from the dataset.")
+
     # Load the saved emotion recognition model
     emo_recog_model = load_model_with_name('best_emotion_recognition_glm_model.pkl')
 
-    # Prepare the data for prediction (drop the 'emotion' column)
+    # Prepare the data for prediction (drop the 'emotion' column from feature data)
     X = final_combined_df.drop(columns=['emotion'])
 
     # Check if the model was loaded successfully
@@ -229,9 +240,15 @@ if data is not None:
     else:
         print("Model not loaded. Unable to make predictions.")
 
-    # Display the final DataFrame with predictions
-    print("Final DataFrame with predictions:")
-    print(final_combined_df.head())
+    # Select the columns you want for output
+    output_df = pd.DataFrame({
+        'sentence': data['sentence'],  # From the original dataset
+        'emotion': final_combined_df['emotion'],  # Actual emotion
+        'predicted_emotion': final_combined_df['predicted_emotion']  # Predicted emotion
+    })
 
-    # Save the predictions to a new CSV file
-    final_combined_df.to_csv('./backend/data/feature vectors/final_predictions.csv', index=False)
+    # Save the output to a new CSV file
+    output_df.to_csv('./backend/data/feature vectors/final_predictions.csv', index=False)
+
+    # Display the first few rows in the console for review
+    print_table(output_df, title="Sentences with Actual and Predicted Emotions")
