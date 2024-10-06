@@ -7,6 +7,9 @@ from utils.resampling import *
 from rich.console import Console
 from rich.table import Table
 import pandas as pd
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report
+from sklearn.model_selection import train_test_split, StratifiedKFold, GridSearchCV
 
 # Function to load a dataset from a file path
 def load_dataset(file_path):
@@ -249,3 +252,51 @@ if filipino_data is not None and english_data is not None:
     print("\nData after resampling:")
     print(resampled_df.head())
 # <-------------------------------------------------------------------------------------------------------------->
+    #TRAINING THE MODEL WITH GLM (MULTINOMIAL LOGISTIC REGRESSION)
+
+    # SPLIT DATA INTO FEATURES (X) AND TARGET (y)
+    X = resampled_df.drop(columns=['emotion'])  # Features are all columns except 'emotion'
+    y = resampled_df['emotion']  # Target variable is the 'emotion' column
+
+    # SPLIT THE DATA INTO TRAINING (80%) AND TESTING (20%) SETS
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+    # PERFORM K-FOLD CROSS-VALIDATION ON THE TRAINING SET
+    k = 5  # Number of folds for cross-validation
+    kf = StratifiedKFold(n_splits=k, shuffle=True, random_state=42)  # Stratified K-Fold to maintain class distribution
+
+    # LOGISTIC REGRESSION WITH GRID SEARCH FOR HYPERPARAMETER TUNING
+    param_grid = {
+        'C': [0.01, 0.1, 1, 10],  # Regularization parameter for Logistic Regression
+        'solver': ['liblinear', 'lbfgs']  # Solvers to be tested
+    }
+
+    # CREATE A LOGISTIC REGRESSION MODEL
+    glm = LogisticRegression(max_iter=1000)  # Initialize the logistic regression model with a max iteration limit
+
+    # GRID SEARCH WITH CROSS-VALIDATION
+    grid_search = GridSearchCV(glm, param_grid, cv=kf, scoring='f1_macro', n_jobs=-1)  # Set up grid search with cross-validation
+    grid_search.fit(X_train, y_train)  # Fit grid search to the training data
+
+    # PRINT BEST PARAMETERS AFTER CROSS-VALIDATION
+    best_params = grid_search.best_params_  # Retrieve the best hyperparameters found
+    print(f"Best hyperparameters found through cross-validation: {best_params}")
+
+    # OUTPUT K-FOLD CROSS-VALIDATION SCORES
+    cv_results = grid_search.cv_results_  # Get the results of the cross-validation
+    for mean_score, std_dev, params in zip(cv_results['mean_test_score'], cv_results['std_test_score'], cv_results['params']):
+        print(f"Mean F1 Score: {mean_score:.4f} ± {std_dev:.4f} for params: {params}")  # Print mean F1 score and std deviation for each parameter combination
+
+    # TRAIN FINAL MODEL USING THE BEST HYPERPARAMETERS ON THE ENTIRE TRAINING SET
+    best_glm = grid_search.best_estimator_  # Retrieve the best estimator from grid search
+    best_glm.fit(X_train, y_train)  # Train the model using the entire training set
+
+    # PREDICT THE TEST SET
+    y_pred = best_glm.predict(X_test)  # Make predictions on the test set
+
+    # GENERATE CLASSIFICATION REPORT (PRECISION, RECALL, F1-SCORE)
+    report = classification_report(y_test, y_pred)  # Create a classification report
+    print("\nClassification Report on Test Set:")  # Print the header for the report
+    print(report)  # Print the classification report
+
+    save_model_with_name(best_glm, "best_emotion_recognition_glm_model.pkl")
