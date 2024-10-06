@@ -249,6 +249,7 @@ if data is not None:
 
     # Save the output to a new CSV file
     output_df.to_csv('./backend/data/feature vectors/final_predictions.csv', index=False)
+    output_df.to_csv('./frontend/backend outputs/output.csv', index=False)
 
     # Display the first few rows in the console for review
     print_table(output_df, title="Sentences with Actual and Predicted Emotions")

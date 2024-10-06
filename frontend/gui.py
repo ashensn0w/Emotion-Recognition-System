@@ -2,6 +2,7 @@ import sys
 from PyQt5.QtWidgets import QSpacerItem, QSizePolicy, QApplication, QMainWindow, QWidget, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, QFileDialog, QScrollArea
 from PyQt5.QtCore import Qt, QSize
 from PyQt5.QtGui import QFont
+import pandas as pd
 
 # Main Window for the application
 class MainWindow(QMainWindow):
@@ -138,21 +139,37 @@ class ResultsWindow(QWidget):
         results_title.setAlignment(Qt.AlignCenter)
         right_layout.addWidget(results_title)
 
-        spacer_between_title_and_emotions = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-        right_layout.addItem(spacer_between_title_and_emotions)
-        right_layout.addItem(spacer_between_title_and_emotions)
+        def display_emotion_counts_and_sentences(csv_file):
+            # Read the CSV file
+            df = pd.read_csv(csv_file)
 
-        # Emotion categories and counts
-        emotions = [("JOY", 87), ("FEAR", 281), ("SADNESS", 166), ("ANGER", 138)]
+            # Group sentences by predicted emotion
+            emotion_sentences = {}
+            for _, row in df.iterrows():
+                emotion = row['predicted_emotion']
+                sentence = row['sentence']  # Adjust this if your column name is different
 
-        for emotion, count in emotions:
+                if emotion not in emotion_sentences:
+                    emotion_sentences[emotion] = []
+                emotion_sentences[emotion].append(sentence)
+
+            # Create a dictionary to hold the counts
+            emotion_counts = {emotion: len(sentences) for emotion, sentences in emotion_sentences.items()}
+            
+            return emotion_counts, emotion_sentences  # Return both counts and sentences
+
+        # Load emotion counts and sentences
+        emotion_counts, emotion_sentences = display_emotion_counts_and_sentences('./frontend/backend outputs/output.csv')  # Adjust this path accordingly
+
+        # Create UI elements for each emotion dynamically
+        for emotion, count in emotion_counts.items():
             # Horizontal layout for each emotion
             hbox = QHBoxLayout()
 
             emotion_label = QLabel(f"{emotion} : ")
             emotion_label.setFont(QFont("Arial", 18))
 
-            count_label = QLabel(f"{count}")
+            count_label = QLabel(f"{count}")  # Use the count from the emotion_counts dictionary
             count_label.setFont(QFont("Arial", 18))
 
             # Button to view sentences
@@ -166,7 +183,8 @@ class ResultsWindow(QWidget):
             border-radius: 10px;
             """)
 
-            view_button.clicked.connect(lambda _, e=emotion: self.go_to_sentences_page(e))
+            # Connect the button to the appropriate function, passing the sentences
+            view_button.clicked.connect(lambda _, e=emotion, s=emotion_sentences[emotion]: self.go_to_sentences_page(e, s))
 
             # Add widgets to the horizontal layout
             hbox.addWidget(emotion_label)
@@ -191,15 +209,15 @@ class ResultsWindow(QWidget):
         main_layout.addLayout(right_layout)
         self.setLayout(main_layout)
 
-    def go_to_sentences_page(self, emotion):
-        self.sentences_window = SentencesWindow(emotion, self)  # Create an instance of the sentences window with the selected emotion
+    def go_to_sentences_page(self, emotion, sentences):
+        self.sentences_window = SentencesWindow(emotion, sentences, self)  # Pass the sentences
         self.sentences_window.show()
         self.close()
 
 
 # Third Window (Sentences Page)
 class SentencesWindow(QWidget):
-    def __init__(self, emotion, parent):
+    def __init__(self, emotion, sentences, parent):
         super().__init__()
         self.parent = parent
         self.setWindowTitle(f"{emotion} Sentences")
@@ -240,19 +258,12 @@ class SentencesWindow(QWidget):
         spacer_between_title_and_sentences = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
         right_layout.addItem(spacer_between_title_and_sentences)
 
-        # Example sentences related to the selected emotion
-        sentences = {
-            "JOY": ["sentence 1", "sentence 2", "sentence 3", "sentence 4", "sentence 5", "sentence 6"],
-            "FEAR": ["sentence 1", "sentence 2", "sentence 3", "sentence 4", "sentence 5", "sentence 6"],
-            "SADNESS": ["sentence 1", "sentence 2", "sentence 3", "sentence 4", "sentence 5", "sentence 6"],
-            "ANGER": ["sentence 1", "sentence 2", "sentence 3", "sentence 4", "sentence 5", "sentence 6"]
-        }
-
         sentence_scroll_area = QScrollArea()
         sentence_widget = QWidget()
         sentence_layout = QVBoxLayout(sentence_widget)
 
-        for sentence in sentences.get(emotion, []):
+        # Add the sentences passed from ResultsWindow
+        for sentence in sentences:
             sentence_label = QLabel(f"• {sentence}")
             sentence_label.setFont(QFont("Arial", 18))
             sentence_layout.addWidget(sentence_label)
@@ -264,7 +275,7 @@ class SentencesWindow(QWidget):
         back_button = QPushButton("Back")
         back_button.setFixedSize(150, 40)
         back_button.setFont(QFont("Arial", 12, QFont.Bold))
-        back_button.setStyleSheet("""
+        back_button.setStyleSheet(""" 
             background-color: #1338BE; 
             color: white;
             border-radius: 10px;
@@ -284,7 +295,6 @@ class SentencesWindow(QWidget):
     def go_back(self):
         self.parent.show()
         self.close()
-
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
