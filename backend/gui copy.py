@@ -2,9 +2,9 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, sent_tokenize
 from preprocessing.narrative_features_eng import *
 from preprocessing.narrative_features_fil import *
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QSize, QTimer
 from PyQt5.QtGui import QFont
-from PyQt5.QtWidgets import QMessageBox, QSpacerItem, QSizePolicy, QApplication, QMainWindow, QWidget, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, QFileDialog, QScrollArea
+from PyQt5.QtWidgets import QDialog, QProgressBar, QFrame, QSpacerItem, QSizePolicy, QApplication, QMainWindow, QWidget, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, QFileDialog, QScrollArea
 from rich.console import Console
 from rich.table import Table
 from utils.save_load import *
@@ -28,6 +28,35 @@ filipino_stopwords = stopwords.stopwords('tl')
 english_stopwords = set(stopwords.stopwords('english'))
 
 
+class LoadingDialog(QDialog):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Processing Novella...")
+        self.setFixedSize(400, 150)
+
+        # Layout
+        layout = QVBoxLayout()
+        self.setLayout(layout)
+
+        # Set background color
+        self.setStyleSheet("background-color: #f2f2f2;")
+
+        # Label
+        label = QLabel("Please wait, processing your novella...")
+        label.setAlignment(Qt.AlignCenter)
+        layout.addWidget(label)
+
+        # Progress bar
+        self.progress_bar = QProgressBar()
+        self.progress_bar.setRange(0, 0)  # Initially indeterminate
+        layout.addWidget(self.progress_bar)
+
+    def update_progress(self, progress):
+        self.progress_bar.setRange(0, 100)  # Set range once processing starts
+        self.progress_bar.setValue(progress)
+
+    def close_screen(self):
+        self.close()
 
 # Main Window for the application
 class MainWindow(QMainWindow):
@@ -143,28 +172,9 @@ class MainWindow(QMainWindow):
             self.file_name_label.setText(f"Selected file: {base_name}")
 
     def go_to_results_page(self):
-        # Check if a file has been uploaded
-        if not self.file_path:
-            # Show error message
-            msg = QMessageBox()
-            msg.setFixedHeight(400)
-            msg.setFixedWidth(600)
-            font = QFont()
-            font.setPointSize(13)
-            msg.setFont(font) 
-            msg.setIcon(QMessageBox.Warning)
-            msg.setText("Please upload a .TXT file \nbefore submitting.")
-            msg.setWindowTitle("Error")
-            msg.setStandardButtons(QMessageBox.Ok)
-            msg.setStyleSheet("""
-                QPushButton {
-                    font-size: 12px;  # Adjust font size as needed
-                    padding: 10px;  # Adjust padding as needed
-                }
-            """)
-            
-            msg.exec()  # This will display the alert box
-            return  # Exit the function early
+        # Show loading screen
+        loading_dialog = LoadingDialog()
+        loading_dialog.exec()
 
         # Read the content of the file
         with open(self.file_path, 'r', encoding='utf-8') as file:
@@ -377,6 +387,10 @@ class MainWindow(QMainWindow):
             # Display the first few rows in the console for review
             print_table(output_df, title="New Input Sentences with Predicted Emotions")
 
+        # Processing complete, close loading screen
+        loading_dialog.close_screen()
+
+
         # Proceed to the results window, if applicable
         self.results_window = ResultsWindow(self, self.file_path)  # Pass file_path to results window
         self.results_window.show()
@@ -422,6 +436,9 @@ class ResultsWindow(QWidget):
         results_title = QLabel("RESULTS")
         results_title.setFont(QFont("Arial", 28, QFont.Bold))
         results_title.setAlignment(Qt.AlignCenter)
+        results_title.setStyleSheet("""
+            margin-bottom: 70px;
+            """)
 
         # Add the results title to the right layout
         right_layout.addWidget(results_title)
@@ -444,28 +461,9 @@ class ResultsWindow(QWidget):
             emotion_counts = {emotion: len(sentences) for emotion, sentences in emotion_sentences.items()}
 
             return emotion_counts, emotion_sentences  # Return both counts and sentences
-    
+
         # Load emotion counts and sentences
         emotion_counts, emotion_sentences = display_emotion_counts_and_sentences('./backend/data/feature vectors/new_input_predictions.csv')
-
-        # Find the dominant emotion
-        dominant_emotion = max(emotion_counts, key=emotion_counts.get)  # Get the emotion with the highest count
-
-        # Create a label for the dominant emotion with HTML formatting
-        dominant_emotion_label = QLabel(
-            f"<span style='color: black;'>Dominant Emotion:</span> "
-            f"<span style='color: #8B1E3F; font-weight: bold'>{dominant_emotion.capitalize()}</span>"
-        )
-        dominant_emotion_label.setFont(QFont("Verdana", 24))
-        dominant_emotion_label.setAlignment(Qt.AlignCenter)
-        dominant_emotion_label.setStyleSheet("margin-top: 20px; margin-bottom: 20px;")
-
-        # Add the dominant emotion label to the right layout
-        right_layout.addWidget(dominant_emotion_label)
-
-        # Add stretch at the bottom for vertical centering
-        right_layout.addStretch(1)
-
 
         # List of all possible emotions
         all_emotions = ['fear', 'sadness', 'anger', 'joy']
@@ -587,9 +585,12 @@ class SentencesWindow(QWidget):
         emotion_title.setAlignment(Qt.AlignCenter)
         right_layout.addWidget(emotion_title)
 
+        spacer_between_title_and_sentences = QSpacerItem(10, 10, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        right_layout.addItem(spacer_between_title_and_sentences)
+
         # Scroll area to contain sentences
         sentence_scroll_area = QScrollArea()
-        sentence_scroll_area.setFixedHeight(580)
+        sentence_scroll_area.setFixedHeight(580)  # Set a maximum height for the scroll area
         sentence_scroll_area.setWidgetResizable(True)
 
         # Content inside the scroll area
@@ -598,13 +599,11 @@ class SentencesWindow(QWidget):
 
         # Add the sentences passed from ResultsWindow
         for index, sentence in enumerate(sentences, start=1):
-            sentence_label = QLabel(f"{index}. {sentence}")
+            sentence_label = QLabel(f"{index}. {sentence}")  # Add the index before the sentence
             sentence_label.setFont(QFont("Verdana", 13))
             sentence_label.setWordWrap(True)
-            sentence_label.setContentsMargins(0, 5, 0, 5) 
+            sentence_label.setContentsMargins(0, 5, 0, 5)  # Adds 5px of margin on top and bottom
             sentence_layout.addWidget(sentence_label)
-
-        sentence_layout.addStretch(1)
 
         sentence_scroll_area.setWidget(sentence_widget)
         right_layout.addWidget(sentence_scroll_area)
