@@ -1,17 +1,14 @@
 import spacy
 import pandas as pd
+import json
 
 nlp = spacy.load("xx_ent_wiki_sm")
 
 def extract_mode(text):
     doc = nlp(text)
     
-    mode_keywords = {
-        'Possibility': ['maaari', 'pwedeng','pwede'],
-        'Impossibility': ['hindi', 'walang','wala'],
-        'Necessity': ['dapat', 'kailangan'],
-        'Prohibition': ['bawal','hindi pwede']
-    }
+    with open('./backend/data/filipino_keywords.json', 'r', encoding='utf-8') as f:
+        mode_keywords = json.load(f)['mode']
     
     detected_modes = {
         'Possibility': False,
@@ -40,27 +37,8 @@ def extract_mode(text):
 def extract_intention(text):
     doc = nlp(text)
     
-    intention_keywords = {
-        'Infinitive Verbs': ['mag-aaral', 'pumunta'],
-
-        'Modal Verbs': ['nais', 'gusto', 'hangad'],
-
-        'Purpose Clauses': ['upang', 
-        'para', 'sa layuning', 'upang mapanatili', 'para sa', 'upang makamit', 
-        'upang maabot', 'sa kagustuhang', 'para makuha', 'para maging', 
-        'para magtagumpay', 'para maiwasan', 'para maprotektahan', 'upang magturo', 
-        'para magpaliwanag', 'para magbigay', 'para makatulong', 'upang maipakita', 
-        'para mabigyan', 'para maghanda', 'upang maghanda', 'upang magplano', 
-        'para magsimula', 'para magwagi', 'upang masiguro', 'para mangyari', 
-        'upang mangyari', 'upang umunlad', 'upang sumulong', 'para umasenso', 
-        'para mapaganda', 'upang mapabilis', 'upang maglakas-loob', 'upang magpayo', 
-        'upang mag-alok', 'para makapagbigay', 'para magdulot', 'upang magdulot', 
-        'para sa ikabubuti', 'upang mapaganda', 'para mapanatili', 'para maprotektahan', 
-        'para magdulot', 'para magturo', 'upang magbigay', 'upang makatulong', 
-        'upang masiguro', 'upang mag-ambag'],
-
-        'Auxiliary Verbs': ['babalik', 'magiging']
-    }
+    with open('./backend/data/filipino_keywords.json', 'r', encoding='utf-8') as f:
+        intention_keywords = json.load(f)['intention']
     
     detected_intentions = {
         'Infinitive Verbs': False,
@@ -89,21 +67,9 @@ def extract_intention(text):
 def extract_result(text):
     doc = nlp(text)
     
-    result_keywords = {
-        'Completed Actions': ['natapos', 'nagawa', 'nakuha','nagresulta', 'humantong', 'nagdulot', 
-        'nagbunga', 'naghatid', 'nagbigay-daan', 'naging', 'naging sanhi', 
-        'nagbunga', 'natamo', 'nakuha', 'nakamit', 'nagtagumpay', 
-        'nakasama', 'nakatulong', 'naranasan', 'nakapagbigay', 'nakabuo', 
-        'nakapagdulot', 'napunta', 'napatunayan', 'naabot', 'nakamtan', 
-        'natupad', 'nagbunga', 'nag-dulot', ],
-
-        'Perfect Aspect Verbs': ['nagkaroon', 'nagawa', 'umunlad', 'sumulong', 'nag-asenso', 
-        'naglaho', 'naganap', 'nangyari', 'nasaksihan', 'naipakita', 
-        'naipamalas', 'napagtagumpayan', 'naibalik', 'naipasa', 'naiwasan', 
-        'naabot', 'nadama', 'nalaman', 'naramdaman', 
-        'nakapagbago', 'napagpasyahan']
-    }
-    
+    with open('./backend/data/filipino_keywords.json', 'r', encoding='utf-8') as f:
+        result_keywords = json.load(f)['result']
+        
     detected_results = {
         'Completed Actions': False,
         'Perfect Aspect Verbs': False
@@ -125,17 +91,8 @@ def extract_result(text):
 def extract_manner(text):
     doc = nlp(text)
     
-    manner_keywords = {
-        'Adverbs': ['maingat', 'maayos', 'mabilis', 'tahimik', 'malumanay', 
-        'mahinahon', 'masinsin', 'magaan', 'mabagal', 'matapang', 
-        'malakas', 'masigla', 'puspusan', 'paggalang', 'matiyaga', 
-        'tapat', 'malasakit', 'mabait', 'matapang', 'mahinahon','masinsinan', 'mapanuri', 'masusing'],
-
-        'Adjectives as Adverbs': ['maganda','masikap', 'pagsisikap', 'masigasig', 'masinop', 'masipag', 
-        'kakayahan', 'tiwala', 'kalooban', 'pag-asa', 'pagmamahal', 'respeto', 'malakas', 'maisip', 
-        'pagkilala', 'pagsasaalang-alang', 'madamdamin', 'pagsusumikap', 'pagnanais', 'kasiglahan', 'kalakasan', 
-        'kasipagan', 'pangarap',]
-    }
+    with open('./backend/data/filipino_keywords.json', 'r', encoding='utf-8') as f:
+        manner_keywords = json.load(f)['manner']
     
     detected_manners = {
         'Adverbs': False,
@@ -158,15 +115,8 @@ def extract_manner(text):
 def extract_aspect(text):
     doc = nlp(text)
     
-    aspect_keywords = {
-        'Aspectual Markers': ['nag', 'naka', 'nagsa'],
-        
-        'Verbal Affixes': ['nag-aaral', 'natapos','patuloy','nagpatuloy', 'patuloy na nangyayari', 
-        'nangyayari', 'nagpapatuloy', 'nagsimula', 'nagwakas', 
-        'nagsisimula', 'natatapos', 'nagaganap', 'patuloy na', 'nangyayari pa', 
-        'nagsisimula pa lang', 'nagsimula na', 'patuloy na nagaganap', 
-        'nagtatapos', 'nagsimula', 'natapos na', ]
-    }
+    with open('./backend/data/filipino_keywords.json', 'r', encoding='utf-8') as f:
+        aspect_keywords = json.load(f)['aspect']
     
     detected_aspects = {
         'Aspectual Markers': False,
@@ -189,9 +139,8 @@ def extract_aspect(text):
 def extract_status(text):
     doc = nlp(text)
     
-    status_keywords = {
-        'Negation Words': ['hindi', 'wala', 'huwag']
-    }
+    with open('./backend/data/filipino_keywords.json', 'r', encoding='utf-8') as f:
+        status_keywords = json.load(f)['status']
     
     detected_status = {
         'Negation Words': False
@@ -209,13 +158,8 @@ def extract_status(text):
 def extract_appearance(text):
     doc = nlp(text)
     
-    appearance_keywords = {
-        'Transition Words': ['naging', 'pinalitan', 'nagbago','nagpakita', 
-        'nagsilbing', 'nagmumungkahi', 'nagpamalas', 'nagpahayag', 
-        'nagbubukas', 'nagbibigay', 'nagsasalita', 'nag-aalok', 'naglalaman', 'nagsasabi', 
-        'nagsusumpa', 'nag-aangkin', 'nagpapakita ng', 'nagpapahayag ng','naglalantad ng', 
-        'nagsasalita ng', 'nag-aalok ng', 'naglalaman ng','nagpapatunay ng']
-    }
+    with open('./backend/data/filipino_keywords.json', 'r', encoding='utf-8') as f:
+        appearance_keywords = json.load(f)['appearance']
     
     detected_appearance = {
         'Transition Words': False
@@ -233,13 +177,8 @@ def extract_appearance(text):
 def extract_knowledge(text):
     doc = nlp(text)
     
-    knowledge_keywords = {
-        'Knowledge Verbs': ['alam', 'nauunawaan','nalaman','nalalaman', 
-        'napagtanto', 'natutunan', 'kilala', 'nalaman', 'nasusundan', 'nauunawaan', 
-        'nagkakaroon','nagtuturo', 'nagbibigay ng kaalaman', 'nagtuturo ng', 'nagpapaliwanag ng', 'nagsasalita ng', 
-        'nagbibigay ng impormasyon', 'nagpapahayag ng', 'nagsusuri ng', 'nagtuturo ng', 
-        'nagbibigay-diin', 'nagpapahayag ng','nagbibigay-alam']
-    }
+    with open('./backend/data/filipino_keywords.json', 'r', encoding='utf-8') as f:
+        knowledge_keywords = json.load(f)['knowledge']
     
     detected_knowledge = {
         'Knowledge Verbs': False
@@ -257,12 +196,8 @@ def extract_knowledge(text):
 def extract_description(text):
     doc = nlp(text)
     
-    description_keywords = {
-        'Descriptive Phrases': ['sinabi', 'nasabi', 'sinasabi','naglarawan','inilarawan', 
-        'nagsalaysay', 'nagdetalye','nagpaliwanag', 'nagpapakita', 
-        'nagpahayag', 'nagbibigay', 'nagpapaliwanag ', 'nagbigay', 
-        'nagbibigay-diin', 'nagpapahayag', 'nagpapaliwanag']
-    }
+    with open('./backend/data/filipino_keywords.json', 'r', encoding='utf-8') as f:
+        description_keywords = json.load(f)['description']
     
     detected_descriptions = {
         'Descriptive Phrases': False
@@ -280,13 +215,8 @@ def extract_description(text):
 def extract_supposition(text):
     doc = nlp(text)
     
-    supposition_keywords = {
-        'Supposition Modal Verbs': ['maaaring', 'baka', 'sana','akala', 'pagpapalagay', 'kumpiyansa', 'hinuha', 
-        'palagay', 'imahinasyon', 'halimbawa', 'sabi', 'tulad', 
-        'sakaling', 'halimbawang', 'nagpapalagay', 'akalang', 
-        'nagpapalagay', 'nag-aakala ', 'nag-iisip', 
-        'nagpapalagay', 'nag-aakalang','sakali']
-    }
+    with open('./backend/data/filipino_keywords.json', 'r', encoding='utf-8') as f:
+        supposition_keywords = json.load(f)['supposition']
     
     detected_suppositions = {
         'Supposition Modal Verbs': False
@@ -304,12 +234,9 @@ def extract_supposition(text):
 def extract_subjectivation(text):
     doc = nlp(text)
     
-    subjectivation_keywords = {
-        'Perception Verbs': ['nagbigay','nagpakita', 'nagsalaysay', 'naglarawan', 
-        'nagsalita', 'nagsabi', 'naikwento', 'nagsasalaysay ', 'nagbigay', 
-        'nagsasabi','nakikita', 'nararamdaman', 'iniisip']
-    }
-    
+    with open('./backend/data/filipino_keywords.json', 'r', encoding='utf-8') as f:
+        subjectivation_keywords = json.load(f)['subjectivation']
+
     detected_subjectivation = {
         'Perception Verbs': False
     }
@@ -326,16 +253,8 @@ def extract_subjectivation(text):
 def extract_attitude(text):
     doc = nlp(text)
     
-    attitude_keywords = {
-        'Emotion-related Adjectives': ['masaya', 'nalungkot', 'nagulat',
-        'nagustuhan', 'hindi nagustuhan', 'pabor', 'hindi pabor', 
-        'sumasang-ayon', 'hindi sumasang-ayon', 'natuwa', 'nainis', 
-        'nagalit', 'nagagalit', 'malungkot', 'nakakaawa', 
-        'nag-aalala', 'natuwa', 'nabahala', 'nag-alala', 'nagagalit', 
-        'nag-iba ng pananaw', 'nagiging positibo', 'nagiging negatibo', 
-        'nagiging neutral', 'nagiging maasahin', 'nagiging pesimista', 
-        'nagiging nag-aalala', 'nagiging masaya', 'nagiging malungkot']
-    }
+    with open('./backend/data/filipino_keywords.json', 'r', encoding='utf-8') as f:
+        attitude_keywords = json.load(f)['attitude']
     
     detected_attitudes = {
         'Emotion-related Adjectives': False
@@ -353,13 +272,8 @@ def extract_attitude(text):
 def extract_comparative(text):
     doc = nlp(text)
     
-    comparative_keywords = {
-        'Comparative Adjectives': ['mas', 'higit','higit na' 'kaysa','mas mabuti', 
-        'mas masama', 'mas mataas', 'mas mababa', 'mas mabilis', 'mas mabagal', 'mas matanda', 
-        'mas bata', 'mas malaki', 'mas maliit', 'mas malakas', 'mas mahina', 'mas magaan', 'mas mabigat', 'mas maganda', 
-        'mas pangit', 'mas malakas', 'mas mahina', 'mas mataas', 'mas mababa', 'mas bago', 'mas luma', 'mas makabago', 
-        'mas konserbatibo']
-    }
+    with open('./backend/data/filipino_keywords.json', 'r', encoding='utf-8') as f:
+        comparative_keywords = json.load(f)['comparative']
     
     detected_comparative = {
         'Comparative Adjectives': False
@@ -377,12 +291,8 @@ def extract_comparative(text):
 def extract_quantifier(text):
     doc = nlp(text)
     
-    quantifier_keywords = {
-        'Quantifiers': ['ang lahat', 'ilan', 'wala', 'marami', 'konti',
-        'karamihan', 'kaunti', 'kalahatan', 
-        'iba', 'madami', 'mas marami', 'pinaka marami',
-        'lahat', 'marami sa', 'konti sa', 'ang lahat', 'ilang','mas']
-    }
+    with open('./backend/data/filipino_keywords.json', 'r', encoding='utf-8') as f:
+        quantifier_keywords = json.load(f)['quantifier']
     
     detected_quantifiers = {
         'Quantifiers': False
@@ -400,12 +310,8 @@ def extract_quantifier(text):
 def extract_qualification(text):
     doc = nlp(text)
     
-    qualification_keywords = {
-        'Qualifying Adjectives/Adverbs': ['napaka', 'sobra', 'talaga','mas mahusay', 
-        'hindi mahusay', 'magaling', 'hindi magaling', 'kasanayan', 'hindi kasanayan', 'sanay', 'hindi sanay', 
-        'mahusay', 'hindi mahusay', 'dalubhasa', 'baguhan', 'bago', 'karanasan', 'walang karanasan', 
-        'mas magaling', 'hindi magaling','kwalipikado', 'hindi kwalipikado']
-    }
+    with open('./backend/data/filipino_keywords.json', 'r', encoding='utf-8') as f:
+        qualification_keywords = json.load(f)['qualification']
     
     detected_qualifications = {
         'Qualifying Adjectives/Adverbs': False
@@ -423,10 +329,8 @@ def extract_qualification(text):
 def extract_explanation(text):
     doc = nlp(text)
     
-    explanation_keywords = {
-        'Explanation Phrases': ['dahil', 'upang', 'sapagkat','nagpaliwanag','nagpapaliwanag', 'nangatwiran', 
-        'nagdiin', 'nagpakita', 'nagpapahayag', 'nagbibigay']
-    }
+    with open('./backend/data/filipino_keywords.json', 'r', encoding='utf-8') as f:
+        explanation_keywords = json.load(f)['explanation']
     
     detected_explanations = {
         'Explanation Phrases': False
