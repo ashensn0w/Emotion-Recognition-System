@@ -13,8 +13,8 @@ import spacy
 import stopwordsiso as stopwords
 import string
 
-nltk.download('punkt')
-nltk.download('stopwords')
+# nltk.download('punkt')
+# nltk.download('stopwords')
 
 nlp = spacy.load("en_core_web_md")
 
@@ -66,54 +66,54 @@ if data is not None:
     def convert_to_lowercase(data):
         if 'sentence' in data.columns:
             data['sentence'] = data['sentence'].str.lower()
-            print("Sentence has been converted to lowercase.")
+            # print("Sentence has been converted to lowercase.")
         else:
             print("Column 'sentence' not found in the DataFrame.")
 
     convert_to_lowercase(data)
-    print_table(data, title="Data After Lowercase Conversion")
+    # print_table(data, title="Data After Lowercase Conversion")
     # <-------------------------------------------------------------------------------------------------------------->
     def remove_punctuation(data):
         if 'sentence' in data.columns:
             data['sentence'] = data['sentence'].apply(lambda x: x.translate(str.maketrans('', '', string.punctuation)))
-            print("Punctuation has been removed.")
+            # print("Punctuation has been removed.")
         else:
             print("Column 'sentence' not found in the DataFrame.")
 
     remove_punctuation(data)
-    print_table(data, title="Data After Punctuation Removal")
+    # print_table(data, title="Data After Punctuation Removal")
     # <-------------------------------------------------------------------------------------------------------------->
     def remove_numbers(data):
         if 'sentence' in data.columns:
             data['sentence'] = data['sentence'].str.replace(r'\d+', '', regex=True)
-            print("Numbers have been removed.")
+            # print("Numbers have been removed.")
         else:
             print("Column 'sentence' not found in the DataFrame.")
 
     remove_numbers(data)
-    print_table(data, title="Data After Numbers Removal")
+    # print_table(data, title="Data After Numbers Removal")
     # <-------------------------------------------------------------------------------------------------------------->
     def tokenize_sentences(data):
         if 'sentence' in data.columns:
             data['sentence'] = data['sentence'].apply(lambda x: word_tokenize(x))
-            print("Sentences have been tokenized.")
+            # print("Sentences have been tokenized.")
         else:
             print("Column 'sentence' not found in the DataFrame.")
 
     tokenize_sentences(data)
-    print_table(data, title="Data After Tokenization")
+    # print_table(data, title="Data After Tokenization")
     # <-------------------------------------------------------------------------------------------------------------->
     def remove_stopwords(data):
         if 'sentence' in data.columns:
             all_stopwords = english_stopwords.union(set(filipino_stopwords))
             
             data['sentence'] = data['sentence'].apply(lambda tokens: [word for word in tokens if word.lower() not in all_stopwords])
-            print("Stopwords have been removed.")
+            # print("Stopwords have been removed.")
         else:
             print("Column 'sentence' not found in the DataFrame.")
 
     remove_stopwords(data)
-    print_table(data, title="Data After Stopwords Removal")
+    # print_table(data, title="Data After Stopwords Removal")
     # <-------------------------------------------------------------------------------------------------------------->
     def lemmatize_filo(data):
         with open('./backend/data/filipino_lemmatizer.json', 'r', encoding='utf-8') as json_file:
@@ -134,27 +134,27 @@ if data is not None:
             data.at[index, 'sentence'] = updated_tokens
 
     lemmatize_filo(data)
-    print_table(data, title="Data After Lemmatization in Filipino")
+    # print_table(data, title="Data After Lemmatization in Filipino")
     # <-------------------------------------------------------------------------------------------------------------->
     def lemmatize_eng(data):
         if 'sentence' in data.columns:
             data['sentence'] = data['sentence'].apply(lambda tokens: [nlp(token)[0].lemma_ for token in tokens])
-            print("Tokens have been lemmatized.")
+            # print("Tokens have been lemmatized.")
         else:
             print("Column 'sentence' not found in the DataFrame.")
 
     lemmatize_eng(data)
-    print_table(data, title="Data After Lemmatization in English")
+    # print_table(data, title="Data After Lemmatization in English")
     # <-------------------------------------------------------------------------------------------------------------->
     def join_tokens(data):
         if 'sentence' in data.columns:
             data['sentence'] = data['sentence'].apply(lambda tokens: ' '.join(tokens))
-            print("Tokens have been joined back into sentences.")
+            # print("Tokens have been joined back into sentences.")
         else:
             print("Column 'sentence' not found in the DataFrame.")
 
     join_tokens(data)
-    print_table(data, title="Data After Joining Tokens")
+    # print_table(data, title="Data After Joining Tokens")
     # <-------------------------------------------------------------------------------------------------------------->
     # Load the saved TF-IDF vectorizer
     tfidf_vectorizer = load_model_with_name('tfidf_vectorizer_model.pkl')
@@ -167,8 +167,8 @@ if data is not None:
         # Convert the TF-IDF matrix to a DataFrame for better visualization (optional)
         tfidf_df = pd.DataFrame(tfidf_matrix.toarray(), columns=tfidf_vectorizer.get_feature_names_out())
 
-        print("TF-IDF transformation successful!")
-        print_table(tfidf_df, title="TF-IDF Features")
+        # print("TF-IDF transformation successful!")
+        # print_table(tfidf_df, title="TF-IDF Features")
     else:
         print("TF-IDF vectorizer could not be loaded.")
     # <-------------------------------------------------------------------------------------------------------------->
@@ -206,8 +206,8 @@ if data is not None:
     final_combined_df = pd.concat([tfidf_df, combined_features_df], axis=1)
 
     # Print the final combined DataFrame
-    print("Final combined DataFrame:")
-    print(final_combined_df.head())
+    # print("Final combined DataFrame:")
+    # print(final_combined_df.head())
 
     # Save the final combined features DataFrame to CSV
     final_combined_df.to_csv('./backend/data/feature vectors/tested_complete_vectorized_data.csv', index=False)
