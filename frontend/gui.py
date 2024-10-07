@@ -3,6 +3,8 @@ from PyQt5.QtWidgets import QSpacerItem, QSizePolicy, QApplication, QMainWindow,
 from PyQt5.QtCore import Qt, QSize
 from PyQt5.QtGui import QFont
 import pandas as pd
+import shutil
+import os
 
 # Main Window for the application
 class MainWindow(QMainWindow):
@@ -90,8 +92,26 @@ class MainWindow(QMainWindow):
     def open_file_dialog(self):
         options = QFileDialog.Options()
         file_name, _ = QFileDialog.getOpenFileName(self, "Open Novella", "", "Text Files (*.txt);;All Files (*)", options=options)
+        
         if file_name:
-            self.file_name_label.setText(f"Selected file: {file_name.split('/')[-1]}")
+            # Extract the file name from the full path
+            base_name = os.path.basename(file_name)
+            
+            # Define the destination directory
+            dest_dir = "./backend/data/novellas"
+            
+            # Create the directory if it doesn't exist
+            if not os.path.exists(dest_dir):
+                os.makedirs(dest_dir)
+            
+            # Set the destination path
+            dest_file = os.path.join(dest_dir, base_name)
+            
+            # Copy the file to the destination directory
+            shutil.copy(file_name, dest_file)
+            
+            # Update the label to show the file was selected and saved
+            self.file_name_label.setText(f"Selected file: {base_name}\nFile saved to {dest_dir}")
 
     def go_to_results_page(self):
         self.results_window = ResultsWindow(self)  # Pass self to allow navigation to sentences page
