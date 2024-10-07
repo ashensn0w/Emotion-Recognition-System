@@ -4,13 +4,11 @@ from preprocessing.narrative_features_eng import *
 from preprocessing.narrative_features_fil import *
 from rich.console import Console
 from rich.table import Table
-from sklearn.feature_extraction.text import TfidfVectorizer
 from utils.save_load import *
 import json
 import nltk
 import numpy as np
 import pandas as pd
-import pickle
 import spacy
 import stopwordsiso as stopwords
 import string
