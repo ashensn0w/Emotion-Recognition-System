@@ -105,18 +105,21 @@ if data is not None:
 # <-------------------------------------------------------------------------------------------------------------->
     # Combine Filipino and English feature vectors using element-wise maximum
     def combine_features(fil_features_df, eng_features_df):
-        # Ensure both DataFrames have the same number of columns
-        assert fil_features_df.shape[1] == eng_features_df.shape[1], "Feature dataframes must have the same number of columns"
-
-        # Concatenate DataFrames by rows
-        combined_features_df = pd.concat([fil_features_df, eng_features_df], ignore_index=True)
-
+        # Ensure both DataFrames have the same structure
+        assert fil_features_df.shape == eng_features_df.shape, "Feature dataframes must have the same shape"
+        
+        # Element-wise maximum between Filipino and English features
+        combined_features = np.maximum(fil_features_df.values, eng_features_df.values)
+        
+        # Convert back to DataFrame with the same column names
+        combined_features_df = pd.DataFrame(combined_features, columns=fil_features_df.columns)
+        
         return combined_features_df
 
-    def process_data(df1, df2):
+    def process_data(df):
         # Extract Filipino and English features
-        fil_features_df = extract_fil_features_from_dataframe(df1)
-        eng_features_df = extract_eng_features_from_dataframe(df2)
+        fil_features_df = extract_fil_features_from_dataframe(df)
+        eng_features_df = extract_eng_features_from_dataframe(df)
 
         # Combine the features
         combined_features_df = combine_features(fil_features_df, eng_features_df)
@@ -124,14 +127,11 @@ if data is not None:
         return combined_features_df
 
     # Read narrative features data from CSV
-    narrative_fil_file_path = './backend/data/sample_fil.csv'
-    narrative_eng_file_path = './backend/data/sample_eng.csv'
-
-    narrative_features_fil_df = pd.read_csv(narrative_fil_file_path)
-    narrative_features_eng_df = pd.read_csv(narrative_eng_file_path)
+    narrative_file_path = './backend/data/sample.csv'
+    narrative_features_df = pd.read_csv(narrative_file_path)
 
     # Apply the feature extraction and combination process
-    combined_features_df = process_data(narrative_features_fil_df, narrative_features_eng_df)
+    combined_features_df = process_data(narrative_features_df)
     # <-------------------------------------------------------------------------------------------------------------->
     # Concatenate TF-IDF features and combined narrative features
     final_combined_df = pd.concat([tfidf_df, combined_features_df], axis=1)

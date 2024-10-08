@@ -1,8 +1,22 @@
 sentence,predicted_emotion
-"Amidst the heavy rain, Clara ran swiftly toward the old house.",fear
-The beating of her heart seemed louder than the raindrops.,fear
-"She was afraid of what might happen, but she couldn't ignore the letter she had received earlier.",fear
-"'Come here, I have something important to tell you,' the note said.",sadness
-"Despite the darkness and cold of the night, she pressed on.",fear
-Her hands trembled as she touched the rusty doorknob.,fear
-What could be waiting inside?,anger
+"Sa tahimik na dalampasigan ng isang maliit na baryo, si Clara ay naglalakad nang mag-isa, bitbit ang kanyang lumang libro.",fear
+"The sun was setting, casting a golden glow over the horizon, ngunit ang kanyang puso ay puno ng lungkot.",fear
+"""Clara, bakit andito ka mag-isa?""",joy
+tanong ni Miguel na biglang lumapit.,fear
+"""Hindi ko alam, Miguel,"" sagot niya, tears forming in her eyes.",fear
+"""May mga bagay na mahirap ipaliwanag.""",joy
+"Miguel frowned, sensing the heaviness in her words.",joy
+"""You can tell me anything, Clara.",anger
+"Alam mo 'yan.""",fear
+Tumahimik si Clara.,sadness
+"She wanted to say something, but her throat tightened.",joy
+Why does it feel so difficult to open up?,sadness
+"""Natatakot ako,"" she finally whispered, her voice trembling.",fear
+"""Natakot akong mawala ang lahat... ang lahat ng mahalaga sa akin.""",joy
+Miguel sighed.,fear
+"""Clara, hindi kita iiwan.",joy
+"I'm here for you no matter what happens.""",anger
+"""Salamat,"" she whispered, her tears now falling freely.",fear
+"""Pero hindi ko alam kung kaya ko pa.""
+
+The waves crashed gently onto the shore, as if mirroring the turmoil in Clara's heart.",fear

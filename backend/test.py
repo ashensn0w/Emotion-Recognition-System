@@ -13,8 +13,8 @@ import spacy
 import stopwordsiso as stopwords
 import string
 
-# nltk.download('punkt')
-# nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('stopwords')
 
 nlp = spacy.load("en_core_web_md")
 
