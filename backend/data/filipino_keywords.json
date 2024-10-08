@@ -37,7 +37,8 @@
         "makipagsabayan", "sasabihin", "sabihing", "pupuntahan", "masasabi", "pagsasabi", "sasabihin", "sasalakayin", "isali", "pagsalitaan",
         "sapukin", "makakasama", "sasama", "makasama", "sinamaan", "sumama", "kasama", "makasama", "nasanay", "sinanay", "sinasarili",
         "sumigaw", "mapasigaw", "siguraduhin", "magsimula", "sinimulan", "sinisiyasat", "subaybayan", "sinubukan", "sinusubukan", "susubukan", 
-        "subukan", "papasugod", "pasugod", "isusuko", "sumuko", "pagsulat", "pagsusulat", "nanumpa", "sinumpa", "masundan", "sumunod", "susunod", "sunod"
+        "subukan", "papasugod", "pasugod", "isusuko", "sumuko", "pagsulat", "pagsusulat", "nanumpa", "sinumpa", "masundan", "sumunod", "susunod", 
+        "sunod", "pagsunog", "sinunog", "sunugin","susuotin", "itaas", "suntok", "itinaas", "pinagtataasan", "tinaasan"
         ],
 
         "Modal Verbs": ["nais", "gusto", "gustong", "gugustuhin", "hangad", "maging", "ayaw", "ayoko", "balak", 
@@ -85,7 +86,8 @@
         "masaktan", "hinanakit", "nasaktan", "mamuti", "sinakripisyo", "nasasaktan", "pagkakasala", "sinaksak", "isinaksak",
         "nagpasalamat", "pasalamat", "salamat", "sinalo", "sinapit", "sigawan", "pagsigaw", "napasigaw", "sumikat", 
         "nagsimula", "sinimulan", "simula", "sinubukang", "nasira", "sumira", "makakasira", "sira", "sinugod", "pagsulat",
-        "sumuko", "nakasulat", "pagsulpot", "sinumpa", "sinundan", "masundan"],
+        "sumuko", "nakasulat", "pagsulpot", "sinumpa", "sinundan", "masundan", "sinunog", "suntok", "sinuntok", "suot",
+        "nakasuot", "itinaas", "nakataas", "tinaasan", "pagtaas"],
 
         "Perfect Aspect Verbs": ["nagkaroon", "nagawa", "umunlad", "sumulong", "nag-asenso", 
         "naglaho", "naganap", "nangyari", "nasaksihan", "naipakita", "desisyon", "ginulo",
@@ -116,7 +118,7 @@
         "putolputol", "sabay-sabay", "sabay", "sabay sabay", "sumaludo", "sinarado", "sandali", 
         "sandaling", "sinasarili", "sumigaw", "sumisigaw", "pagsigaw", "mapasigaw", "sinisiyasat", 
         "sinisira", "nagsisinungaling", "sira", "sumusugod", "nakasuksok", "pagsulat", "nanumpa",
-        "sumusunod"],
+        "sumusunod", "pagsunog", "nakakataas", "tumataas", "mataas"],
 
         "Adjectives as Adverbs": ["maganda", "magagandang", "masikap", "pagsisikap", "masigasig", "masinop", "masipag", 
         "kakayahan", "tiwala", "kalooban", "pag-asa", "pagmamahal", "respeto", "malakas", "maisip", "magalit",
@@ -150,7 +152,7 @@
         "nagpa-practice", "pinupunasan", "papunta", "pupunta", "pumupunta", "nakakasakit", "papunta", "pupunta", 
         "pumupunta", "pinuputol", "putol-putol", "kasabay", "sabay", "sumabay", "sinasabi", "sumagot", "sinasalo",
         "sinarado", "sinisiyasat", "sinisira", "sinusubukan", "sinusubukang", "sumusugod", "sumugod", "pagsusulat",
-        "magkakasunod", "sumusunod"
+        "magkakasunod", "sumusunod", "sinusuot", "tumaas", "tumataas", "pinagtataasan", "pagtaas"
         ]
     },
 
@@ -247,7 +249,7 @@
         "lahat", "marami sa", "konti sa", "ang lahat", "ilang", "mas", "madaming",
         "dagdag", "karagdagang", "dalawa", "dalawang", "maliliit", "malaki",
         "limang", "lima", "maraming", "pito", "pitong", "napakaraming", "sampung",
-        "sampu"]
+        "sampu", "matataas"]
     },
 
     "qualification" : {
