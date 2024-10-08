@@ -1,6 +1,5 @@
 from nltk.corpus import stopwords
-from nltk.data import find
-from nltk.tokenize import word_tokenize
+from nltk.tokenize import word_tokenize, sent_tokenize
 from preprocessing.narrative_features_eng import *
 from preprocessing.narrative_features_fil import *
 from PyQt5.QtCore import Qt
@@ -20,22 +19,15 @@ import stopwordsiso as stopwords
 import string
 import sys
 
-# List of resources to check
-resources = ['tokenizers/punkt', 'corpora/stopwords']
-
-# Check if the resources are already downloaded
-for resource in resources:
-    try:
-        find(resource)
-        # print(f"{resource} is already downloaded.")
-    except LookupError:
-        # print(f"{resource} not found. Downloading...")
-        nltk.download(resource)
+nltk.download('punkt')
+nltk.download('stopwords')
 
 nlp = spacy.load("en_core_web_md")
 
 filipino_stopwords = stopwords.stopwords('tl')
 english_stopwords = set(stopwords.stopwords('english'))
+
+
 
 # Main Window for the application
 class MainWindow(QMainWindow):
@@ -182,7 +174,7 @@ class MainWindow(QMainWindow):
         sentences = [line.strip() for line in text_content.strip().split('\n\n') if line.strip()]
 
         # Print the sentences variable to see the output
-        # print(sentences)
+        print(sentences)
 
         # Create a DataFrame from the list of sentences
         data = pd.DataFrame(sentences, columns=['sentence'])
@@ -190,55 +182,77 @@ class MainWindow(QMainWindow):
         def format_list_as_string(token_list):
             return str(token_list).replace("'", '"')
 
+        def print_table(data, title="Table", num_samples=20):    
+            table = Table(title=title)
+            
+            # Add column names to the table
+            for col in data.columns:
+                table.add_column(col)
+
+            # Add rows to the table
+            for _, row in data.head(num_samples).iterrows():
+                formatted_row = [format_list_as_string(row[col]) if isinstance(row[col], list) else row[col] for col in data.columns]
+                table.add_row(*map(str, formatted_row))
+            
+            # Display the table
+            console = Console()
+            console.print(table)
+
         # Check if the dataset is loaded successfully
         if data is not None:
+            print_table(data, title="Original Data")
             # <-------------------------------------------------------------------------------------------------------------->
             def convert_to_lowercase(data):
                 if 'sentence' in data.columns:
                     data['sentence'] = data['sentence'].str.lower()
-                    # print("Sentence has been converted to lowercase.")
+                    print("Sentence has been converted to lowercase.")
                 else:
                     print("Column 'sentence' not found in the DataFrame.")
 
             convert_to_lowercase(data)
+            print_table(data, title="Data After Lowercase Conversion")
             # <-------------------------------------------------------------------------------------------------------------->
             def remove_punctuation(data):
                 if 'sentence' in data.columns:
                     data['sentence'] = data['sentence'].apply(lambda x: x.translate(str.maketrans('', '', string.punctuation)))
-                    # print("Punctuation has been removed.")
+                    print("Punctuation has been removed.")
                 else:
                     print("Column 'sentence' not found in the DataFrame.")
 
             remove_punctuation(data)
+            print_table(data, title="Data After Punctuation Removal")
             # <-------------------------------------------------------------------------------------------------------------->
             def remove_numbers(data):
                 if 'sentence' in data.columns:
                     data['sentence'] = data['sentence'].str.replace(r'\d+', '', regex=True)
-                    # print("Numbers have been removed.")
+                    print("Numbers have been removed.")
                 else:
                     print("Column 'sentence' not found in the DataFrame.")
 
             remove_numbers(data)
+            print_table(data, title="Data After Numbers Removal")
             # <-------------------------------------------------------------------------------------------------------------->
             def tokenize_sentences(data):
                 if 'sentence' in data.columns:
                     data['sentence'] = data['sentence'].apply(lambda x: word_tokenize(x))
-                    # print("Sentences have been tokenized.")
+                    print("Sentences have been tokenized.")
                 else:
                     print("Column 'sentence' not found in the DataFrame.")
 
             tokenize_sentences(data)
+            print_table(data, title="Data After Tokenization")
             # <-------------------------------------------------------------------------------------------------------------->
             def remove_stopwords(data):
                 if 'sentence' in data.columns:
                     all_stopwords = english_stopwords.union(set(filipino_stopwords))
                     
                     data['sentence'] = data['sentence'].apply(lambda tokens: [word for word in tokens if word.lower() not in all_stopwords])
-                    # print("Stopwords have been removed.")
+                    print("Stopwords have been removed.")
                 else:
                     print("Column 'sentence' not found in the DataFrame.")
 
             remove_stopwords(data)
+            print_table(data, title="Data After Stopwords Removal")
             # <-------------------------------------------------------------------------------------------------------------->
             def lemmatize_filo(data):
                 with open('./backend/data/filipino_lemmatizer.json', 'r', encoding='utf-8') as json_file:
@@ -259,25 +273,28 @@ class MainWindow(QMainWindow):
                     data.at[index, 'sentence'] = updated_tokens
 
             lemmatize_filo(data)
+            print_table(data, title="Data After Lemmatization in Filipino")
             # <-------------------------------------------------------------------------------------------------------------->
             def lemmatize_eng(data):
                 if 'sentence' in data.columns:
                     data['sentence'] = data['sentence'].apply(lambda tokens: [nlp(token)[0].lemma_ for token in tokens])
-                    # print("Tokens have been lemmatized.")
+                    print("Tokens have been lemmatized.")
                 else:
                     print("Column 'sentence' not found in the DataFrame.")
 
             lemmatize_eng(data)
+            print_table(data, title="Data After Lemmatization in English")
             # <-------------------------------------------------------------------------------------------------------------->
             def join_tokens(data):
                 if 'sentence' in data.columns:
                     data['sentence'] = data['sentence'].apply(lambda tokens: ' '.join(tokens))
                     # data['sentence'] = data['sentence'].str.lower()
-                    # print("Tokens have been joined back into sentences.")
+                    print("Tokens have been joined back into sentences.")
                 else:
                     print("Column 'sentence' not found in the DataFrame.")
 
             join_tokens(data)
+            print_table(data, title="Data After Joining Tokens")
             # <-------------------------------------------------------------------------------------------------------------->
             # Load the saved TF-IDF vectorizer
             tfidf_vectorizer = load_model_with_name('tfidf_vectorizer_model.pkl')
@@ -290,7 +307,8 @@ class MainWindow(QMainWindow):
                 # Convert the TF-IDF matrix to a DataFrame for better visualization (optional)
                 tfidf_df = pd.DataFrame(tfidf_matrix.toarray(), columns=tfidf_vectorizer.get_feature_names_out())
 
-                # print("TF-IDF transformation successful!")
+                print("TF-IDF transformation successful!")
+                print_table(tfidf_df, title="TF-IDF Features")
             else:
                 print("TF-IDF vectorizer could not be loaded.")
             # <-------------------------------------------------------------------------------------------------------------->
@@ -324,7 +342,7 @@ class MainWindow(QMainWindow):
             sentences = [line.strip() for line in text_content.strip().split('\n\n') if line.strip()]
 
             # Print the sentences variable to see the output
-            # print(sentences)
+            print(sentences)
 
             # Create a DataFrame from the list of sentences
             data = pd.DataFrame(sentences, columns=['sentence'])
@@ -336,8 +354,8 @@ class MainWindow(QMainWindow):
             final_combined_df = pd.concat([tfidf_df, combined_features_df], axis=1)
 
             # Print the final combined DataFrame
-            # print("Final combined DataFrame:")
-            # print(final_combined_df.head())
+            print("Final combined DataFrame:")
+            print(final_combined_df.head())
 
             # Remove any columns that were not part of the model's training
             if 'emotion' in final_combined_df.columns:
@@ -362,10 +380,14 @@ class MainWindow(QMainWindow):
             # Save the output to a new CSV file
             output_df.to_csv('./backend/data/feature vectors/new_input_predictions.csv', index=False)
 
+            # Display the first few rows in the console for review
+            print_table(output_df, title="New Input Sentences with Predicted Emotions")
+
         # Proceed to the results window, if applicable
         self.results_window = ResultsWindow(self, self.file_path)  # Pass file_path to results window
         self.results_window.show()
         self.close()
+        
         
 # Second Window (Results Page)
 class ResultsWindow(QWidget):

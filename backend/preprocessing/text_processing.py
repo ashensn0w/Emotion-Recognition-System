@@ -5,9 +5,19 @@ from nltk.corpus import stopwords
 import spacy
 import json
 import stopwordsiso as filipino_stopwords
+from nltk.data import find
 
-nltk.download('punkt')
-nltk.download('stopwords')
+# List of resources to check
+resources = ['tokenizers/punkt', 'corpora/stopwords']
+
+# Check if the resources are already downloaded
+for resource in resources:
+    try:
+        find(resource)
+        print(f"{resource} is already downloaded.")
+    except LookupError:
+        print(f"{resource} not found. Downloading...")
+        nltk.download(resource)
 
 nlp = spacy.load("en_core_web_md")
 
@@ -87,6 +97,7 @@ def lemmatize_eng(data):
 def join_tokens(data):
     if 'sentence' in data.columns:
         data['sentence'] = data['sentence'].apply(lambda tokens: ' '.join(tokens))
+        data['sentence'] = data['sentence'].str.lower()
         print("Tokens have been joined back into sentences.")
     else:
         print("Column 'sentence' not found in the DataFrame.")
