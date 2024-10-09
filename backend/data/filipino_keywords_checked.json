@@ -2,7 +2,9 @@
     "mode": {
         "Possibility": ["maaari", "maaring", "pwedeng", "pwede", "puwede", "makabalik", "mabawi", "mabibigyan", "maibibigay",
         "makaalis", "malamang", "makalaya", "makalimot", "makakalimutan","makalimutan", "nakakalipas", "makapagpaliwanag", 
-        "maipaliwanag", "mapanatili", "mananatiling", "mananatili", "pagkakataong", "makakapahinga", "makapasok"],
+        "maipaliwanag", "mapanatili", "mananatiling", "mananatili", "pagkakataong", "makakapahinga", "makapasok", "palitan", 
+        "mapalitan", "pagpasok", "kapalit", "pansinin", "mapapatay", "pagpatay", "baliktarin", "babaliktarin", "babaligtarin", 
+        "mabuntis", "dagsain"],
 
         "Impossibility": ["hindi", "walang", "wala"],
 
@@ -34,7 +36,8 @@
         "tawagan", "magtayo", "tiisin", "manigas", "tigilan", "titingin", "manirahan", "magtiwala", "makatulog", "matulog", 
         "magpapatuloy",  "ipagpapatuloy", "magpapatuloy", "maipagpatuloy", "itumba", "pakitunguhan", "tutuparin", "ituturing", 
         "magturo", "kausapin", "maka-usap", "makausap", "makipagusap", "mag-usap", "uuwi", "makauwi", "pauwi", "mawala", "mawalan", 
-        "wasakin", "yakapin", "yakap", "balaan"
+        "wasakin", "yakapin", "yakap", "balaan", "baliktarin", "binaligtad", "mabuntis", "ipagdiwang", "gumuhit", "magpahayag", 
+        "ipahayag", "ipahiwatig", "magpahulog", "umibig", "magkuwento", "magkwento", "mangangatwiran"
         ],
 
         "Modal Verbs": ["nais", "gusto", "gustong", "gugustuhin", "hangad", "maging", "ayaw", "ayoko", "balak"],

@@ -352,6 +352,38 @@ INTENTION
 
     "Tumawa" (to laugh):
     This verb describes an action but does not explicitly indicate intention or desire. Depending on the context, it may be considered a general verb rather than a verb of intention. (Not Intention)
+    
+    "dumagundong" - to rumble (does not imply intention directly)
+
+    "dinamay" - to involve (can imply intention but more context-dependent)
+
+    "dumura" / "dudura" - to spit (does not express intention as it refers to an action)
+
+    "gumala" - to roam (can imply intention but is more about action)
+
+    "mahulog" - to fall (generally describes an event rather than intention)
+
+    "mahumaling" - to be captivated (can imply an intention to pursue something but lacks a direct intention)
+
+    "nahuni" - to hum (does not express intention directly)
+
+    "iniba" - to change (may imply intention, but context is crucial)
+
+    "tumabi" - to move aside (generally describes an action rather than a specific intention)
+
+    "nagtabi" - set aside (does not explicitly convey intention without additional context)
+
+    "lalabag" - to violate (describes an action rather than intention)
+
+    "lalamasin" - to squeeze (does not convey intention directly)
+
+    "bati" - Could fall under an Action feature (related to greeting).
+
+    "banggit" - Could be categorized under an Action feature (related to mentioning).
+
+    "gamit" - Could also fall under an Action feature (related to using something).
+    
+    "tumawa" - Would likely fit under an Action feature (describing the action of laughing).
 -----------------------------------------------------------------------------------------------------------------------------------
 RESULT
 
@@ -1583,3 +1615,5 @@ EXPLANATION
 
     "pupuntahan" - place to go; indicates a future action and is more about ACTIONS than EXPLANATION.
 -----------------------------------------------------------------------------------------------------------------------------------
+
+
