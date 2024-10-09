@@ -84,204 +84,134 @@
     },
 
     "manner" : {
-        "Adverbs": ["maingat", "maayos", "mabilis", "tahimik", "malumanay", "gumalaw",
-        "mahinahon", "masinsin", "magaan", "mabagal", "matapang", "mabuti", "mabuting",
-        "malakas", "masigla", "puspusan", "paggalang", "matiyaga", "magulo", "magulong",
-        "tapat", "malasakit", "mabait", "mahinahon", "masinsinan", "gagalaw",
-        "mapanuri", "masusing", "nakakabahala", "pabalik", "nagbibigay-daan", "pabiro",
-        "kaagad", "nagmamakaawa", "bastos", "mabigat", "madali", "kadali", "nagmamadali",
-        "madaplisan", "nakagalaw", "makagalaw", "kagulat-gulat", "hahayaang", "hinahayaan",
-        "hayaang", "hawakan", "hinahawakan", "humahawak", "nakahawak", "pagkakahawak",
-        "mapapagaling", "karumaldumal", "karumal-dumal", "nadurog", "gamit", "naglalagablab",
-        "maglakbay", "palamigin", "malamig","taglamig", "larangang", "larangan","paligid",
-        "maliit", "malaki", "malaking", "lumilikha", "pinaglilingkuran", "lumingon","lumipat",
-        "papalubog", "nagloloko", "nakaluhod", "lumalahok", "pagmamaktol", "malubha", "malubhang",
-        "namumugtong", "namumugto", "mura", "pagmumura", "obserba", "obserbahan", "dalan", 
-        "dalang-dala", "nakakapagod", "nakapatong", "ipagpatuloy", "magpatuloy", "pinapayagan", 
-        "mapayapa", "pinipigil", "pinapihit", "ipikit", "nakapikit", "pipiliin", "mapili", "pipilitin",
-        "pinindot", "pumiyok", "naprotektahan", "pagprotekta", "protektahan", "proprotektahan",
-        "pinupunasan", "papunta", "pumupunta", "nagreklamo", "pagrereklamo", "papunta", "pumupunta", 
-        "putolputol", "putol-putol", "sabay-sabay", "sabay", "sabay sabay", "sumaludo", "sinarado", "sandali", 
-        "sandaling", "sinasarili", "sumigaw", "sumisigaw", "pagsigaw", "mapasigaw", "sinisiyasat", 
-        "sinisira", "nagsisinungaling", "sira", "sumusugod", "nakasuksok", "pagsulat", "nanumpa",
-        "sumusunod", "pagsunog", "nakakataas", "tumataas", "mataas", "katahimikan", "tahimik", 
-        "manahimik", "katakot-takot", "pinakanakakatakot", "nagpatakot", "tamang", "pagbabalik-tanaw",
-        "matandang", "tangi", "tanging", "natatanging", "ipagtatanggol", "tango", "natatawa", "tumatawa",
-        "patawad", "tawag", "matawag", "tayong", "tayo", "tingin", "nakatingin", "tumitingin", "pagtingin", 
-        "tinitignan", "tinitigan", "tinatrato", "nakatutok", "nakakatuwa", "pakitunguhan", "nagta-type",
-        "umuukit", "inuulit", "umuwi", "uwi", "mawawala", "pagkawala", "niyayakap", "niyakap", "napayakap",
-        "nakayuko"
+        "Adverbs": ["maingat", "maayos", "mabilis", "tahimik", "malumanay", "mahinahon", "masinsin", "magaan", "mabagal", "matapang", 
+        "mabuti", "mabuting", "malakas", "masigla", "puspusan", "paggalang", "matiyaga", "magulo", "magulong", "tapat", "malasakit", 
+        "mabait", "mahinahon", "masinsinan", "mapanuri", "masusing", "nakakabahala", "pabalik", "nagbibigay-daan", "pabiro", "kaagad", 
+        "nagmamakaawa", "bastos", "mabigat", "madali", "kadali", "nagmamadali", "madaplisan", "kagulat-gulat", "hinahayaan", 
+        "karumaldumal", "karumal-dumal", "naglalagablab", "malamig", "laging", "malubhang", "mapayapa", "putolputol", "putol-putol", 
+        "sabay-sabay", "sabay", "sabay sabay", "sandaling", "sinasarili", "tahimik", "katakot-takot", "pinakanakakatakot", "nakakatuwa"
         ],
 
-        "Adjectives as Adverbs": ["maganda", "magagandang", "masikap", "pagsisikap", "masigasig", "masinop", "masipag", 
-        "kakayahan", "tiwala", "kalooban", "pag-asa", "pagmamahal", "respeto", "malakas", "maisip", "magalit",
-        "pagkilala", "pagsasaalang-alang", "madamdamin", "pagsusumikap", "pagnanais", "kasiglahan", "kalakasan", 
-        "kasipagan", "pangarap", "kalagayan", "malumanay", "maluwag", "mahaba", "mahabang", "pabor", "pagod", "patay",
-        "patuloy", "pilitin", "puno", "punong", "punong-puno", "napuno", "pumuno", "talino", "matibay"]
+        "Adjectives as Adverbs": ["maganda", "magagandang", "masikap", "masigasig", "masinop", "masipag", "malakas", "madamdamin", 
+        "kasiglahan", "kalakasan", "kasipagan", "malumanay", "maluwag", "puno", "punong", "punong-puno", "matibay"
+        ]
     },
 
     "aspect" : {
-        "Aspectual Markers": ["nag", "naka", "nagsa"],
+        "Aspectual Markers": ["nag", "naka"],
         
-        "Verbal Affixes": ["nag-aaral", "natapos", "patuloy", "nagpatuloy", "patuloy na nangyayari", 
-        "nangyayari", "nagpapatuloy", "nagsimula", "nagwakas", "madilim", "hinahawakan",
-        "nagsisimula", "natatapos", "nagaganap", "patuloy na", "nangyayari pa", "magiging",
-        "nagsisimula pa lang", "nagsimula na", "patuloy na nagaganap", "nandidiring", "taglamig", "nilalamig",
-        "nagtatapos", "nagsimula", "natapos na", "inaayos", "pagbabalik", "pagbalik", "binabantayan",
-        "pagbibigay", "ibinibigay", "kabilang", "nabubuhay", "nagbubukas", "namumuo", "umaabot", "pagdating",
-        "paparating", "umaagos", "inaalis", "alisan", "naririnig", "pang-araw-araw", "namumuong", "binabangunot",
-        "ibinabaon", "bago", "binabali", "paghahanap", "hinahanap", "humihingi", "madudulas", "pagkadurog", 
-        "pagdurusa", "pagising", "gumising", "naguguluhan", "humahangin", "hinihingal", "humiga", "hinahayaan",
-        "paghihiganti", "maipaghihiganti", "magagamit, gagamitin", "gumagapang", "inilalagay", "lagi", 
-        "palagi", "palaging", "napalakas", "lumalim", "nanlamig", "lumilikha", "pinaglilingkuran", "malilimutan",
-        "nakalimutan", "lumipas", "nakalipas", "nakalilipas", "nagpapaliwanag", "papalubog", "nagloloko", "niloko",
-        "lumalahok", "ikinalulungkot", "pagmamaktol", "paminsan-minsan", "minsang", "minsan", "pinagmamasdan", 
-        "pinagmasdan", "namimiss", "nami-miss", "namiss", "muli", "muling", "pagmumura", "naging", "nagiging", 
-        "ngayon", "ngayong", "nanginginig", "nanginig", "panginginig", "napangisi", "ngumisi", "nakangiti",
-        "napangiti", "nangingiti", "nakangiting", "nanonood", "pinapanood", "noon", "non", "noong", "nun", "nung",
-        "dalhin", "nagdadala", "pagdadala", "nagdala", "nagpapadala", "napadpad", "ipinadyak", "napapagod",
-        "nagpapahinga", "nangako", "pinapasok", "nakikipagpalitan", "magpapahinga", "pagpasok", "napapansin",
-        "papansinin", "pinapansin", "mamamatay", "namamatay", "nakapatong", "pinapayagan", "pinipigil", "pinipigilan",
-        "nagpa-practice", "pinupunasan", "papunta", "pupunta", "pumupunta", "nakakasakit", "papunta", "pupunta", 
-        "pumupunta", "pinuputol", "putol-putol", "kasabay", "sabay", "sumabay", "sinasabi", "sumagot", "sinasalo",
-        "sinarado", "sinisiyasat", "sinisira", "sinusubukan", "sinusubukang", "sumusugod", "sumugod", "pagsusulat",
-        "magkakasunod", "sumusunod", "sinusuot", "tumaas", "tumataas", "pinagtataasan", "pagtaas",  "tatapusin", 
-        "tatanungin", "tatawa", "tatagal", "tatakas", "tumatago", "tumatakbo", "tumatango", "tumatalon", 
-        "tumatakbo", "tumatawa", "tumatakbo", "tumatalon", "tumatakbo", "tumagal", "tumatagal", "itatago",
-        "tumatahimik", "nagtataka", "natatakot", "nananakot", "ipagtatanggol", "tumatango", "tinatanong", 
-        "itinapon", "patapos", "matatapos", "matapos", "pagtatapos", "ipagpatawad", "mapapatawad", "tawagan",
-        "tinatawag", "pinapatawag", "patibukin", "natitinag", "itigil", "tumitingala", "tumitingin", "natitira", 
-        "nakatitig", "tinitignan", "tinititigan", "tinitigan", "nagtitiwala", "pinaniniwalaan", "tinatrato",
-        "pinagtitripan", "itinutok", "natutuwa", "matutulog", "natutulog",  "nagtuluy-tuloy", "patuloy", "patungo",
-        "tungo", "tutuparin", "itinuturing", "nagta-type", "nauubo", "itinuturo", "tinuturo", "umuukit", "mauulit", 
-        "paulit-ulit", "inuulit", "pangunahing", "umusbong", "umuunlad", "nakaupo", "usap-usapan", "pag-uusap", 
-        "pag-usapan", "usapang", "nag-uusap", "nawalan", "nawalang", "nawawalang", "nawawala", "pagkawasak", 
-        "nababagabag", "bumabago"
+        "Verbal Affixes": ["nag-aaral", "natapos", "patuloy", "nagpatuloy", "patuloy na nangyayari", "nangyayari", "nagpapatuloy", 
+        "nagsimula", "nagwakas", "nagsisimula", "natatapos", "nagaganap", "patuloy na", "nangyayari pa", "magiging", 
+        "nagsisimula pa lang", "nagsimula na", "patuloy na nagaganap", "nagtatapos", "natapos na", "inaayos", "umaabot", "pagdating",
+        "paparating", "umaagos", "inaalis", "naririnig", "namumuong", "ibinabaon", "hinahanap", "humihingi", "gumising", "humiga", 
+        "hinihingal", "magagamit", "gagamitin", "gumagapang", "inilalagay", "lumilikha", "lumipas", "nakalipas", "nakalilipas", 
+        "nagpapaliwanag", "papalubog", "lumalahok", "pinagmamasdan", "pinagmasdan", "naging", "nagiging", "nanginginig", "nanginig", 
+        "nagdadala", "nagdala", "nagpapadala", "napapansin", "nagpapahinga", "napapagod", "magpapahinga", "papansinin", "pinapansin", 
+        "mamamatay", "namamatay", "nakapatong", "pinapayagan", "pinipigil", "pinipigilan", "nagpa-practice", "pinupunasan", "papunta", 
+        "pupunta", "pumupunta", "nakakasakit", "pinuputol", "putol-putol", "kasabay", "sabay", "sumabay", "sinasabi", "sumagot", 
+        "sinasalo", "sinarado", "sinisiyasat", "sinisira", "sinusubukan", "sinusubukang", "sumusugod", "sumugod", "pagsusulat", 
+        "magkakasunod", "sumusunod", "sinusuot", "tumaas", "tumataas", "pinagtataasan", "pagtaas", "tatapusin", "tatanungin", 
+        "tatawa", "tatagal", "tatakas", "tumatago", "tumatakbo", "tumatango", "tumatalon", "tumatakbo", "tumatawa", "tumatakbo", 
+        "tumatalon", "tumatakbo", "tumagal", "tumatagal", "itatago", "tumatahimik", "nagtataka", "natatakot", "nananakot", 
+        "ipagtatanggol", "tumatango", "tinatanong", "itinapon", "patapos", "matatapos", "matapos", "ipagpatawad", "mapapatawad", 
+        "tawagan", "tinatawag", "pinapatawag", "patibukin", "natitinag", "itigil", "tumitingala", "tumitingin", "natitira", 
+        "nakatitig", "tinitignan", "tinititigan", "tinitigan", "nagtitiwala", "pinaniniwalaan", "tinatrato", "pinagtitripan", 
+        "itinutok", "natutuwa", "matutulog", "natutulog",  "nagtuluy-tuloy", "patuloy", "patungo", "tungo", "tutuparin", 
+        "itinuturing", "nagta-type", "nauubo", "itinuturo", "tinuturo", "umuukit", "mauulit", "paulit-ulit", "inuulit", 
+        "pangunahing", "umusbong", "umuunlad", "nakaupo", "usap-usapan", "pag-uusap", "pag-usapan", "usapang", "nag-uusap", 
+        "nawawalang", "nawawala", "nababagabag", "bumabago"
         ]
     },
 
     "status" : {
-        "Negation Words": ["hindi", "wala", "huwag", "ayaw", "ayoko", "ayokong", "don't"]
+        "Negation Words": ["hindi", "wala", "huwag", "ayaw", "ayoko", "ayokong", "hindi ko", "di", "walang", "bawal", "wag"]
     },
 
     "appearance" : {
-        "Transition Words": ["naging", "pinalitan", "nagbago", "nagpakita", 
-        "nagsilbing", "nagmumungkahi", "nagpamalas", "nagpahayag", "buong",
-        "nagbubukas", "nagbibigay", "nagsasalita", "nag-aalok", "naglalaman", "nagsasabi", 
-        "nagsusumpa", "nag-aangkin", "nagpapakita ng", "nagpapahayag ng", "naglalantad ng", 
-        "nagsasalita ng", "nag-aalok ng", "naglalaman ng", "nagpapatunay ng", "panibago",
-        "panibagong", "pag-asul"]
+        "Transition Words": ["naging", "pinalitan", "nagbago", "nagpakita", "nagsilbing", "nagpahayag", "nagpamalas", "panibago", 
+        "panibagong", "nagpapakita ng", "nagpapahayag ng", "naglalantad ng", "pag-asul"]
     },
 
     "knowledge" : {
-        "Knowledge Verbs" : ["alam", "nauunawaan", "nalaman", "nalalaman", "ganyan", "ganiyan", "ganoon", "ganon", "ganoong",
-        "napagtanto", "natutunan", "kilala", "nalaman", "nasusundan", "nauunawaan", "dito", "nandito", "rito", "riyo",
-        "nagkakaroon", "nagtuturo", "nagbibigay ng kaalaman", "nagtuturo ng", "nagpapaliwanag ng", "nagsasalita ng", "marunong",
-        "nagbibigay ng impormasyon", "nagpapahayag ng", "nagsusuri ng", "nagtuturo ng", "doon", "nandoon", "don",
-        "nagbibigay-diin", "nagpapahayag ng", "nagbibigay-alam", "aalalahanin", "alalahanin", "inaalala", "ipaalala", 
-        "maalala", "magalala", "naaalala", "naalala", "nagaalala", "nagalala", "paalala", "pagaalala", "ipaalam", 
-        "kaalaman", "kinalaman", "malaman", "pakialam", "pagkabasa", "nakakaramdam", "nakaramdam", "naramdaman", "nararamdaman", 
-        "pakiramdam", "ramdam", "maramdaman", "maranasan", "naranasan", "diskriminado", "nandidiring", "nandiri",
-        "kamalayan", "malay", "sinungaling", "nagsisinungaling", "kasinungalingan", "naniniwala", "paniwalaan", "makapaniwala",
-        "pinaniwalaan", "totoo", "kaugnayan", "ugnayan", "maunawaan"]
+        "Knowledge Verbs" : ["alam", "nauunawaan", "nalaman", "nalalaman", "napagtanto", "natutunan", "kilala", "nasusundan", 
+        "nagkakaroon", "nagbibigay ng kaalaman", "nagpapaliwanag ng", "marunong", "nagbibigay ng impormasyon", "nagsusuri ng", 
+        "nagbibigay-alam", "aalalahanin", "alalahanin", "inaalala", "ipaalala", "maalala", "naaalala", "naalala", "paalala", 
+        "kaalaman", "malaman", "pakialam", "nakakaramdam", "nakaramdam", "naramdaman", "nararamdaman", "pakiramdam", "ramdam", 
+        "maramdaman", "naranasan", "diskriminado", "kamalayan", "malay", "naniniwala", "paniwalaan", "makapaniwala", "pinaniwalaan", 
+        "totoo", "maunawaan"
+        ]
     },
 
     "description" : {
-        "Descriptive Phrases" : ["sinabi", "nasabi", "sinasabi", "naglarawan", "inilarawan",
-        "nagsalaysay", "nagdetalye", "nagpaliwanag", "nagpapakita", "malinaw", "malabo",
-        "nagpahayag", "nagbibigay", "nagpapaliwanag", "nagbigay", 
+        "Descriptive Phrases" : ["sinabi", "nasabi", "sinasabi", "naglarawan", "inilarawan", "nagsalaysay", "nagdetalye", 
+        "nagpaliwanag", "nagpapakita", "malinaw", "malabo", "nagpahayag", "nagbibigay", "nagpapaliwanag", "nagbigay", 
         "nagbibigay-diin", "nagpapahayag", "nagpapaliwanag"]
     },
 
     "supposition" : {
-        "Supposition Modal Verbs" : [ "maaaring", "baka", "sana", "akala", "pagpapalagay", "kumpiyansa", "hinuha",
-        "palagay", "imahinasyon", "halimbawa", "sabi", "tulad", "nagbabadyang", "malabo",
-        "sakaling", "halimbawang", "nagpapalagay", "akalang", "dito", "nandito", "rito", "riyo",
-        "nagpapalagay", "nag-aakala", "nag-iisip", "ganyan", "ganiyan", "ganoon", "ganon", "ganoong",
-        "nagpapalagay", "nag-aakalang", "sakali", "hamunin", "gugustuhin", "gugustuhing", "gusto", "gustong",
-        "inaasahan", "pagasa", "umaasa", "umaasang", "umasa", "pagbagsak", "makakalimutan", "ipagluluto",
-        "mananatiling", "mananatili", "mamimiss", "muli", "pagkakataon", "pagkakataong",  "mapapalitan", 
-        "ipapangako", "pangyayari", "mamatay", "ipagpapatuloy", "magpapatuloy", "papayagang", "mapigilan",
-        "makapunta", "pupuntahan", "masasabi", "masasaktan", "makakasama", "pinapatawag", "titingin",
-        "magtitiwala", "pagtitripan", "balang-araw"]
+        "Supposition Modal Verbs" : ["maaaring", "baka", "sana", "akala", "pagpapalagay", "kumpiyansa", "hinuha", "palagay", 
+        "imahinasyon", "halimbawa", "sabi", "tulad", "nagbabadyang", "malabo", "sakaling", "nagpapalagay", "akalang", "nag-iisip", 
+        "ganyan", "ganiyan", "ganoon", "ganon", "ganoong", "sakali", "hamunin", "gugustuhin", "gugustuhing", "gusto", "gustong", 
+        "inaasahan", "pagasa", "umaasa", "umaasang", "umasa", "pagbagsak", "makakalimutan", "ipagluluto", "mananatiling", 
+        "mananatili", "mamimiss", "muli", "pagkakataon", "mapapalitan", "ipapangako", "pangyayari", "mamatay", "ipagpapatuloy", 
+        "magpapatuloy", "papayagang", "mapigilan", "makapunta", "pupuntahan", "masasabi", "masasaktan", "makakasama", "pinapatawag", 
+        "titingin", "magtitiwala", "pagtitripan", "balang-araw"
+        ]
     },
 
     "subjectivation" : {
-        "Perception Verbs" : ["nagbigay", "nagpakita", "nagsalaysay", "naglarawan",
-        "nagsalita", "nagsabi", "naikwento", "nagsasalaysay", "nagbigay", "malaki",
-        "nagsasabi", "nakikita", "nararamdaman", "iniisip", "natin", "nating", "atin",
-        "naalala", "maalala", "lalagyan", "lalaking", "kalangitan", "lupaing", 
-        "tagapagmana", "mismo", "mismong", "mo", "mong", "mukha", "mukhang", "namin", 
-        "naming", "nga", "ngang", "pangalan", "pangalang", "ninyo", "ninyong", "niya", 
-        "nya", "niyo", "nyong", "nyo", "niyang", "niyong", "kapareho", "personal", 
-        "presensya", "sarili", "sila", "silang", "siyang", "siya'y", "sino", 
-        "sinuman", "tanda", "matanda", "pagkatao", "kinatatayuan", "pagtingin",
-        "naniniwala"]
+        "Perception Verbs" : ["inaasahan", "pagasa", "umaasa", "umaasang", "umasa", "mamimiss", "muli", "mamatay", "mananatiling", 
+        "mananatili", "ipagpapatuloy", "magpapatuloy", "masasabi", "masasaktan", "titingin", "magtitiwala", "pagtitripan"]
     },
 
     "attitude" : {
-        "Emotion-related Adjectives" : [ "masaya", "nalungkot", "nagulat",
-        "nagustuhan", "hindi nagustuhan", "pabor", "hindi pabor", "sang-ayon",
-        "sumasang-ayon", "hindi sumasang-ayon", "natuwa", "nainis", "kalungkutan",
-        "nagalit", "nagagalit", "malungkot", "nakakaawa", "bida-bida", "lungkot",
-        "nag-aalala", "nabahala", "nag-alala", "marunong", "masayang",
-        "nag-iba ng pananaw", "nagiging positibo", "nagiging negatibo",
-        "nagiging neutral", "nagiging maasahin", "nagiging pesimista",
-        "nagiging nag-aalala", "nagiging masaya", "nagiging malungkot", 
-        "pang-aasar", "naasar","bahala", "nababahala", "mabait", "nakakabagot",
-        "bumuntong-hinga", "napabuntung-hininga", "napabuntong hininga",
-        "napabuntong-hininga", "maghiganti", "nilalamig", "malaya", "maligaya",
-        "maligayang", "mapakali", "mapakaling", "nakakamangha", "pagkamangha",
-        "kamangha-mangha", "nakakamiss", "pinakamumuhian", "nginig", "ngisi",
-        "ngiti", "nakangiti", "nakangiting", "pabaya", "dalang-dala", "pasensya",
-        "nasasabik", "masakit", "masaktan", "nasaktan", "sarkastiko", "sarkastikong", 
-        "kasiyahan", "kasaya", "masaya", "masiyahan", "nakasimangot", "pagkasindak",
-        "siraulo", "tahimik", "manahimik", "natakot", "takot", "natatakot", "tinakot",
-        "mataray", "patawarin", "patawad", "nagtitiwala", "pinagkakatiwalaan", "magtitiwala",
-        "mapagkakatiwalaan", "pagtitiwala", "nakakatuwa", "natutuwa", "natuwa", "itinuturing",
-        "tinuturing", "maunawaan", "pakiusap", "maangas", "nababagabag"]
+        "Emotion-related Adjectives" : ["masaya", "nalungkot", "nagulat", "nagustuhan", "hindi nagustuhan", "pabor", "hindi pabor", 
+        "sang-ayon", "sumasang-ayon", "hindi sumasang-ayon", "natuwa", "nainis", "kalungkutan", "nagalit", "nagagalit", "malungkot", 
+        "nakakaawa", "lungkot", "nag-aalala", "nabahala", "nag-alala", "marunong", "masayang", "nag-iba ng pananaw", 
+        "nagiging positibo", "nagiging negatibo", "nagiging neutral", "nagiging maasahin", "nagiging pesimista", 
+        "nagiging nag-aalala", "nagiging masaya", "nagiging malungkot", "pang-aasar", "naasar", "bahala", "nababahala", "mabait", 
+        "nakakabagot", "bumuntong-hinga", "napabuntung-hininga", "napabuntung hininga", "napabuntong-hininga", "maghiganti", 
+        "nilalamig", "malaya", "maligaya", "maligayang", "mapakali", "mapakaling", "nakakamangha", "pagkamangha", "kamangha-mangha", 
+        "nakakamiss", "pinakamumuhian", "nginig", "ngisi", "ngiti", "nakangiti", "nakangiting", "pabaya", "dalang-dala", "pasensya", 
+        "nasasabik", "masakit", "masaktan", "nasaktan", "sarkastiko", "sarkastikong", "kasiyahan", "kasaya", "masaya", "masiyahan", 
+        "nakasimangot", "pagkasindak", "siraulo", "tahimik", "manahimik", "natakot", "takot", "natatakot", "tinakot", "mataray", 
+        "patawarin", "patawad", "nagtitiwala", "pinagkakatiwalaan", "magtitiwala", "mapagkakatiwalaan", "pagtitiwala", "nakakatuwa", 
+        "natutuwa", "natuwa", "itinuturing", "tinuturing", "maunawaan", "pakiusap", "maangas", "nababagabag"
+        ]
     },
 
     "comparative" : {
-        "Comparative Adjectives" : ["mas", "higit", "mababa", "higit na", "kaysa", "mas mabuti",
-        "mas masama", "mas mataas", "mas mababa", "mas mabilis", "mas mabagal", "mas matanda",
-        "mas bata", "mas malaki", "mas maliit", "mas malakas", "mas mahina", "mas magaan", "mas mabigat", "mas maganda",
-        "mas pangit", "mas malakas", "mas mahina", "mas mataas", "mas bago", "mas luma", "mas makabago",
-        "mas konserbatibo", "kabagal", "pinakabata", "mala-bakal", "ka-bobo", "pinakadakilang", "pinakadakila",
-        "pinakamadilim", "pinakamagandang", "pinakamaganda", "maliitin", "pinakamahusay", "masyado", "masyadong",
-        "pinakamumuhian","pareho", "parehong", "parang", "kasakit", "katagal", "katakot-takot, pinakanakakatakot",
-        "nauna"]
+        "Comparative Adjectives" : ["mas", "higit", "kaysa", "mas mabuti", "mas masama", "mas mataas", "mas mababa", "mas mabilis", 
+        "mas mabagal", "mas matanda", "mas bata", "mas malaki", "mas maliit", "mas malakas", "mas mahina", "mas magaan", 
+        "mas mabigat", "mas maganda", "mas pangit", "mas bago", "mas luma", "mas makabago", "mas konserbatibo", "pinakabata", 
+        "pinakadakilang", "pinakadakila", "pinakamadilim", "pinakamagandang", "pinakamaganda", "pinakamahusay", "pareho", 
+        "parehong", "parang", "ka-bobo", "masyado", "masyadong", "nauna"
+        ]
     },
 
     "quantifier" : {
-        "Quantifiers" : ["ang lahat", "ilan", "wala", "marami", "konti", "lamang", 
-        "karamihan", "kaunti", "unti", "kalahatan", "bahagya", "bahagyang", "daan-daan",
-        "iba", "madami", "mas marami", "pinaka marami", "daan-daang","lang",
-        "lahat", "marami sa", "konti sa", "ang lahat", "ilang", "mas", "madaming",
-        "dagdag", "karagdagang", "dalawa", "dalawang", "maliliit", "malaki",
-        "limang", "lima", "maraming", "pito", "pitong", "napakaraming", "sampung",
-        "sampu", "matataas", "tatlo", "ikatlong", "tatlong", "una", "unang",
-        "untiunting", "konti", "unti-unting"]
+        "Quantifiers" : ["ang lahat", "ilan", "wala", "marami", "konti", "lamang", "karamihan", "kaunti", "unti", "kalahatan", 
+        "bahagya", "bahagyang", "daan-daan", "iba", "madami", "mas marami", "pinaka marami", "daan-daang", "lang", "lahat", 
+        "marami sa", "konti sa", "ilang", "madaming", "dagdag", "karagdagang", "dalawa", "dalawang", "maliliit", "malaki", 
+        "limang", "lima", "maraming", "pito", "pitong", "napakaraming", "sampung", "sampu", "matataas", "tatlo", "ikatlong", 
+        "tatlong", "una", "unang", "untiunting", "konti"
+        ]
     },
 
     "qualification" : {
-        "Qualifying Adjectives/Adverbs" : [ "napaka", "sobra", "talaga", "mas mahusay", "eksakto", "eksaktong",
-        "hindi mahusay", "magaling", "hindi magaling", "kasanayan", "hindi kasanayan", "sanay", "hindi sanay",
-        "mahusay", "hindi mahusay", "dalubhasa", "baguhan", "bago", "karanasan", "walang karanasan",
-        "mas magaling", "hindi magaling", "kwalipikado", "hindi kwalipikado", "nakababahala", "kabaitan",
-        "dahan-dahan", "dahan dahan", "dali", "karangalan", "karapat-dapat", "pagbutihan", "marunong",
-        "kalokohan", "napakalupit", "masyado", "masyadong", "naman", "namang", "nakakalungkot", "nakakalipas", 
-        "nakakamangha", "nakakamiss", "nakaka-akit", "nakakabahala", "nakakapagod", "nakakaramdam", "nakakaawa", 
-        "nakakabagot", "nakakamangha", "nakakamiss", "kapayapaang", "kaputian", "masakit", "salitang",
-        "sariling", "nakasentro", "silangan", "silangang", "siguradong", "simpleng", "nagsimulang", 
-        "tagasunod", "matagal", "matagal-tagal", "katagal", "nakatago", "talagang", "matitigilan", "titigil",
-        "matindi", "matinding", "naniniwalang", "mapagkakatiwalaan", "pagkauhaw", "maamo", "maamoy",
-        "awtomatikong", "balang"]
+        "Qualifying Adjectives/Adverbs" : ["napaka", "sobra", "talaga", "mas mahusay", "eksakto", "eksaktong", "hindi mahusay", 
+        "magaling", "hindi magaling", "kasanayan", "hindi kasanayan", "sanay", "hindi sanay", "mahusay", "hindi mahusay", 
+        "dalubhasa", "baguhan", "bago", "karanasan", "walang karanasan", "mas magaling", "hindi magaling", "kwalipikado", 
+        "hindi kwalipikado", "nakababahala", "kabaitan", "dahan-dahan", "dahan dahan", "dali", "karangalan", "karapat-dapat", 
+        "pagbutihan", "marunong", "kalokohan", "napakalupit", "masyado", "masyadong", "naman", "namang", "nakakalungkot", 
+        "nakakalipas", "nakakamangha", "nakakamiss", "nakaka-akit", "nakakabahala", "nakakapagod", "nakakaramdam", "nakakaawa", 
+        "nakakabagot", "matagal", "matagal-tagal", "katagal", "matindi", "matinding", "talagang", "maamo", "maamoy", "awtomatikong"
+        ]
     },
 
     "explanation" : {
-        "Explanation Phrases" : [ "dahil", "upang", "sapagkat", "nagpaliwanag", "nagpapaliwanag", "nangatwiran",
-        "nagdiin", "nagpakita", "nagpapahayag", "nagbibigay", "aano", "anong", "papaano", "papaanong", "aanong", "ano",
-        "ba", "bang", "dahilan", "maliban", "pagpapaliwanag", "paliwanag", "makapunta", "pupuntahan"]
+        "Explanation Phrases" : ["dahil", "upang", "sapagkat", "nagpaliwanag", "nagpapaliwanag", "nangatwiran", "nagdiin", 
+        "nagpakita", "nagpapahayag", "nagbibigay", "paliwanag", "pagpapaliwanag", "aano", "papaano", "anong", "ano", "maliban", 
+        "dahilan"]
     }
 }

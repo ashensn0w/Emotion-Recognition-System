@@ -613,620 +613,973 @@ RESULT
 -----------------------------------------------------------------------------------------------------------------------------------
 MANNER
 
-"Gumalaw" (moved):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Gagalaw" (will move):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Nakagalaw" (was able to move):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Makagalaw" (able to move):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Hahayaang" (will allow):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Hayaang" (allow):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Hawakan" (to hold):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Hinahawakan" (being held):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Humahawak" (holding):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Nakahawak" (having held):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pagkakahawak" (holding):
-Refers to the action of holding but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Mapapagaling" (will heal):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Nadurog" (crushed):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Gamit" (use):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Maglakbay" (to travel):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Palamigin" (to cool):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Taglamig" (winter):
-Refers to a season; not a manner of action.
-Classification: Not MANNER; falls outside.
-
-"Larangan" (field/arena):
-Refers to a context or location, not manner.
-Classification: Not MANNER; falls outside.
-
-"Maliit" (small):
-Describes a size; not a manner.
-Classification: Not MANNER; falls outside.
-
-"Malaki" (big):
-Describes a size; not a manner.
-Classification: Not MANNER; falls outside.
-
-"Malaking" (big):
-Describes a size; not a manner.
-Classification: Not MANNER; falls outside.
-
-"Lumilikha" (creating):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pinaglilingkuran" (being served):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Lumingon" (looked):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Lumipat" (transferred):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Papalubog" (sinking):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Nagloloko" (joking):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Nakaluhod" (kneeling):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Lumalahok" (participating):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pagmamaktol" (complaining):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Malubha" (serious):
-Describes a state but not manner.
-Classification: Not MANNER; falls outside.
-
-"Namumugtong" (puffed):
-Describes a state but not manner.
-Classification: Not MANNER; falls outside.
-
-"Namumugto" (swollen):
-Describes a state but not manner.
-Classification: Not MANNER; falls outside.
-
-"Mura" (cheap):
-Describes a quality but not manner.
-Classification: Not MANNER; falls outside.
-
-"Pagmumura" (cursing):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Obserba" (observe):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Obserbahan" (observed):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Dalan" (road):
-Refers to a noun; not a manner of action.
-Classification: Not MANNER; falls outside.
-
-"Dalang-dala" (carried):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Nakakapagod" (tiring):
-Describes an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Nakapatong" (resting):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Ipagpatuloy" (to continue):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Magpatuloy" (continue):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pinapayagan" (allowing):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pinipigil" (being stopped):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pinapihit" (being turned):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Ipikit" (to close):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Nakapikit" (closed):
-Refers to a state but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pipiliin" (will choose):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Mapili" (selective):
-Describes a state or quality; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pipilitin" (will force):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pinindot" (pressed):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pumiyok" (croaked):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Naprotektahan" (was protected):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pagprotekta" (protecting):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Protektahan" (to protect):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Proprotektahan" (will protect):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pinupunasan" (being wiped):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Papunta" (going):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pumupunta" (going):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Nagreklamo" (complaining):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pagrereklamo" (complaining):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Sumaludo" (saluting):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Sinarado" (closed):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Sandali" (moment):
-Refers to a duration; not manner.
-Classification: Not MANNER; falls outside.
-
-"Sumigaw" (shouted):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Sumisigaw" (shouting):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pagsigaw" (shouting):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Mapasigaw" (will shout):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Sinisiyasat" (being investigated):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Sinisira" (destroying):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Nagsisinungaling" (lying):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Sira" (broken):
-Describes a state but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Sumusugod" (charging):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Nakasuksok" (stuck):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pagsulat" (writing):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Nanumpa" (swore):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Sumusunod" (following):
-Refers to an action; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pagsunog" (burning):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Nakakataas" (raising):
-Refers to an ability; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Tumataas" (rising):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Mataas" (high):
-Describes a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Katahimikan" (silence):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Manahimik" (to be quiet):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Nagpatakot" (scared):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Tamang" (correct):
-Describes a quality; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pagbabalik-tanaw" (looking back):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Matandang" (old):
-Describes a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Tangi" (unique):
-Describes a quality; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Tanging" (sole):
-Describes a quality; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Natatanging" (exceptional):
-Describes a quality; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Ipagtatanggol" (will defend):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Tango" (nod):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Natatawa" (laughing):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Tumatawa" (laughing):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Patawad" (forgiveness):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Tawag" (call):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Matawag" (to call):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Tayong" (we):
-Refers to a subject; does not specify manner.
-Classification: Not MANNER; falls outside.
-
-"Tayo" (to stand):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Tingin" (look):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Nakatingin" (looking):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Tumitingin" (looking):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pagtingin" (looking):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Tinitignan" (looking):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Tinitigan" (looked at):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Tinatrato" (treating):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Nakatutok" (focused):
-Refers to a state but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pakitunguhan" (to deal with):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Nagta-type" (typing):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Umuukit" (carving):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Inuulit" (repeating):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Umuwi" (to go home):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Uwi" (home):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Mawawala" (will be lost):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pagkawala" (loss):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Niyayakap" (being embraced):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Niyakap" (embraced):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Napayakap" (was embraced):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Nakayuko" (bending):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pagsisikap" (effort):
-Refers to an action but focuses more on the concept of effort rather than manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Gumalaw" (moved):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Gagalaw" (will move):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Nakagalaw" (was able to move):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Makagalaw" (able to move):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Hahayaang" (will allow):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Hayaang" (allow):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Hawakan" (to hold):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Hinahawakan" (being held):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Humahawak" (holding):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Nakahawak" (having held):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pagkakahawak" (holding):
+    Refers to the action of holding but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Mapapagaling" (will heal):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Nadurog" (crushed):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Gamit" (use):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Maglakbay" (to travel):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Palamigin" (to cool):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Taglamig" (winter):
+    Refers to a season; not a manner of action.
+    Classification: Not MANNER; falls outside.
+
+    "Larangan" (field/arena):
+    Refers to a context or location, not manner.
+    Classification: Not MANNER; falls outside.
+
+    "Maliit" (small):
+    Describes a size; not a manner.
+    Classification: Not MANNER; falls outside.
+
+    "Malaki" (big):
+    Describes a size; not a manner.
+    Classification: Not MANNER; falls outside.
+
+    "Malaking" (big):
+    Describes a size; not a manner.
+    Classification: Not MANNER; falls outside.
+
+    "Lumilikha" (creating):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pinaglilingkuran" (being served):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Lumingon" (looked):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Lumipat" (transferred):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Papalubog" (sinking):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Nagloloko" (joking):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Nakaluhod" (kneeling):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Lumalahok" (participating):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pagmamaktol" (complaining):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Malubha" (serious):
+    Describes a state but not manner.
+    Classification: Not MANNER; falls outside.
+
+    "Namumugtong" (puffed):
+    Describes a state but not manner.
+    Classification: Not MANNER; falls outside.
+
+    "Namumugto" (swollen):
+    Describes a state but not manner.
+    Classification: Not MANNER; falls outside.
+
+    "Mura" (cheap):
+    Describes a quality but not manner.
+    Classification: Not MANNER; falls outside.
+
+    "Pagmumura" (cursing):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Obserba" (observe):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Obserbahan" (observed):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Dalan" (road):
+    Refers to a noun; not a manner of action.
+    Classification: Not MANNER; falls outside.
+
+    "Dalang-dala" (carried):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Nakakapagod" (tiring):
+    Describes an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Nakapatong" (resting):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Ipagpatuloy" (to continue):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Magpatuloy" (continue):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pinapayagan" (allowing):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pinipigil" (being stopped):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pinapihit" (being turned):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Ipikit" (to close):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Nakapikit" (closed):
+    Refers to a state but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pipiliin" (will choose):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Mapili" (selective):
+    Describes a state or quality; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pipilitin" (will force):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pinindot" (pressed):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pumiyok" (croaked):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Naprotektahan" (was protected):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pagprotekta" (protecting):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Protektahan" (to protect):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Proprotektahan" (will protect):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pinupunasan" (being wiped):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Papunta" (going):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pumupunta" (going):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Nagreklamo" (complaining):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pagrereklamo" (complaining):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Sumaludo" (saluting):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Sinarado" (closed):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Sandali" (moment):
+    Refers to a duration; not manner.
+    Classification: Not MANNER; falls outside.
+
+    "Sumigaw" (shouted):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Sumisigaw" (shouting):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pagsigaw" (shouting):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Mapasigaw" (will shout):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Sinisiyasat" (being investigated):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Sinisira" (destroying):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Nagsisinungaling" (lying):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Sira" (broken):
+    Describes a state but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Sumusugod" (charging):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Nakasuksok" (stuck):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pagsulat" (writing):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Nanumpa" (swore):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Sumusunod" (following):
+    Refers to an action; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pagsunog" (burning):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Nakakataas" (raising):
+    Refers to an ability; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Tumataas" (rising):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Mataas" (high):
+    Describes a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Katahimikan" (silence):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Manahimik" (to be quiet):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Nagpatakot" (scared):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Tamang" (correct):
+    Describes a quality; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pagbabalik-tanaw" (looking back):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Matandang" (old):
+    Describes a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Tangi" (unique):
+    Describes a quality; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Tanging" (sole):
+    Describes a quality; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Natatanging" (exceptional):
+    Describes a quality; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Ipagtatanggol" (will defend):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Tango" (nod):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Natatawa" (laughing):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Tumatawa" (laughing):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Patawad" (forgiveness):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Tawag" (call):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Matawag" (to call):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Tayong" (we):
+    Refers to a subject; does not specify manner.
+    Classification: Not MANNER; falls outside.
+
+    "Tayo" (to stand):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Tingin" (look):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Nakatingin" (looking):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Tumitingin" (looking):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pagtingin" (looking):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Tinitignan" (looking):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Tinitigan" (looked at):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Tinatrato" (treating):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Nakatutok" (focused):
+    Refers to a state but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pakitunguhan" (to deal with):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Nagta-type" (typing):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Umuukit" (carving):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Inuulit" (repeating):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Umuwi" (to go home):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Uwi" (home):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Mawawala" (will be lost):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pagkawala" (loss):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Niyayakap" (being embraced):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Niyakap" (embraced):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Napayakap" (was embraced):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Nakayuko" (bending):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Pagsisikap" (effort):
+    Refers to an action but focuses more on the concept of effort rather than manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Kakayahan" (ability):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+
+    "Tiwala" (trust):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Kakayahan" (ability):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Kalooban" (will):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Tiwala" (trust):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Pag-asa" (hope):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Kalooban" (will):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
-
-"Pag-asa" (hope):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Pagmamahal" (love):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Pagmamahal" (love):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Respeto" (respect):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Respeto" (respect):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Maisip" (to think):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Maisip" (to think):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Magalit" (to be angry):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Magalit" (to be angry):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Pagkilala" (recognition):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Pagkilala" (recognition):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Pagsasaalang-alang" (consideration):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Pagsasaalang-alang" (consideration):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Pagsusumikap" (persistence):
+    Refers to an action but focuses on the effort aspect.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Pagsusumikap" (persistence):
-Refers to an action but focuses on the effort aspect.
-Classification: Not MANNER; could fall under RESULT.
+    "Pagnanais" (desire):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Pagnanais" (desire):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Pangarap" (dream):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Pangarap" (dream):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Kalagayan" (condition):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Kalagayan" (condition):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Mahaba" (long):
+    Describes a quality; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Mahaba" (long):
-Describes a quality; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Mahabang" (long, adjective):
+    Describes a quality; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Mahabang" (long, adjective):
-Describes a quality; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Pabor" (favor):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Pabor" (favor):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Pagod" (tiredness):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Pagod" (tiredness):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Patay" (dead):
+    Describes a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Patay" (dead):
-Describes a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Patuloy" (continues):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Patuloy" (continues):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Pilitin" (to force):
+    Refers to an action but does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Pilitin" (to force):
-Refers to an action but does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Napuno" (filled):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Napuno" (filled):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Pumuno" (filled):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
 
-"Pumuno" (filled):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "Talino" (intelligence):
+    Refers to a state; does not specify manner.
+    Classification: Not MANNER; could fall under RESULT.
+-----------------------------------------------------------------------------------------------------------------------------------
+ASPECT
 
-"Talino" (intelligence):
-Refers to a state; does not specify manner.
-Classification: Not MANNER; could fall under RESULT.
+    "madilim": Describes a state or quality, not an action.
+    Description (Describing state or condition).
 
+    "nandidiring": Emotional state; refers to an experience rather than an action.
+    Attitude (Emotional state).
 
+    "taglamig": Refers to a season or condition, not an action.
+    Description (Environmental or temporal context).
 
-    "manner" : {
-        "Adverbs": ["maingat", "maayos", "mabilis", "tahimik", "malumanay", "mahinahon", "masinsin", "magaan", "mabagal", "matapang", 
-        "mabuti", "mabuting", "malakas", "masigla", "puspusan", "paggalang", "matiyaga", "magulo", "magulong", "tapat", "malasakit", 
-        "mabait", "mahinahon", "masinsinan", "mapanuri", "masusing", "nakakabahala", "pabalik", "nagbibigay-daan", "pabiro", "kaagad", 
-        "nagmamakaawa", "bastos", "mabigat", "madali", "kadali", "nagmamadali", "madaplisan", "kagulat-gulat", "hinahayaan", 
-        "karumaldumal", "karumal-dumal", "naglalagablab", "malamig", "laging", "malubhang", "mapayapa", "putolputol", "putol-putol", 
-        "sabay-sabay", "sabay", "sabay sabay", "sandaling", "sinasarili", "tahimik," "katakot-takot," "pinakanakakatakot," "nakakatuwa",
-        ],
+    "nilalamig": Describes a physical state (feeling cold).
+    Attitude (Physical state/condition).
 
-        "Adjectives as Adverbs": ["maganda", "magagandang", "masikap", "masigasig", "masinop", "masipag", "malakas", "madamdamin", 
-        "kasiglahan", "kalakasan", "kasipagan", "malumanay", "maluwag", "puno", "punong", "punong-puno", "matibay"
-        ]
-    }
+    "pagbabalik": Refers to the action of returning but is a nominalization (noun form), not an action in its verb form.
+    Result (Indicating the return as a completed action).
 
+    "pagbalik": Same as above; nominal form of "return."
+    Result (Completed action).
 
+    "binabantayan": Ongoing action of guarding, but emphasizes surveillance or careful attention.
+    Manner (Describes the manner in which the action is performed).
 
+    "pagbibigay": Nominal form; refers to the act of giving rather than the temporal contour of action.
+    Result (Completed action of giving).
 
+    "ibinibigay": Refers to an act of giving (focus on the recipient), more related to process and manner.
+    Manner (The way something is given).
 
+    "kabilang": Describes inclusion or membership, not the temporal contour of an action.
+    Description (Describing state or relation).
 
+    "nabubuhay": Describes the state of being alive; more related to ongoing state than action.
+    Description (State of being).
 
+    "nagbubukas": Describes the action of opening, but focus may be on process or intention.
+    Manner (The way the action occurs).
 
+    "namumuo": Refers to the forming of something (e.g., emotions or physical elements like clouds).
+    Result (Forming or resulting state).
 
+    "alisan": Refers to a location or state, rather than the temporal contour of an action.
+    Manner (Indicates a place to leave from).
 
+    "pang-araw-araw": Refers to frequency, not the temporal progression of a specific action.
+    Quantifier (Indicates frequency or habitual action).
 
-    
+    "binabangunot": Describes an event (nightmares) affecting someone, not a specific action contour.
+    Result (Describes the effect/result of an event).
 
+    "bago": Describes a condition (new), not the temporal contour of an action.
+    Description (State or condition).
 
+    "binabali": Refers to an action of breaking something, but with a focus on the act or result, not the temporal aspect.
+    Result (Describes an ongoing result of breaking).
 
+    "pagkadurog": Nominal form; describes the state of being crushed rather than an action's progression.
+    Result (The result of an action).
 
+    "pagdurusa": Refers to a state or experience (suffering), not the temporal contour of an action.
+    Attitude (Emotional or physical state).
 
+    "pagising": Nominal form; refers to the act of waking up, not the temporal contour of an action.
+    Result (Indicates the result of waking).
 
+    "naguguluhan": Describes a state of confusion, not the temporal progression of an action.
+    Attitude (Describes emotional or mental state).
 
+    "humahangin": Describes a natural process, more related to environmental description.
+    Description (Environmental state).
 
+    "hinahayaan": Relates to an action of allowing, but focuses more on intent or manner.
+    Intention (Expresses the intention to allow).
 
+    "paghihiganti": Nominal form; refers to the concept of revenge, not the contour of an action.
+    Intention (Describes the intent to take revenge).
 
+    "maipaghihiganti": Describes the potential or intention to exact revenge.
+    Intention (Expresses possibility or intent).
+
+    "lagi": Refers to frequency, not the temporal aspect of a single action.
+    Quantifier (Indicates habitual or frequent action).
+
+    "palagi": Similar to "lagi"; refers to habitual occurrence.
+    Quantifier (Describes frequency).
+
+    "palaging": Indicates frequency or repetition.
+    Quantifier (Habitual or repetitive action).
+
+    "napalakas": Describes the result of an action (being strengthened).
+    Result (The result of becoming strong).
+
+    "lumalim": Refers to the deepening of something, but focuses more on the result or intensity.
+    Manner (Describes the intensity of the action).
+
+    "nanlamig": Refers to a change in state (becoming cold), not the temporal contour of an action.
+    Attitude (Describes physical or emotional state).
+
+    "pinaglilingkuran": Refers to an ongoing action of serving, but with an emphasis on the manner in which it is done.
+    Manner (Focuses on how the action is performed).
+
+    "malilimutan": Refers to the potential of forgetting, more related to the possibility or future action.
+    Mode (Expresses possibility).
+
+    "nakalimutan": Refers to a completed state of forgetting, but more related to the result.
+    Result (The outcome of forgetting).
+
+    "nagloloko": Describes an ongoing action, but more focused on behavior or manner.
+    Manner (The way someone acts).
+
+    "niloko": Describes a completed action (being deceived), but focuses on the result.
+    Result (Outcome of deception).
+
+    "ikinalulungkot": Describes the emotional state of being sad, not the temporal contour of an action.
+    Attitude (Emotional state).
+
+    "pagmamaktol": Refers to the act of grumbling or sulking, more related to emotional expression or attitude.
+    Attitude (Emotional state).
+
+    "paminsan-minsan": Refers to frequency (occasionally), not the temporal progression of an action.
+    Quantifier (Indicates frequency).
+
+    "minsang": Describes a single instance or occurrence of something, which refers to frequency.
+    Quantifier (Describes a single or occasional event).
+
+    "minsan": Refers to a singular instance or frequency of an action.
+    Quantifier (Describes the frequency of an event).
+
+    "namimiss": Refers to the emotional state of missing someone, rather than the temporal aspect of an action.
+    Attitude (Emotional state).
+
+    "nami-miss": Another form of "namimiss," focusing on the emotional state of longing.
+    Attitude (Emotional state).
+
+    "namiss": Refers to the completed emotional state of having missed someone.
+    Attitude (Emotional state).
+
+    "muli": Refers to a repetitive action or event (again), but focuses more on repetition than aspect.
+    Quantifier (Repetition of an event).
+
+    "muling": Similar to "muli," refers to something being done again.
+    Quantifier (Repetition).
+
+    "pagmumura": Describes the act of cursing or swearing, but it is more related to the manner or emotional state.
+    Manner/Attitude (Describes how an action is performed or emotional state).
+
+    "ngayon": Refers to a specific time (now), not an action’s temporal contour.
+    Time Marker (Temporal expression, not aspect).
+
+    "ngayong": Similar to "ngayon," refers to the present time.
+    Time Marker (Temporal expression).
+
+    "panginginig": Nominal form referring to the act of trembling, but not indicating the aspect of the action.
+    Result (Outcome or state after the trembling).
+
+    "napangisi": Describes a completed emotional reaction (smiling), but focuses on the result.
+    Result (Completed emotional reaction).
+
+    "ngumisi": Refers to the action of smiling, but it focuses more on the behavior rather than aspect.
+    Manner (Describes how the action was done).
+
+    "nakangiti": Describes a state of being smiling, but this is more a description of the subject's attitude or emotion.
+    Attitude (Describes the emotional or physical state).
+
+    "napangiti": Describes a completed action (smiling), but focuses more on the result.
+    Result (Describes the outcome of the smile).
+
+    "nangingiti": Refers to the ongoing action of smiling, but focuses on emotional expression rather than action contour.
+    Attitude (Describes emotional expression).
+
+    "nakangiting": Similar to "nakangiti," describes a smiling state, related to attitude or expression.
+    Attitude (Describes emotional expression).
+
+    "nanonood": Progressive aspect; refers to the ongoing action of watching something.
+    Aspect (Progressive).
+
+    "pinapanood": Progressive aspect; describes the ongoing action of being watched.
+    Aspect (Progressive).
+
+    "noon": Refers to a past time or event, not to the temporal progression of an action.
+    Time Marker (Temporal expression).
+
+    "non": Another form of "noon," referring to a past time.
+    Time Marker (Temporal expression).
+
+    "noong": Similar to "noon," refers to a specific time in the past.
+    Time Marker (Temporal expression).
+
+    "nun": Another form of "noon," indicating a past event or time.
+    Time Marker (Temporal expression).
+
+    "nung": Another form of "noon," indicates a past time or event.
+    Time Marker (Temporal expression).
+
+    "dalhin": Refers to the intention of bringing something, but focuses on the result of the action rather than its temporal aspect.
+    Intention/Result (Expresses intention or outcome).
+
+    "napadpad": Refers to a completed action of being swept away or drifting, focuses on the result.
+    Result (Outcome of being swept or drifting).
+
+    "ipinadyak": Describes the completed action of stamping one's foot, but focuses on the result.
+    Result (Outcome of the foot-stamping).
+
+    "nangako": Describes the completed act of making a promise, focuses on intention or result.
+    Intention (Promise made).
+
+    "pinapasok": Refers to the ongoing action of allowing someone in, but focuses on the manner or intention.
+    Manner/Intention (How the action is performed).
+
+    "nakikipagpalitan": Refers to the ongoing action of exchanging, focuses on interaction or manner.
+    Manner (Describes how the exchange happens).
+
+    "pagpasok": Nominal form referring to the act of entering, focuses on the event rather than temporal contour.
+    Result (The event or result of entering).
+
+    "napansin" - Indicates a completed action of noticing; can indicate a Result (the outcome of noticing).
+
+    "pagtaas" - Refers to the act of rising; focuses on the event rather than aspect and can indicate a Result.
+
+    "namimiss" - Indicates a state of missing; may describe the emotional state rather than the action itself and can indicate Attitude.
+
+    "ngayon" - Indicates a point in time rather than an action; could indicate Status (present state).
+
+    "noon" / "non" / "noong" / "nun" / "nung" - These are temporal markers indicating time rather than the aspect of an action and can indicate Aspect as they may specify when an action occurred.
+
+    "muli" / "muling" - Indicates repetition or return; may indicate a Supposition or Comparative when discussing repeated actions or states.
+
+    "sabay" / "kasabay" - These indicate simultaneous actions; they may not directly express the temporal contour but indicate Comparative relationships.
+
+    "madudulas" - Refers to a potential future occurrence; may indicate a possible action rather than an aspect and could belong to Mode.
+
+    "pagkawasak": While it may indicate a process of destruction, it can also be seen as a state rather than a temporal contour of an action. It could fall into Result or Status.
+
+    "nawalan": Although it indicates a completed action, it can also signify a state of loss and may be better suited under Result.
+
+    "nawalang": Similar to "nawalan," it describes a state and can fit into Result.
+-----------------------------------------------------------------------------------------------------------------------------------
+APPEARANCE
+
+    "nagbibigay" - giving
+    Could fall under Result (indicating an outcome of an action).
+
+    "nagsasalita" - speaking
+    Could fit under Description (communication of an action).
+
+    "nag-aalok" - offering
+    Could also be classified under Description or Intention, as offering implies a potential future action or a communicative act.
+
+    "naglalaman" - containing
+    Likely fits under Result (denoting the contents or result of an action).
+
+    "nagsasabi" - saying
+    Should be categorized under Description, as it relates to communication.
+
+    "nagsusumpa" - swearing (an oath)
+    This could also fit under Description or Intention, as it involves a verbal commitment or declaration.
+
+    "nag-aangkin" - claiming
+    Could fall under Intention or Description, since claiming often relates to intention or communication.
+
+    "buong" - whole, entire
+    Could fit under Quantifier (expressing the extent or totality).
+-----------------------------------------------------------------------------------------------------------------------------------
+KNOWLEDGE
+
+    "ganyan", "ganiyan", "ganoon", "ganon", "ganoong" - like that
+    Likely fall under Description or Subjectivation, as these words indicate a manner of something or the way something is being described.
+
+    "dito", "nandito", "rito", "riyo" - here
+    These refer to location and are better suited for Description (spatial descriptions) or Subjectivation (locating the subject).
+
+    "doon", "nandoon", "don" - there
+    Similar to the previous set, these are location indicators and may fit under Description.
+
+    "nagbibigay-diin" - emphasizing
+    Likely fits under Qualification (adding emphasis to a narrative event).
+
+    "nagtuturo" - teaching
+    Could potentially fall under Knowledge, but it also might be placed under Description (describing an act of teaching or instruction).
+
+    "nagalala", "nagaalala" - these words imply concern or worry, which can be tied to Attitude (emotional state) rather than direct knowledge.
+
+    "kinalaman" - relates to relevance or connection, which might fit better under Subjectivation (indicating the relationship between subjects and actions).
+
+    "ugnayan" - refers to connection or relationship, which can also be more relevant to Subjectivation.
+
+    "sinungaling" - refers to being deceitful and might relate to Attitude or Description (describing character traits).
+
+    "kasinungalingan" - refers to falsehood, fitting under Description or Attitude.
+-----------------------------------------------------------------------------------------------------------------------------------
+DESCRIPTION
+
+    "nagpapakita" - While it can be relevant to DESCRIPTION, it can also imply a Result or Appearance depending on context, so careful consideration is needed for its use.
+
+    "malinaw" and "malabo" - These terms indicate clarity and vagueness, which could also relate to the Attitude feature (as they describe a judgment of the quality of information).
+-----------------------------------------------------------------------------------------------------------------------------------
+SUPPOSITION
+
+    "nagbabadyang" - While it suggests an impending event, it can also imply an Appearance if it describes something about to happen.
+
+    "malabo" - This term suggests uncertainty but can also indicate Attitude regarding the clarity of information.
+
+    "halimbawa" - This word means "example" and can be more aligned with providing context or illustration rather than anticipation.
+
+    "pagbagsak" - Although it can indicate a future event, it may also fit under DESCRIPTION if it describes an ongoing scenario or situation.
+
+    "muli" - Depending on the context, it can imply repetition but may also fit into DESCRIPTION when discussing past actions being revisited or repeated.
+
+    "pagtitripan" - This could imply a casual action that might not strictly relate to future anticipation. Depending on the context, it might fit better under an Affect feature if focusing on interpersonal dynamics.
+-----------------------------------------------------------------------------------------------------------------------------------
+SUBJECTIVATION
+
+    "pagbagsak" - This refers to an event (downfall) rather than a personal attribution; it might fit better under DESCRIPTION if it's used to describe an occurrence or situation.
+
+    "pagkakataon" - This term refers to an opportunity, which may not inherently carry subjective meaning unless contextualized within a judgment.
+
+    "mapapalitan" - While it may indicate a change, it doesn't necessarily reflect a personal attribution and could be categorized under DESCRIPTION.
+
+    "pangyayari" - Referring to an event, this keyword may fit better in DESCRIPTION, as it describes something that occurs rather than an observation or judgment.
+
+    "balang-araw" - This term indicates a vague future time and doesn't necessarily express a subjective judgment unless tied to a specific personal context.
+-----------------------------------------------------------------------------------------------------------------------------------
+ATTITUDE
+
+    "nag-iba ng pananaw" - Although it suggests a change in viewpoint, it could be used in DESCRIPTION when discussing perspectives without emotional implications.
+
+    "marunong" - This indicates knowledge or skill rather than a direct emotional state and could fit better under KNOWLEDGE.
+
+    "bahala" - Depending on context, this can imply a sense of indifference, which may not directly correlate with an emotional state. It could also be interpreted as a more passive or neutral sentiment.
+
+    "lungkot" - This describes a state of sadness, which might not always reflect an attitude depending on how it's used in context (e.g., in a narrative without personal attribution).
+
+    "nag-iba ng pananaw" - This reflects a change in perspective that might also fit under DESCRIPTION, especially if it's used to detail a narrative or an event.
+
+    "tahimik" - While this can indicate calmness, it may also represent neutrality or a lack of emotion, which could fall under DESCRIPTION.
+
+    "malaya" - While it can suggest freedom, it might not always imply an emotional state and could also fit under KNOWLEDGE when used in a more abstract context (e.g., freedom of thought).
+
+    "patawarin" and "patawad" - These could fit into DESCRIPTION when discussing actions of forgiveness without emotional context.
+-----------------------------------------------------------------------------------------------------------------------------------
+COMPARATIVE
+
+    "kabagal" - slowness (could be considered as a state, potentially fitting in DESCRIPTION).
+
+    "katagal" - duration (could be more descriptive and might fit under DESCRIPTION as it describes a time aspect rather than direct comparison).
+
+    "kasakit" - pain (does not inherently imply a comparison unless specified and could fit under ATTITUDE).
+
+    "katakot-takot" - frightening (may indicate a state of fear, fitting more with ATTITUDE).
+-----------------------------------------------------------------------------------------------------------------------------------
+QUANTIFIER
+
+    "bahagya" - can indicate an amount but might fit better under DESCRIPTION because it describes a state of scarcity rather than pure quantity.
+
+    "bahagyang" - similar reasoning to "bahagya," focusing on a slight degree, fitting more with DESCRIPTION.
+
+    "lamang" - although it implies limitation, it often appears in context to indicate comparison or exclusivity, which may also fit under COMPARATIVE or SUBJECTIVATION.
+-----------------------------------------------------------------------------------------------------------------------------------
+QUALIFICATION
+
+    "hindi mahusay", "hindi magaling", "hindi kwalipikado" - While these express qualification, they often indicate a judgment or opinion that could fit under SUBJECTIVATION.
+
+    "sanay", "hindi sanay" - These relate to experience and could imply judgment, fitting into SUBJECTIVATION or even DESCRIPTION.
+
+    "nakababahala" - Although it qualifies a state, it may be more about an emotional response, fitting into ATTITUDE.
+
+    "dahan-dahan", "dahan dahan" - These can indicate a manner of doing something, possibly fitting into DESCRIPTION rather than strict quantification.
+
+    "siguradong" - certain; more related to SUPPOSITION (indicating certainty or confidence about a situation).
+
+    "salitang" - word; not qualifying anything directly and fits better into DESCRIPTION.
+
+    "sariling" - own; relates to possession rather than quantification and may fit into DESCRIPTION or SUBJECTIVATION.
+
+    "nagsimulang" - began; this indicates action and fits into DESCRIPTION or ACTIONS rather than quantification.
+
+    "tagasunod" - follower; it doesn't indicate quantity or qualification and may fit into DESCRIPTION.
+
+    "nakatago" - hidden; describes a state rather than a qualification and may belong to DESCRIPTION.
+
+    "pagkauhaw" - thirst; indicates a state or feeling rather than a qualification of an event.
+
+    "balang" - all (can be seen as a quantifier but often used in specific contexts).
+-----------------------------------------------------------------------------------------------------------------------------------
+EXPLANATION
+
+    "makapunta" - to be able to go; relates to capability or action and may fit better in ACTIONS or SUBJECTIVATION rather than providing an explanation.
+
+    "pupuntahan" - place to go; indicates a future action and is more about ACTIONS than EXPLANATION.
+-----------------------------------------------------------------------------------------------------------------------------------
