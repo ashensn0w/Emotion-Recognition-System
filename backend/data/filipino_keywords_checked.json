@@ -227,7 +227,7 @@
         "bahagya", "bahagyang", "daan-daan", "iba", "madami", "mas marami", "pinaka marami", "daan-daang", "lang", "lahat", 
         "marami sa", "konti sa", "ilang", "madaming", "dagdag", "karagdagang", "dalawa", "dalawang", "maliliit", "malaki", 
         "limang", "lima", "maraming", "pito", "pitong", "napakaraming", "sampung", "sampu", "matataas", "tatlo", "ikatlong", 
-        "tatlong", "una", "unang", "untiunting", "konti"
+        "tatlong", "una", "unang", "untiunting", "konti", "unti-unting"
         ]
     },
 
@@ -238,13 +238,14 @@
         "hindi kwalipikado", "nakababahala", "kabaitan", "dahan-dahan", "dahan dahan", "dali", "karangalan", "karapat-dapat", 
         "pagbutihan", "marunong", "kalokohan", "napakalupit", "masyado", "masyadong", "naman", "namang", "nakakalungkot", 
         "nakakalipas", "nakakamangha", "nakakamiss", "nakaka-akit", "nakakabahala", "nakakapagod", "nakakaramdam", "nakakaawa", 
-        "nakakabagot", "matagal", "matagal-tagal", "katagal", "matindi", "matinding", "talagang", "maamo", "maamoy", "awtomatikong"
+        "nakakabagot", "matagal", "matagal-tagal", "katagal", "matindi", "matinding", "talagang", "maamo", "maamoy", "awtomatikong", 
+        "balang"
         ]
     },
 
     "explanation" : {
         "Explanation Phrases" : ["dahil", "upang", "sapagkat", "nagpaliwanag", "nagpapaliwanag", "nangatwiran", "nagdiin", 
-        "nagpakita", "nagpapahayag", "nagbibigay", "paliwanag", "pagpapaliwanag", "aano", "papaano", "anong", "ano", "maliban", 
-        "dahilan"]
+        "nagpakita", "nagpapahayag", "nagbibigay", "paliwanag", "aano", "papaano", "anong", "ano", "maliban", 
+        "dahilan", "pagpapaliwanag", "paliwanag"]
     }
 }
