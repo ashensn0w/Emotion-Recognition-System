@@ -1,16 +1,16 @@
 {
     "mode": {
-        "Possibility": ["maaari", "maaring", "pwedeng", "pwede", "puwede", "makabalik", "mabawi", "mabibigyan", "maibibigay",
-        "makaalis", "malamang", "makalaya", "makalimot", "makakalimutan","makalimutan", "nakakalipas", "makapagpaliwanag", 
+        "Possibility": ["maaari", "maaring", "maaaring", "pwedeng", "pwede", "puwede", "makabalik", "mabawi", "mabibigyan", 
+        "maibibigay", "makaalis", "malamang", "makalaya", "makalimot", "makakalimutan","makalimutan", "nakakalipas", "makapagpaliwanag", 
         "maipaliwanag", "mapanatili", "mananatiling", "mananatili", "pagkakataong", "makakapahinga", "makapasok", "mapalitan", 
         "kapalit", "mapapatay", "babaliktarin", "babaligtarin", "mabuntis", "dagsain", "mapaginipan", "mapilipit", "mapipilipit", 
-        "mapugutan", "masaksihan", "makapagsalita", "masangkot", "siguro", "siguro'y"],
+        "mapugutan", "masaksihan", "makapagsalita", "masangkot", "siguro", "siguro'y", "posibilidad"],
 
         "Impossibility": ["hindi", "walang", "wala"],
 
         "Necessity": ["dapat", "kailangan"],
         
-        "Prohibition": ["bawal", "hindi pwede"]
+        "Prohibition": ["bawal", "hindi pwede", "huwag"]
     },
 
     "intention" : {
