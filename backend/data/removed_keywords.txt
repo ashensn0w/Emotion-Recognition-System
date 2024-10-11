@@ -9,29 +9,15 @@ MODE
     "Nakakamiss" (something that is missed):
     Similar to "mamimiss," this reflects an emotional state and can also fall under Attitude.
 
-    "Palitan" (to replace), "Mapalitan" (to be replaced), "Kapalit" (replacement):
-    These words indicate a substitution of one action for another. They fit under the Appearance feature, which describes the replacement of one event by another.
+    "palitan" – Refers to an action (to change or replace), which would be better suited under an Action feature.
 
-    "Pansinin" (to notice):
-    This verb focuses on attention or observation, which could fit under the Subjectivation feature, as it involves attributing an action as an object of observation by the subject.
+    "pagpasok" – Refers to an action (entering), which would also be better classified under an Action feature.
 
-    "Mapapatay" (will be killed):
-    This refers to a future action with a result implied (the action of killing). It fits under Result, as it indicates an action to be accomplished in the future.
+    "pansinin" – Refers to an action (pay attention), fitting under an Action feature.
 
-    "Malabo" (unclear/unlikely):
-    This word expresses uncertainty or improbability and doesn't directly fit the MODE feature as previously thought. It fits under Supposition, as it involves anticipating or assuming an outcome that is uncertain or unclear.
+    "pagpatay" – Refers to an action (killing), which should fall under an Action feature.
 
-    "Nakakalungkot" (sad):
-    This expresses an emotional response or attitude. It fits under the Attitude feature, as it describes the state of sadness elicited in response to an action.
-
-    "Nakakamangha" (amazing):
-    Similar to "nakakalungkot," this word expresses an emotional state of amazement. It should also fit under Attitude, as it describes the reaction of amazement toward an event or action.
-
-    "Pagpatay" (killing):
-    This word refers to the action of killing but does not express modality directly. It fits under Result, as it refers to an action already accomplished or presented as inevitable.
-
-    "Pagpasok" (entering):
-    This is the act of entering and is more of a description of a completed action. It also fits under Result, as it presents an action (entering) as something that has been or will be accomplished.
+    "baliktarin" – Refers to an action (reverse), fitting under an Action feature.
 -----------------------------------------------------------------------------------------------------------------------------------
 INTENTION
 
@@ -353,37 +339,56 @@ INTENTION
     "Tumawa" (to laugh):
     This verb describes an action but does not explicitly indicate intention or desire. Depending on the context, it may be considered a general verb rather than a verb of intention. (Not Intention)
     
-    "dumagundong" - to rumble (does not imply intention directly)
-
-    "dinamay" - to involve (can imply intention but more context-dependent)
-
-    "dumura" / "dudura" - to spit (does not express intention as it refers to an action)
-
-    "gumala" - to roam (can imply intention but is more about action)
-
-    "mahulog" - to fall (generally describes an event rather than intention)
-
-    "mahumaling" - to be captivated (can imply an intention to pursue something but lacks a direct intention)
-
-    "nahuni" - to hum (does not express intention directly)
-
-    "iniba" - to change (may imply intention, but context is crucial)
-
-    "tumabi" - to move aside (generally describes an action rather than a specific intention)
-
-    "nagtabi" - set aside (does not explicitly convey intention without additional context)
-
-    "lalabag" - to violate (describes an action rather than intention)
-
-    "lalamasin" - to squeeze (does not convey intention directly)
-
-    "bati" - Could fall under an Action feature (related to greeting).
-
-    "banggit" - Could be categorized under an Action feature (related to mentioning).
-
-    "gamit" - Could also fall under an Action feature (related to using something).
+    "dumagundong" – This refers to the act of thundering or a loud sound, and it describes an event rather than an intention. It would fit better under the Event feature.
     
-    "tumawa" - Would likely fit under an Action feature (describing the action of laughing).
+    "dinamay" – This is more about an action that has already occurred (to involve someone), so it would fit under an Action feature.
+    
+    "dumilat" – Describes the act of opening one's eyes, which is more of an action than an intention, so it falls under the Action feature.
+   
+    "mahulog" – Refers to the act of falling, which could be categorized under an Event feature.
+ 
+    "nahuni" – This is about being chirped or sung, and it is more event-based.
+   
+    "iniba" – Past action of changing something, so it fits better under the Action feature.
+  
+    "nagtabi" – A past action of setting something aside, which would fit under the Action feature.
+   
+    "lalamasin" – Refers to the act of kneading or pressing, which is more about a physical action, fitting under the Action feature.
+  
+    "pinaliwanag" – Past action of explaining, fits under Explanation.
+  
+    "mapagkamalang" / "mapagkakamalang" – Refers to the possibility of being mistaken for something, which is more aligned with the MODE feature (possibility).
+ 
+    "mamulat" – Refers to becoming aware or enlightened, which fits better under Aspect or Result features.
+
+    "pugutan" – This refers to an act of beheading, which is more of an action. It fits under the Action feature.
+   
+    "namuwersa" / "namwerasa" – Describes past actions of forcing someone. These are more suitable for the Action feature.
+  
+    "puwestuhan" / "pwestuhan" – These relate to a specific location or placement rather than intention and may fit under a Location feature.
+  
+    "masasaksihan" – Describes an event that will be witnessed. This falls under Event or Result.
+  
+   "sampalin" / "masasampal" – These describe the action of slapping, which is an Action rather than an intention.
+ 
+    "sasalpok" / "magsalpukan" / "magsasalpukan" / "salpukin" – These refer to collisions or impacts, which are Event-based actions.
+ 
+    "masasangkot" – This refers to being involved in something, which falls under Event.
+  
+    "sinilip" – Describes a past action, better suited for Action.
+  
+    "suportahan" / "susuporta" – These could express support, but more in the sense of Action or Result rather than intention.
+  
+    "mataranta" – Refers to being flustered or in a panic, which is more about the emotional or psychological state than intention. It fits under the Attitude feature.
+ 
+    "tataraya" / "magtaya" – These refer to placing a bet, which is an Action rather than intention.
+   
+    "titili" – Refers to shrieking, which is an action, so it would fit better under Action.
+
+    "maubos" / "mausisa" – These describe outcomes (to be depleted or to be inquisitive), and would fit under Result.
+    "silayan" – This refers to looking at something, which is an Action.
+
+    "tumawa" – This keyword should not be included in the INTENTION feature; it is better categorized under the Action feature, as it simply describes the act of laughing without conveying intention or desire.
 -----------------------------------------------------------------------------------------------------------------------------------
 RESULT
 
@@ -642,6 +647,66 @@ RESULT
     "Nawawala" (is missing):
     Indicates a state of being missing; does not imply completion.
     Classification: Not Result; fits in Intention.
+
+    "gumala" (to roam)
+    Possible Feature: ACTION or INTENTION
+    Reason: Indicates an ongoing or habitual action that could express an intention or desire to move about.
+
+    "guhit" (to draw)
+    Possible Feature: ACTION
+    Reason: Represents an action but does not indicate completion; it describes the act of drawing without specifying if the drawing was completed.
+  
+    "nagkwento" (told a story)
+    Possible Feature: NARRATIVE or ACTION
+    Reason: While it indicates a storytelling action, it doesn’t convey a completed result. It reflects a narrative structure but not a specific outcome.
+  
+    "nagmartsa" (marched)
+    Possible Feature: ACTION
+    Reason: Describes an action but does not imply a specific result; it can also indicate ongoing movement.
+  
+    "magsalita" (to speak)
+    Possible Feature: INTENTION
+    Reason: As an infinitive, it indicates the intention to speak rather than a completed action or result.
+   
+    "nagpanggap" (pretended)
+    Possible Feature: INTENTION or ACTION
+    Reason: Indicates an action of pretending but does not indicate a completion. It suggests an intention or desire behind the action.
+  
+    "maging" (to become)
+    Possible Feature: INTENTION
+    Reason: This infinitive form indicates a process or intention of change rather than a completed result.
+
+    "namilipit" (to squirm)
+    Possible Feature: ACTION
+    Reason: Indicates a continuous or ongoing action.
+    
+    "magpupulong" (will hold a meeting)
+    Possible Feature: INTENTION
+    Reason: Future tense indicates intention rather than a completed action.
+
+    "sumaglit" (to suddenly appear)
+    Possible Feature: ACTION
+    Reason: Describes an action but does not imply completion.
+ 
+    "sumakay" (to ride)
+    Possible Feature: ACTION
+    Reason: Infinitive form indicates an intention or plan rather than a completed action.
+  
+    "nagsalita" (spoke)
+    Possible Feature: ACTION
+    Reason: This indicates an action without suggesting completion in a resultative context.
+ 
+    "nagpatulis" (to sharpen)
+    Possible Feature: ACTION
+    Reason: Describes an action without indicating completion.
+  
+    "natutong" (learned)
+    Possible Feature: INTENTION or LEARNING
+    Reason: Indicates the process of learning rather than a completed result.
+   
+    "pinaubos" (made someone consume)
+    Possible Feature: ACTION
+    Reason: Focuses on the act of consuming without indicating a completed result.
 -----------------------------------------------------------------------------------------------------------------------------------
 MANNER
 
@@ -1224,6 +1289,82 @@ MANNER
     "Talino" (intelligence):
     Refers to a state; does not specify manner.
     Classification: Not MANNER; could fall under RESULT.
+
+    "pagkawala" (disappearance)
+    Possible Feature: RESULT
+    Reason: Indicates an end state rather than the manner of an action.
+ 
+    "umuwi" (to go home)
+    Possible Feature: ACTION
+    Reason: Indicates an action without specifying how it is done.
+  
+    "uwi" (home)
+    Possible Feature: ACTION
+    Reason: Simply indicates a location without manner.
+  
+    "mawawala" (will disappear)
+    Possible Feature: RESULT
+    Reason: Future tense indicates a result rather than manner.
+  
+    "paglabag" (violation)
+    Possible Feature: ACTION or RESULT
+    Reason: Indicates an action or result of an action.
+   
+    "paglipad" (flying)
+    Possible Feature: ACTION
+    Reason: Refers to the action itself without detailing the manner.
+   
+    "pagliwanag" (to become light)
+    Possible Feature: RESULT
+    Reason: Refers to a change in state rather than a manner of doing something.
+  
+    "pagluha" (crying)
+    Possible Feature: ACTION
+    Reason: Indicates the action but doesn’t specify how it’s done.
+  
+    "pagpaumanhin" (asking for forgiveness)
+    Possible Feature: INTENTION or RESULT
+    Reason: Indicates intent or result rather than manner.
+   
+    "paumanhin" (forgiveness)
+    Possible Feature: RESULT
+    Reason: Refers to an outcome rather than the manner of an action.
+    
+    "nakipagrambulan" (to fight)
+    Possible Feature: ACTION
+    Reason: Describes an action without specifying how it is done.
+  
+    "magkasalubong" (to meet)
+    Possible Feature: ACTION
+    Reason: Refers to an event without detailing the manner.
+   
+    "magkakasalubong" (will meet)
+    Possible Feature: ACTION
+    Reason: Future tense indicates an action without manner.
+   
+    "pagsilip" (glimpse)
+    Possible Feature: ACTION
+    Reason: Describes an action but does not imply how it is done.
+   
+    "pagtaya" (betting)
+    Possible Feature: ACTION
+    Reason: Indicates the action without specifying manner.
+   
+    "pagkatulad" (similarity)
+    Possible Feature: RESULT
+    Reason: Refers to a condition rather than a manner of action.
+  
+    "pagkakatulad" (similarities)
+    Possible Feature: RESULT
+    Reason: Similar to the previous reason.
+   
+    "pagtulak" (pushing)
+    Possible Feature: ACTION
+    Reason: Describes the action without specifying manner.
+  
+    "pagtutulak" (pushing)
+    Possible Feature: ACTION
+    Reason: Similar to the previous reason.
 -----------------------------------------------------------------------------------------------------------------------------------
 ASPECT
 
@@ -1461,6 +1602,62 @@ ASPECT
     "nawalan": Although it indicates a completed action, it can also signify a state of loss and may be better suited under Result.
 
     "nawalang": Similar to "nawalan," it describes a state and can fit into Result.
+
+    "fucking"
+    Possible Feature: STATUS
+    Reason: This word can serve to negate or emphasize the intensity of a situation, depending on context.
+
+   "pagdilat" (opening one's eyes)
+    Possible Feature: DESCRIPTION
+    Reason: It describes a specific action rather than an aspectual quality.
+ 
+    "kumikirot-kirot" and "kumikirotkirot"
+    Possible Feature: QUALIFICATION
+    Reason: These variants may serve as intensifiers, emphasizing the quality of the ache.
+   
+    "lumilipad-lipad" and "lumilipadlipad"
+    Possible Feature: QUALIFICATION
+    Reason: Similar to the above, these forms emphasize the action of flying, suggesting repetition or intensity.
+   
+    "nanlilisik" (is shining)
+    Possible Feature: DESCRIPTION
+    Reason: While it conveys an action, it describes the state of being rather than an aspect.
+
+    "pumuwersa" (to force)
+    Possible Feature: INTENTION (Indicating the intention to force an action)
+ 
+    "nagpupulong" (is meeting)
+    Possible Feature: STATUS (Indicating the action of gathering or meeting, possibly as a state)
+   
+    "sumasaglit" (is temporarily stopping)
+    Possible Feature: MANNER (Indicating the manner in which the action occurs)
+   
+    "nasasambot" (is being obtained)
+    Possible Feature: RESULT (Indicating the outcome of an action)
+   
+    "masasambot" (will be obtained)
+    Possible Feature: RESULT (Future aspect indicating a potential result)
+   
+    "nagsasampalan" (is colliding)
+    Possible Feature: RESULT (Indicating an action that results from two subjects interacting)
+   
+    "sumasandal" (is leaning)
+    Possible Feature: MANNER (Indicating the manner in which the action occurs)
+   
+    "nagsisilay" (is appearing)
+    Possible Feature: APPEARANCE (Indicating the action of showing up)
+   
+    "nagsasalita" (is talking)
+    Possible Feature: DESCRIPTION (Describing the action of speaking)
+   
+    "nagrambulan" (is fighting)
+    Possible Feature: RESULT (Indicating an outcome of fighting)
+   
+    "pumuwersa" (to force)
+    Possible Feature: INTENTION (Intention to force an action)
+   
+    "pagsasalita" (speaking)
+    Possible Feature: DESCRIPTION (The act of communication)
 -----------------------------------------------------------------------------------------------------------------------------------
 APPEARANCE
 
@@ -1514,6 +1711,8 @@ KNOWLEDGE
     "sinungaling" - refers to being deceitful and might relate to Attitude or Description (describing character traits).
 
     "kasinungalingan" - refers to falsehood, fitting under Description or Attitude.
+
+    The keywords provided ("iyan", "yan", "yang", "nito", "nitong") are demonstratives or pronouns that indicate something specific in context rather than explicitly expressing cognitive awareness or knowledge. They do not fit well within the cognitive or reporting verbs. Given this context, none of the provided keywords directly fit the KNOWLEDGE feature as they do not represent cognitive awareness or knowledge.
 -----------------------------------------------------------------------------------------------------------------------------------
 DESCRIPTION
 
@@ -1534,18 +1733,6 @@ SUPPOSITION
     "muli" - Depending on the context, it can imply repetition but may also fit into DESCRIPTION when discussing past actions being revisited or repeated.
 
     "pagtitripan" - This could imply a casual action that might not strictly relate to future anticipation. Depending on the context, it might fit better under an Affect feature if focusing on interpersonal dynamics.
------------------------------------------------------------------------------------------------------------------------------------
-SUBJECTIVATION
-
-    "pagbagsak" - This refers to an event (downfall) rather than a personal attribution; it might fit better under DESCRIPTION if it's used to describe an occurrence or situation.
-
-    "pagkakataon" - This term refers to an opportunity, which may not inherently carry subjective meaning unless contextualized within a judgment.
-
-    "mapapalitan" - While it may indicate a change, it doesn't necessarily reflect a personal attribution and could be categorized under DESCRIPTION.
-
-    "pangyayari" - Referring to an event, this keyword may fit better in DESCRIPTION, as it describes something that occurs rather than an observation or judgment.
-
-    "balang-araw" - This term indicates a vague future time and doesn't necessarily express a subjective judgment unless tied to a specific personal context.
 -----------------------------------------------------------------------------------------------------------------------------------
 ATTITUDE
 
