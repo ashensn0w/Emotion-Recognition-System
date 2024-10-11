@@ -357,14 +357,11 @@
     },
 
     "quantifier" : {
-        "Quantifiers" : ["ang lahat", "ilan", "wala", "marami", "konti", "lamang", 
-        "karamihan", "kaunti", "unti", "kalahatan", "bahagya", "bahagyang", "daan-daan",
-        "iba", "madami", "mas marami", "pinaka marami", "daan-daang","lang",
-        "lahat", "marami sa", "konti sa", "ang lahat", "ilang", "mas", "madaming",
-        "dagdag", "karagdagang", "dalawa", "dalawang", "maliliit", "malaki",
-        "limang", "lima", "maraming", "pito", "pitong", "napakaraming", "sampung",
-        "sampu", "matataas", "tatlo", "ikatlong", "tatlong", "una", "unang",
-        "untiunting", "konti", "unti-unting", "bandang", "labinlimang", "labin-limang", 
+        "Quantifiers" : ["ang lahat", "ilan", "wala", "marami", "konti", "lamang", "karamihan", "kaunti", "unti", "kalahatan", 
+        "bahagya", "bahagyang", "daan-daan", "iba", "madami", "mas marami", "pinaka marami", "daan-daang","lang", "lahat", 
+        "marami sa", "konti sa", "ang lahat", "ilang", "mas", "madaming", "dagdag", "karagdagang", "dalawa", "dalawang", "maliliit", 
+        "malaki", "limang", "lima", "maraming", "pito", "pitong", "napakaraming", "sampung", "sampu", "matataas", "tatlo", 
+        "ikatlong", "tatlong", "una", "unang", "untiunting", "konti", "unti-unting", "bandang", "labinlimang", "labin-limang", 
         "labinlima", "labin-lima"]
     },
 
