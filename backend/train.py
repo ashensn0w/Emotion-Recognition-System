@@ -27,7 +27,7 @@ def load_dataset(file_path):
     except Exception as e:
         print(f"An error occurred while loading {file_path}: {e}")
 
-file_path = './backend/data/sample500.csv'
+file_path = './backend/data/training_data.csv'
 data = load_dataset(file_path)
 
 sentences = data['sentence'].tolist()
@@ -127,7 +127,7 @@ if data is not None:
         return combined_features_df
 
     # Read narrative features data from CSV
-    narrative_file_path = './backend/data/sample500.csv'
+    narrative_file_path = './backend/data/training_data.csv'
     narrative_features_df = pd.read_csv(narrative_file_path)
 
     # Apply the feature extraction and combination process

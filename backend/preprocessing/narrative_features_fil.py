@@ -27,12 +27,11 @@ def extract_mode(text):
         elif token.text.lower() in mode_keywords['Prohibition']:
             detected_modes['Prohibition'] = True
         
-        if token.dep_ in ['acomp', 'xcomp', 'ccomp'] and token.head.text.lower() in mode_keywords['Possibility']:
-            detected_modes['Possibility'] = True
-        elif token.dep_ in ['acomp', 'xcomp', 'ccomp'] and token.head.text.lower() in mode_keywords['Impossibility']:
-            detected_modes['Impossibility'] = True
-
-    return 1 if any(detected_modes.values()) else 0
+        if token.dep_ in ['acomp', 'xcomp', 'ccomp']:
+            if token.head.text.lower() in mode_keywords['Possibility'] or token.head.lemma_ in mode_keywords['Possibility']:
+                detected_modes['Possibility'] = True
+            elif token.head.text.lower() in mode_keywords['Impossibility'] or token.head.lemma_ in mode_keywords['Impossibility']:
+                detected_modes['Impossibility'] = True
 
 def extract_intention(text):
     doc = nlp(text)
@@ -333,7 +332,8 @@ def extract_explanation(text):
         explanation_keywords = json.load(f)['explanation']
     
     detected_explanations = {
-        'Explanation Phrases': False
+        'Explanation Phrases': False,
+        'Quotation Marks': False
     }
     
     for token in doc:
@@ -342,6 +342,9 @@ def extract_explanation(text):
         
         if token.dep_ in ['mark', 'ccomp'] and token.text.lower() in explanation_keywords['Explanation Phrases']:
             detected_explanations['Explanation Phrases'] = True
+
+        if token.text.lower() in ['\"', '“', '”']:
+                    detected_explanations['Quotation Marks'] = True
 
     return 1 if any(detected_explanations.values()) else 0
 
