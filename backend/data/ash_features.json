@@ -1,0 +1,91 @@
+{
+    "mode": {
+        "Mode": ["makagalaw", "mapapagaling", "pinapayagan", "pinipigil", "mapasigaw", "matawag", "mawawala", "gagalaw", 
+        "hahayaang", "pipiliin", "pipilitin", "ipagtatanggol", "hayaang", "pinapayagan", "pinipigil", "pipilitin", 
+        "mangangailangan", "kailangan", "palagi", "palaging", "madudulas", "pumuwersa"]
+    },
+
+    "intention" : {
+        "Intention": ["pagsulat", "pagsagot", "maglakbay", "ipagpatuloy", "pipiliin", "pipilitin", "magpatuloy", "papunta", 
+        "sumaludo", "umuwi", "magalit", "ipagtatanggol", "pakitunguhan", "pagprotekta", "pumupunta", "pagbabalik-tanaw", 
+        "tinatrato", "proprotektahan", "pagsisikap", "maisip", "magalit", "protektahan", "pagsasaalang-alang", "pagsusumikap", 
+        "pagnanais", "pangarap", "pilitin", "pagbalik", "pagbabalik", "pagbigay", "paghihiganti", "maipaghihiganti", "magpatuloy", 
+        "ipagpatuloy", "mapili", "pagsusumikap", "magalit", "pagsasaalang-alang", "pagsulat", "pagtutulak", "pagbibigay", 
+        "paghihiganti", "pagtaya", "nangako"]
+    },
+
+    "result" : {
+        "Result": ["pinindot", "naprotektahan", "nadurog", "sinarado", "nakasuksok", "niyakap", "napayakap", "napuno", "sira", 
+        "pagbabalik", "pagbalik", "ibinibigay", "binabali", "napalakas", "nakalimutan", "napansin", "nakahawak", "pinindot", 
+        "sinarado", "nanumpa", "napuno", "niyakap", "napalakas", "nakatulog", "nalupig", "napadpad", "nawalan", "nawalang", 
+        "napangiti"]
+    },
+
+    "manner" : {
+        "Manner": ["patuloy", "muli", "muling", "sabay", "kasabay", "mapasigaw", "dalang-dala", "nakakapagod", "panginginig", 
+        "kumikirot-kirot", "napangisi"]
+    },
+
+    "aspect" : {
+        "Aspect": ["ipagpatuloy", "magpatuloy", "inuulit", "patuloy", "gumalaw", "lumipat", "lumilikha", "pagluha", "pagdulog", 
+        "pagdalaw", "pagpasok", "pagbalik", "pagsilip", "pagkawasak"]
+    },
+
+    "status" : {
+        "Status": []
+    },
+
+    "appearance" : {
+        "Appearance": ["nagloloko", "nagpatakot", "nakatutok"]
+    },
+
+    "knowledge" : {
+        "Knowledge" : ["obserba", "obserbahan", "sinisiyasat", "maisip", "pagkilala", "pagsasaalang-alang"]
+    },
+
+    "description" : {
+        "Description" : ["pagsasalita", "tawag", "nagsasalita", "pagsulat", "nagpupulong"]
+    },
+
+    "supposition" : {
+        "Supposition" : ["papalubog", "mawawala", "pipiliin", "malilimutan", "masasambot"]
+    },
+
+    "subjectivation" : {
+        "Subjectivation" : []
+    },
+
+    "attitude" : {
+        "Attitude" : ["magalit", "natatawa", "tumatawa", "patawad", "respeto", "nakakapagod", "dalang-dala", "pagmamahal", 
+        "pag-asa", "pagnananais", "pangarap", "pabor", "pagod", "paumanhin", "nandidiring", "nilalamig", "pagdurusa", 
+        "naguguluhan", "ikinalulungkot", "pagmamaktol", "namimiss", "namiss", "malubha", "katahimikan", "nanlamig", "pagmamaktol", 
+        "namimiss", "ngumisi", "nakangiti", "nangingiti", "napangiti"]
+    },
+
+    "comparative" : {
+        "Comparative" : ["malaki", "malaking", "maliit", "tamang", "mataas", "tangi", "tanging", "matandang", "mahaba", "mahabang", 
+        "pagkatulad", "pagkakatulad"]
+    },
+
+    "quantifier" : {
+        "Quantifier" : []
+    },
+
+    "qualification" : {
+        "Qualification" : ["nakakapagod", "dalang-dala", "tangi", "tanging", "tamang", "malubha", "natatanging", "nandidiring", "bago", 
+        "mataas", "malubha", "pang-araw-araw"]
+    },
+
+    "explanation" : {
+        "Explanation" : []
+    },
+
+    "unsure" : {
+        "Unsure" : ["pagsigaw", "sumigaw", "sumisigaw", "pagmumura", "mura", "nakakataas", "tumataas", "natatawa", "tumatawa", 
+        "tawag", "nakatingin", "tumitingin", "pagtingin", "tinitigan", "tinatrato", "humahangin", "nagsasalita", "nagsasampalan", 
+        "pagsunog", "paglipad", "pagliwanag", "pagtulak", "pagbigay", "pagtaas", "pagdilat", "pinaglilingkuran", "patay", 
+        "pagkawala", "nalimutan", "malilimutan", "taglamig", "talino", "nagreklamo", "pagrereklamo", "sumusugod", "lumalahok", 
+        "lumingon", "nakaluhod", "pumiyok", "hinahawakan", "humahawak", "tingin", "nagloloko", "niloko", "nanlilisik", 
+        "nagsasampalan", "namumugtong", "namumugto", "madilim"]
+    }
+}
