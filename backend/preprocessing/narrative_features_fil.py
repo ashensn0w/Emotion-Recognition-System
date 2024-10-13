@@ -33,6 +33,8 @@ def extract_mode(text):
             elif token.head.text.lower() in mode_keywords['Impossibility'] or token.head.lemma_ in mode_keywords['Impossibility']:
                 detected_modes['Impossibility'] = True
 
+    return 1 if any(detected_modes.values()) else 0
+
 def extract_intention(text):
     doc = nlp(text)
     

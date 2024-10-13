@@ -45,7 +45,7 @@ def load_dataset(file_path):
     except Exception as e:
         print(f"An error occurred: {e}")
 
-file_path = './backend/data/training_data.csv'
+file_path = './backend/data/training_data_with_taglish.csv'
 data = load_dataset(file_path)
 
 sentences = data['sentence'].tolist()
@@ -206,7 +206,7 @@ if data is not None:
         return combined_features_df
 
     # Read narrative features data from CSV
-    narrative_file_path = './backend/data/training_data.csv'
+    narrative_file_path = './backend/data/training_data_with_taglish.csv'
     narrative_features_df = pd.read_csv(narrative_file_path)
 
     # Apply the feature extraction and combination process
@@ -223,7 +223,7 @@ if data is not None:
     final_combined_df.to_csv('./backend/data/feature vectors/tested_complete_vectorized_data.csv', index=False)
     # <-------------------------------------------------------------------------------------------------------------->
     # Load the original dataset and make sure the 'emotion' column is intact
-    file_path = './backend/data/training_data.csv'
+    file_path = './backend/data/training_data_with_taglish.csv'
     data = load_dataset(file_path)
 
     # Check if the 'emotion' column is present in the original data
