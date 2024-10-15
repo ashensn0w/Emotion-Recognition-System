@@ -1,6 +1,6 @@
 from nltk.corpus import stopwords
 from nltk.data import find
-from nltk.tokenize import word_tokenize
+from nltk.tokenize import word_tokenize, sent_tokenize
 from preprocessing.narrative_features_eng import *
 from preprocessing.narrative_features_fil import *
 from PyQt5.QtCore import Qt
@@ -178,8 +178,10 @@ class MainWindow(QMainWindow):
         with open(self.file_path, 'r', encoding='utf-8') as file:
             text_content = file.read()
 
-        # Split the text into lines based on double newlines and store in sentences
-        sentences = [line.strip() for line in text_content.strip().split('\n\n') if line.strip()]
+        # # Split the text into lines based on double newlines and store in sentences
+        # sentences = [line.strip() for line in text_content.strip().split('\n\n') if line.strip()]
+
+        sentences = sent_tokenize(text_content)
 
         # Print the sentences variable to see the output
         # print(sentences)
@@ -320,8 +322,10 @@ class MainWindow(QMainWindow):
             with open(self.file_path, 'r', encoding='utf-8') as file:
                 text_content = file.read()
 
-            # Split the text into lines based on double newlines and store in sentences
-            sentences = [line.strip() for line in text_content.strip().split('\n\n') if line.strip()]
+            # # Split the text into lines based on double newlines and store in sentences
+            # sentences = [line.strip() for line in text_content.strip().split('\n\n') if line.strip()]
+
+            sentences = sent_tokenize(text_content)
 
             # Print the sentences variable to see the output
             # print(sentences)
