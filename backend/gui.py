@@ -1,11 +1,11 @@
 from nltk.corpus import stopwords
 from nltk.data import find
-from nltk.tokenize import word_tokenize, sent_tokenize
+from nltk.tokenize import word_tokenize
 from preprocessing.narrative_features_eng import *
 from preprocessing.narrative_features_fil import *
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont
-from PyQt5.QtWidgets import QMessageBox, QSpacerItem, QSizePolicy, QApplication, QMainWindow, QWidget, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, QFileDialog, QScrollArea
+from PyQt5.QtWidgets import QFrame, QSpacerItem, QSizePolicy, QApplication, QMainWindow, QWidget, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, QFileDialog, QScrollArea
 from rich.console import Console
 from rich.table import Table
 from utils.save_load import *
@@ -105,17 +105,17 @@ class MainWindow(QMainWindow):
         self.file_name_label.setFont(QFont("Arial", 12))
         right_layout.addWidget(self.file_name_label, alignment=Qt.AlignCenter)
 
-        # Submit button
-        submit_button = QPushButton("Submit Novella")
-        submit_button.setFixedSize(250, 50)
-        submit_button.setFont(QFont("Arial", 14, QFont.Bold))
-        submit_button.setStyleSheet("""
+        # Preview Novella Button
+        self.preview_button = QPushButton("Preview Novella")
+        self.preview_button.setFixedSize(250, 50)
+        self.preview_button.setFont(QFont("Arial", 14, QFont.Bold))
+        self.preview_button.setStyleSheet("""
             background-color: #1338BE; 
             color: white;
             border-radius: 10px;
         """)
-        submit_button.clicked.connect(self.go_to_results_page)
-        right_layout.addWidget(submit_button, alignment=Qt.AlignCenter)
+        self.preview_button.clicked.connect(self.show_preview_page)
+        right_layout.addWidget(self.preview_button, alignment=Qt.AlignCenter)
         right_layout.addStretch(1)
 
         # Add widgets to main layout
@@ -149,45 +149,155 @@ class MainWindow(QMainWindow):
             
             # Update the label to show the file was selected and saved
             self.file_name_label.setText(f"Selected file: {base_name}")
+    
+    def show_preview_page(self):
+        if self.file_path:
+            self.preview_window = PreviewWindow(self.file_path, self)  # Pass self as parent
+            self.preview_window.show()
+            self.hide()  # Hide main window
+        else:
+            print("Please upload a novella first.")
 
-    def go_to_results_page(self):
-        # Check if a file has been uploaded
-        if not self.file_path:
-            # Show error message
-            msg = QMessageBox()
-            msg.setFixedHeight(400)
-            msg.setFixedWidth(600)
-            font = QFont()
-            font.setPointSize(13)
-            msg.setFont(font) 
-            msg.setIcon(QMessageBox.Warning)
-            msg.setText("Please upload a .TXT file \nbefore submitting.")
-            msg.setWindowTitle("Error")
-            msg.setStandardButtons(QMessageBox.Ok)
-            msg.setStyleSheet("""
-                QPushButton {
-                    font-size: 12px;  # Adjust font size as needed
-                    padding: 10px;  # Adjust padding as needed
-                }
-            """)
-            
-            msg.exec()  # This will display the alert box
-            return  # Exit the function early
+        ##
+        ##
 
-        # Read the content of the file
+# Ensure to include the necessary imports at the top of your code
+
+class PreviewWindow(QMainWindow):
+    def __init__(self, file_path, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Preview Window")
+        self.setFixedSize(1500, 800)
+
+        # Store the parent reference
+        self.parent = parent
+        self.file_path = file_path 
+
+        # Main layout with two columns
+        main_layout = QHBoxLayout()
+        left_layout = QVBoxLayout()
+
+        # Left side (Red background with text)
+        left_widget = QWidget()
+        left_widget.setStyleSheet("background-color: #8B1E3F;")
+        left_layout.addStretch(1)
+        title_label = QLabel("EMOTION\nRECOGNITION\nIN FILIPINO\nNOVELLAS")
+        title_label.setAlignment(Qt.AlignLeft)
+        title_label.setFont(QFont("Arial", 28, QFont.Bold))
+        title_label.setStyleSheet("color: white; margin-left: 4px;")
+        left_layout.addWidget(title_label)
+        left_layout.addStretch(1)
+        left_widget.setLayout(left_layout)
+        left_widget.setFixedWidth(400)
+
+        # Right column layout (for the preview content)
+        right_layout = QVBoxLayout()
+
+        # Create a scroll area for the content
+        scroll_area = QScrollArea()
+        scroll_area.setFixedHeight(630)
+        scroll_area.setStyleSheet("margin-bottom: 20px;")
+        scroll_area.setWidgetResizable(True)
+
+        # Create a frame to hold the content in the scroll area
+        content_frame = QFrame()
+        content_layout = QVBoxLayout(content_frame)
+
+        # Read the text file
+        self.title = ""
+        self.content = ""
+        self.paragraph_count = 0  # Initialize paragraph count
+        try:
+            with open(file_path, 'r', encoding='utf-8') as file:
+                lines = file.readlines()
+                if lines:
+                    self.title = lines[0].strip()  # First line as title
+                    self.content = "".join(lines[1:]).strip()  # Remaining lines as content
+                    
+                    # Count the number of paragraphs
+                    self.paragraph_count = self.content.count('\n\n') + 1  # Add 1 to account for the last paragraph if it does not end with "\n\n"
+                    
+                    print(self.title)
+                    print(self.paragraph_count)
+        except Exception as e:
+            print(f"Error reading file: {e}")
+
+        # Display title and content
+        self.title_label = QLabel(self.title)
+        self.title_label.setFont(QFont("Arial", 24))
+        self.title_label.setAlignment(Qt.AlignCenter)
+        self.title_label.setStyleSheet("margin-top: 20px; margin-bottom: 10px;")
+        content_layout.addWidget(self.title_label)
+
+        self.content_label = QLabel(self.content)
+        self.content_label.setFont(QFont("Arial", 12))
+        self.content_label.setWordWrap(True)
+        content_layout.addWidget(self.content_label)
+
+        # Set the content frame to the scroll area
+        scroll_area.setWidget(content_frame)
+
+        # Add the scroll area to the right layout
+        right_layout.addWidget(scroll_area)
+
+        # Back button to return to the main window
+        self.back_button = QPushButton("Back")
+        self.back_button.setFixedSize(250, 40)
+        self.back_button.setFont(QFont("Arial", 12, QFont.Bold))
+        self.back_button.setStyleSheet(""" 
+            background-color: #1338BE; 
+            color: white; 
+            border-radius: 10px; 
+        """)
+        self.back_button.clicked.connect(self.back_to_main)
+        right_layout.addWidget(self.back_button, alignment=Qt.AlignCenter)
+
+        # Process Novella button
+        self.process_button = QPushButton("Process Novella")
+        self.process_button.setFixedSize(250, 40)
+        self.process_button.setFont(QFont("Arial", 12, QFont.Bold))
+        self.process_button.setStyleSheet(""" 
+            background-color: #1338BE; 
+            color: white; 
+            border-radius: 10px; 
+        """)
+        self.process_button.clicked.connect(self.process_novella)
+        right_layout.addWidget(self.process_button, alignment=Qt.AlignCenter)
+
+        # Add stretch at the bottom for vertical centering
+        right_layout.addStretch(1)
+
+        # Add widgets to the main layout
+        main_layout.addWidget(left_widget)
+        main_layout.addLayout(right_layout)
+
+        # Set the central widget
+        central_widget = QWidget()
+        central_widget.setLayout(main_layout)
+        self.setCentralWidget(central_widget)
+
+    def back_to_main(self):
+        self.close()  # Close the preview window
+        if self.parent:  # Check if parent is set
+            self.parent.show()  # Show the main window again
+
+    def process_novella(self):
+        print("Processing novella...")
+        # Use self.file_path instead of self.file_path
         with open(self.file_path, 'r', encoding='utf-8') as file:
             text_content = file.read()
 
-        # # Split the text into lines based on double newlines and store in sentences
-        # sentences = [line.strip() for line in text_content.strip().split('\n\n') if line.strip()]
+        # Split the text into lines based on double newlines and store in sentences
+        sentences = [line.strip() for line in text_content.strip().split('\n\n') if line.strip()]
 
-        sentences = sent_tokenize(text_content)
+        remaining_sentences = sentences[1:] if len(sentences) > 1 else []  # Get the rest of the sentences for analysis
+        # print(remaining_sentences)
 
         # Print the sentences variable to see the output
         # print(sentences)
 
         # Create a DataFrame from the list of sentences
-        data = pd.DataFrame(sentences, columns=['sentence'])
+        data = pd.DataFrame(remaining_sentences, columns=['sentence'])
 
         def format_list_as_string(token_list):
             return str(token_list).replace("'", '"')
@@ -323,15 +433,15 @@ class MainWindow(QMainWindow):
                 text_content = file.read()
 
             # # Split the text into lines based on double newlines and store in sentences
-            # sentences = [line.strip() for line in text_content.strip().split('\n\n') if line.strip()]
+            sentences = [line.strip() for line in text_content.strip().split('\n\n') if line.strip()]
 
-            sentences = sent_tokenize(text_content)
+            remaining_sentences = sentences[1:] if len(sentences) > 1 else []  # Get the rest of the sentences for analysis
 
             # Print the sentences variable to see the output
             # print(sentences)
 
             # Create a DataFrame from the list of sentences
-            data = pd.DataFrame(sentences, columns=['sentence'])
+            data = pd.DataFrame(remaining_sentences, columns=['sentence'])
     
             # Apply the feature extraction and combination process
             combined_features_df = process_data(data)
@@ -366,11 +476,12 @@ class MainWindow(QMainWindow):
             # Save the output to a new CSV file
             output_df.to_csv('./backend/data/feature vectors/new_input_predictions.csv', index=False)
 
-        # Proceed to the results window, if applicable
-        self.results_window = ResultsWindow(self, self.file_path)  # Pass file_path to results window
+        # Simulating processing and then opening the results window
+        self.results_window = ResultsWindow(self.parent, self.parent.file_path)
         self.results_window.show()
-        self.close()
-        
+        self.close()  # Close the preview window after opening results
+
+
 # Second Window (Results Page)
 class ResultsWindow(QWidget):
     def __init__(self, parent, file_path):  # Add file_path parameter
@@ -534,14 +645,13 @@ class ResultsWindow(QWidget):
         self.parent.show()
         self.close()
 
-
 # Third Window (Sentences Page)
 class SentencesWindow(QWidget):
     def __init__(self, emotion, sentences, parent):
         super().__init__()
         self.parent = parent
         self.setWindowTitle(f"{emotion} Sentences")
-        self.setGeometry(250, 150, 1500, 800)  # Set the same size as the other pages
+        self.setGeometry(250, 150, 1500, 800)
 
         # Main layout with two columns
         main_layout = QHBoxLayout()
