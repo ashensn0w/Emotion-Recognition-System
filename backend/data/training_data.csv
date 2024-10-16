@@ -1,4 +1,4 @@
-﻿sentence,emotion
+sentence,emotion
 """Okay lang ako! Ano ba kayo?""",anger
 """Napinsala ang iyong tibialis anterior.""",fear
 """Ha? Saan 'yun? Ay basta, ayos lang ako. Habulin na lang natin 'yung kriminal at baka makatakas siya!""",anger
@@ -104,7 +104,6 @@ Napatingin din ako sa paligid at may naramdaman akong kakaiba. Sinuri ko ang mga
 Napatingin din ako sa kalapit na gusali kung nasaan ang isa pang nagmamanman sa amin at nakita kong sinusundan niya pa rin kami ng tingin.,fear
 Napasandal na lang ako at huminga nang malalim.,fear
 "Lalo pang tumataas ang lebel ng stress ko dahil hindi ko alam kung paano 'to sasabihin kina Darwin, Krystal at Nel.",fear
-"""Nararamdaman mo rin ba ang presensya na iyon?"" Napatingin ako kay Hiro na diretso lang na nakatingin pero seryoso ang ekspresyon niya.",fear
 Nakakamangha na nagawa niyang talunin ang limang 'yun sa loob lang ng ilang minuto.,joy
 Narinig ko pa nga ang mahinang pagtawa ni Mama sa harapan namin kaya bigla akong nahiya.,joy
 """Gumawa siya ng maliit na eroplano dati at tinawag nila itong Kaoru. Mukhang nagawa na niya talaga ang proyektong 'yun.""",joy
@@ -320,7 +319,7 @@ Lumayo siya sa akin at kinabahan ako sa pagsigaw niya. Ramdam na ramdam ko ang g
 """Layuan mo ako,"" malamig niyang sabi at saka nagmartsa papunta sa pintuan.",anger
 """P-paumanhin!"" biglang sigaw ng lalaki at bigla siyang lumuhod kaya napatayo ako.",fear
 """Salamat,"" sinabi ko at nginitian siya pabalik.",joy
-"""Anong ginagawa mo?!"" sigaw niya pero hindi ko siya pinansin at tinulak ko siya papupo sa bangko. Gaya ng dati, sinamaan lang niya ako ng tingin at tinaasan ng kilay.",anger
+"""Anong ginagawa mo?!"" sigaw niya pero hindi ko siya pinansin at tinulak ko siya paupo sa bangko. Gaya ng dati, sinamaan lang niya ako ng tingin at tinaasan ng kilay.",anger
 """Huwag kang mag-isip ng kung ano-ano,"" malamig niyang sabi.",anger
 "Wala akong maalala mula sa mga magulang ko kundi ang paboritong linya ng nanay ko: Ang alaala ng isang tao ay malinaw na makikita sa kaniyang mga mata. Tama siya, dahil ngayon, pinuno ng mga alaala ni Mitsuo ang isip ko. Isang karagatan ng dugo, daan-daang bangkay, iyak ng mga tao sa buong lugar, at siya na nakatayo sa gitna ng lahat ng iyon. Gamit ang lahat ng natitirang lakas ko sa pag-iisip, nilipat ko ang mga mata ko sa sugat niya at nanghina ang mga tuhod ko at lumalim ang hininga ko.",sadness
 "Oo, malamig ang gabi, pero nanginig ang katawan ko dahil sa katakot-takot niyang mga alala. Dahan-dahan kong kinalma ang sarili ko at tinignan ko siya nang masama pero hindi ko inaasahan ang nakita ko.",fear
@@ -1471,7 +1470,6 @@ Iyan din ang sinabi nila.,sadness
 """Lumayas ka,"" sambit niya sa akin.",joy
 "Salamat,' sabi niya at ngumiti ako nang marinig iyon.",joy
 """B-bakit . . ."" hirap niyang tanong, ""hindi ko . . . m-maigalaw ang katawan ko . . .""",fear
-Dugo ang sumabog sa kanyang mukha at ang kanyang dilaw na buhok ay natakpan ng pula. Ang kanyang berdeng mga mata ay kumikislap sa madilim na espasyo at ang balat ko ay kinilabutan nang ngumiti siya sa amin.,sadness
 """Hindi,"" bulong ko, pilit na hindi umiyak.",sadness
 """Gusto mo ba siyang makita?"" tanong ko at marahan siyang tumango.",fear
 """Magkalaban tayo,"" bigla niyang sabi. ""Hindi mo kailangang magbait-baitan. Galit din ako sa'yo, dahil sa ginawa mo sa kanya.""",anger
@@ -1710,7 +1708,6 @@ Ano? Halos magkasama tayo nang alagaan mo ako—,sadness
 """Hey,"" bati niya.",joy
 """Hindi, hindi, hindi ganyan ang nangyari,"" ungol ni Hiroshi bago napansin kami ni Hayate.",sadness
 "Ano ka ba, maging proud ka! Para 'yang pagkakaroon ng aking fighting style at kay Mitsuo sa isang tao.",joy
-Talagang nakakatakot iyon.,fear
 """Kailan ka uuwi?"" tanong niya.",sadness
 "Hmm, wala na para sa linggong ito.",sadness
 Bakit may paghusga?,anger
@@ -2072,7 +2069,6 @@ Hideo! Please help him. Please—,sadness
 """No . . . Vince . . . don't say that . . .""",sadness
 """I'm here. You should calm down and think carefully. You're safe so you do not need to worry."" Those were the meanings of his knocks.",joy
 "But I'm sorry, Nathalie, I don't think I can save you",sadness
-"""Sorry.""",sadness
 "Don't say that! Please, don't say that.",sadness
 """Please, just forget me,"" he weakly said. ""Use my sixth sense, Nathalie.""",sadness
 What are you saying?,sadness
@@ -2254,7 +2250,6 @@ Heh. Are you embarrassed? How cute.,joy
 """You . . ."" Kana snarled as she glared at the humdrum. ""You were there. You, too, killed everyone!""",anger
 """Where are you?"" I mumbled. ""It's getting dangerous here.""",fear
 """What the hell are you saying?"" Kana grumbled. ""Assist who? The person who killed⁠ —""",anger
-Damn it!,anger
 """Behind you!"" I alerted as I felt the opening of the Black Dimension near Kana.",fear
 """You should've told us first if there are any explosives in the vicinity, you humdrum,"" Kana growled as she glared at Ariel who was still in his knees.",anger
 """I'm sorry for using her face. I had to survive. Don't worry, the end is near. You won't see this face after this.""",sadness
@@ -2276,7 +2271,7 @@ I don't know what to do anymore. I should've killed myself the moment they have 
 "Please, somebody, please end my misery.",sadness
 """Don't worry too much,"" she said while wiping off the tears on her eyes and face. ""I will be okay.""",sadness
 "She smiled while pointing at the tree behind us. ""I have a business there.""",joy
-"""I wish I can stay here a bit longer,"" she mumbled while looking at those two. ",sadness
+"""I wish I can stay here a bit longer,"" she mumbled while looking at those two.",sadness
 I can't. You know that I only stayed here because of my personal matters.,sadness
 """I've been staying here for more than a year, and honestly, I have enjoyed my time here that I almost forgot I have a life outside this campus.""",sadness
 """I know that sending off a friend is hard, even unbearable for some,"" he said and I don't know if my eyes were just playing tricks on me but I could see the sadness on his face. ""But there are times that you have to.""",sadness
@@ -2948,7 +2943,6 @@ Who's the weakling now?,fear
 "I sighed and smiled. ""Finally.""",joy
 What the he—why did you use your hand?!,anger
 "Lumapit ako sa kanya. ""What did you find out?",fear
-"""Excuse me? Araw-araw na kaya akong nagpa-practice.""",anger
 You're going to be a great instructor.,joy
 I was about to open the door when I felt something strange.,fear
 "Five years after the tragedy, another wave of devastation plowed through us, but this time, I crumbled and wished death was the better option.",sadness
@@ -3038,7 +3032,6 @@ Then why are you staring at me like that?,fear
 "And? Why aren't you with them? You're an Elite, too, right?",fear
 """I can't face them,"" he muttered.",fear
 "So, you're going to give up your status?",sadness
-Huh? What do you mean?,anger
 Brat?,anger
 Tsk. Hope he gives up now.,sadness
 """Merry Christmas,"" I mumbled. ""Sleep well.""",joy
@@ -3243,7 +3236,6 @@ Biglang bumalik ang tension sa loob ng room at bumilis ang tibok ng puso ko dahi
 """Do you sense that presence, too?"" Napatingin ako kay Hiro na diretso lang na nakatingin pero seryoso ang expression niya.",fear
 Napatingin din ako sa paligid at may naramdaman akong kakaiba. I scanned the people around us and I saw several suspicious-looking persons observing us.,fear
 Napatingin din ako sa kalapit na building kung nasaan ang isa pang nagmamanman sa amin at nakita kong sinusundan niya pa rin kami ng tingin.,fear
-"""Do you sense that presence, too?"" Napatingin ako kay Hiro na diretso lang na nakatingin pero seryoso ang expression niya.",fear
 """He built a miniature plane before and they named it Kaoru. Mukhang nagawa na niya talaga ang project na 'yun.""",joy
 """H-Hiro..."" I tapped his face but he's not responding. ""Don't you dare die on me. Hiro...please, gumising ka.""",fear
 "Then suddenly, his eyes fluttered and he groaned. Pagdilat niya ay tuluy-tuloy na ang pagtulo ng luha ko dahil sa takot at pasasalamat na buhay siya.",joy
@@ -3281,7 +3273,6 @@ Nakatingin lang ako sa chip. Natatakot ako sa maaari kong malaman base sa data n
 Ganito na naman. Ako na naman ang dahilan. I'm always dragging them into my own mess. I thought I'm strong enough to defend myself and it's my turn to protect them but it all comes back to me being the one to be protected. I hate it. I hate this feeling.,anger
 """To our ancestor, Ryou!"" sigaw nila habang nakataas ang mga sandata. ""Let this victory mark the start of another era! Shinigamis!"" Another round of thunderous roar filled the surroundings.",joy
 Bigla tuloy akong naguilty dahil hindi ko man lang ulit sila nakita para makapagpasalamat. They are the reason why I survived the fight. If it weren't for them...,sadness
-Inuna kong tignan ang pictures na nakalagay doon at halos sumikip ang dibdib ko habang ginagawa ko 'yun.,sadness
 Gusto kong maalala ang nangyari noong bagong silang pa lang ako. I want to feel that I was held by my mother during her last moment. I want to remember it all but I can't.,sadness
 Hindi ko pa kayang basahin ang iba pang files na nakalagay doon dahil sobrang bigat na kaagad ng pakiramdam ko. Maybe visiting our former school will help me lessen the pain.,sadness
 """It's nice to see the both of you again,"" bati niya sa amin at napansin kong wala siyang suot na contacts kaya kitang-kita ang green eyes niya.",joy
@@ -3301,7 +3292,6 @@ It's really painful and I'm sure ganito rin ang nararamdaman ni Papa lalo na't n
 "Pagtingin ko, lumapit siya sa grave nina Akira at Mayu. She placed flowers in front of their graves and prayed.",sadness
 The war has just ended three days ago and Tantei High is still grieving for the Senshins who lost their lives. May madadagdag na namang graves dito.,sadness
 """I can't believe we're having our reunion right here,"" sabi ni Michiko at nakita kong tumulo ang luha niya. May naramdaman akong presence sa likuran at pagtingin ko, nandoon na rin si Hideo. Nakatalikod siya sa amin at nakatingin lang sa langit.",sadness
-Nagulat naman ako nung biglang may tumulong luha sa mga mata niya at parang bumagsak ang puso ko nung nakita ko 'yun.,sadness
 """Hi Mitsuo! Welcome to Atama family!"" masayang sabi ni Akira.",joy
 Napatingin naman ako doon kay Mitsuo at halos magkasalubong na ang kilay niya. What a rude guy.,anger
 """The other member. 'Yung babae,"" sabay ngiti niya nang nakakaloko.",joy
@@ -3327,7 +3317,7 @@ My knees gave up on me as I feel the pain coursing through my leg. Nagpanic ako 
 """I didn't expect him to be a gentleman. Ang tumatak na impression ko sa kanya ay short-tempered and cold pero ngayon ay nasaksihan ko ang pagiging caring niya. Wow.""",joy
 Lumayo siya sa akin at kinabahan ako sa pagsigaw niya. I can definitely feel his rage and I know that I have crossed the line.,fear
 """Stay away from me,"" malamig niyang sabi at saka nagmartsa papunta sa pintuan.",anger
-"""What the hell are you doing?!"" sigaw niya pero hindi ko siya pinansin at tinulak ko siya papupo sa bench. As usual, he just glared at me and I raised my brow.",anger
+"""What the hell are you doing?!"" sigaw niya pero hindi ko siya pinansin at tinulak ko siya paupo sa bench. As usual, he just glared at me and I raised my brow.",anger
 """Don't get the wrong idea,"" malamig niyang sabi.",anger
 "Sure, the night is cold, but my body trembled because of his bone-chilling memories. Dahan-dahan kong kinalma ang sarili ko at tinignan ko siya nang masama pero hindi ko inaasahan ang nakita ko.",fear
 """Yes, that's because I have the same symptoms written on the book."" Pagkasabi ko no'n ay saglit na natawa si Mayu kaya naman nagtaka ako.",joy
@@ -3386,7 +3376,6 @@ Natahimik pagkarinig ko no'n at hindi ko alam kung saan ako mas nagulat—her pa
 """Who are you to decide what she deserves?"" tanong ko at pinatigil ko ang oras nila. I attacked them using my fan and two of them fell down.",anger
 """I'll protect him with my life so don't worry,"" dagdag niya at agad na tumulo ang luha ko.",sadness
 "I don't care!' sigaw niya. ""You said you'll protect me, right? Then keep moving! Pupunta ako sa campus sa ayaw at sa gusto mo.""",anger
-Napaupo na ako nang makita ko kung paano niya pinugutan ng ulo ang Elite na kalaban niya . . . at kung paano siya sinaksak sa puso ng Elite na 'yon.,fear
 """Tell Nathan that he should fulfill my wish,"" sabi niya habang nakangiti at nagtuluy-tuloy ang agos ng luha ko.",sadness
 """I'm sorry for saying that earlier. The truth is, I am scared that you will forget me.""",fear
 """Gusto kong makilala si Papa pero wala naman siyang pictures at ayaw ko namang pilitin si Mama,"" she once said in her inner voice.",sadness
@@ -3421,15 +3410,12 @@ School has always been a monotonous process to me. I did well but it wasn't fun.
 Pagkabasa ko no'n ay napatingin ako sa wala nang malay na Rick Torres at naintindihan ko na kung bakit gano'n ang ikinilos niya kanina. He was living in fear for the past three years because of this guy who wanted to set him up as the murderer.,sadness
 """High probability,"" sagot ni Hayate.",fear
 """Who's that?"" tanong ni Hayate.",fear
-"Pumunta kami sa main gate para magtanong pero may kakaiba akong naramdaman sa lugar na 'yon. I instinctively reached for my dagger but I realized I only brought a taser and a handcuff. But what surprised me was the guard did the same thing—his hands hovered over his holster, as if he felt some kind of danger.
-",fear
+"Pumunta kami sa main gate para magtanong pero may kakaiba akong naramdaman sa lugar na 'yon. I instinctively reached for my dagger but I realized I only brought a taser and a handcuff. But what surprised me was the guard did the same thing—his hands hovered over his holster, as if he felt some kind of danger.",fear
 """Did you feel something a while ago?"" tanong ko ulit sa kanya.",fear
 """Yes,"" mahina niyang sagot. ""Lagi kong nararamdaman pero hindi ko masundan. It's like a mixture of presence of several Shinigamis.""",fear
 """Let's get straight to the point,"" sagot ko naman. ""You are going to get killed if you leave this school alone.""",anger
-"""Is this related to the news this morning?"" seryoso niyang tanong at tumango naman si Hayate.
-",fear
-"""Kana! Don't let him get away!"" sigaw ko habang tumatakbo papunta kina Luke at Hayate.
-",anger
+"""Is this related to the news this morning?"" seryoso niyang tanong at tumango naman si Hayate.",fear
+"""Kana! Don't let him get away!"" sigaw ko habang tumatakbo papunta kina Luke at Hayate.",anger
 """Assist Kana,"" mahinang sabi ni Hayate. ""He's a dangerous one. He aimed at my limbs, giving me no chance of resisting.""",fear
 """Wow. This feels like we're in a medieval setting with your weapons,"" he commented. ""Pero sino ba kayo at niligtas n'yo ang halimaw na 'yon?""",joy
 """Halimaw? You are the monster here,"" sabi ko naman. ""You killed several people because they they didn't let you in.""",anger
@@ -3437,7 +3423,7 @@ Pagkabasa ko no'n ay napatingin ako sa wala nang malay na Rick Torres at naintin
 """Dahil nakita n'yo ang mukha ko, hindi ko hahayaang makalabas kayo rito ng buhay,"" he said while watching our every move. ""It's been a while since I last dissected a woman.""",anger
 """What's inside this container?"" tanong niya at lalo lang kumunot ang noo ng lalaki.",anger
 """Oh God, Kana, come on, don't die on me!"" sigaw ko at agad kong pinindot ang emergency button sa KT para humingi ng tulong kina Hiroshi.",fear
-"""You tried treating them on your own but you didn't have the equipment and medicines. Kung dinala mo sila sa ospital sa simula pa lang, malamang ay naagapan pa ng mga doktor ang kalagayan nila. It was your last resort and that cost them their lives. You used the symptoms of cholera to kill those you think robbed the lives of your children. Dehydration, wrinkled, bluish skin and exposed their stomach and intestines where the cholera bacteria thrive. You used themto remind your victims what they have done and you mutilated their bodies to challenge the police. Do you think your daughters would be proud of what you did?""",anger
+"""You tried treating them on your own but you didn't have the equipment and medicines. Kung dinala mo sila sa ospital sa simula pa lang, malamang ay naagapan pa ng mga doktor ang kalagayan nila. It was your last resort and that cost them their lives. You used the symptoms of cholera to kill those you think robbed the lives of your children. Dehydration, wrinkled, bluish skin and exposed their stomach and intestines where the cholera bacteria thrive. You used them to remind your victims what they have done and you mutilated their bodies to challenge the police. Do you think your daughters would be proud of what you did?""",anger
 """How is she?"" tanong ko nang makarating kami sa ospital kung nasaan si Kana.",sadness
 """You two,"" biglang tawag ni Hiroshi kaya napatingin kami sa kanya. ""I told you that weapon transportation has yet to be completed.""",anger
 """H-he's right,"" dagdag ko naman. ""But we promise, it won't happen again.""",fear
@@ -3453,12 +3439,10 @@ Pagkabasa ko no'n ay napatingin ako sa wala nang malay na Rick Torres at naintin
 """How about us?"" tanong ko. ""Do you think you don't belong here with us?""",sadness
 """I'm not wearing that ever again,"" matigas kong sabi matapos kong maalala ang pinagdaanan namin dahil sa device na 'yon.",fear
 """Be careful, you two,"" biglang sabi ni Hayate sa earpiece namin. You're entering a high-pressure area.""",fear
-"""We're nearby,"" sabi ni Hayate kaya nakahinga ako nang maluwag.
-",joy
+"""We're nearby,"" sabi ni Hayate kaya nakahinga ako nang maluwag.",joy
 "Napangiti naman ako sa narinig ko. ""Yeah. I'm sure they have their reasons.""",joy
 "Kana replied with a laugh. ""My god, J, ang clingy mo. Don't worry, I'll contact you later.""",joy
-"""Pagtitripan mo na naman,"" sabi ni Hayate kaya napangiti ako. ""I won't be surprised if he resents you when he grows up.""
-",joy
+"""Pagtitripan mo na naman,"" sabi ni Hayate kaya napangiti ako. ""I won't be surprised if he resents you when he grows up.""",joy
 """Ayos ka na ba?"" he asked in a gentle tone.",joy
 Rielle's wishes broke my heart. Paano pa kaya si Hideo?,sadness
 "If the council won't allow her to live inside the campus, she can have my cabin in the forest. Pwede mo siyang dalawin doon.",fear
@@ -3477,22 +3461,20 @@ Isang malalim na buntong-hininga ang pinakawalan ko. I relaxed my body and start
 """Wala bang Class S missions for Intel department?"" tanong ko.",sadness
 "Napaayos naman ako ng upo. ""Why?! I want to—""",anger
 """Your body was way beyond its limit,"" sabi ko at muling napatingin sa hiwa sa dibdib niya. ""Hindi ka pa talaga makakagalaw lalo na at damaged pa ang 
-internal organs mo.""",sadness
+ internal organs mo.""",sadness
 """How?"" sabay tingin niya sa akin. ""I can only kill for them. Will that count as protection?""",anger
 What the hell are you doing?' pagalit niyang tanong.,anger
 "Oh, well. Might as well rest here. Saka na lang ako aalis kapag sumikat na ang araw.",sadness
 """It's just a scratch,"" I chuckled. ""Wala lang 'yan.""",sadness
 """Oo nga. May bahay ka naman sa village,"" added Akira. ""Ang layu-layo mo 
-tuloy.""",sadness
+ tuloy.""",sadness
 "Excuse me, hindi babysitter ang role ko rito, ha!",anger
 """Seryoso ka ba?! Me? An instructor?"" I asked while pointing at myself.",anger
 """Don't worry, I can't wait to leave this place, too,"" sagot naman niya.",sadness
 What the hell are those?' tanong niya.,anger
-"Ha! Ako, takot? As if,' balik ko sa kanya.",anger
 """Hey,"" tawag niya habang nakatingin pa rin sa puntod ni Akemi. ""This place does not have a barrier, right?""",fear
 """You're still having nightmares?"" tanong ni Mayu.",sadness
 """Seryoso na ba 'yan?"" I beamed, my hopes getting up.",fear
-"""Uhh, hi?"" bati ko pero mukhang wala sila sa mood na bumati pabalik.",sadness
 """Shh . . ."" alo ko. ""Your mommy is alright,"" I said as I choked back my tears.",sadness
 """Why are you here?"" matigas kong tanong.",anger
 """Leave,"" I said as I walked toward his direction but I was surprised when he threw something. Agad ko iyong sinalo. It was a bloody knife and a pistol.",anger
