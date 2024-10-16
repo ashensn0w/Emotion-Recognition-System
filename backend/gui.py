@@ -37,12 +37,12 @@ nlp = spacy.load("en_core_web_md")
 filipino_stopwords = stopwords.stopwords('tl')
 english_stopwords = set(stopwords.stopwords('english'))
 
-# Main Window for the application
+# First Window (Uploading Novella)
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Emotion Recognition in Filipino Novellas")
-        self.setGeometry(250, 150, 1500, 800)
+        self.setFixedSize(1500, 800)
 
         # Initialize file_path variable
         self.file_path = ""
@@ -158,11 +158,7 @@ class MainWindow(QMainWindow):
         else:
             print("Please upload a novella first.")
 
-        ##
-        ##
-
-# Ensure to include the necessary imports at the top of your code
-
+# Second Window (Displaying Novella)
 class PreviewWindow(QMainWindow):
     def __init__(self, file_path, parent=None):
         super().__init__(parent)
@@ -207,6 +203,7 @@ class PreviewWindow(QMainWindow):
         self.title = ""
         self.content = ""
         self.paragraph_count = 0  # Initialize paragraph count
+        self.word_count = 0  # Initialize word count
         try:
             with open(file_path, 'r', encoding='utf-8') as file:
                 lines = file.readlines()
@@ -215,12 +212,28 @@ class PreviewWindow(QMainWindow):
                     self.content = "".join(lines[1:]).strip()  # Remaining lines as content
                     
                     # Count the number of paragraphs
-                    self.paragraph_count = self.content.count('\n\n') + 1  # Add 1 to account for the last paragraph if it does not end with "\n\n"
-                    
-                    print(self.title)
-                    print(self.paragraph_count)
+                    self.paragraph_count = self.content.count('\n\n') + 1  # Add 1 to account for the last paragraph
+                    # Count the number of words
+                    self.word_count = len(self.content.split())
+
         except Exception as e:
             print(f"Error reading file: {e}")
+
+         # Create a horizontal layout for the paragraph and word count labels
+        count_layout = QHBoxLayout()
+        
+         # Paragraph count label (lower left)
+        self.paragraph_count_label = QLabel(f"Paragraphs: <span style='color: #8B1E3F;'>{self.paragraph_count}</span>")
+        self.paragraph_count_label.setFont(QFont("Arial", 12))
+        count_layout.addWidget(self.paragraph_count_label, alignment=Qt.AlignLeft)
+        
+        # Word count label (lower right)
+        self.word_count_label = QLabel(f"Words: <span style='color: #8B1E3F;'>{self.word_count}</span>")
+        self.word_count_label.setFont(QFont("Arial", 12))
+        count_layout.addWidget(self.word_count_label, alignment=Qt.AlignRight)
+
+        # Add the count layout to the right layout
+        right_layout.addLayout(count_layout)
 
         # Display title and content
         self.title_label = QLabel(self.title)
@@ -482,14 +495,14 @@ class PreviewWindow(QMainWindow):
         self.close()  # Close the preview window after opening results
 
 
-# Second Window (Results Page)
+# Third Window (Results Page)
 class ResultsWindow(QWidget):
     def __init__(self, parent, file_path):  # Add file_path parameter
         super().__init__()
         self.parent = parent
         self.file_path = file_path  # Store the file_path if needed
         self.setWindowTitle("Results")
-        self.setGeometry(250, 150, 1500, 800)
+        self.setFixedSize(1500, 800)
 
         # Main layout with two columns
         main_layout = QHBoxLayout()
@@ -517,13 +530,30 @@ class ResultsWindow(QWidget):
         # Add stretch at the top for vertical centering
         right_layout.addStretch(1)
 
+        # Load the novella title from the first line of the file
+        try:
+            with open(self.file_path, 'r', encoding='utf-8') as file:
+                self.novella_title = file.readline().strip()  # Read the first line as the title
+        except Exception as e:
+            self.novella_title = "Unknown Title"  # Fallback if there is an error reading the file
+
         # Results title
         results_title = QLabel("RESULTS")
-        results_title.setFont(QFont("Arial", 28, QFont.Bold))
+        results_title.setFont(QFont("Verdana", 26, QFont.Bold))
         results_title.setAlignment(Qt.AlignCenter)
+        results_title.setStyleSheet("margin-bottom: 20px;")
 
         # Add the results title to the right layout
         right_layout.addWidget(results_title)
+
+        # Novella title label (display the title at the top)
+        novella_title_label = QLabel(f"\"{self.novella_title}\"")
+        novella_title_label.setFont(QFont("Verdana", 22))
+        novella_title_label.setAlignment(Qt.AlignCenter)
+        novella_title_label.setStyleSheet("color: #050088; margin-bottom: 30px;")  # Add some space below the title
+
+        # Add the novella title label to the right layout
+        right_layout.addWidget(novella_title_label)
 
         def display_emotion_counts_and_sentences(csv_file):
             # Read the CSV file
@@ -555,7 +585,7 @@ class ResultsWindow(QWidget):
             f"<span style='color: black;'>Dominant Emotion:</span> "
             f"<span style='color: #8B1E3F; font-weight: bold'>{dominant_emotion.capitalize()}</span>"
         )
-        dominant_emotion_label.setFont(QFont("Verdana", 24))
+        dominant_emotion_label.setFont(QFont("Verdana", 22))
         dominant_emotion_label.setAlignment(Qt.AlignCenter)
         dominant_emotion_label.setStyleSheet("margin-top: 20px; margin-bottom: 20px;")
 
@@ -564,7 +594,6 @@ class ResultsWindow(QWidget):
 
         # Add stretch at the bottom for vertical centering
         right_layout.addStretch(1)
-
 
         # List of all possible emotions
         all_emotions = ['fear', 'sadness', 'anger', 'joy']
@@ -578,7 +607,7 @@ class ResultsWindow(QWidget):
             emotion_label = QLabel(f"{emotion.capitalize()} : ")
             emotion_label.setFont(QFont("Verdana", 18))
 
-            count_label = QLabel(f"{count}")  # Use the count from the emotion_counts dictionary
+            count_label = QLabel(f"{count}    ")  # Use the count from the emotion_counts dictionary
             count_label.setFont(QFont("Arial", 18))
 
             # Button to view sentences
@@ -645,13 +674,13 @@ class ResultsWindow(QWidget):
         self.parent.show()
         self.close()
 
-# Third Window (Sentences Page)
+# Fourth Window (Sentences Page)
 class SentencesWindow(QWidget):
     def __init__(self, emotion, sentences, parent):
         super().__init__()
         self.parent = parent
         self.setWindowTitle(f"{emotion} Sentences")
-        self.setGeometry(250, 150, 1500, 800)
+        self.setFixedSize(1500, 800)
 
         # Main layout with two columns
         main_layout = QHBoxLayout()
