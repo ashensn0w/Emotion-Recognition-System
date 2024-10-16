@@ -50,7 +50,7 @@
         "tumalon", "tanggap", "pagsulat", "pagsagot", "ipagpatuloy", "papunta", "sumaludo", "umuwi", "magalit", 
         "pakitunguhan", "pagprotekta", "pumupunta", "pagbabalik-tanaw", "tinatrato", "proprotektahan", "pagsisikap", 
         "maisip", "pagsasaalang-alang", "pagnanais", "pangarap", "pagbalik", "pagbabalik", "pagbigay", 
-        "paghihiganti", "maipaghihiganti", "mapili", "pagtutulak", "pagbibigay", "pagtaya", "nangako"
+        "paghihiganti", "maipaghihiganti", "mapili", "pagtutulak", "pagbibigay", "pagtaya", "nangako", "paupo"
         ],
 
         "Modal Verbs": ["nais", "gusto", "gustong", "gugustuhin", "hangad", "maging", "ayaw", "ayoko", "balak"],
@@ -105,7 +105,9 @@
         "nagtabi", "nahuni", "humingi", "sagot", "sabi", "sira", "nakatingala", "nakatingin", "gumala",
         "nagkwento", "nagmartsa", "nagpanggap", "namilipit", "sumaglit", "nagpatulis", "natutong", "naprotektahan", "sinarado", 
         "nakasuksok", "napuno", "pagbabalik", "pagbalik", "ibinibigay", "binabali", "napalakas", "napansin", "nakahawak", "napuno", 
-        "nakatulog", "nalupig", "napadpad", "nawalan", "nawalang", "napangiti", "mura", "tawag", "pagrereklamo", "nakaluhod", "nalimutan"
+        "nakatulog", "nalupig", "napadpad", "nawalan", "nawalang", "napangiti", "mura", "tawag", "pagrereklamo", "nakaluhod", "nalimutan",
+        "nagflinch", "nag-flinch", "nakapagmoveon", "nakapagmove-on", "naglelead", "nag-enjoy", "nagenjoy", "nagsummon", "nag-summon",
+        "winidthraw", "nagfocus", "nag-focus", "nag focus", "nag flinch", "nakapagmove on","nag enjoy", "nag summon"
         ],
 
         "Perfect Aspect Verbs": ["nagkaroon", "nagawa", "umunlad", "sumulong", "nag-asenso", "naglaho", "naganap", "nangyari", 
@@ -125,7 +127,8 @@
         "matulis", "pagtulis", "yumanig", "yumanig-yanig", "bilangin", "nagagawa", "nagloloko", "nagiging", "nanginginig", 
         "panginginig", "nangingiti", "nanonood", "pasok", "pinapayagang", "patungo", "dumagundong", "nagtabi", "suportahan", 
         "sumira", "pagtaas", "tinatamasa", "tuluyan", "saglit", "kabagal", "bahagya", "bahagyang", "dahan-dahan", "siguradong", 
-        "patuloy", "muli", "muling", "kasabay", "mapasigaw", "dalang-dala", "nakakapagod", "kumikirot-kirot", "napangisi"
+        "patuloy", "muli", "muling", "kasabay", "mapasigaw", "dalang-dala", "nakakapagod", "kumikirot-kirot", "napangisi",
+        "naglelead"
         ],
 
         "Adjectives as Adverbs": ["maganda", "magagandang", "masikap", "masigasig", "masinop", "masipag", "malakas", "madamdamin", 
@@ -151,7 +154,7 @@
         "nakalimutan", "lumipas", "nakalipas", "nakalilipas", "nagpapaliwanag", "papalubog", "nagloloko", "niloko",
         "lumalahok", "ikinalulungkot", "pagmamaktol", "paminsan-minsan", "minsang", "minsan", "pinagmamasdan", 
         "pinagmasdan", "namimiss", "nami-miss", "namiss", "muli", "muling", "pagmumura", "naging", "nagiging", 
-        "ngayon", "ngayong", "nanginginig", "nanginig", "panginginig", "napangisi", "ngumisi", "nakangiti",
+        "ngayon", "ngayong", "nanginginig", "nanginig", "panginginig", "napangisi", "ngumisi", "nakangiti", "n'on",
         "napangiti", "nangingiti", "nakangiting", "nanonood", "pinapanood", "noon", "non", "noong", "nun", "nung",
         "dalhin", "nagdadala", "pagdadala", "nagdala", "nagpapadala", "napadpad", "ipinadyak", "napapagod",
         "nagpapahinga", "nangako", "pinapasok", "nakikipagpalitan", "magpapahinga", "pagpasok", "napapansin",
@@ -170,7 +173,7 @@
         "tungo", "tutuparin", "itinuturing", "nagta-type", "nauubo", "itinuturo", "tinuturo", "umuukit", "mauulit", 
         "paulit-ulit", "inuulit", "pangunahing", "umusbong", "umuunlad", "nakaupo", "usap-usapan", "pag-uusap", 
         "pag-usapan", "usapang", "nag-uusap", "nawalan", "nawalang", "nawawalang", "nawawala", "pagkawasak", 
-        "nababagabag", "bumabago"
+        "nababagabag", "bumabago", "pag agos", "pag-agos", "pagagos"
         ]
     },
 
@@ -224,7 +227,7 @@
         "mauusisa", "yata", "yatang", "mapapatay", "mangyari", "magdulot", "ikabubuti", "papasugod", 
         "sampalin", "mamulat", "lalamasin", "mapagkamalan", "mapagkamalang", "masasaksihan", 
         "sasalpok", "masasangkot", "malilimutan", "pipilitin", "mauulit", "mapupulong", "papalubog", 
-        "mawawala", "pipiliin", "masasambot"
+        "mawawala", "pipiliin", "masasambot", "maglaland"
         ]
     },
 
@@ -233,12 +236,13 @@
         "nagsasalaysay", "malaki", "nagsasabi", "nakikita", "nararamdaman", "iniisip", "natin", 
         "nating", "atin", "naalala", "maalala", "lalagyan", "lalaking", "kalangitan", "lupaing", 
         "tagapagmana", "mismo", "mismong", "mo", "mong", "mukha", "mukhang", "namin", "naming", 
-        "nga", "ngang", "pangalan", "pangalang", "ninyo", "ninyong", "niya", "nya", "niyo", 
+        "nga", "ngang", "pangalan", "pangalang", "ninyo", "ninyong", "niya", "nya", "niyo", "n'yo",
         "nyong", "nyo", "niyang", "niyong", "kapareho", "personal", "presensya", "sarili", "sila", 
         "silang", "siyang", "siya'y", "sino", "sinuman", "tanda", "matanda", "pagkatao", "kinatatayuan", 
         "pagtingin", "naniniwala", "ikinalulungkot", "makasabay", "dito", "nandito", "rito", "riyo", 
         "doon", "nandoon", "don", "kinalaman", "ugnayan", "iyan", "yan", "yang", "nito", "nitong", 
-        "lamang", "sariling", "tinitigan", "pinaglilingkuran"
+        "lamang", "sariling", "tinitigan", "pinaglilingkuran", "yon", "yun", "yung", "iyun", "'yung", "'yon", "'yong", 
+        "iyon"
         ]
     },
 
@@ -269,7 +273,8 @@
         "nakakabahala", "magalit", "natatawa", "tumatawa", "respeto", "nakakapagod", "pagmamahal", 
         "pag-asa", "pagnananais", "pangarap", "pagod", "paumanhin", "nandidiring", "naguguluhan", 
         "pagmamaktol", "namiss", "malubha", "katahimikan", "nanlamig", "ngumisi", "napangiti", "pagmumura", 
-        "namumugtong", "namumugto", "nanlilisik", "niloko"
+        "namumugtong", "namumugto", "nanlilisik", "niloko", "nag-enjoy", "nagenjoy", "nag-panic", "nagpanic", 
+        "nag panic", "nagfocus", "nag-focus", "nag focus", "nacucurious", "nacu-curious", "nacu curious"
         ]
     },
 
