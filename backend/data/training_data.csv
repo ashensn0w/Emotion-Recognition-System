@@ -1,4 +1,4 @@
-sentence,emotion
+﻿sentence,emotion
 """Okay lang ako! Ano ba kayo?""",anger
 """Napinsala ang iyong tibialis anterior.""",fear
 """Ha? Saan 'yun? Ay basta, ayos lang ako. Habulin na lang natin 'yung kriminal at baka makatakas siya!""",anger
@@ -61,7 +61,7 @@ Bigla namang tumingin si Nel kay Krystal at alam kong anumang oras ay may mangya
 """May ibig ka bang ipahiwatig?"" maangas na sabi ni Krystal . . . at literal ang ibig kong sabihin dahil sa namumuong yelo sa lamesa kung saan nakalapag ang kamay niya.",anger
 Uh oh. Naamoy ko ang gulo.,fear
 "Biglang tumahimik ang lahat at tanging 'yung tunog lang ng hangin na umiikot sa loob ang naririnig. Maging ang balat ko ay nararamdaman ang tensyon dahil tumaas ang mga balahibo ko at nabalutan ng pangingilabot. Pati sina Akane, Hiro at 'yung mga kasama nina Darwin, Krystal at Nel ay naging alerto rin. Isang salita o kahit kaunting kilos ay maaaring magsimula ng gulo.",fear
-"Bigla na lang akong nakaramdam ng sobrang bigat at sabay-sabay namin nilabas at itinutok ang aming mga armas sa isa’t isa, pagkatapos ay biglang nagyelo ang lamesa at upuan.",fear
+"Bigla na lang akong nakaramdam ng sobrang bigat at sabay-sabay namin nilabas at itinutok ang aming mga armas sa isa't isa, pagkatapos ay biglang nagyelo ang lamesa at upuan.",fear
 Medyo nanginginig ako dahil bigla kong natutok ang baril ko na may balang palaso dahil nakaramdam ako ng bigat sa direksyon niya.,fear
 "Bigla ko ulit naramdaman ang bigat, pero sa pagkakataong ito, mas malala. Sobrang bigat sa pakiramdam ang nanggagaling sa tatlong ito.",fear
 """Magaling. Nasabi mo ang punto mo nang maayos."" Narinig ko ang boses ni Hiro sa isip ko pero hindi ako makalingon sa likod dahil nakatingin sa akin 'yung tatlo.",joy
@@ -655,7 +655,7 @@ Pagkabasa ko no'n ay napatingin ako sa wala nang malay na Rick Torres at naintin
 """Anong nangyari? Bakit hindi ka makagalaw?"" Tanong ko, nagaalala at nababahala sa kalagayan niya.",fear
 """N-neuromuscular blocker,"" sabi niya nang may hirap. ""P-paralyzing agent.""",fear
 """Tulungan mo si Kana,"" mahinang sabi ni Hayate. ""Mapanganib siya. Tinamaan niya ang aking mga hita, upang hindi ako makalaban""",fear
-"""Baliw ang lalaking ito,” sabi ni Kana habang ibinabaon ang kuko niya sa kanyang balat.",anger
+"""Baliw ang lalaking ito,â€ sabi ni Kana habang ibinabaon ang kuko niya sa kanyang balat.",anger
 """Sang-ayon ako. Paano natin siya dapat itumba?""",fear
 """Sabi ni Hayate dapat maging maingat tayo. May kaalaman sa medisina ang lalaking ito at magagamit niya ito tulad ng nangyari kay Hayate.""",fear
 """Wow. Parang nasa medieval na lugar tayo sa mga armas niyo,"" komento niya. ""Pero sino ba kayo at niligtas n'yo ang halimaw na 'yon?""",joy
@@ -667,7 +667,7 @@ Pagkabasa ko no'n ay napatingin ako sa wala nang malay na Rick Torres at naintin
 """Damn, mas nagiging mahirap ito. Kung meron lang tayong pampakalma para—""",anger
 """Whoa, malaking karayom ito,"" komento ni Kana habang tinitignan ang syringe na hawak niya. ""Baka mawalan ako ng malay kapag itinurok ito sa akin.""",fear
 """Ano ang nasa loob ng lalagyan na ito?"" tanong niya at lalo lang kumunot ang noo ng lalaki.",anger
-"""Kana! Huwag! May natitira pa siyang isang syringe!"" sigaw ko pero hindi na makontrol ni Kana ang galaw niya. Tumakbo ako patungo sa direksyon nila pero hindi ako makakarating sa oras kaya inihagis ko nalang ang espada ko patungo sa direksyon niya, umaasa na matitigilan nito ang galaw niya.”",fear
+"""Kana! Huwag! May natitira pa siyang isang syringe!"" sigaw ko pero hindi na makontrol ni Kana ang galaw niya. Tumakbo ako patungo sa direksyon nila pero hindi ako makakarating sa oras kaya inihagis ko nalang ang espada ko patungo sa direksyon niya, umaasa na matitigilan nito ang galaw niya.""",fear
 Ginawa niya ngunit huli na ang lahat.,fear
 """Diyos ko, Kana, huwag kang mamatay!"" sigaw ko at agad kong pinindot ang emergency button sa KT para humingi ng tulong kina Hiroshi.",fear
 """T-tulungan niyo ako! Si Kana ay . . .""",fear
@@ -1567,7 +1567,7 @@ HINDI SIYA PATAY! HINDI SIYA PUWEDENG MAMATAY!,fear
 Patay na ang anak ng walang kwentang si Aiwa.,sadness
 """Paano mo ako natagpuan?"" tanong ko, sinusubukan kong ilayo ang isip ko sa mga masalimuot na iniisip.",fear
 """Ganun din ang naramdaman ko noon,"" bigla niyang sabi. ""Gusto kong patayin ang gumawa sa kanya non.",sadness
-"""M-Michiko…"" umiiyak niyang sabi. Hindi... huwag kang magpakita . . . Pakiusap . . . Vivien . . . paparating ang anak ko. . . pakiusap. . . iligtas mo siya. . . huwag mong hayaan. . . makita niya 'to. . . pakiusap. . .",sadness
+"""M-Michikoâ€¦"" umiiyak niyang sabi. Hindi... huwag kang magpakita . . . Pakiusap . . . Vivien . . . paparating ang anak ko. . . pakiusap. . . iligtas mo siya. . . huwag mong hayaan. . . makita niya 'to. . . pakiusap. . .",sadness
 """Huwag kang pumunta rito. . . Vivien. . . Pakiusap. . ."" paulit-ulit na binubulong ni Akira at durog doon nadurog ang puso ko.",fear
 "Pasensya na. . . patawad. . . Michiko. . . pakiusap, alagaan mo siya. . .",sadness
 """Shh. . ."" alo ko. ""Ayos lang ang mommy mo,"" sabi ko habang pinipigilan ang luha ko.",sadness
@@ -1575,7 +1575,7 @@ Patay na ang anak ng walang kwentang si Aiwa.,sadness
 Pakiusap. . . narito ang anak mo. . . huwag mong gawin ito. . . pakiusap. . .,fear
 Pakiusap. . . pabayaan niyo muna kami. . .,fear
 """Hideo,"" mahina kong tawag. ""Tama na.""",fear
-"""Magagawa niya!"" sigaw niya habang tahimik na tumutulo ang mga luha. ""Kailangan niya…""",anger
+"""Magagawa niya!"" sigaw niya habang tahimik na tumutulo ang mga luha. ""Kailangan niyaâ€¦""",anger
 Pakawalan mo na ako.,anger
 Manatili ka rito. . . pakiusap. . . huwag kang umalis. . .,fear
 """Ako. . ."" Lalo siyang humigpit sa yakap. ""Hindi ko kayang mawala ka rin. . ."" umiiyak niyang sabi.",sadness
@@ -1727,22 +1727,22 @@ Hindi mo kailangang pag-usapan ang kakaibang katangian ng ating mga mata sa sinu
 "Ngunit ang mga taong iyon ay may din ng poot sa atin, hindi ba? Bakit hindi ko magagawa ang pareho, kapatid?",anger
 "Alam kong mahirap, pero sinabi sa atin ng ama na huwag silang kamuhian. Ang ama ay isang mabait na tao, at gusto niyang maging ganun tayo.",joy
 "Sobra na at ang mga ganid at masama ay mapapakinabangan ito. Ang ama ay mabait, ngunit naiv din.",anger
-"""Bilisan mo,"" sabi niya, pinutol ang usapan ni Ryō. ""Umalis ka na sa lugar na ito.""",anger
+"""Bilisan mo,"" sabi niya, pinutol ang usapan ni RyÅ. ""Umalis ka na sa lugar na ito.""",anger
 Ama! Bakit ka—,fear
 """Ama,"" tawag niya. ""May mga tao . . . may mga tao na papunta dito.""",fear
 "Ang katotohanan ay, palagi kong kinamumuhian ang mga tao, ngunit ayaw kong ibahagi mo ang parehong damdamin dahil hindi lahat sa kanila ay masama.",anger
-"Kahit gaano kahirap, mabuhay nang maayos, Shō, Ryō. Mabuhay at patunayan na hindi kasalanan ang mabuhay dahil tayo ay iba.",joy
-"""A-anong nangyari—"" Tumigas ang katawan ni Ryō nang naaalala ang nangyari bago siya nawalan ng malay. ""Ama!""",fear
+"Kahit gaano kahirap, mabuhay nang maayos, ShÅ, RyÅ. Mabuhay at patunayan na hindi kasalanan ang mabuhay dahil tayo ay iba.",joy
+"""A-anong nangyari—"" Tumigas ang katawan ni RyÅ nang naaalala ang nangyari bago siya nawalan ng malay. ""Ama!""",fear
 Ama! Hindi!,fear
-"""Ama!"" sigaw ni Ryō habang tumakbo siya patungo kay Shotarō.",sadness
-"""Hindi natin maaring ipakita ito sa kanila,"" sabi ni Shō.",fear
+"""Ama!"" sigaw ni RyÅ habang tumakbo siya patungo kay ShotarÅ.",sadness
+"""Hindi natin maaring ipakita ito sa kanila,"" sabi ni ShÅ.",fear
 Marahil talagang mga halimaw tayo. Ang mga mata ng ama. Ang iyong mga mata. Maging ang misteryo sa likod ng pagkamatay ng ina at ng ating angkan.,sadness
 """At ano kung ganun, kapatid?"" sagot niya. ""Sa tingin mo ba, tinatrato silang iba sa atin? Ang mga taong iba sa normal ay palaging itinuturing na mga outcast. Mga kakaiba. Mga halimaw.""",anger
-"Anong . . . anong ginawa mo, Ryō?",fear
+"Anong . . . anong ginawa mo, RyÅ?",fear
 Ipinagpatuloy ko ang hindi natapos na negosyo ng ama.,anger
 "Ryo, sabihin mo sa akin . . . ilan ang . . .",fear
 Pumatay lamang ako ng mga umatake sa atin.,anger
-"Kailangan nating umalis sa nayon na ito, Ryō,",fear
+"Kailangan nating umalis sa nayon na ito, RyÅ,",fear
 Sinabi nilang ang ating angkan ay dati nang isang marangal na lahi ng mga samurais.,joy
 "Dapat tayong tahimik na umalis sa bahay,",fear
 "Huwag mong ibabad ang iyong mga kamay sa higit pang dugo, kapatid,",fear
@@ -1834,7 +1834,7 @@ Paano kung magtayo tayo ng isang bagong nasyon?,joy
 "Sa halip na magtago sa mundo, maaari tayong lumikha ng ligtas na lugar para sa mga katulad natin, at mula rito, maaari nating pagmasdan ang mundo mula sa malayo.",joy
 Gaya ng inaasahan ko. Walang saysay ang pagpupulong na ito.,anger
 "Ayokong makipagsabwatan sa mga taong hindi sumasang-ayon sa aking mga paniniwala. Bukod dito, mayroon na akong lupaing pinamumunuan.",anger
-"Pakiusap, Ryō. Pwede ba tayong mag-usap?",sadness
+"Pakiusap, RyÅ. Pwede ba tayong mag-usap?",sadness
 Paalam. Sana'y hindi na tayo magkita muli.,anger
 "Hindi maganda ang nangyari, Pinuno,",sadness
 "Dapat na rin tayong bumalik, Pinuno,",fear
@@ -2249,7 +2249,7 @@ Heh. Are you embarrassed? How cute.,joy
 """No, kid. You will pay for the crime of your clan. You will tell me about the heir. That's—!""",anger
 """You . . ."" Kana snarled as she glared at the humdrum. ""You were there. You, too, killed everyone!""",anger
 """Where are you?"" I mumbled. ""It's getting dangerous here.""",fear
-"""What the hell are you saying?"" Kana grumbled. ""Assist who? The person who killed⁠ —""",anger
+"""What the hell are you saying?"" Kana grumbled. ""Assist who? The person who killedâ  —""",anger
 """Behind you!"" I alerted as I felt the opening of the Black Dimension near Kana.",fear
 """You should've told us first if there are any explosives in the vicinity, you humdrum,"" Kana growled as she glared at Ariel who was still in his knees.",anger
 """I'm sorry for using her face. I had to survive. Don't worry, the end is near. You won't see this face after this.""",sadness
@@ -3075,7 +3075,7 @@ Such a liar.,anger
 You shall never talk about our eyes' peculiarity to anybody. Hear me?,fear
 "But those people are also throwing hate to us, aren't they? Why can I not do the same, brother?",anger
 "I know it is hard, but father told us not to hate them. Father is a kind man, and he wants us to be like that, too.",joy
-"Too much and the greedy and the wicked will take advantage of it. Father is kind, but also naïve.",anger
+"Too much and the greedy and the wicked will take advantage of it. Father is kind, but also naÃ¯ve.",anger
 """Quick,"" he said, cutting off Ryo. ""Leave this place.""",anger
 Father! Why are you—,fear
 """F-father,"" he called. ""People . . . there are people heading here.""",fear
@@ -3205,7 +3205,7 @@ Hatred is something that cannot be quelled easily. I am sure we all know that.,a
 """I cannot wait for you to be the leader. You're definitely more mature than this one,""",joy
 """Just say you are short-tempered,"" Nel retorted.",joy
 A smile escaped her lips upon seeing the three.,joy
-"Pero kapag naaalala ko ‘yung sinabi nung Huntres during the war, lumalakas ang loob ko. I want to be like her. Kahit nasa gitna kami ng laban nun ay wala siyang pinakitang kahinaan, kahit na andaming namamatay sa paligid niya.",joy
+"Pero kapag naaalala ko â€˜yung sinabi nung Huntres during the war, lumalakas ang loob ko. I want to be like her. Kahit nasa gitna kami ng laban nun ay wala siyang pinakitang kahinaan, kahit na andaming namamatay sa paligid niya.",joy
 """Not really. Share sila ni Dad. Maybe she just want to brag,"" sabay ngiti niya. Napangiti rin ako sa thought na 'yun.",joy
 """Here,"" sabay abot ko ng green flower na hawak ko sa kanya. ""Just fill your mind with happy and positive thoughts.""",joy
 """Hmm, 115 bpm. Definitely excited,"" sabay ngiti niya sa akin.",joy
@@ -3508,3 +3508,1145 @@ Wow. Akala niya ba ay hotel 'to na pwede niyang puntahan kung kalian niya lang g
 "Ano ka ba, be proud! That's like having my fighting style and Mitsuo's in a single person.",joy
 "Hmm, wala na for this week.",sadness
 """How is he?"" tanong ko.",fear
+"""Where is he?"" tanong ko kay Hideo.",neutral
+"""Do you want to see him?"" I nodded. ""Follow me.""",neutral
+Sinundan ko siya hanggang sa makarating kami sa isang lugar na ayaw na ayaw kong puntahan pero wala akong magagawa dahil nandito siya. Huminto kami sa harapan niya at iniwan ako ni Hideo mag-isa.,neutral
+"""So you're also here."" Kahit hindi ako lumingon ay alam ko kaagad sa boses niya na si Michiko ang dumating.",neutral
+"It's been four days after the war but everyone's still in the process of recovering. I also know that he's got my ability to read closed minds and having a closed mind but despite that, I can still read his superficial thoughts.",neutral
+Nakaupo siya ngayon sa couch at nakatulala kaya naman lumapit ako at pumwesto sa likuran niya.,neutral
+I gently massaged his temples to calm his thoughts but his eyes flew open.,neutral
+"""Stay still,"" I ordered. ""This will somehow soothe your mind.""",neutral
+Tumahimik naman siya at habang nakatingin ako sa kanya ay naaalala ko si Vince. Their serious expressions are the same.,neutral
+Mitsuo's whole body was covered with blood after killing Raizo. He stood quietly after that and his spear slipped out of his hand.,neutral
+"""It's not your fault, Nathan,"" bulong ko sa kanya. ""You're just a child that time.""",neutral
+He slowly nodded and we stayed like that for a few minutes.,neutral
+"Beneath his stone-cold expression and a leader-like aura, I know that he wants someone who can understand him and someone to depend on.",neutral
+Nung maging kalmado na kaming pareho ay naghiwalay muna kami dahil marami pang kailangang gawin. Pinatawag ako ni Hideo kaya naman pumunta agad ako sa office niya.,neutral
+Muli kong naalala ang unang beses na nakita ko siya at ang mga nangyari pagkatapos nun.,neutral
+"""Sino kaya ang makakasama natin for this year?"" tanong ni Akira.",neutral
+"""Isa lang daw ang madadagdag sa Atama Family,"" dagdag ni Michiko.",neutral
+"""At least, meron. This is the first time na may madadagdag sa batch natin,"" sabi naman ni Mayu.",neutral
+"""Quiet down,"" biglang sabi ni Hideo kaya napatingin kami sa kanya pero siya ay nakatingin lang doon sa nag-aannounce ng classes sa harapan.",neutral
+"""Sungit,"" sabay-sabay naming sabi sa kanya pero wala man lang pagbabago sa expression niya.",neutral
+"Simula na naman ng panibagong school year at sabi sa amin ni Sir Kyo, may magiging bagong member daw ng Atama Family.",neutral
+"Mula mga bata pa kami ay magkakasama na kaming lima kaya naman hindi ko alam kung magiging maganda ba ang mangyayari. Pero wala naman na kaming magagawa dahil sa ayaw at gusto namin, makakasama pa rin namin siya.",neutral
+"Nung pinapasok na ang transferees ay tinaas ni Akira ang hwak niyang cardboard na ang nakalagay ay Atama. Napatingin naman ako doon sa isang lalaki na halos green na ang mata, and I'm sure na siya ang sinasabi ni Sir Kyo.",neutral
+"""Seems like there's another one,"" sabi bigla ni Hideo at nung nakita ko ang babaeng katabi nung lalaki ay nakita kong greenish na rin ang mga mata niya.",neutral
+"""Akala ko ba isa lang? But you're right. That girl seems special,"" sabi ni Mayu at dahil sa pag aayos niya ng salamin ay alam kong nag-aanalyze na siya.",neutral
+"Tumayo sila sa unahan kasama ng ibang transferees at 'yung preschool students na magsisimula pa lang. As expected, dito nga pumunta 'yung lalaki, his alternative name's Mitsuo, pero 'yung babae ay kausap ni Yamato hanggang sa umalis sila at mukhang may problema sa sorting ng family niya.",neutral
+Pagsasabihan ko na sana siya pero hinawakan ni Hideo ang braso ko saka siya tumingin sa akin.,neutral
+Natahimik naman ako sa sinabi niya. I will never win an argument against this guy.,neutral
+"After ng orientation, pumunta na ang families sa kani-kanilang dorms kaya naman nagsibalikan na rin kami. Magkasamang naglakad sina Hideo at Mitsuo at nung tinignan ko sila ay wala man lang umiimik. Sinukuan ko na sila at bumalik na lang kami sa kwarto namin.",neutral
+After a few minutes ay biglang tumayo si Akira kaya nagulat ako.,neutral
+Bigla naman siyang tumakbo papunta sa pinto at agad niya 'yung binuksan kahit na wala pa namang kumakatok.,neutral
+"Her actions radiates defensive instincts that's why I immediately stopped the time at our perimeter. After that, tumingin siya sa akin at alam ko na pinapakiramdaman niya rin ako at alam niya ring ako ang may gawa nun.",neutral
+"Ginulo lang siya ni Akira at dumagdag pa si Michiko nung pumasok sila ni Mayu rito sa kwarto namin. Nag-usap din kaming dalawa using inner voice dahil siya lang, bukod kay Hideo, ang nakakablock ng pagbabasa ko ng isip nila.",neutral
+"After an hour, tinawag kami ni Hideo kaya naman bumaba kaming lima. Pagdating namin sa harapan ng dorm, nakatayo roon si Hideo at Mitsuo.",neutral
+Pagkasabi nun ni Michiko ay lalong kumunot ang noo ni Mitsuo kaya naman hinatak ko na siya palayo sa kanya dahil baka kung ano pang mangyari. Ayokong magkaroon kaagad ng gulo dahil umaga pa lang. At malala ang kinalalabasan kapag dalawang miyembro ng Atama family ang naglaban.,neutral
+"""Sorry. Sinasabi niya talaga lahat ng gusto niyang sabihin,"" sabi ko kay Mitsuo.",neutral
+Nakahinga ako nang maluwag nung lumipat ang tingin niya sa iba. Nag-usap-usap lang kami and after that ay nagdecide si Hideo na i-tour sina Akemi at Mitsuo sa buong campus. Maglalakad na sana kami pero biglang napahinto si Akira.,neutral
+"""Gising na si Hiroshi,"" sabi niya habang nakatingin kay Mayu.",neutral
+"""I'll be back,"" sabi naman ni Mayu.",neutral
+Pagbaba ni Mayu ay buhat na niya si Hiroshi at kinuha naman siya ni Michiko mula kay Mayu. Nauuna sina Hideo at Mitsuo sa amin at habang naglalakad kami ay pinagtitinginan kami ng ibang estudyante.,neutral
+Atama family members are famous inside and even outside the campus. Kaya hindi nakakapagtakang maraming nakakakilala sa amin.,neutral
+Napatigil naman kaming pito nung biglang binaggit ni Hiroshi ang pangalan ni Mitsuo. Then I realized na baka kaya niya sinabi 'yun ay dahil first time niya lang na narinig 'yun sa sentence na sinabi kanina ni Michiko.,neutral
+"""Are you afraid of kids? Or you just can't handle them?""",neutral
+A small house.,neutral
+"An old man with a huge bardiche, a pole weapon that has a sharp, long and cleaver blade at the end that is usually used in decapitation.",neutral
+"""Take care of this snot. I need to do my job.""",neutral
+Looks like you're interested with him.' Napatingin naman ako kay Hideo na lumalayo kina Akira dahil alam niyang malapit nang ipasa sa kanya si Hiroshi.,neutral
+"Aren't we the same?' tanong ko and this time, tumingin ako kay Akemi.",neutral
+Yeah. I think so.',neutral
+And being curious about him isn't that bad either.,neutral
+Nandito kami ngayon sa agency dahil kailangan naming i-solve ang case na dumating.,neutral
+"Of course, Mitsuo and Akemi looked lost. I am actually observing their movements since we don't know their backgrounds.",neutral
+"Even though they seemed nice, their alertness and defensive instincts aren't normal. Either they are not familiar with this kind of environment and situation, or they are hiding something from us.",neutral
+"Nang makarating na kami sa bangko kung saan nangyari ang krimen, napatingin kaming lahat sa expressions nilang dalawa.",neutral
+"""Oww. Akala pa naman namin magffreak out kayong dalawa kasi first time niyo sa isang case,"" sabi ni Akira sa kanila.",neutral
+"""Sanay na ako,"" sagot ni Mitsuo.",neutral
+"""Ako rin,"" sabi naman ni Akemi.",neutral
+Nagkatinginan agad kami ni Hideo. They looked relaxed while looking at the dead body. Maybe this is a normal thing for them? But what kind of job or environment would make them like this?,neutral
+"""O ito, gamitin mo,"" sabi ni Michiko habang inaabot sa kanya ang gloves. ""Wag na 'wag kang hahawak ng bangkay with bare hands. Baka makuha nila ang fingerprints natin. You know, kakaiba ang katawan natin kaya siguradong magsususpect ang humdrum community.""",neutral
+"After that, nagpatuloy kami sa pag-iinvestigate at napatigil kami nung may sinabi si Mitsuo.",neutral
+"""Gusto kong makita 'yung bullet wound,"" sabi niya.",neutral
+"""I want to see it, too,"" sabi niya sabay tingin sa akin. ""Naomi.""",neutral
+"Well, I can't say no to him. Tumingin muna ako sa paligid kung may nakatingin sa amin. When I confirmed that there are no bystanders near us, I warned them.",neutral
+"""You only have three seconds. Kaya gawin niyo na lahat within three seconds,"" I said and breathed deeply.",neutral
+"I calmed my mind and visualized the surroundings. The humdrums, the police officers, the things around us, my comrades, and the body. With a snap of my mind, all people and things, except the seven of us, within my radius lost their ability to move. Instantly, the time of this dimension froze.",neutral
+The people started moving again. Naglakad naman sina Hideo papunta kay Mayu para i-analyze ang nakita nila sa bullet wound. Susunod na sana ako pero biglang umikot ang paningin ko.,neutral
+"""Careful,"" biglang bulong sa akin ni Mitsuo at doon ko lang narealize na nakaalalay na siya sa akin. Tinulungan niya akong tumayo at kinalma ko ang sarili ko.",neutral
+"Agad naman akong umayos nang tayo at nakita kong nakatingin sa amin sina Akemi at Hideo kaya tumango na lang ako. After that, dumiretso na kami kay Miyu para pag-usapan ang case. Nung nasa loob na kami ay inabutan kami ni Mayu ng autopsy report at isa-isa na kaming nagbigay ng insights.",neutral
+"""Bakit hindi mo binabasa?"" tanong niya dahil nilapag na ni Mitsuo ang report sa mesa.",neutral
+"""Nabasa ko na."" Pagkasabi niya nun ay napatingin kaming lahat sa kanya maliban kay Hideo na patuloy lang na nagbabasa ng report. Tinanong pa siya ulit nina Michiko at Akira kung talagang nabasa niya at um-oo naman siya.",neutral
+"""Wait,"" sabi ko at tumingin ako sa report. ""Second page. Fourth paragraph. First sentence.""",neutral
+"""The bullet was from a gun called Mamba pistol which automatically loads bullets and can be used by a man or a woman,"" he precisely answered.",neutral
+After a few minutes ay nakita naming lumabas sina Akemi at Hideo sa may eskinita habang duguan naman 'yung murderer. I guess they already did it. Buti na lang at nasolve namin ang case within the time limit.,neutral
+Ilang weeks na ang nakakalipas at every time na matutulog na kami ay laging si Akemi ang nahuhuli. I want her to see her sleep but she can stay all night long.,neutral
+"Bumangon ako para uminom ng tubig at napansin kong wala si Akemi sa kwarto. Pagtingin ko sa oras, 3 AM na. Where did that girl go?",neutral
+"""Someone's coming,"" he whispered. ""Two of them, actually.""",neutral
+Nagsimula naman siyang maglakad at magsasalita na sana ako pero pinigilan niya ako.,neutral
+"""Don't ask or follow me,"" sabi niya habang nakatingin sa akin.",neutral
+"""Because it's none of your business."" Pagkasabi niya nun ay mabilis siyang naglakad hanggang sa naglaho na siya sa dilim. But he's right. It's none of my business. Maybe I should head back.",neutral
+"After that night, bumalik kaagad ako sa dorm at paggising ko ay naabutan ko si Akemi na may hawak na libro. Lumapit ako sa kanya at pagtingin ko, ancient Erityian writings ang nakalagay sa libro.",neutral
+"""Yeah right. Nakita ko na so no need to hide it.""",neutral
+Matagal ko nang nakikita ang Erityian writings sa ilang buildings dito. Ang iba ay nakaukit sa ilang parte ng mga kwarto pero hindi ko na pinapansin dahil hindi naman na iyon ginagamit. Hindi ko alam na may mga libro palang nakasulat gamit iyon.,neutral
+Lumabas kami sa kwarto at mukhang nauna na sina Michiko at Mayu dahil wala na sila sa loob ng room nila.,neutral
+Saktong pagbaba namin ay naabutan namin sin Hideo at Mitsuo.,neutral
+Our eyes met and I remembered what happened last night. He suddenly broke his gaze and stood behind Hideo.,neutral
+Hindi ko na lang din siya pinansin at pagkatapos ng klase namin ay nagpatuloy kami ni Akemi sa pagdedecode.,neutral
+Nalaman ko rin ang sixth sense niya dahil sinadya kong matapilok habang dala ko ang dalawang baso ng juice para sa amin.,neutral
+"Before the glasses hit the floor, she quickly repelled them and they broke upon contact with the wall. So her sixth sense is repulsion, huh.",neutral
+"After a few days, nagkaroon na rin kami ng ideas about the corresponding letters, numbers and punctuations. We decoded several pages of the book.",neutral
+Napansin ko rin na laging nawawala si Akemi kapag madaling-araw. Lagi akong nagsasabi na matutulog na ako pero ang totoo ay binabantayan ko ang bawat kilos niya.,neutral
+Pagkatapos ng Psychology class namin ay naglakad agad kami pabalik sa dorm pero napalingon ako nung nakita kong magkausap sina Akemi at Mitsuo pero hindi ko marinig ang usapan nila.,neutral
+Pagbalik namin sa dorm ay agad na nakatulog sina Akemi at Akira kaya naman ako lang ang nagdecode sa naiwan naming pages. After some time ay nahilo na ako at sumakit na ang ulo ko kaya naman napagdesisyunan kong lumabas muna. Halos 7 PM na rin kaya naman kinuha ko ang jacket ko at naglakad papuntang plaza.,neutral
+"The lights below the fountain changed their colors, as the water danced with the faint music coming from the nearest stall.",neutral
+"""What do you mean by that, Sir?""",neutral
+"After those vague statements, he walked away from me. Nanatili naman ako sa bench at pinanood ulit ang fountain pero naglakbay na ang isip ko sa mga sinabi niya.",neutral
+"He's right. Unang tingin pa lang ay alam kong may kakaiba na sa kanilang dalawa. Both of them are tight-lipped when it comes to their personal information and when I tried to read their minds, I can only see and hear the surface of their thoughts. They know how to conceal the confidential and critical data inside their heads.",neutral
+"""Naomi?"" Akira woke up and she looked at me, confused. ""Hindi ka natulog? Aba, nahahawa ka na kay Akemi—wait, nasaan si Akemi?""",neutral
+"""She didn't come back,"" I said while scribbling symbols on the paper. Nagdecode na lang ako buong magdamag dahil hindi ako makatulog.",neutral
+"Dahil may klase pa kami ay nagprepare na kami ni Akira at tinigilan ko muna ang pagdedecode, though malapit na akong matapos sa first chapter. Nung paalis na kami ay saka lang bumalik si Akemi at sinabihan niya kami na mauna na lang kami.",neutral
+"""Well, yeah. Pero for sure ay binabantayan din naman sila ng higher ups. Baka nga maging Council of Elders ay tinitignan ang kilos nila.""",neutral
+"""They are hiding their background,"" dagdag ko. ""And they must have a reason for doing that. I want to know those reasons.""",neutral
+"""You sound like Hideo,"" sabi naman ni Akira. ""Habang tumatagal, nagiging pareho na kayo ng takbo ng utak. Baka sa susunod niyan, hindi na namin kayo naiintindihan ha?""",neutral
+"A Senshin can only be allowed to enter this place if he or she is born here, or through transferral. The administration will send letter to the guardians and school, or someone from Tantei High will recommend the Senshin to be transferred here.",neutral
+Bumalik naman sa kasalukuyan ang isip ko nung narinig kong may tumawag sa akin. Doon ko lang narealize na nandito na rin si Akemi at tinuruan kami ni Sir Kyo ng ilang self-defense moves pati na rin sa pag-corner sa criminals kapag nakatakas sila.,neutral
+Nilibot ko ang paningin ko sa buong kwarto pero wala pa rin si Akemi kahit hatinggabi na. That girl. Maybe she's lurking around the campus and forest again.,neutral
+Dahil nakapagpahinga na ako ay kinuha ko ang librong hiniram ko kay Akemi at binasa ko ang nadecode ko last time.,neutral
+The first chapter is just the summary of the beginning of the Erityian race and the succeeding chapters discussed the sixth sense and the power that lies beyond it. I'll decode those parts later.,neutral
+Nakatulala lang si Akira sa amin habang inaayos ko ang papers na pinagsulatan ng decoded chapters ng book. Halos nasa kalahati na kami pero dahil ang sakit na ng mata ko ay tinigil ko muna.,neutral
+Akemi fell asleep on the floor and I didn't wake her up since she seems tired these past few days. Buti na lang at wala kaming pasok ngayon kaya makakapagpahinga na ako.,neutral
+"Naghilamos lang ako at nagbihis, then after that ay umalis na kaming dalawa at iniwan namin si Akemi sa kwarto.",neutral
+"""Kanina ka pa niya tinatawag,"" I said while looking at Reina.",neutral
+Nakahawak lang si Mitsuo sa dibdib niya at pinipigilan niya pang maubo. Hindi ko naman madescribe ang expression na ginawa niya no'ng tumingin siya kay Reina. Bago pa siya makagalaw ulit ay hinawakan na ni Reina ang kamay niya.,neutral
+We went to the ice cream parlor and waited for our order.,neutral
+"""Kuya Misho?"" tanong ni Reina nang mapansin niyang gumalaw ang lamesa.",neutral
+"Pabalik na kami ni Akira sa dorm nang bigla kong makita na magkasama sina Hideo at Mitsuo, at naglalakad sila papunta sa direksyon namin.",neutral
+Naudlot naman ang pagdedecode namin dahil sa isang case at no'ng nakasakay na kami kay Miyu ay kinuwento ni Akemi ang ginawa niya at ang pagkuha niya sa libro.,neutral
+"Napatingin ako kay Akemi at nakatingin naman siya sa labas, na nakaproject sa gilid ni Miyu. Nang makarating kami sa crime scene ay agad kaming lumabas at nangalap ng clues.",neutral
+"Mitsuo shot the two Shinigamis that jumped off the building but they easily deflected it using the debris falling with them. Using my steel fan, I cut the falling debris into smaller parts to lessen their impact to us.",neutral
+"""The agent is there?"" rinig kong tanong ni Dana.",neutral
+"Nagising naman ako dahil sa ingay at naramdaman ko ang pag-angat ng katawan ko. Pagmulat ko, nakita ko kaagad si Mitsuo. He's carrying me in his arms.",neutral
+Nanatili siyang nakatayo roon at hindi ko alam kung ano ang iniisip niya ngayon. I can't read his mind anymore. Sinubukan kong umayos ng posisyon at nagawa ko namang umupo.,neutral
+Bigla naman akong napaisip sa mga nangyari noong nakaraan kaya tumingin ako sa kanya.,neutral
+"I really found it weird, I mean those Shinigamis. It was like they knew us and the Custos agent was too strong but they still divided their forces and chose to fight us. Why? Do they have a hidden motive? What is it?",neutral
+Hindi na namin natuloy ang usapan namin dahil bigla na lang pumasok sa kwarto sina Hideo at Mitsuo. Mitsuo approached me and he held my wrist.,neutral
+Pagkatapos ng case ay ipinahinga ko kaagad ang paa ko dahil sa pagtakbo at paglalakad na ginawa namin. Bigla ko tuloy naalala ang pagiging show-off ng dalawang lalaking 'yon during the investigation.,neutral
+"Watching them a while ago made me realize his talents, though he's still as cold as ever.",neutral
+Naalala ko naman no'ng bigla akong tinanong ni Akemi about sa kanya no'ng nasa crime scene kami. I can't really answer her in a precise manner since I don't understand these feelings yet. Hideo's the only guy I am close with but I see him as my brother.,neutral
+"Napadilat naman ako dahil sa dami ng iniisip ko at pagtingin ko ay wala na naman si Akemi. Tsk. That girl. Saan kaya siya pumupunta at lagi na lang siyang umaalis kapag mga ganitong oras? Though, mukhang mas maaga siyang umalis ngayon.",neutral
+Tumayo ako at dahan-dahan kong inilakad ang paa ko. I can't sleep anymore so I decided to follow her. Dahil ayaw kong mawala siya sa paningin ko at agad akong lumabas at hindi ko naisip na magdala ng jacket.,neutral
+Tiniis ko na lang ang lamig at sumunod sa kanya pero napatigil ako no'ng nakita kong lumabas din ng dorm si Hideo. Nagtago ako sa bandang blindspot ni Hideo at sinundan ko na lang sila ng tingin. I guess I'm not needed anymore.,neutral
+Dahil nasa labas na rin naman ako ay naglakad na lang ako sa kabilang direksyon. Mukhang bukas pa ang ilang shops sa plaza dahil naririnig ko pa ang ingay mula roon. Nagstay na lang ako sa fountain area at umupo sa bench.,neutral
+Pagkaharap ko sa kabilang direksyon ay may tatlong lalaki naman na nakatingin sa akin kaya napayuko na lang ako.,neutral
+Naalala ko tuloy bigla ang usapan namin ni Akemi during the case a week ago.,neutral
+Bumalik naman ang isip ko sa kasalukuyan at ako na lang ang tao rito sa dorm. Lumabas muna kasi si Akira dahil magtetraining daw sila ni Michiko.,neutral
+Tumayo muna ako at balak ko sanang magbasa na lang pero may nahagip ang mata ko sa bintana. Naglakad ako papunta roon at nakita ko siya.,neutral
+"""Anong ginagawa mo dyan?"" Narinig ko naman ang boses ni Akemi mula sa likuran ko. Nakabalik na pala siya.",neutral
+"""Wala lang,"" I replied but she stood beside me and saw Mitsuo.",neutral
+Nacurious naman ako bigla kung bakit siya pupunta ro'n at no'ng tinanong ko si Akemi ay hindi niya rin daw alam.,neutral
+The paragraphs not having any significance might be because of the absence of its continuation.,neutral
+"""You're right. Parang pinutol talaga ang paragraphs pero kahit na na-cut ay comprehensible pa rin naman kaso walang depth.""",neutral
+"Hindi ko namalayang nakatulog pala ako after magdecode. Paggising ko, mag-isa na naman ako sa kwarto. Those two keep on disappearing when I'm asleep. I stood up and pulled my jacket out of the closet. Time to get that book.",neutral
+"Dahan-dahan akong naglakad sa hallway hanggang sa makalabas ako sa dorm. Doon ako dumaan sa likod para walang makakita sa akin, at nagstay ako sa path ng mga puno para natatakpan ako. I checked the time and it's already 2 AM.",neutral
+"After a few minutes ay nakarating ako sa library at dumaan ako sa bintana. Nang makapasok ako ay dumiretso agad ako sa restricted section. For sure, hindi ako kasya sa space sa taas kaya naman hinanap ko kung saan nakalagay ang susi. Naglagay muna ako ng gloves at mask para wala akong maiwang ebidensya.",neutral
+"I searched nearby and I ended up at the librarian's quarter. Looking through her things, I saw a vault below the table and instead of a numerical code, there's a miniboard attached to it.",neutral
+"For a couple of minutes, I've been trying to discover the etched figures or symbols and when I realized what are those, I immediately understood its mechanism.",neutral
+"Hinawakan ko ulit ang gilid at this time, naging mabilis ang pagkilos ko dahil baka magbago na naman. Kinuha ko kaagad ang pen na nakakabit sa gilid ng vault at sinulat ang word na naramdaman ko.",neutral
+"Agad akong tumakbo papunta sa restricted section at binuksan ang pinto. Pagpasok ko ay hinanap ko kaagad ang librong kapareho ng binigay ni Akemi, at matapos ang halos kalahating oras ay nahanap ko rin sa wakas. So this is the book, huh?",neutral
+Doon ko narealize na tama siya. My mind was opened and I didn't even notice it.,neutral
+"""Hay. Bakit ba ganito ang roommates ko?"" sabi niya habang nakatingin sa kisame.",neutral
+Lumabas ako ng kwarto at hinayaan ko muna sina Akemi at Akira. Pumunta ako sa kabila at naabutan kong tulog si Michiko habang si Mayu naman ay inaalagaan si Hiroshi.,neutral
+"""Hey,"" tawag ko at pareho silang tumingin. Bigla namang naglakad si Hiroshi papunta sa direksyon ko kaya umupo ako at sinalubong siya.",neutral
+"""So? Ano bang pag-uusapan natin? Though I think I know it already,"" sabi ni Mayu nang makaupo kami sa bench malapit sa fountain. Madilim na pero dahil sa holographic lights sa plaza ay nagmukhang maliwanag pa rin ang paligid.",neutral
+Nakita ko naman ang isang journal na sinulat ng sikat na Senshin historian.,neutral
+"Nag-ayos na lang ako ng gamit dahil mamayang madaling-araw ay aalis na kami ni Akira, samantalang 'yong tatlo ay magsstay rito. The vacation before the Fielding has started and I can't believe that seven months have already passed. It felt like I used my sixth sense for a long time.",neutral
+I was in the middle of packing my clothes when Akira approached me.,neutral
+"""Hm?"" I put away my clothes and gave my attention to her.",neutral
+"We trod inside the forest and using our weapons, cleared the wild plants and shrubs stems along the way until we reached the abandoned mansion in the outskirts of the city after a couple of hours. Actually, we could've crossed the lake and walked into the forest and we could've arrived at the park but there might be few people strolling and exercising around so this was a good choice.",neutral
+We put our contact lenses and went on our separate ways.,neutral
+Sumakay ako ng taxi nang makarating ako sa shed at tahimik na tumingin sa labas. Makalipas ang isang oras ay nakarating ako sa apartment na tinutuluyan ko tuwing bakasyon. Nagbayad ako at saka pumasok sa loob.,neutral
+Inayos ko lang ang mga gamit ko at matapos no'n ay agad akong humiga hanggang sa tuluyan na akong makatulog.,neutral
+"Pagdilat ko ng mga mata ko ay napabangon ako. I was a bit disoriented and when I looked at the time, it was already 8 PM. I can't believe I slept for about twelve hours.",neutral
+"Bumangon agad ako at naligo. Pagkatapos no'n ay kinuha ko ang wallet ko para bumili ng pwedeng lutuin. Mayu has been the 'cook' in our family and whenever we have some free time, she would teach us, saying that we would need it when we have our own families.",neutral
+Huminto naman siya nang makarating kami sa fountain area at umupo siya sa bakanteng bench. Naglaan siya ng pwesto sa tabi niya kaya tinignan ko siya at nang hindi siya umimik ay umupo ako.,neutral
+May ilan pa siyang pinindot at inaccess hanggang sa may mapa nang nakalagay sa screen. The location was just several kilometers from here.,neutral
+"I have never experienced passing out after reading an Erityian's mind until now. According to Mitsuo, I was asleep for about three to four hours. Talk about getting unconscious repetitively.",neutral
+Nanatili akong nakasandal at siya naman ay nakaupo sa harapan ko. I already have an idea about his background though there are still some details that I don't understand. I need to hear it straight from him.,neutral
+Naalala ko naman ang sinabi sa akin nina Michiko at Akira bago ako umalis.,neutral
+"According to them, those Executioners kill Erityians and even humdrums who defy the laws of their community but almost all Erityians think that they are just a myth. However, sitting in front of me is the living proof.",neutral
+"""Why is there a hidden clan of executioners? And where is this Shima island that you're talking about?"" tanong ko.",neutral
+"""Our story goes back to our ancestors. Ishida Jikko, the head of the clan and Shou's right-hand man, killed hundreds of humdrums when they were in Germania. During that time, there was a religious war happening.""",neutral
+"""The Thirty Years' War?"" I asked and he nodded. I remembered reading that when I researched about post-Holy Roman Empire.",neutral
+"""I have a question,"" sabi ko kaya napatingin siya.",neutral
+Agad kaming sumakay sa raft na ginawa niya at mukhang kalmado naman ang dagat. Sana lang ay hindi na magpakita ang Huntres na nakalaban namin kahapon.,neutral
+Tinignan ko naman ang paligid at wala pa rin akong nakikitang kahit anong isla. We were still in the middle of the ocean.,neutral
+Siguro ay lima o anim na oras na ang lumipas nang biglang tumayo si Mitsuo kaya napatingin ako sa kanya. That was when I realized we were surrounded by fog.,neutral
+"The island's ambiance was worthy of its name—it looked cursed. Its shape was similar to a volcano, making it more like a fortress or prison because of its dimensions.",neutral
+"""Long story,"" sagot naman ni Mitsuo. ""What's the current situation?""",neutral
+Napatigil naman ako nang marinig ko ang boses na 'yon sa labas.,neutral
+Nagpahatak ako sa kanya hanggang sa makarating kami sa isang station kung saan may cabin lift na papunta sa plateau.,neutral
+"We boarded one of the lifts and the line connecting the station and the plateau moved, taking the lift along with it.",neutral
+"After talking to Lionel, Mitsuo marched towards my direction. Our boat was already prepared, along with supplies we would need throughout the trip.",neutral
+"""Let's go,"" he said and we boarded the boat.",neutral
+Ilang oras ang lumipas at nakarating kami sa pamilyar na lugar. Bumaba kami sa bangka at inalalayan naman niya ako.,neutral
+"After several hours, we boarded Miyu and went to the organization's base. Along the trip, we received a case that happened in that same place so Akira contacted the police for back-up. When we arrived, the place was already in chaos.",neutral
+We all went inside the building and Hideo narrowed down the suspects. It must be one of the staffs working in the top floor.,neutral
+Kumilos naman ako para maghanda na at makalipas ang halos isang oras ay naayusan ko rin ang sarili ko.,neutral
+He was sitting on the couch and I strode towards his direction. Pinaupo naman niya ako sa tapat niya at agad naman akong sumunod.,neutral
+Tinawag ko kaagad si Dr. Miwako para tignan ang kalagayan niya at pagkatapos ng isang oras ay lumabas siya mula sa kwarto.,neutral
+"I spent almost three months just to find the place where they exiled the traitors. According to the Intel department, it might be in the West, particularly in Alaska. I located them in an abandoned village and they were guarded by a group of Elites.",neutral
+"Sa pagkakatanda ko, tatlo ang Elite ni Rielle pero dalawa lang silang nandoon—Haruka and Daiki, I think. I consulted Hideo about my plan and just like when we were young, we ended up modifying it with respect to the variables, making it the most efficient and possible way.",neutral
+I looked at those two guys who kept on pestering me since we were children. Nandito pa rin ako sa classroom kahit na tapos na ang orientation dahil hindi ako makapaniwala sa narinig ko.,neutral
+"""C'mon, Reina,"" tawag ni Kana kaya napatingin ako sa kanya. Tumayo naman ako at kumapit ako sa braso niya.",neutral
+"""Well, if you're asking me the probability of doing this within the time limit, I think it's about 67 —""",neutral
+"Sir Eiichi gathered the graduating class of each family for orientation and discussion of requirements before the start of classes. After that, we headed back to the dorm but we halted in front of Midori building to look at the opening of the main gate.",neutral
+"""Seems like it has started,"" Kana muttered while staring at the intelligence department staffs at the gate.",neutral
+"""In 3 . . . 2 . . . 1 . . ."" I murmured.",neutral
+"The final requirement for anyone in the Atama family is to catch a class S criminal—whether they are a humdrum or an Erityian. One year. That's the limit. Now prepare yourselves because for a year, you're going to live in the humdrum world.",neutral
+My life had always been at standstill . . . until now. Tick tock. Tick tock. I think the clock is finally moving.,neutral
+"I observed her tiny movements and the moment her eyes opened, I stood beside her bed.",neutral
+Tumalikod siya sa akin at tinalukbungan niya ang sarili niya ng kumot kaya agad ko naman 'yong hinatak. She groaned while trying to pull back her blanket but I already threw it on the side.,neutral
+"I suddenly heard a buzzing sound behind me, a reminder that those guys were already awake.",neutral
+"""I slept early while Hayate's busy with his current project,"" sagot niya.",neutral
+He has a project?,neutral
+"Some sort of a collaboration, I think.",neutral
+Nasa kalagitnaan kami ng pag-uusap nang biglang bumukas ang pinto sa banyo at lumabas si Kana na naka-towel lang ang katawan at buhok.,neutral
+"I remembered her saying that word for the first time when she was just living here for a week. When she saw those two with their glasses as they talked about complicated stuff, she labeled them as meganerds—a play on megane and nerd.",neutral
+Nagsimula naman kaming mag-impake at nakita ko na naman ang bagay na 'yon sa mga gamit niya. She saw me staring at it so she threw it at my direction.,neutral
+"Yes, she's an FBI agent of the Cyber Division, someone who has been living in the humdrum's world, upholding and enforcing criminal laws using her sixth sense and abilities. When she was introduced to us last year, we thought she was just a transferee from a Senshin family who lives in the humdrum world.",neutral
+"""May meeting ba ulit ngayon?"" tanong naman niya. Isinauli ko na rin ang ID niya at nagpatuloy kami sa pag-iimpake.",neutral
+"""Yup. Some last-minute reminders from Sir Eiichi,"" sagot ko naman.",neutral
+"Pagkatapos naming magligpit ng mga gamit ay lumabas na kami para um-attend sa meeting. We met the two at the lobby, along with the three guys from the lower batch.",neutral
+"Lumapit naman ako sa kanila at inakbayan ko siya. Halos magkasingtangkad na kami at paniguradong tatangkad pa ang isang 'to. Parang dati lang, binubuhat ko pa siya.",neutral
+He really gives off a vibe similar to him. To his father.,neutral
+"""Again, you need to log all your activities and through those phones,"" Sir Eiichi said while pointing at the device he gave us a while ago, ""your entries will be sent to the intelligence department.""",neutral
+"""We will assume that something happened to you so don't forget to note down your observations and proceedings. Is that clear?""",neutral
+"""Yes, Sir,"" we answered in chorus.",neutral
+"Pagbalik namin sa dorm ay kinuha agad namin ang mga maleta namin at sumakay sa shuttle. We were sorted according to our families and grouped into teams with four members. Luckily, the Atama family have exactly four people.",neutral
+"""Yeah. The shorter the time we spend in arresting the criminal, the higher the grade. We should be preparing by now,"" sagot naman ng isa.",neutral
+"Mukhang nagse-search na sila sa iba't ibang database ng potential targets. For families A to E, they are required to catch five A-class criminals each group while we, the Atama family, need to apprehend three S-class with at least one Erityian.",neutral
+"We were the first group to be dropped off and we found ourselves standing in front of a simple apartment. The four of us entered the house and it has two indentical rooms, kitchen, bathroom, laundry area and a small living room. Nilagay agad namin ang mga gamit namin sa kwarto at balak ko na sanang mag-ayos pero napatigil ako nang mapatingin ako kay Kana.",neutral
+"She was standing beside the windows and when she drew the curtain open, a huge digital billboard came into view.",neutral
+"The serial murderer who disappeared three years ago made his return with a new victim. The body has the same condition of brutality with the victims several years ago. For a more detailed report, here's Nerisse Ocampo.'",neutral
+"""A serial murderer, huh?"" Hiroshi said and I didn't even notice their movements.",neutral
+"Jack Jr., huh? sabi naman ni Hayate kaya napatingin kami sa kanya.",neutral
+Do you know him? tanong ko at in-adjust niya ang salamin na suot niya.,neutral
+"I have read about his case three years ago. He was given that alias because of his victims, he explained.",neutral
+"""Jack the Ripper,"" Kana muttered and right after that, the detailed report was shown on the screen.",neutral
+"""Yes. He earned that name because he mutilates his victims' bodies and cuts them in half. We need to investigate this case since that guy is an elusive S-class criminal, sabi niya at"" pagkatapos no'n ay may lumabas na hologram sa relong suot ni Hiroshi.",neutral
+"I just got some information about his cases, he added.",neutral
+"""Well then, why don't we go to the crime scene?"" I suggested and the three of them agreed. Agad kaming nag-ayos ng gamit na dadalhin namin at pagkatapos no'n ay lumabas kami.",neutral
+"Our first target has been determined and he should be counting down his remaining days as a free man. Or in this case, I'd be the one deciding that.",neutral
+"Nandito kami ngayon sa crime scene habang itinataboy ng mga pulis ang mga tao. Luckily, the chief inspector is a Senshin and he's quite close to Sir Tora. When he saw us, he let us observe and investigate the scene which bothered some of the officers.",neutral
+"Pagkakita pa lang namin sa katawan ng biktima ay napatigil na kami. Just like the description in the news, the victim was brutally murdered. His eyeballs were removed from their sockets, his abdomen was cut, revealing his stomach and intestines and his skin was unbelievably dry.",neutral
+"""Are there any suspects?"" tanong ni Hayate kay Inspector Warren.",neutral
+"""Yes,"" sabay tanggal niya sa sumbrerong suot niya. ""There are actually two suspects three years ago but due to insufficient evidence, we were forced to release them.""",neutral
+"""One of them is Ariel Andrada, right?"" Kana chimed in and all of us were surprised by her input.",neutral
+"""How did you know that?"" the inspector asked, still dumbfounded.",neutral
+Hindi naman sumagot si Kana at muli siyang tumingin sa bangkay na nasa harapan namin.,neutral
+"According to the initial report, the victim is Gabriel Corpuz, a newly-licensed physician and one of the top ten takers. His friends were waiting for him in a nearby cafe when he suddenly texted a creepy message to one of them:",neutral
+Mukhang hindi pa tapos ang pagpatay niya ng mga tao.,neutral
+"The four of us stayed and gathered information about the case, especially now that there might be another victim.",neutral
+Agad akong lumingon pero sa dami ng taong nakapaligid ay hindi ko matukoy kung saan ko nakuha ang pakiramdam na 'yon.,neutral
+An Erityian is here.',neutral
+"But I'm sure that that one isn't the criminal,' Kana chimed in while looking at the body.",neutral
+"Yeah. This one is a work of humdrum,' Hiroshi added.",neutral
+Lumapit naman sa amin si Inspector Warren at ipinakita ang ilan pang information na nakalap nila. Pagkatapos no'n ay nagdesisyon kami na magsimula na ring mag-imbestiga. Hayate and I wandered around the street where the body was found while Kana and Hiroshi stayed at the crime scene to examine the body with the forensic team.,neutral
+"Agad namang nag-send si Hiroshi ng summary of report sa kanya-kanya naming KT, a device similar to a mobile phone. Erityians do not use electronic devices made by humdrums since we could be traced or tapped so the tribes usually have their own inventions or methods to communicate. For Senshins, the Technology department have invented several portable devices useful for times like this.",neutral
+"According to the reports he found three years ago, three murders were committed by the same killer. The same brutality and method were observed and this person is quite clever because he or she didn't leave any traces of him or her. In addition, there were no patterns on the dates of the murders, as well as connections among the three victims.",neutral
+"The first victim, RJ Narita, was found near his home with his mutilated body. The autopsy showed that he died due to dehydration and he was later cut up. The next victim was Samantha Dimos, a doctor, and she was killed three days after RJ's death. Her white coat was soaked in her own blood that it was initially mistaken as a scarlet dress. Her intestines were also removed and were later found in her own bag that was thrown in a nearby trash bin. The last victim three years ago was a nurse who was working in the same hospital as Samantha, Krista Conny. However, the weird thing was she was dumped into a drum of blue paint while some of her organs were outside of it.",neutral
+"It seems like this guy has good medical knowledge when you look at the way he disemboweled his or her victims, Hayate commented while looking at the photos from the report.",neutral
+But how did they arrive at the conclusion that these murders were committed by the same person? rinig namin sa boses ni Kana na mula sa KT.,neutral
+"""Even if I don't want to admit it, she's right,"" dagdag ni Hiroshi. ""The methods of death are different and the only thing that groups them together is how the organs were removed and scattered after killing them.""",neutral
+"""It's the way the murderer opens their gut,"" sabi naman ni Hayate. ""Look at the pictures. Their wounds and the manner the organs were pulled out from their respective bodies are the same. Maybe that's why they reported it to be a serial murderer.""",neutral
+"I suddenly remembered the first time I encountered their dimension. In our clan, the kids are taught basic tracking techniques and by the time they reach fifteen, they have to experience it firsthand. Well, in my case, since there was a war that time, I saw and felt the Black Dimension earlier than expected.",neutral
+"Maging sa Senshins, hindi agad dini-discuss ang tungkol sa lugar na 'yon. The professors usually introduce them in their last year to prepare them for the final requirement since most of the families deal with cases involving humdrums.",neutral
+Hindi ko na natapos ang sasabihin ko kay Hayate dahil biglang sumugod ang dalawa papunta sa amin.,neutral
+"""A sword, huh?"" he muttered and he cut his thumb while rushing to those two Shinigamis. He propelled towards them without anything but before they could attack him, his favorite weapon —his broadsword—appeared straight on his right hand and came into contact with the enemy's sword.",neutral
+"With the way they attack, I'm pretty sure they are Reapers. Buti na lang at hindi sila Elite dahil paniguradong mahihirapan kami kung lumabas sila rito lalo na't maraming humdrums sa kabilang street.",neutral
+The other one lunged at me but I immediately summoned my twin shortswords and countered his spear.,neutral
+He attacked me again and I could only defend myself. I couldn't attack him because of the length of his spear and his strength alone pushed me outside of my comfort zone.,neutral
+"""A Shinigami tracker, I see,"" he said and I stepped backward as he overwhelmed me with his immense physical strength.",neutral
+"""Good eyes, Reaper,"" I responded and used my agility to spin and target his back but despite his large body, he was fast. To find the tattoo on my nape even when I was moving . . . he has good eyes.",neutral
+He attacked me again and I could only defend myself. I couldn't attack him because of the length of his spear and his strength alone pushed me outside of my comfort zone.,neutral
+Bigla naman akong nakaramdam ng matinding presensya at akala ko ay muling bumalik ang taong 'yon pero hindi ko inasahan ang mga sumunod na nangyari. Blood has splattered on my face and I saw the tip of a sickle protruding on the Shinigami's chest.,neutral
+"This time, si Hayate naman ang may seryosong mukha. Nakatitig siya kay Kana at inayos niya ang salamin niya. Alam kong nagulat din siya sa mga pangyayari at ngayon ay naging curious siya kay Kana. Honestly, I thought she was a Shinigami a while ago. She just went straight to him and targeted his vital organ with a fatal blow.",neutral
+"""We found a common point among the victims,"" Hiroshi said and a hologram appeared before our eyes. ""They were all employees from a private hospital.""",neutral
+"""Wait, the doctor and the nurse, yes but the first victim wasn't,"" sabi naman ni Warren. ""He was working as a security guard for a firm.""",neutral
+"We found the connection among the three victims three years ago, as well as to the suspects. According to the reports, Rick Torres also worked in the same hospital for a year and he was seen in the vicinity where the second victim's body was found while Ariel Andrada was caught in the CCTV in the place where the third victim was brutally murdered, one hour earlier.",neutral
+"Speaking of Ariel Andrada, Kana seemed to know that guy. From what I heard, he's an elusive S-class and international criminal because of that incident.",neutral
+"""So . . . is Rick Torres the murderer?"" tanong ni Kana.",neutral
+"We grabbed some sandwiches from a café one block away from the crime scene and it was quite filled due to people who wanted to know what happened. I couldn't read a humdrum's mind, just like any other Erityian, but I could infer what one was thinking based on their expressions, habits and external factors. We were trained for that, after all.",neutral
+Pagkatapos no'n ay umuwi muna kami sa apartment na tinutuluyan namin para mag-prepare. I equipped myself with a taser and a handcuff and Hayate did the same.,neutral
+"He projected the information above the laptop and expanded it, occupying the whole room. The hologram was a city map, with various landmarks highlighted in different colors, but something was amiss. On the right side, the hologram of an area flickered uncontrollably and I realized it was three blocks away from the crime scene.",neutral
+"""Well, according to his their co-workers, he had a big argument with Dr. Samantha Dimas, the second victim, and that was one of the reasons why he was on probation for months. Being a suspect worsened his status but it wasn't reported whether he was working on another hospital or became unemployed,"" sagot naman ni Hayate pero gaya kanina ay may kakaiba sa mukha niya. He seemed perturbed about this case and he had already closed his mind, not allowing any of his thoughts to be heard.",neutral
+"Hindi naman siya pinansin ni Kana at nagpatuloy lang siya sa paglalakad. Hinayaan ko na lang sila dahil normal na ang ganitong sagutan, lalo na't may galit sila sa isa't isa.",neutral
+Napunta kami sa isang apartment complex at dito nanggagaling ang bulk ng hits na naka-display ngayon sa relo ni Hiroshi. We went to our designated positions and carefully approached the place.,neutral
+Dahan-dahan akong lumapit sa isang unit na itinuro nina Hayate at Kana. I was just a few meters away from the door when I heard Hayate's voice behind me.,neutral
+"""Did you get heavier?"" Hayate grunted while I lay above him.",neutral
+"All of a sudden, the man found us and was about to fire at our direction again but I dashed at him as my twin swords appeared on my hands.",neutral
+Napakunot naman ang noo ko nang marinig ko 'yon. The murderer's behavior was regarded a psychopathic but this guy seemed to be experiencing anxiety attack.,neutral
+"""Kana,"" sabay tingin ko sa kanya at tumango naman siya. She approached Rick but he backed away and continued throwing rocks at us so she had no choice but to sedate him. Hiroshi and Hayate moved him inside and the four of us started investigating his apartment.",neutral
+"As expected, he has medical kit and supplies that can be used as murder weapons. Hayate immediately tested them with luminol while Kana examined the tools and gadgets lying on his table and bed. I was about to search Rick's body but Hiroshi suddenly called our attention. Pagtingin namin ay nandoon na siya sa harap ng laptop ni Rick at agad niyang ipinakita ang naka-display sa screen.",neutral
+"""His recent searches include the serial murders and a food poisoning incident that both happened three years ago,"" sabi ni Hiroshi.",neutral
+"""Food poisoning?"" tanong ko naman.",neutral
+"""According to an article, several college students were rushed to the hospital due to food poisoning and it seemed like we finally found the connection between the four victims.""",neutral
+"True enough, on that day, the four victims were present. The latest victim, Gabriel Corpuz, was among the students who were rushed to the hospital where the nurse, Krista Conny, and the Dr. Samantha Dimos were working and the regular guard was relieved by RJ Nieta.",neutral
+"""Is that his phone?"" tanong ni Kana. ""How did you unlock it?""",neutral
+"""He's a doctor,"" sagot naman ni Hayate.",neutral
+"""Stethoscope,"" he said and he went back to the lock screen, unlocked it by connecting the four dots, forming an inverted triangle with a line below it, and looked at us as if that should be a general knowledge.",neutral
+"After that, he showed us the conversation of Rick and an unknown number three years ago.",neutral
+"""Wait, let me access the footage that day,"" sabi ni Hiroshi at nagsimula na siyang mag-type ng kung anu-ano. Several holograms of alphanumerics also appeared around him and I didn't attempt to read them since I couldn't understand those things.",neutral
+Matapos ang ilang minuto ay tumayo si Hiroshi at nag-project sa harapan namin ang video na sinasabi niya. Ambulances and cars simultaneously arrived at the hospital with a lot of students.,neutral
+"Some were unconscious and some were clutching their stomachs and heads. As the influx of food poisoning victims increased, a man with two little girls on his arms, tried to enter the hospital but the guard, RJ Nieta, stopped him.",neutral
+"We couldn't see his face but it seemed urgent as he grew impatient and shoved the guard away. When he got inside, he ran towards a nurse and a doctor but they were busy accommodating two food poisoning victims, one of which was Gabriel Corpuz. The guard he shoved searched for him and when he found him, he dragged him outside, not allowing him to pass anymore.",neutral
+Agad namang nag-type si Hiroshi at may isa pang video na nag-appear sa harapan namin. It was the news right after the murder in which a teacher saved a kid from being hit by a car.,neutral
+"""Hiroshi.""",neutral
+"""News?""",neutral
+"""That guy . . ."" sabay turo ko sa news video at napatingin ako sa footage three years ago. ""He was there.""",neutral
+"""Yes. He's one of the food poisoning victims who were accommodated by Kristy and Samantha,"" Hayate confirmed.",neutral
+The four of us immediately left the house after securing Rick since he might still get targeted by the killer. We assumed that he would be on the move because of the news earlier and the probability of him monitoring Rick would be low if that was the case.,neutral
+"""If the murderer doesn't have any information about the students, he can't kill them. Maybe that's the reason why he didn't have any movement for three years. However, both of them appeared on national television. Gabriel for being one of the topnotchers and this guy for his heroic deed,"" Hayate explained as we dashed away from this zone.",neutral
+"""Got his details,"" sabi naman ni Hiroshi habang tumatakbo kami. ""He's Luke Borja, 22 years old, a fresh graduate and currently teaching high school students.""",neutral
+"""Do you know where he is right now?"" tanong ko.",neutral
+"""He's currently teaching at St. Joseph Academy, about four streets away from here.""",neutral
+"""Well, then, let's visit that school.""",neutral
+"Good thing was, there were a lot of trees surrounding this school so staking out wasn't a problem. The faculty room was about fifty meters away from us but we couldn't just trespass.",neutral
+Napatingin naman kaming tatlo kay Hiroshi dahil bigla siyang tumalon pababa at buti na lang ay walang nakatingin na mga estudyante sa direksyon namin.,neutral
+"Chakushoku? So this school is inhabited with Erityians. Someone from our tribe must be monitoring them. Hiroshi showed his KT's screen and a guy's face was displayed there. Somehow, he reminded me of someone but I couldn't pinpoint who.",neutral
+"""Branch, Castro family,"" I responded.",neutral
+Sinabi namin ang concern namin sa kanya at tinuro naman niya kung nasaan ang Principal's Office para makausap si Mr. Manuel Salas. Naglakad kami sa corridor sa first floor at ang daming estudyanteng nakakalat. Mukhang break time nila kaya naman may ilan kaming nakakasalubong. I could still feel the faint presence of the Black Dimension but I couldn't determine the direction where it was opened.,neutral
+"Kakatok pa lang sana kami pero sakto namang lumabas ang isang middle-aged na lalaki mula sa office. He went out of the room to meet us and the first thing I noticed was how his hair gleamed red like a Custos' eye. A Rua, I thought. Ate Akira and Akane were also from that Senshin clan which was usually depicted as red-haired combatants.",neutral
+"""Ah. So you want to arrest an S-class criminal before he could kill his next victim,"" sabi niya at tumango kami.",neutral
+In-explain naman niya na pwede niya kaming samahang umakyat para i-introduce as teaching assistants at mabantayan ang kilos ni Luke Borja. Hayate and I volunteered while Hiroshi and Kana stayed around the perimeter of the school to see any movement from the outside.,neutral
+"Doon ko naman na-realize kung sino siya. It was the daughter of the main family of Querino Clan. I couldn't remember her name but I knew her face because I saw her once, during the meeting of the main and several branch families, when she was still a toddler.",neutral
+Reina. A tracker like you. The guy beside me is Hayate. We're from Atama family.',neutral
+Mula rito sa posisyon ko ay halatang gusto niyang lumingon ulit sa amin pero hindi niya magawa. Young trackers like her were usually sent to humdrum school,neutral
+"I stared at her back, impressed. For an eleven- or twelve-year old tracker, she had already mastered the basics and could even detect trace presence of the Black Dimension. As expected from the daughter of the Querino clan.",neutral
+Natapos naman ang klase ni Luke at agad namin siyang sinundan pababa. Hinatak namin siya sa isang bakanteng room at tiningnan naman niya kami dahil sa ginawa namin.,neutral
+We informed Kana and Hiroshi about our plan and they both went to their respective positions. I could see the chief's daughter peeking from the corridor above and I seriously wanted to talk to her about those Shinigami's presence but this case should be my priority.,neutral
+Dahil uwian na ay naglakad palabas ng school si Luke at nakasunod naman si Hayate sa kanya habang ako ay nauuna sa kanilang dalawa. Hiroshi stayed inside the campus after placing several demodulators which would emit signals to our KTs when a humdrum's brain waves exhibit an irrational movement similar to a killing intent.,neutral
+"He has been working on reducing them to gadgets that could be carried by Senshins but he couldn't put his theory into reality yet. Kana, on the other hand, hid herself on the huge branches of trees to observe any movements from above.",neutral
+"The serial murderer must be around the area by now, waiting for the right time to attack. Being an S-class murderer, he must have given the police a hard time, seeing that he hadn't been sighted for the last three years. He might be a humdrum but his heinous acts were worthy of Shima imprisonment.",neutral
+"I was surveying the surroundings when I felt my KT's vibration and when I looked behind, a guy in student's uniform walked straight toward Luke.",neutral
+The guy drove his sharp weapon to Luke's body but Hayate shoved him away and I screamed when I saw that thing penetrating his skin. That serial murderer was caught off-guard but he recovered quickly and ran away as if his life depended on it.,neutral
+Tinulungan ko siyang tumayo at gaya ng sinabi niya ay hindi niya maigalaw ang katawan niya.,neutral
+"Hinatak ko rin si Luke papunta sa tabi niya at tinawagan si Hiroshi para tulungan ako. However, something wasn't right. Why didn't he kill him right away? Why did he need to paralyze him?",neutral
+"Pagkatapos no'n ay agad akong tumakbo sa direskyon kung saan siya tumakas. Around fifty meters from me was Kana, jumping from roof to roof, trying not to lose our target. I followed her on the ground, traversing empty alleys and narrow streets, until I was only a few meters away from them.",neutral
+Idagdag pa ang hawak niyang scalpel at gunting na para bang may ooperahan siya. He pulled out a tranquilizer gun from his back and pointed it at us. That was when I realized he lured us into this enclosed area where he could maximize his weapons.,neutral
+We dodged the pointed needles that came out of the muzzle and simultaneously summoning our weapons. Kana swung his sickle but he easily avoided it as he threw syringes at her direction.,neutral
+"He lunged at us, scalpel and syringes on his hands, and had it not for the range of our weapons, he could've easily administered drugs or poisons into our systems. His physical skills weren't that outstanding but what made him dangerous was his medical wisdom and how he could use it against humanity.",neutral
+"I volunteered as a bait since I was faster and more agile than Kana. With the twin swords on my hand, I launched myself to his direction and attacked. He used his scalpel to stop my sword and he must have a strong wrist and arm to thwart my sword with that. I almost tumbled over when he suddenly thrust a huge syringe but Kana managed to take it away from him and I retreated a second after.",neutral
+Bigla namang sumugod si Kana papunta sa kanya habang hawak 'yon at umatras siya nang umatras hanggang sa tumama na ang likod niya sa pader.,neutral
+Kana immediately removed the syringe poking her arm and I was hoping it was just a paralyzing agent but the symptoms weren't the same. She was shivering and she couldn't talk anymore.,neutral
+Inalala ko naman ang mga sinabi ni Luke sa amin kanina pero wala akong maalalang makapagbibigay ng clue tungkol sa murderer. Ni hindi ko nga alam kung paano niya nalaman ang pangalan niya.,neutral
+"We were lucky that the nearest one has an Erityian specialist or else, we would be forced to bring her in our own medical facility inside the campus.",neutral
+Napaupo ako sa tabi nina Hiroshi at Hayate na kasalukuyang nagbabantay sa kanya. We got our first criminal but the cost was high.,neutral
+"Hayate and Hiroshi explained everything to me. Apparently, the syringe contained a cholinergic poison which works like a nerve agent. They discovered that Antonio Salazar must have some kind of antidote in case something happened and I was thankful they were both quick thinkers and could keep calm even in that kind of situation.",neutral
+Hindi naman na siya nagsalita matapos no'n. We were all exhausted after what happened today. Hindi ko alam na ganito pala kahirap ang last requirement para maka-graduate. We got trained for this kind of work when we took our Fielding subject but the difficulty of apprehending criminals with A and S ranks exceeded our expectations.,neutral
+Napahiga na lang ako sa sahig nang makapasok kami sa lodge namin dahil sa mga nangyari ngayong araw. Dumiretso naman sina Hayate at Hiroshi sa Japanese table na nasa gitna ng sala. Hayate set up his laptop and communication devices while Hiroshi pulled some wires along with the weapons we summoned while fighting the Shinigamis.,neutral
+Buti na lang at nagawa kong masalo lahat kahit nakahiga pa ako. Bumangon naman ako at sinamahan sila sa table.,neutral
+"""Now that you have summoned your weapons here, the Technology department staffs are probably aware of my research by now.""",neutral
+"Sir Aiwa did a wise decision, I think. Hayate and I grew up with Hiroshi and we know how dangerous his creations could be.",neutral
+I remembered getting chased by mechanical pencils because I pissed him off. Hayate once had to hide in the east side of the forest for a day because he accidentally poked Hiroshi's eye. He made holograms of beasts to chase Hayate and the teachers had to calm him down.,neutral
+"Naalala ko ang nangyari noong oras na 'yon. When the Shinigamis stepped out of the Black Dimension, even though she was with Hiroshi and they were both far away, she rushed into our direction and gave the Reaper a fatal blow.",neutral
+"""But after that incident, they didn't allow anyone to leave their island,"" sabi naman ni Hayate. ""She certainly has the disposition of an Executioner but I doubt they would put another one inside the school after what happened to him.""",neutral
+"""Come to think of it, we don't know anything about her besides being an FBI agent of the Cyber Division,"" dagdag naman ni Hiroshi.",neutral
+"Tumabi kami ni Hiroshi sa kanya at sinilip ang naka-display sa screen ng laptop niya. According to the source, Ariel Andrada is an S-class criminal because of his international records involving terrorism, murders and illegal trading.",neutral
+"Forces like FBI, CIA and InterPol are all hunting him and is considered as one of the most elusive criminals because he's been on the wanted list for ten years.",neutral
+Matapos ang pag-uusap namin ay kaagad din namang nagpahinga ang dalawa. I'm sure they were drained after all that fighting and running.,neutral
+Kinuha ko ang twinswords ko sa gilid ni Hiroshi. I wore a cloak to conceal them and went outside. This place reeked of musty smell similar to that of the Black Dimension. I wondered if the Shinigamis we had encountered were targeting us or we were just in their way.,neutral
+"I was already striding toward the hospital's direction when I suddenly felt a faint presence. Napahinto ako at agad na hinawakan ang twinswords na nasa magkabilang gilid ko, nag-aabang sa kung anuman ang parating.",neutral
+The tip of his sword appeared right in front of my face and I stumbled upon warding off his attack.,neutral
+"I didn't have any time to devise a plan. The moment I lost my balance, I did the only thing I could do. Using my other feet as the axis, I spun around while holding both my swords, giving him a huge cut on his arm and face, while his sword made a gash on my waist.",neutral
+"It's been a week since that incident. Kana was discharged two days after she was admitted but I didn't tell Hiroshi and Hayate what happened that night. For some reason, I couldn't bring myself to inform them about her.",neutral
+He placed his KT on the table and a holographic image of the current head technician of the Technology department appeared.,neutral
+"""Hiroshi of Atama family, please see me after you finish your final requirement. And from now you are forbidden to enter our facilities alone, unless you let one of our staffs accompany you all the time. In addition, we will inspect your laboratory to see if you have been doing unauthorized researches. That's all. Good day.""",neutral
+"""Own laboratory in the technology department? A temporary suspension instead of the normal punishments that students must go through whenever they violate rules? He's been privileged since he was born and I'm sure he's been showered with compliments because of his so-called brilliance. It's about time someone reminds him of his shortcomings.""",neutral
+"It was a a noise filter, one that blocks undesirable frequencies and they set the parameters into which they couldn't hear my voice at all.",neutral
+"Naging busy naman kami sa kanya-kanya naming working area. Hayate kept tabs on the current wanted list and updated our journal while Hiroshi continued tinkering with the wires and devices on the floor. Kana, on the other hand, was training by herself and assessing the condition of her body.",neutral
+"I stared at her and her image that night resurfaced in my mind. The way she took down the Shinigami was a lot similar to how Kuya Mitsuo used to fight. She might be an Executioner but according to our intels, the Jikko clan became more cautious and didn't send any people outside of Shima after what happened that time.",neutral
+"Bigla ko namang naalala si Ate Naomi. Strong Senshins and those who have the disposition of being leaders usually can hear inner voices even if their minds are closed through continuous training and honing their senses to the limits. However, there are people who are born with that kind of ability.",neutral
+Napatingin kaming tatlo kay Hayate. He was staring at the screen of his laptop with a perturbed expression on his face. The three of us walked toward him and saw what he was looking at.,neutral
+"Ever since we came in the world of humdrums, she started getting suspicious. I guess we have to monitor her closely this time.",neutral
+Pagdating naming do'n ay nagkalat na ang iba't ibang grupo para sa kanya-kanya nilang mga trabaho. Police officers were assisting the medical team in saving and helping those who were injured and in critical condition.,neutral
+There were also rescue officers and firefighters who bravely marched into the building to see if there were still people left inside. Reporters were trying their best to relay the situation to the public while some were interviewing witnesses.,neutral
+Agad naman kaming kumilos matapos niyang sabihin 'yon. The four of us were dressed in police uniforms so we could observe and investigate better.,neutral
+"""Reina, come with me,"" Hayate said while pointing at the facility. ""Kana, inform us immediately once you detect any changes in temperature, pressure, humidity or anything around here. Hiroshi, secure the perimeter. I also want to see the explosion itself, as well as its details, so recreate it using one of your programs.""",neutral
+Tumango kaming lahat sa plano ni Hayate at nagsimula kaming dalawa na maglakad papunta sa facility. It was still burning but the fire was starting to get smaller. We marched inside and went to the opposite side of the building.,neutral
+Makapal pa ang usok sa loob pero napatigil ako nang may makita akong kakaiba sa sahig. Pinulot ko 'yon at mukhang tama nga ang hinala namin kanin.,neutral
+"Clutching the fragments of the phone, I breathed deeply and used my sixth sense. The phone got destroyed 34 minutes ago and that must be also the time the explosion happened.",neutral
+"""This is surely done by a humdrum,"" rinig ko kay Hiroshi mula sa communication device sa tenga ko.",neutral
+Lumabas kami ni Hayate at nakita namin sina Kana at Hiroshi sa bandang gilid. We decided to go home first to plan our action. This kind of crime might be considered as S-level due to the extent of its casualties and the panic it caused in the city and the people.,neutral
+"""I already sent a piece of residue I found inside the facility. We just have to wait for the confirmation of the Technology department but based on its structure, it's probably similar to Semtex—a plastic explosive,"" Hayate explained.",neutral
+"He played the footage around 45 minutes ago. There were ten people, mostly staffs and visitors, who went inside and left the facility before the explosion. At exactly 3:48 P.M., a loud blast was heard, destroying the whole building and causing a fire. Some bystanders were caught in the explosion and they got thrown away by the shock and impact.",neutral
+The explosion two days ago caused widespread apprehension because of its huge media coverage and the nature of the incident. Some voiced out their concerns in social media and thought it might not end here.,neutral
+We already got the information regarding our suspects but most of them had alibis at the time of the explosion. Only four people didn't have any proof regarding their whereabouts during the incident and we were still monitoring them in case something strange happened.,neutral
+"""Okay. We'll contact you once we narrowed down the probable source or supplier of the culprit.""",neutral
+"Hayate ended the call and I stared at the facility that was reduced to ruins. There were police officers and investigators roaming around the area, which was declared off-limits, so I opted to watch and observe from a distance.",neutral
+"Nandito ako ngayon sa rooftop ng building na ilang metro ang layo mula sa facility. We surmised that they might either return at the crime scene or go to the hospital where the victims are. Kana and I went to the crime scene and hospital, respectively, to see whether some of the suspects would show up.",neutral
+Tumayo naman muna ako at tinanaw ang paligid. The streets beyond this area were crowded with humdrums and busy establishments. I didn't know weekends could be this hectic outside our world.,neutral
+"Stepping back to reset my plan of attack, I saw the Shinigami who ambushed me. I drew both of my swords and took a defensive stance. Just when I was about to ask who he was, I realized he was one of the Reapers who attacked us before.",neutral
+"I remembered how Kana propelled his sickle right into his comrade's chest. If he was alone, the other one he had rescued must have been in a critical situation or already dead.",neutral
+"With a series of short and long tap signals, I sent a message to Hayate by tapping my earpiece to inform them of what was happening in this area.",neutral
+"Before I could react to his answer, he swung his Claymore, a medieval type of sword, at my direction but I fended it off with my twin swords. However, I didn't expect the weight of his attack. He hit them so hard that the impact made my whole body buckle.",neutral
+Sobrang bilis ng mga sumunod na nangyari. Ang alam ko lang ay nawala na lang bigla ang Shinigami habang nasa harapan ko na si Kana.,neutral
+She was panting as she held her sickle in an offensive position. Lumingon siya sa akin at doon ko lang na-realize na nakahiga na pala ako sa lapag at hindi ko maigalaw ang kanang binti ko.,neutral
+Tinulungan niya akong makatayo at napatingin kami sa pagsabog na nangyari kanina kaya nagmadali kami papunta ro'n. We set aside our Shinigami encounter and prioritized this incident first.,neutral
+Nang makarating kami ro'n ay wala pa ring firefighters kaya lalo lang kumakalat ang apoy. The main explosion also triggered ignition of electrical wires in the vicinity. May mga taong nagkusang-loob na tulungan ang mga nasaktan sa pagsabog habang ang iba naman ay patuloy na tumatawag ng tulong.,neutral
+"After a few minutes, Hiroshi and Hayate arrived. They were both carrying suitcases and I was sure their devices were all there.",neutral
+"""Are there any Senshin officer in the response and rescue team who are coming?"" tanong ni Hiroshi matapos niyang ibaba ang hawak niyang case.",neutral
+He pressed some buttons at the side of his case and a radar appeared on its surface. Fifteen dots came into view and he marked them with some sort of codes so that the Senshin officer could lead the rescue team to their positions.,neutral
+"""Reina, Kana, search for any of the suspects in the vicinity,"" Hayate ordered. ""I'm sure quite a few of them are here.""",neutral
+Tiningnan ko ulit ang list of suspects namin mula sa unang case. I went to the rooftop of the opposite building for a better view and he was right. Two of the suspects were loitering near the crime scene.,neutral
+Kana and I followed the four suspects for a few hours since we couldn't apprehend them yet without solid evidence. Sina Hiroshi at Hayate naman ang naiwan sa crime scene para i-analyze ang pagsabog na nangyari at para tulungan ang police officers at rescue team.,neutral
+"Dahil gabi na ay hindi naging madali ang pagsunod sa suspects, lalo na at tig-dalawa kami ng kailangang i-observe. We went home around midnight to share the information we had gathered to each other.",neutral
+"The four suspects we saw lingering around the bar before and during the explosion were: Desiree Doras, a friend of an employee in the facility for the disabled; Ronald Tadeo, one of the caretakers; Ramon Jose Tuazon, a visitor who happened to be a retired general; and Patricia Ibañez, another visitor.",neutral
+"""Doras was lurking around the bar. It seemed like she was waiting for someone inside,"" dagdag ni Kana. ""On the other hand, Tuazon just left the bar when the explosion happened. He looked perturbed but he stayed around.""",neutral
+We tried gathering more information about those four individuals but I was starting to get distracted because of the chilly night. Halos 2 A.M. na pero gising pa rin kaming lahat at alam kong bukod sa case ay nasa isip din nila ang nangyari kanina.,neutral
+"After I said those words, I knew I just shattered their concentration and got their attention. Panigurado namang gusto rin nilang malaman ang tungkol do'n.",neutral
+Napaisip naman ako sa sinabi niya. Our tribe has influential clans that have the power and authority to oversee the Senshins.,neutral
+"There are four main clans are: Shou clan, the root and leading family of the Senshin tribe; Heren clan, one of the oldest and powerful family that can read closed minds; Jikko clan, a group of warriors who isolated themselves to the world and became Executioners; and the Querino clan, the experts on tracking and luring Shinigamis.",neutral
+"""According to Mom's data, there was a clan in the West which specializes in counterintelligence and reconnaissance—the Hansen clan. Those were the Senshins who were always stationed in intelligence agency like FBI, MI6, IB and NSA.""",neutral
+We followed Hayate even though we had no idea about his plan. He said we were going to the third exhibition. That meant another explosion was bound to happen.,neutral
+Binuksan ko ang files ng suspects at muli kong binasa ang mga nakuha naming information tungkol sa kanila.,neutral
+"Desiree Doras is a chemical engineer who got fired from her job because of her attitude toward her co-employees. She was in the facility, where the first explosion happened, because of her friend who was admitted there. During the second explosion, it seemed like she was waiting for someone according to the guard who saw her.",neutral
+Ronald Tadeo was one of the caretakers in the facility for the disabled but some patients dislike him because of his indifference. He narrowly escaped the explosion during the first attack while he witnessed the entertainment bar getting blown up when he was with his friend.,neutral
+"The third suspect was Ramon Jose Tuazon, a retired general who happened to visit the facility during the explosion. However, he was seen observing the bar from the outside during the second explosion.",neutral
+Maglalakad na sana palayo si Kana pagkasabi niya no'n pero agad siyang napahinto nang muling nagsalita si Hiroshi.,neutral
+"As a member of the Querino clan, we were taught about the Black Dimension since we were kids. In Tantei High, it would be introduced one semester before we go to the humdrum's world for our final requirement. During that sem, students would be trained on how to avoid that place and what to do if we encounter it.",neutral
+My train of thoughts got disrupted when I heard my name. Doon ko lang na-realize na kanina pa nila ako tinatawag at nakatingin na silang tatlo sa akin.,neutral
+"My eyes drifted toward the entrance and I immediately knew what he meant. It was a special school for indigenous people who lives in the city. Instead of school uniforms, most were wearing their traditional clothes while some opted for a more casual look.",neutral
+"Napatingin kami sa tinuro ni Kana. Ramon Jose Tuazon, the retired general, was there. After a few seconds, another suspect came into view.",neutral
+Makalipas pa ang ilang minuto ay dumating din ang dalawa pang suspects: sina Desiree Doras at Ronald Tadeo. We were waiting for something to happen or any changes in their behavior when three of them went inside the school.,neutral
+"""They're making their move. Let's go.""",neutral
+Agad kaming sumunod sa kanila at pumasok sa school gamit ang ibang daan. I went to the rooftop and entered through one of the windows on the topmost floor. The security in this place was too lenient that even unauthorized personnel could enter without getting caught. Someone could easily place a bomb somewhere and that person wouldn't even draw suspicions.,neutral
+"Everything happened so fast and my instinct took over. The next thing I knew, Kana was already beside Hayate while I was pinning the terrorist on the floor.",neutral
+Bago ko pa masabi sa kanya ang lahat ng gusto kong sabihin ay dumating si Tuazon at agad na inilagay ang phone sa tenga niya.,neutral
+"""Ronald Tadeo, you're under arrest for killing dozens of people, blowing up facilities and causing widespread panic.""",neutral
+"Tiningnan ko naman ang case file na nasa harapan namin. Two of the suspects, Tuazon and Ibañez, where cleared off the list. It turned out Ramon Tuazon was also monitoring Tadeo's movements because of what his friend from the facility had reported about him.",neutral
+"On the other hand, Tadeo wanted to use Ibañez as the scapegoat since she already had a record. Apparently, she got convicted because she accidentally killed his husband whom she caught cheating on her. Since the mistress was an influential person, she used her power to lock her up and she kept on threatening her even after she got out.",neutral
+"Tadeo used that information to make her go to the places he wanted to blow up, making her one of the suspects.",neutral
+Nagtuluy-tuloy naman siyang maglakad hanggang sa makasalubong niya ang dalawa.,neutral
+"""But you look like you're planning something right now,"" I added. ""That's the same face you make when you're about to design a device.""",neutral
+"According to Hiroshi's sources, it was once part of the main clans in the Senshin tribe before it was annihilated. Senshins couldn't salvage anything from their village and no traces were left so they were left with little to no data about the tragedy.",neutral
+"Kana's background was still a mystery for us but it would be rude to ask her about it. However, her repulsive behavior against Shinigamis was a huge clue about her purpose. She got into Tantei High through a special admission and we knew people like her were either carrying a mission or relaying messages from their family or headquarters to the administration and vice versa.",neutral
+"After several minutes of discussion, Hiroshi retired to his room. Hayate and I began recording and summarizing our second case but we still need Doras' statement since she provided the materials for Tadeo's bombs.",neutral
+"With the sky covered in swirls of ominous vortex of clouds that shifted with the wind and the creeping midnight chill along the darkened street, it felt like we were inside the Black Dimension. All my senses were on high alert, as if my body was sending warning signals for an upcoming danger.",neutral
+There was a rising tension in the air and the dead body of Doras was making it harder to breathe. I was about to tell them to focus on the murder first when Hayate suddenly called our attention.,neutral
+"""Her computer, phone and hard drives have been reformatted,"" he said as he continued checking the desktop. ""All files were erased. Nothing but this message.""",neutral
+Hiroshi revealed that he put a tracker on her just in case something like this would happen. She was moving too fast and it seemed like that message had a huge impact on her. She never showed us any kind of emotional attachment to anyone or anything until now.,neutral
+"My mind drifted away as I recalled our first case and how Ariel Andrada was mentioned as one of the suspects. He was caught on camera in the same place where the thirs victim died, but his case was immediately forwarded to FBI and CIA because of his records.",neutral
+"In addition, most of his murders were executed through explosives, thus, reducing the probability of him being the serial killer.",neutral
+We shouldn't have told the Senshin officer in that station to put her under a house confinement.,neutral
+We were given permission to question her while being detained but we realized that Shinigamis might come for her or us if something went wrong and being in a restricted space with a lot of humdrums wouldn't do us any good.,neutral
+"Since they didn't have enough evidence to put her in jail as the murderer's associate besides his statement, we requested to put her under a detention in her apartment so we could freely ask everything.",neutral
+Napahinto kami nang huminto rin ang tracker na nakakabit kay Kana. We were about thirty meters away from her and she was checking her surroundings.,neutral
+Hiroshi and Hayate immediately reached for their weapons. We observed Kana's actions and followed her the moment she moved again.,neutral
+"He was about to tell us what he just found out but a disturbance caught our attention. From the rooftop of a building several meters away from us, we could see Kana along with someone else.",neutral
+"""Yutomu,"" he replied. ""I asked him to find anything about that name.""",neutral
+"""A Shinigami,"" I alerted and the three of us immediately ran toward that direction.",neutral
+"Upon hearing Hayate's explanation, we went to where they were but we halted when Kana thrust her sickle into the Shinigami's chest. The Shinigami grunted as he fell on his knees but before we could realize what was going on, Kana had already collapsed beside him.",neutral
+The woman pulled out a needle from her back and impaled it on the wounded Shinigami's chest. He cried and bellowed but he calmed down a few seconds later.,neutral
+"""Peculiar, isn't it?"" A voice from the speaker beside the screen said and that caught more attention. ""There are people out there who have these set of eyes. A shade of green so intense that it could petrify you the moment you see it in real life.""",neutral
+Nakita ko naman ang pag-iiba ng expression sa mukha ng mga Elite. It seemed like they knew who was behind this.,neutral
+I spent the whole night in the library's restricted section.,neutral
+"Hayate and I sneaked inside the campus for various reasons, while we left Hiroshi in our lodging to monitor and take care of Kana.",neutral
+"It was quite hard to enter the campus at night, especially this time because the tension between Senshins and Shinigamis were heightening, but we managed to sneak inside undetected. I immediately went to the library while Hayate went to the dorm.",neutral
+"""Right. Those Elites immediately shifted their attention to him after that stunt.""",neutral
+"""I wonder how he knew about the Erityians.""",neutral
+Tinapik ko ang kamay ni Hayate niya para makapagsalita at agad niya rin naman 'yong inalis.,neutral
+"""The Shinigami tribe is making their move,"" the other one replied. ""We should be getting ready yet those Elders want to involve the child.""",neutral
+"Her existence was kept as a secret and only the older Senshins, as well as members of the Atama family knew about it.",neutral
+I don't have any idea where she is or how her life is but that would surely turn into a mess once both tribes make their moves.,neutral
+Nang makalayo na ang dalawang lalaki ay mabilis kaming umalis sa campus at bumalik sa lodging.,neutral
+Pagdating namin doon ay saktong nagkamalay na si Kana pero napahinto ako nang makita ko si Hiroshi.,neutral
+Nagkatinginan kami ni Hayate nang sabihin iyon ni Kana. May alam siya tungkol doon?,neutral
+A week had already past after Kana's breakdown. Hayate told her to focus on healing while we gathered intel about the Hansen clan and the Shinigamis who attacked their village.,neutral
+"On the other hand, Hiroshi was back on tinkering with the wires and devices in his little space at the corner of the living room.",neutral
+"Napahiga na lang ako sa tabi sa sobrang pagod. We had been sneaking in and out of the library and campus for the past few days, looking for any information about the Hansen clan, since Kana fell into a deep slumber a week ago.",neutral
+Naalala ko ang unang trial ng device na 'yon a few years ago.,neutral
+Pinagsuot niya kami ni Hayate ng helmet na mas malaki kaysa hawak niya ngayon at sinabi niyang kaya nitong ilabas ang naiisip namin ay visual output. But there was something wrong with his device.,neutral
+The images flashed so quick that nothing made sense and we suffered grave repercurssions from it. Our hippocampus malfunctioned and we would have lost our explicit memories had the Medical departments staffs didn't intervene.,neutral
+Hiroshi was banned from using or working on any device for three months.,neutral
+Napalingon naman ako at naglakad palapit sa amin si Hayate.,neutral
+Siguradong naalala niya rin ang mga nangyari dati.,neutral
+Napatingin si Hiroshi kay Kana na tulog pa rin hanggang ngayon at doon ko lang na-realize kung bakit niya ipinakita sa amin 'yon.,neutral
+May inabot naman siyang papel sa amin at nalaman namin na nakapag-usap na pala sila about that bago pa naging ganito ang kondisyon ni Kana.,neutral
+Bigla tuloy akong napaisip kung paano sila nag-usap nang matino dahil may signed agreement pa sila.,neutral
+"Hiroshi carefully put his invention on her head and we waited for her memories to be projected. According to him, there's a high probability that she's dreaming about what happened to their village, especially after that encounter with the Reaper and Elites.",neutral
+She was conversing with her Dad as they walked along the street when a sudden explosion brought everything into chaos. Houses and offices were in ruins.,neutral
+Bodies scattered on the ground. Screams of anguish and bewilderment.,neutral
+They weren't prepared and were still trying to analyze what was happening when several parts of the Black Dimension opened. Shinigamis came and started fighting and killing the Hansen clan.,neutral
+"""Then this makes things easier,"" Hiroshi added.",neutral
+"""Right,"" Hayate agreed. ""We still need an S-Class criminal and he's one. If we captured him, Shinigamis might come for him and we could have an Erityian criminal. We could finish our fielding by then.""",neutral
+Napatingin kaming tatlo nang marinig namin ang boses ni Kana. She was finally awake but she kept her gaze on the ceiling.,neutral
+"""Do you have a plan.""",neutral
+Hayate came back after a few hours. He sneaked into the campus to connect the Intelligence department database to our servers so we could find our targets easily.,neutral
+I see. Kaya pala gano'n ang reaksyon niya noong nakita sa cctv sa una naming case si Ariel. She had been tracking her the moment she got in the FBI but that guy was always one step ahead of everyone chasing him.,neutral
+We wore the contact lenses that directly projects the readings on Hayate's program and headed out.,neutral
+Malalim na ang gabi at paniguradong mas mahihirapan kaming kumilos pero mas magandang ngayon na kami umatake kaysa hintayin pa namin ang umaga.,neutral
+Habang tumatakbo kami papunta sa mga lugar na maaaring magbukas ang Black Dimension ay hindi mawala sa isip ko si Ariel Andrada.,neutral
+"""I mean, he's just one middle-aged man and he seems like the type who can't win a physical 
+confrontation. I wonder how he survived both the FBI and Shinigamis.""",neutral
+"A sharp, prickling sensation crawled onto my skin and my blood felt boiling that I almost passed out. The only time I felt this exhausted while tracking the Black Dimension was when Elites and most probably Royals came out of it.",neutral
+"According to Kana, Takeshi was the commander of the attack in their village.",neutral
+Nakita rin namin siya sa memories ni Kana pero noong huli nilang encounter ay hindi siya nakilala ni Takeshi.,neutral
+"They were focused on finding the heir and Ariel Andrada, the humdrum who suddenly almost revealed the existence of our race. Kana was also already unconscious when they appeared in front of us.",neutral
+"""Yutomu,"" Hiroshi said. ""They probably investigated the death of Doreen Doras and saw the same clues.""",neutral
+Pagkarinig ko no'n ay bigla na lang may sumabog malapit sa amin.,neutral
+The explosion caught Takeshi's cloak and it could have damaged his limbs if he hadn't moved back to the Black Dimension.,neutral
+Napatingin ako sa paligid dahil wala naman akong naramdamang Shinigami bukod sa kanya.,neutral
+I couldn't quite understand what was going on.,neutral
+Takeshi wanted Kana to tell her about the heir because he learned that she was a Hansen member.,neutral
+"Hindi ko rin alam kung may alam ba talaga si Kana at hindi niya lang sinasabi sa amin pero nasa kanya na 'yon kung ano ang magiging desisyon niya. After all, that was her clan's legacy.",neutral
+Elites were really hard to deal with.,neutral
+We were just fighting him for a few minutes but I already felt exhausted. He could utilize his skill as well as the Black Dimension efficiently even while facing three opponents.,neutral
+"He was just wearing black shirt, jeans and cap, and I wasn't sure if that was the suit he was talking about.",neutral
+"Meanwhile, Ariel was having a hard time keeping up with us. He was breathing heavily after continuously attacking Takeshi with his explosives. However, he successfully evaded critical injuries by using the Black Dimension as his escape and ambush routes.",neutral
+"For the past few years, Ariel Andrada's image has always been a middle-aged muscular man.",neutral
+He was seen on cameras and recordings a couple of times and those became leads for the intelligence agencies to his current location.,neutral
+They didn't know it was a carefully planned trick.,neutral
+"And tonight, we saw his real appearance.",neutral
+I didn't exactly know the whole plan but Kana and I had only one job: attack and tire Takeshi until we seal his movements.,neutral
+There were times when he tried to drag us inside it and I almost passed out when my arm went through it but Kana helped me survive. And I did the same thing to her.,neutral
+Hayate succeeded on putting the headgear on Takeshi's head but Kana and him weren't able to escape his last swing.,neutral
+"I remembered that headgear. It was the device that almost drove me insane when I was a child. And just as expected, an Elite was as susceptible as us from its effects.",neutral
+It took me a while to understand what he meant. Hiroshi's holographic strings came into view and bound the two.,neutral
+"Hayate slowly stood up and once again summoned something—a huge cubic container, large enough to contain both of them . . . and the impact of the explosion.",neutral
+His time had finally stopped.,neutral
+And the ticking of her clock had finally come to an end.,neutral
+Naghintay ako kung maririnig ko rin si Kana pero walang nangyari.,neutral
+I guess she was being handled by the President and the Council since her identity as a Hansen clan member was revealed that night.,neutral
+"Even though we were close to him when we were still toddlers, his position as the President of the school and the leader of the tribe put him on a higher ground and made him distant and unreachable.",neutral
+Tumabi naman agada ko kay Kana at umupo sa harapan namin sina Hayate at Hiroshi.,neutral
+"On the other hand, Sir Hideo sat on the chair between the couches, facing the four of us.",neutral
+Sir Hideo told us the gist of the meeting between the professors and the Council.,neutral
+"Pagkatapos no'n ay umalis na rin kami sa office niya pero bago pa kami makalabas ay may inabot siyang notebook. Upon closer inspection, I realized it was a journal.",neutral
+"Agad naman siyang kinuha ni Ma'am Michiko dahil iyon ang ""punishment"" niya.",neutral
+"He has to perfect the summoning of the weapons and since the concept was extracted from Ma'am Michiko's sixth sense, she said she would help him just like how she helped her mother with the prototype of that project before.",neutral
+"""Your real name. You haven't told us that yet.""",neutral
+"""Oo nga no?"" I commented.",neutral
+"""I do not have one,"" she said and that made me more confused.",neutral
+"""Ah, those kids are looking at us,"" sabi naman ni Hiroshi kaya napalingon ako.",neutral
+Mutation. Genetic drift. Natural selection.,neutral
+A single change. A course of evolution. A lifetime effect.,neutral
+"For centuries, these new species of humans, albeit shrouded in mystery and secrecy, had been the overlords of the world and the humdrums. Perfectly blending in with the normal humans, they have saved and destroyed civilizations and lives.",neutral
+"By the end of the 19th century, these unique speciation of humans were known within their own race as Erityians—a name befitting of their origins and capabilities—the children of the special blood.",neutral
+"In the early1500s, the Miyamoto family, one of those who settled early in the South of Ezo, was shunned by the people and feudal lord because the head of the family, Miyamoto Saitō, refused to commit seppuku after his master died.",neutral
+"He reasoned that he saw his master's killer from a distance, and he must avenge him before taking his own life. However, his fellow samurais and retainers did not believe him as they were surrounded by forests.",neutral
+"His samurai status was degraded to a rōnin and they lost their lands and fief. For several decades, the main family lived quietly in the suburbs and endured and lived in shame brought by Saitō's status and were often the subjects of taunting and ridicule by neighboring villages.",neutral
+"""Is it because we are living in the outskirts?"" asked Ryō.",neutral
+"That night, two lives were claimed by the power of the gods.",neutral
+"""Ah!"" Ryō exclaimed when they arrived home. ""Perhaps it is because of father's peculiar eyes?""",neutral
+"""Do you think father has a foreign blood?"" Ryō asked his older brother while they were lying on their bed.",neutral
+"Shō met his brother's gaze. ""Because of his eyes?""",neutral
+"Ryō nodded. ""People are saying we have tainted the code of honor. I wonder if it is because father and our predecessors have foreign blood.""",neutral
+"With a swift swing of his left hand, their shadows expanded. The next thing they knew, they were already falling into it.",neutral
+"That night, a monster was born, but not from Shōtarō's feat, and would be known in the next few years as the Shinigami—the grim reaper.",neutral
+Shō was in a stupor when he opened his eyes. He remembered hitting his head on a rock while trying to secure his brother's safety. His surveyed the surroundings and realized they were in the forest. His brother was lying a few meters away from him and he scrambled his way to him.,neutral
+"""We should rest for now,"" he told his brother.",neutral
+"""Brother, your eyes have changed,"" he commented with a deadpan expression. ""It's lighter than usual.""",neutral
+"Never did he think about what was outside of their land. After all, they were in the early stages of closing borders under Sakoku policy, and anyone who dared attempt to get outside was punished.",neutral
+"""Do you want to see the world?"" Shō asked.",neutral
+"Ryō remained impassive. ""What for?""",neutral
+Shō had always had an insatiable curiosity since he was a child.,neutral
+"They lived in the forest for several days, sometimes, going back furtively to their old house to salvage anything that could help them survive. Of course, the villagers painted them as monsters, after discovering several dead bodies in their own homes.",neutral
+"Weeks had passed and just like what Ryō had said, the villagers did not come for revenge. They depended a lot in the forest for food and other necessities as they did not want to set foot on the village beyond them.",neutral
+"Their abilities were starting to develop, too.",neutral
+"Shō knew that their father went decrepit because he suppressed his power to evolve, and without letting it manifest, it started corrupting and eating up his body.",neutral
+Shō would always feel disoriented whenever he opens his eyes. Everything seemed to be magnified and extended.,neutral
+"He felt like he had eyes all over his body. And because he could see such great distance, he could also tell what could happen before it takes place.",neutral
+"""It's okay,"" he said. ""Just imagine the forest. The place where we built a shelter to escape from them before.""",neutral
+His power was similar to their father's. He could create gateways through something's or someone's shadow by touching it.,neutral
+"However, he should also know the place where they wanted to end up. The first time he did it, they broke several bones after freefalling from the top of the trees.",neutral
+"It had been an hour since they were on the run. The forest was surrounded, hence, they had no choice but to traverse the village and hoped to hide and start a more reclusive life in a nearby village.",neutral
+"Shō moved forward and shielded both of them, but Ryō knew he would not fight and would rather sacrifice himself to let him escape.",neutral
+"""Brother, you asked me if I wanted to see the world.""",neutral
+"And that night, the two brothers went their separate ways—one to see the people and the world, the other to annihilate them by his sword.",neutral
+"On top of the strong waves rocking the boat violently, the cold wind also felt like a thousand needles prickling through the skin. Winter was harshly felt on the dark, raging sea, but Shō was not bothered by it.",neutral
+"The merchants' vessel was not as large as the ships he had seen at the port, but it was enough to house thirty to forty people. The lamps near the mast were the only source of light, but the sea fog obscured every view possible.",neutral
+"He scrunched down near the rails, away from the merchants' quarters, veiling himself with a dirty mantle used to cover some of the wooden boxes on the deck.",neutral
+"For days, he had traversed the mountain range. He had no problem with food as he knew how to hunt and the forest was abundant of fruits and edible leaves. On his fifth day, he encountered a life-threatening situation—he got surrounded by indigenous hunters.",neutral
+It was hard to cut hack off the thick log of the cage but he had no choice. He couldn't stay here as a captive. He promised his brother that he would explore the world and come back.,neutral
+"With a stronger resolve, he finally cut two of the wooden rails, allowing him to slip out of the cage.",neutral
+He silently steered clear of the villagers' huts and ran away to the deeper part of the forest.,neutral
+"The kid explained that in their culture, wolves are revered as gods and killing them is forbidden. He said wolves would not attack humans unprovoked, and most of the times, would be wary of them.",neutral
+"Their village had never been attacked by wolves before, but there were instances where they would hang around the borders because they could smell food.",neutral
+"The villagers would offer portions of their hunt to them, and sometimes, wolves would do the same by not devouring their preys whole.",neutral
+"""I have been meaning to ask,"" Shō said after the kid explained the relationship between his tribe and the wolves, ""why are you following me?""",neutral
+"Shō was still disoriented. He felt like someone just drilled a hole on his head. It was hard to go against what his mind was telling him to do, but that saved him from whatever the kid was planning.",neutral
+"""Ishida,"" Shō blurted out as they started walking again.",neutral
+"This time, he wanted to be a leader.",neutral
+"""Shinji,"" he announced. ""I am called Shinji.""",neutral
+"Being with Ishida made the journey through the forests and mountains easier. He knew where to go and the places to avoid. In just a week, they reached the border of the island.",neutral
+"Ishida nodded. ""You cannot protect yourself just by running away, especially when danger is always looming. Sometimes, you have to toughen up.""",neutral
+"""I am not sure how or why, but this peculiarity may be an index of our . . . abilities.""",neutral
+"""You may be right. Ah, I don't know your abilities yet.""",neutral
+"Few hours later, they reached the harbor. He was thinking of ways to get to Ruthenia, the largest landmass in their continent. He had heard about the country from merchants his family had talked to when they were still working at the port.",neutral
+"The ground was already covered in a foot-deep snow and despite the two growing up in winter islands, the icy wind was something their bodies could not ignore. He spotted a bear and got envious of its fur but he was taken aback when Ishida attacked it by himself.",neutral
+They were walking for several hours already and the snowstorm was just getting stronger. They did not want to stay in the mountains during the storm so they decided to take the empty roads nearby since there was no way someone would be travelling in this state.,neutral
+"Ishida, on the other hand, was skeptical of the girl. He knew she was like them the moment he tried to peer into her mind. Just like Shinji, she was able to block his intrusion and even projected her own destructive thoughts, overwhelming him.",neutral
+"""How are you?"" Shō asked Ishida while pointing at his own temple.",neutral
+"""I am fine now,"" he answered. ""What is your plan, Shinji?""",neutral
+"""We need to move.""",neutral
+They did not know how many hours had passed. It was already dark when they realized they still hadn't eaten anything. Ishida was about to hunt for food when the girl tugged Sho's cloak.,neutral
+She showed them a small pouch and it turned out it was full of pennies. The two was not sure if that was hers or she just got it from those people but the money would help them a lot.,neutral
+They left her town and managed to earn some money through physical work.,neutral
+Her intuition was also right. They were cut from the same cloth.,neutral
+"Ishida came closer. ""Do you like your name?"" he asked.",neutral
+"Little did he know, the journey he was about to take would give birth to one of the tribes of their own race.",neutral
+"With their striking green eyes, sharp senses, and shrewd insights, Shinji's group became known as the Senshins.",neutral
+The smell and stains of blood were not unfamiliar to Ryō.,neutral
+"Born in a war-torn land and ostracized by their own village, he learned that people are just animals with a more evolved brain.",neutral
+Ingrained in their minds were the primeval instinct to hunt and kill for survival.,neutral
+The village had turned into a gruesome nightmare.,neutral
+A lone man walking and knocking on doors with his bloody katana had taken lives as a retribution.,neutral
+"That night, it was as if the god of death was there.",neutral
+Ryō walked toward the dead man's body and pulled his katana out of his head.,neutral
+"It was an unexpected discovery, but she learned that she could control the force exerted to an object or person. She could attract and repel matter, and sometimes could even expand and contract them.",neutral
+"But for a second, he wondered if keeping her conscious a while ago was the right choice.",neutral
+"Ah. It must be her ability, he thought, and he was taken aback by how it felt normal to associate strange abilities to peculiar people now. Perhaps because he had seen how her eyes flickered from dark brown to amber that night. No normal person could do that.",neutral
+"""Are you going to stand there all night?"" Ryō asked.",neutral
+"The guy motioned at the leftover meat beside her. ""Eat it.""",neutral
+"""If it isn't impudent, my lord, may I ask you your name?""",neutral
+"""Ryō,"" he replied. ""And you?""",neutral
+"Before she could even react, Ryō lay on his makeshift bed, facing away from her.",neutral
+"She was persistent on staying as a servant, refusing to call his name, or acknowledge that she was a free person now. It took her two months to finally let go of his appellation, and gradually became more comfortable of talking to him.",neutral
+"He was waiting for Yoru, who went just near the border to gather food, but it was already getting late. Ryō was about to fetch her wherever she was when she emerged from the woods with blood trailing behind her.",neutral
+"He immediately opened the portal but he did not know where to go. They must have already been surrounded and soldiers would be rounding the forest, too. Desperate, he thought of the port. Perhaps they could steal a boat and escape through the sea.",neutral
+"He did not understand what she meant initially, until she shifted her gaze from him to the darkness around them.",neutral
+"When he went out of the dark realm Yoru had created out of his portals, a gruesome scene came into his view. The people who lived with them were slaughtered like animals.",neutral
+"As soon as he stepped out of his village, everything was in havoc. Blood was spilled. Countless bodies littered the ground. Villages reduced to dust. To the people who witnessed his atrocity, he was death personified.",neutral
+"If humanity would name its greatest enemy other than itself, it would be nature.",neutral
+"The adversarial relationship between man and nature had been the cause of several destructions, even almost extinctions, on both sides, but what drove both to stay around was their abilities to quickly adapt. Life would always evolve to ensure survival.",neutral
+"Yllka respected the tales, but she found them hard to believe, especially after what the rivers and waterfalls turned into.",neutral
+"Her father would take her here when she was younger, telling the same stories she had heard a hundred times from her mother. The higher peaks had become her place of solace, especially after her father passed away.",neutral
+The elders had no choice but to confine her at home. She could not go outside anyway because people would always look at her curiously.,neutral
+"It turned out every village was hiding their own breed of ""monsters,"" with some manifesting it years ago. They just kept it within their respective communities because having the ability to channel nature's powers had its own risks.",neutral
+"For some reasons, they started treating her like a god.",neutral
+"She was hoping nothing would go wrong until she was ready in every aspect, but a series of incidents forced her to fight.",neutral
+"""Fjahr just came back from the borough below,"" one of them responded. ""He said he heard the soldiers preparing for a conquest.""",neutral
+They had already lost half of their domain after the emergence of Renaissance.,neutral
+The extravagant structures built during its early era forced their previous generations to live in the less habitable regions in the mountains.,neutral
+"Due to the rapid increase of the urban settlers' population and the scale of their architectures, those people must have wanted to expand their dominion.",neutral
+"""Breathe,"" Ivankov said.",neutral
+"Their ambush was successful as the soldiers broke their formation as soon as they entered their homeland. Krudj used the wind to send her comrades to strategic places and battle the enemies. Those who could control trees, water, and ground entered the fight, too.",neutral
+"She just used her power for a few seconds, but she couldn't move anymore. Every part of her body was sore and her head felt like it would explode in any minute.",neutral
+"Her throat was so hoarse she couldn't even finish her sentence. Before her consciousness seeped away, Casmir's figure appeared in front of her, his hand extended.",neutral
+"Years later, villages formed a single community. Harjas were then renamed as Huntres, the strongest hunters and fighters with innate power of nature in them.",neutral
+Intelligence had always been the reason for humanity's evolution.,neutral
+"Ethedred, her mother, was trained to be an espion, as their family was from a long line of reconnaissance experts, but she had to retire early due to the complications from her condition. The advisors suggested she was not fit to be an espion because of her striking physical appearance, and her worsening vision.",neutral
+"She would quietly watch Ethedred do her routine and somehow, she realized the moves were quite easy to mimic.",neutral
+"Edda also got more curious about the nature of her job as an espion. She wondered if she could be like that in the future, too.",neutral
+"Edda's interest with espionage and strategic operations greatly increased after several months of listening to her mother's stories. She also learned that her parents did not teach her anything when she was a child because they wanted her to live longer and normally. But for her, following their footsteps was already inevitable.",neutral
+A curious look crossed her mother's face. Her comment must have intrigued the latter because Ethedred turned to her direction despite only seeing a faint silhouette with her worsening vision.,neutral
+"Her mother, albeit her weakened body, tried to execute advanced movements, and asked her to copy it. Just as Edda had expected, she could master them in several tries.",neutral
+"Ethedred seemed convinced that she was, indeed, someone who had broken the limits of a person's mind and body.",neutral
+"She had been traveling up north for months, hoping to find Gosse, her father, after years of being away. It was one of the reasons why he wanted to be an espion, aside from the fact that she had to convey her mother's message to him.",neutral
+"From the limited knowledge she got for the past few months, she was aware that his father had been serving this land for quite some time and this looming mayhem might finally force him to emerge from his cloak of obscurity.",neutral
+"Despite being relatively new to the group, she had become the center of attention because of her strange eye color—light brown and orange hues surrounding her irises. The members even had a sobriquet for her—dyr, which translated to beast or monster.",neutral
+"""An edict of extreme importance has been imparted,"" Kiraj, the guild leader, announced.",neutral
+"They were immediately dispatched to their targets' expected locations. Edda knew that his father, being the ever crafty espion that he was, would likely escape this trap, unless something unexpected happened.",neutral
+"She knew what her father was talking about. It was one of the fundamental rules in espionage, and the right option to pick, yet his words wouldn't get through her mind.",neutral
+"The poison running through his veins had severely weakened his attacks, giving her the chance to deal the fatal blow . . . but she could not do it.",neutral
+"She was not sure if it was just her imagination, but she heard her father's voice inside her head.",neutral
+"""You are awake.""",neutral
+"""Are you one of Casimir's people?"" she inferred, judging by how he knew her father, yet he did not eliminate him.",neutral
+"""Rather than them using and controlling us, we shall keep a tight rein on the passage of knowledge and information and let them seek us. Perhaps that could also reduce the chances of betrayal and death."" She paused and stared back at him.",neutral
+"""From what I have gathered, there are three prominent religious factions in the land: Catholics, Lutherans, and Calvinists,"" Frida Heren, whom Shinji had given a new name, Kiku, reported.",neutral
+"""The Empire lacks central authority; hence these factions sought to destabilize it and expand their own territories.""",neutral
+"""Lord Shinji,"" Ishida called once the counselors left. He had told Ishida to address him as Shinji, but the kid was stubborn.",neutral
+"""What is it, Ishida?""",neutral
+"After nights of discussion and planning with the counselors, they had finally secured an escape route to Amerigen, the nearby continent. Natsue helped him explain the operation.",neutral
+Something hit his nape and his vision blurred. The last thing he saw was Ishida carrying him and Natsue leading the way.,neutral
+The other counselors agreed in unison.,neutral
+"Before the meeting got adjourned, a messenger knocked on the door with a letter on his hand.",neutral
+"He felt a familiar presence nearby. Upon recognizing Isamu, one of his top vassals, he willed the darkness to bend and create a door.",neutral
+"""Our scout reported about the preparation of Yamato-sama's samurais.""",neutral
+"""How many soldiers are they planning to send?"" he asked.",neutral
+Ryō knew that samurais were loyal to their master and would do anything to fulfill the latter's wishes.,neutral
+"As soon as the moon rose, the feudal lord's samurais and retainers marched toward the direction of the village.",neutral
+"Two samurais, whom he assumed to be the strongest based on their armors and katana, guarded Yamato.",neutral
+"""By morrow, I want good news,"" Yamato told one of the samurais.",neutral
+"He did not want to use his power yet, but he had to. In the shadows, he would have an upper hand. With a deep breath, he attacked again, knowing that the three were still stunned at how he just disappeared.",neutral
+"His gaze shifted to the daimyo and the remaining samurai. With blood dripping from his sword, he slowly walked toward their direction.",neutral
+"""If you have already decided, wait for me outside.""",neutral
+"With a swift slash, the daimyo's head rolled on the floor, and his home was bathed in his blood.",neutral
+"Isamu, Yuma, and Genkei, the former retainer of the deceased daimyo, all drew their katanas, but Ryō gestured them to halt. For some reason, the veiled intruder was masking his true presence.",neutral
+The gray wolf's coat draped around Yllka's shoulders felt heavier as soon as she stood in front of the other clans' harjas.,neutral
+"After their emergence—individuals with abilities channeling the powers of nature—they were elected as protectors, and later elevated their status as their respective clans' chiefs, while the previous chieftains became advisers.",neutral
+"They had agreed on sharing the uninhabited areas in the mountain range, but there had been differences of opinions over staple-abundant places bordering the villages. Some wanted priority given to the villages near them while others wanted equal rights.",neutral
+Most still wanted territories and resources only for themselves.,neutral
+"She studied him closely. ""May I know why?""",neutral
+"She dreamt of a united nation, a shared land, for everyone. They needed one another and figuring out the differences would be the only way for everyone to partake in the solidarity.",neutral
+"""How about we make the rainforest a common hunting ground?""",neutral
+"The people started to build a temple in their common ground, hvítr, as a symbol of unity, representing each tribe's traditions and their respective chief's powers.",neutral
+"""My name is of little importance, but my master wants to talk to you,"" he said.",neutral
+"""Master?""",neutral
+"""Chief.""",neutral
+"Morgan, a skilled mercenary whom she encountered during a classified mission, walked toward her direction. ""I have delivered your message to the blue-eyed people.""",neutral
+"It was not hard to identify one as they had an aberrant feature—crimson eyes that seemed to reflect blood. But what she did not expect was the existence of other people who shared the same peculiarities, but differed features in their irises.",neutral
+"Their very existence attracts chaos. Sooner or later, it would affect the world in a much larger scale.",neutral
+The time had come. The true rulers shall finally meet at the center of the world.,neutral
+Their conversation was put to a stop when another series of waves hit the islet. They were slammed with hundreds of gallons of water and almost thrown into the ocean.,neutral
+"""Is this truly the center of the world?""",neutral
+"""The lord of the harjas,"" Morgan remarked. ""You have arrived.""",neutral
+"She saw the red-eyed man who intruded into their village, and another who seemed to be gauging them, but what caught her attention was the woman standing between them.",neutral
+"Their attention suddenly shifted to the new presence they had sensed. From a distance, a boat was sailing toward their direction.",neutral
+A portal appeared on thin air and Yuma and Isamu went inside. Ryō was about to enter when he heard Shinji's voice inside his head.,neutral
+"Minsan na lang namin makita 'yung trio—sina Ms. Reina, Sir Hayate at Sir Hiroshi dahil kapag umuuwi sila sa campus ay agad-agad din silang umaalis.",neutral
+Napasilip ako saglit at may apat na lalaki na doon sa loob ng building at umakyat sila.,neutral
+Sinundan ko siya at nagsimula kaming umakyat sa hagdan. Then pagdating namin sa fifth floor ay lumabas kami at ginamit namin 'yung tagong elevator. Nakita na kasi ni Hiro kanina sa lobby 'yung plan ng buong building at nakabisado na niya.,neutral
+"""Mamaya na lang. Kailangan ko pang pag-aralan 'to,"" sabay taas ni Akane doon sa makapal na librong hawak niya.",neutral
+Nakakalat sa kama ngayon 'yung mga librong may ancient text at tinatranslate ko sila isa-isa. After months of deciphering and decoding them ay nalaman na namin ang codes para sa bawat symbol na nagcocorrespond sa letters.,neutral
+"Si Akane kasi ay nagfofocus ngayon sa pag-aaral ng interpretation ng sounds na ginagawa ng tao. Although hindi pa ganoon kadeveloped ang sixth sense niya to the point na pati 'yung breathing, pulse at heartbeat ay naririnig niya, ay nagsisimula na siyang mag-aral tungkol doon.",neutral
+"Si Riye naman, may mga inuwing books galing sa clan niya para maging Shinigami tracker.",neutral
+Doon ako dumaan sa kung saan ako hindi makikita habang nagtatago ako sa likod ng buildings at puno. Hanggang sa makarating na ako sa gubat.,neutral
+"""So you’re also here.""",neutral
+Umakyat din siya sa hill at umupo siya sa tabi ko.,neutral
+"""So that means, nagfefade ang ibang thoughts ng Dad mo? Pero sa’yo, nagsstay."" Combination nga ng sixth senses ng parents niya. Siguro 'yung permanent memories ay galing sa Mama niya.",neutral
+"""Ito ba 'yung pinag-usapan niyo ni Hiro kanino about sa right time?""",neutral
+"""Yeah. At kailangan kong magsama ng dalawa.""",neutral
+"""So si Hiro at ako. Well ang sixth sense namin ang pinakaeffective na gamitin pagdating sa meetings and assembly. So hindi 'to alam ng Papa mo?""",neutral
+"""Sabi ni Hiro, si Yllka daw ang isa sa founders ng Huntres tribe along with Ivankov. At ang shrine niya ay located sa Romania.""",neutral
+Nung 5 AM na ay niligpit na namin ni Akane lahat ng books at ginising na rin namin si Riye. After that ay nagprepare na kami para sa class namin at nakasimangot si Akane nung lumabas kami ng kwarto.,neutral
+"Napatingin ulit ako doon sa dalawa. Akala ko kung anong libro, medical pala. Kung siguro nasa labas sila ng Tantei High, aakalaing fiction book ang pinag-uusapan nila.",neutral
+"""Nasabi mo na kay Akane?"" tanong niya naman at tumango ako.",neutral
+"""Mmm. Nadiscover niya pa ngang nasa gitna ang Yllka Shrine ng major bases ng bawat tribes.Though, mukhang ikaw ay alam mo na kaagad.""",neutral
+Minsan napapaisip ako kung kasing-edad ba talaga nina Papa at Mama si Ma’am Michiko.,neutral
+"Pinagwarm-up muna kami bago namin sinummon ang weapons namin. Ang training ko ngayon ay matarget ang moving objects. Nagsummon si Ma'am ng tatlong shuriken, according sa kanya. It has four pointed blades at may butas sa gitna. Weapons daw 'yun from Japan. Ang kailangan kong gawin ay matamaan ko 'yung butas sa gitna at ma-pin 'yung shurikens sa pader.",neutral
+May iba’t ibang trainings din sina Akane na bagay sa weapons nila. Sinabi kasi namin kay Ma’am Michiko na gusto naming taasan ang level ng PE class namin kaya siya mismo ang nag isip ng training routines namin.,neutral
+Nagsuot kami ng cape at lumabas kami ng dorm. Dumaan kami doon sa way kung saan walang makakatrack sa amin papuntang gubat. Dumiretso kami doon sa hillside at nakita namin si Hiro sa tuktok.,neutral
+"Nakatayo sa likuran ni Hiro sina Ma’am Reina, Sir Hayate at Sir Hiroshi.",neutral
+"""Here,"" sabay abot ni Hiro ng coat. Pagtingin ko ay nakasuot na sila ni Akane ng coat.",neutral
+Nagpaalam sa amin sina Ms. Reina at lumipad ulit 'yung plane kaya humawak ako sa trunk ng puno dahil sa sobrang hangin. After that ay nagsimula na kaming maglakad. Ginamit ko ang sixth sense ko para tignan ang paligid.,neutral
+Naintindihan kaagad namin iyon kaya pumunta kami kung saan nakaturo ang arrow. Naalala ko bigla 'yung sinabi ni Hiro dahil sa nabasa namin sa bato. Si Yllka ang isa sa founders ng Huntres tribe.,neutral
+"Actually, gusto kong pag-aralan ang History ng Erityian race pero hindi ko magawa dahil sa dami ng mga nangyayari.",neutral
+Sa loob ng bahay ay may lumabas na dalawang babae at pumwesto sila sa magkabilang gilid nung kausap kong Huntres.,neutral
+They are the representatives of the Custos tribe. Hindi ko sila masyadong nakita noong war pero parang pamilyar sila. Siguro ay nakita ko silang makipaglaban that time kaya tumatak sa isip ko ang image nila though ngayon ko na lang ulit naalala.,neutral
+"""You're all here.""",neutral
+"""Now that we're all here, let's start the meeting. We have so much to talk about.""",neutral
+This will be the start of the new generation.,neutral
+"""One of our founders, Yllka, used to live here before being labeled as an Erityian. After her death, they built a shrine in honor of establishing the Huntres tribe."" sagot ni Krystal.",neutral
+Napag-usapan namin 'to ni Akane at narealize namin habang nakatingin kami sa mapa na nasa center nga ang Romania ng bases namin. Nagkataon namang may shrine dito si Yllka kaya dito kami nagkita-kita.,neutral
+Sinarado ko kaagad nang mabuti ang isip ko. Napag-isip-isip ko rin kasi na may point si Nel. Both Shinigamis and Huntres depend mainly on their sixth sense and attributes. They can easily use their overwhelming abilities to fight and survive.,neutral
+"Naaalala ko pa ang panahon na 'yun. A man ang woman with red and blue eyes, respectively.",neutral
+Now I know kung bakit nagpasama siya ng dalawang colleagues. Siguro nahulaan niyang ganito ang mangyayari kapag kaming apat lang ang nagkita-kita pero dahil sa mga kasama namin ay nagbago ang mood.,neutral
+Nilatag ni Darwin ang isang Asian Map at tinuro niya kung nasaan ang Hokkaido sa Japan.,neutral
+"""Who's your mother?"" tanong ni Darwin.",neutral
+"""I think I've heard that name before.""",neutral
+"""I agree,"" the guy behind Nel added.",neutral
+Naglakad siya palayo kaya tumalikod na rin ako at hinanap ko sina Hiro at Akane. Nakita ko naman kaagad sila kahit 500 meters ang layo nila sa akin.,neutral
+"Makikipagtalo pa sana ako pero nung narinig ko ang salitang sleep ay lalo akong inantok. Pumikit ako at ilang segundo lang ang lumipas, nakatulog na ako kaagad.",neutral
+Iniscan ko lahat ng handouts at nakakahilo ang dami ng mga pangalan ng parts bawat systems.,neutral
+"Ang tagal na panahon na rin ang nakakalipas simula nung narinig ko ang boses niya na tinatawag ako sa pangalan ko. Bukod kina Darwin at Papa, siya lang ang tumatawag sa akin nun.",neutral
+Hindi ko alam kung anong irereact ko dahil biglaan lang ang pagkakasabi nila. Ni hindi ko nga alam kung bakit kami ang sasama sa kanya at kung ano ba talaga ang mission niya.,neutral
+"""We just drank . . .""",neutral
+Sabay na kaming naglakad papunta sa dorm. Pag-akyat ko sa room namin ay nandoon na sina Akane at Riye na mukhang kanina pa ako hinihintay.,neutral
+"""Hindi ko rin alam.""",neutral
+"""Wear your contact lenses,"" biglang sabi ni Mama kaya naman agad naming nilabas ang eyedrops.",neutral
+"Sa pagkakaalam ko ay nasa Narita Airport kami ngayon at kailangan naming magbook ng flight sa kalapit na airport dito sa Tokyo, which is the Haneda Airport, dahil doon lang may flight papunta sa Nakashibetsu Airport na pinakamalapit sa Nemuro, Hokkaido kung saan ang base ng Shinigamis.",neutral
+"Agad kaming sumakay ng cab at si Hiro na ang kumausap doon sa driver, habang ako ay tumingin ulit sa direksyon ng Mama niya.",neutral
+Sumunod siya sa amin at nauna na kami ni Hiro papunta sa loob ng eroplano. Inabot ni Hiro sa flight attendant 'yung tickets namin at nag-usap sila in Japanese kaya hindi ko naintindihan.,neutral
+"""Let's go, then."" Tumayo kami pareho at nagsimulang maglakad kahit hindi namin alam kung saan pupunta.",neutral
+"""You really look like her,"" sabi naman nung lalaking katabi niya and for a second ay akala ko si Darwin ang nakatingin sa akin. He must be his father.",neutral
+May mga sinabi pa sila pero hindi ko na 'yun pinakinggan.,neutral
+"""Saan na tayo pupunta ngayon?"" tanong ko naman habang naglalakad kami.",neutral
+Napahinto ako sa paglalakad dahil sa dami ng tumatakbo sa isip ko. Nakita ko namang huminto rin si Darwin at lumapit siya sa akin.,neutral
+Tahimik lang kaming naglalakad at hindi ko alam kung ilang minuto na ang lumipas.,neutral
+Nilibot ko ang paningin ko sa kwarto kung nasaan kami ngayon at narealize kong isa pala 'tong medical laboratory.,neutral
+"""Do you have any idea?"" tanong ko sa kanya about sa password pero umiling siya.",neutral
+Natahimik kaming dalawa at pareho kaming nag-isip kung ano ang possible password para sa folder na 'to.,neutral
+"""Yes.""",neutral
+"""Sinong namamahala ng lab na 'to?"" tanong ko.",neutral
+"""What's her name?""",neutral
+"""Saeko. And she's one of the Elites of Riko, your grandmother.""",neutral
+"""I think the password is a japanese term."" Bumalik naman ang isip ko sa nangyayari ngayon nung narinig ko si Darwin at tumingin ulit ako sa screen.",neutral
+According sa text sa baba ng dialogue box ay 8-letter word ang password at naisip ko ring japanese term 'yun dahil mas inclined ang Shinigami sa japanese culture.,neutral
+May sinaksak si Darwin na kakaibang drive sa computer at tinransfer niya ang data at files na kailangan namin.,neutral
+Tumahimik ulit siya habang ako ay tinabi ang chip sa bulsa ng damit ko at tumingin ulit sa nangyayari sa Shinigami base.,neutral
+"They're here,' biglang sabi niya at pagtingin ko ay naglalakad palapit sa amin si Papa at ang Mama niya.",neutral
+"""Nathan,"" tawag ng Mama niya sa kanya. ""Let's go.""",neutral
+Naalala ko naman bigla si Darwin. Hindi na pala ako nakapagpaalam sa kanya. But I think he's going to be busy because his parents will be the ones to lead the new Shinigami tribe.,neutral
+Dalawang araw na ang nakakalipas simula nung araw na 'yun. Dalawang araw ko na ring pinag-aaralan ang laman ng chip na binigay sa akin ni Darwin. The chip that contains information about my mother and eye projects.,neutral
+"Kahapon ay nagdadalawang-isip pa ako kung bubuksan ko ba 'to o hindi, pero nung bandang gabi na at tulog na sina Akane at Riye ay sinaksak ko ang chip sa holophone, a device where you can view any data in 3D or hologram.",neutral
+Nakakapasok na nga rin pala sa Tantei High ang ilang Shinigami para sa truce na nangyari sa apat na tribes. Their representatives can enter the campus using the Black Dimension since we want to prevent them from being seen by the students.,neutral
+Kumuha ako ng jacket sa closet ko at narealize ko na ito rin ang jacket na sinuot ko nung pumunta kami ni Mama dito sa Tantei High.,neutral
+Sinuot ko ang kinuha kong jacket at nilagay ko sa bulsa ang wallet ko.,neutral
+Lumapit siya sa akin at pinatakan ko rin ang mga mata niya. Halatang hindi siya sanay doon dahil gusto niyang kusutin ang mga mata niya kaya pinigilan ko siya.,neutral
+Pagdating namin sa harap ng school ay bigla akong may naalala.,neutral
+"""Dapat pala sinama natin si Riye.""",neutral
+"""Oo pero one batch lower sa atin.""",neutral
+Sayang. Pero mukhang hindi rin naman mangyayari 'yun dahil nasa klase siya at hindi ko naman ineexpect na pupunta si Darwin sa kwarto namin para mag-ayang pumunta rito.,neutral
+"Medyo hindi na ako sanay gamitin ang Lazaro, na maiden name ng mama ni Hiro.",neutral
+"""Oo nga po eh,"" sabi ko at tumingin ako kay Darwin para magpatulong. Baka kasi hindi kami papasukin dahil hindi naman na kami taga-rito.",neutral
+"""Syempre naman,"" sagot naman ni Manong at lumapit siya sa amin. ""Pwedeng pumasok ang Erityians dito.""",neutral
+"""Galing ako sa Querino clan at nagsimula ako rito dalawang taon bago pumasok ang anak ng leader namin, si Ms. Rizelle Querino, para masiguro na magiging ayos ang lahat.""",neutral
+"""Ibig sabihin, alam mo po kung sino ang mga Shinigami na nandito dati?""",neutral
+"""Oo pero nandyan naman si Ms. Janelle at mas may kakayanan siya para gawin 'yun. Nandito lang ako para magbantay at alisin lahat ng threat sa school na 'to dahil na rin sa utos ni Sir Salas.""",neutral
+"""Na-track n'yo po ba kami?"" tanong ko at tinuro ko ang sarili ko pati na si Darwin.",neutral
+Ilang minuto pa naming kinausap si Manong Guard at nalaman naming may ilang Shinigami pala talaga na pumupunta rito para bantayan ang ilang Erityians na nandito.,neutral
+Dumiretso kami sa Principal's office at pagdating namin doon ay nakaupo na sa couch si Sir Salas.,neutral
+"""Sobrang isolated pala talaga natin dati,"" sabi ko sa kanya.",neutral
+"""Yeah. We really don't belong in this class,"" dagdag niya. ""Pero ikaw, nakakapag-interact ka sa kanila kapag may napapansin kang kakaiba tulad nung nangyari kay Tessa.""",neutral
+"But I know I can't go back to this world anymore because the world where I am living now is the place where I need to be, the place where I truly belong.",neutral
+"""Tara na,"" sabi ni Darwin nung nasa quadrangle na kami. ""Baka hinahanap ka na ng mga kasama mo.""",neutral
+Maggagabi na pala at hindi ko masyadong namalayan ang oras. Nagpaalam kami kina Sir Salas at Manong Guard bago kami umalis.,neutral
+"""Ikaw lang ang kinakausap ko dati dahil nakikita ko ang sarili ko sa'yo."" Nalito naman ako dahil out of the blue niyang sinabi 'yun at 'di ko pa rin maalis ang isip ko sa kamay namin. ""We're both outcasts and we really don't communicate with our classmates.",neutral
+Ilang araw na ang nakakalipas nung sinimulan kong basahin at pag-aralan ang lahat ng nakalagay sa chip.,neutral
+"""I'll listen,"" sabi ko sa kanya.",neutral
+"""Memories from the war?"" I asked and he nodded.",neutral
+"""Memories when I was still a kid.""",neutral
+"Naging tahimik kami bigla and for a second, hiniling ko na sana meron din akong sixth sense ni Hiro.",neutral
+"""It's okay,"" sabi naman niya. Reading my mind again, huh.",neutral
+"""He said I should always protect Mom. For him.""",neutral
+Tumayo naman ako at pumwesto sa harapan niya. Umupo ako para maging magka-level kami at napatingin siya sa akin. Hinawakan ko ang magkabilang sentido niya.,neutral
+Tinigilan ko na ang pagmamassage sa kanya at tumayo na ako sabay talikod sa kanya.,neutral
+Bigla namang may nagvibrate sa bulsa ko kaya kinuha ko 'yun. Pagtingin ko ay may message si Darwin.,neutral
+"We're going to have another meeting. This time, bring your most trusted team. Let's see each other at the Yllka Shrine three days from now.",neutral
+"""Magkakaroon ulit ng assembly,"" sabi ko kay Hiro.",neutral
+"""I don't know. Sabi lang ni Darwin, dalhin ko raw ang team ko.""",neutral
+"""Yllka Shire. Three days from now.""",neutral
+"""Okay.""",neutral
+"""What?"" he asked.",neutral
+"""Nothing.""",neutral
+"""Si Kaoru ba ulit ang gagamitin natin papunta sa Yllka Shrine?"" tanong ni Akane habang naghahanda kami para mamaya.",neutral
+"""Yes. Sabi ni Hiro, kinausap na niya raw si Sir Hiroshi about doon and pumayag siya.""",neutral
+"""Nee-san, bakit pala magkakaroon ulit kayo ng meeting?""",neutral
+"""Hindi ko rin alam. Nagpatawag lang si Darwin.""",neutral
+After ng mga pag-uusap namin ay agad ding nakatulog sina Riye at Akane pero ako ay nanatiling gising. Ewan ko pero tuwing gabi ay lagi ko nang naaalala lahat ng nabasa at nakita ko sa chip.,neutral
+Lumapit ako sa kanya at umupo sa tabi niya.,neutral
+"""It's okay."" Napatigil naman ako nung narinig ko 'yun at humiwalay ako sa kanya.",neutral
+"Nagprepare naman ako ng breakfast habang naliligo sila at binuksan ko ang bintana namin. After several minutes, narinig ko na ang pag-akyat nila.",neutral
+"""Bakit ka nagpalit ng pabango?"" tanong naman ni Ken kay Akane na nagpapatuyo ng buhok sa tapat ng electric fan.",neutral
+Hindi kami nag-usap at nagtulungan lang kami sa paghahanda ng mesa. After that ay agad din naman kaming kumain lahat at hinanda namin ang mga kailangan namin sa pag-alis. Mga 6 AM kami nakalabas ng dorm at dumiretso kami sa gubat kung nasaan si Kaoru. Pagdating namin doon ay sinalubong kami ni Sir Hiroshi at inexplain niya sa amin ang auto-pilot system ni Kaoru.,neutral
+Siguro dahil na rin sa kulang ako sa tulog at pagod kaya pagkaupong-pagkaupo ko ay napapikit agad ako at nakatulog. Ginising lang ako ni Hiro nung malapit na kami.,neutral
+"""We're here,"" sabi niya kaya naman nag-ayos na ako.",neutral
+Gemma at Ashley. I think mas bata or kasing-edad sila ni Riye pero mukhang mas bata sila magact at kumilos. Meron ding isang lalaki na nakaupo sa terrace at sobrang cool niyang tignan habang may nagfoform na ice sa kamay niya.,neutral
+"Dahil turn na namin ay nagpakilala naman sina Ken, Riye at Reiji sa kanila. Agad namang hinatak nina Kelsey at Miles si Riye sa isang gilid at nagbulungan na silang tatlo doon.",neutral
+"""How's your tribe?"" Nel asked to Darwin.",neutral
+"Right now, we're just bonded by a truce due to the fight with the main forces of Shinigamis but because the battle has ended, so as our truce. Indifferent ang Erityian tribes sa isa't isa at hindi talaga kami nagkakaroon ng contact or treaties, maliban sa War Alliance ng Senshins, Huntres at Custos na nangyayari lang kapag nasa state of war ang isa sa kanila.",neutral
+"""Yes,"" mabilis na sagot ni Darwin. ""Our current leaders don't trust each other and I think that's understandable because of the problems in their generation.But in our case, it is feasible.""",neutral
+All of us stood up and I remember reading this in a book about the first Erityians—their pledge as a member of the Erityian race. I think we're going to do the same kind of vow.,neutral
+Halos tahimik kami ng ilang minuto matapos 'yun pero agad din namang bumalik sa dati. Nagpunta kami sa kanya-kanya naming grupo at pinakilala ang isa't isa.,neutral
+"""No problem.""",neutral
+"""Yeah. You too. Bye, Darwin.""",neutral
+"""I'm fine.""",neutral
+I placed my hand on his.,neutral
+"""Everything is ready.""",neutral
+"""Is this one a humdrum?"" the guy on the left asked.",neutral
+"According to them, the White Division had been usurped by Pierre, the leader of the opposing faction of my father's regime. He built a guild that followed every word he says and named it Flame Spectre. He took control of the government, the military and the flow of information.",neutral
+I wanted to see even one of their allies.,neutral
+"""Ayos lang ba kayo?""",neutral
+"And that day, I learned the truth about us—the history and power of the Alveria family, the rightful people to rule the Huntres tribe, the strongest fighters among the Erityian race.",neutral
+"""Those with Wind attributes could manipulate the air around, creating some superior mirages,"" he chuckled. ""Nandito na tayo.""",neutral
+"""Yes. You are not yet ready,"" he said. ""But you have to. As the successor of your father, and the inheritor of the strongest Ice attribute, you are destined to command our tribe.""",neutral
+"Isaz led me to a room in the manor and gave me a book about our history. It was written in strange symbols and I had to decode everything for hours. To be honest, I already had an idea about the content after what I had witnessed for the past several years but I started reading it.",neutral
+"Apparently, we are part of a race called Erityian and it is divided into four tribes: the Senshin, Shinigami, Huntres and Custos.",neutral
+"Those who possess elemental powers are part of the Huntres tribe, and the Alveria family has been the ruler of the tribe since our ancestors' time.",neutral
+Isaz said the history and the truth about our powers would be passed down to children either when they reached twelve or when they manifested a bit of their attribute.,neutral
+Reading the books in this room explained a lot of unanswered questions.,neutral
+"""Ayos ka na ba?"" he asked in a gentle tone.",neutral
+"""Starting tomorrow, Riyo, Hilda and I will personally train you,"" he stated.",neutral
+"""Magpahinga ka ngayong araw para handa ang katawan mo kinabukasan.""",neutral
+"""You've lasted for four hours. That's quite a feat given you're still young. But as an Alveria, you need to do better. Now, sleep and recover.""",neutral
+"""That's Gerald.""",neutral
+His gaze drifted to the guy he just called Gerald.,neutral
+"""You need to be more agile, Winter,"" she commented. ""From now on, you have to evade all of my attacks.""",neutral
+"Beads of water formed around him, fluidly taking any shapes and sizes. Riyo looked like the youngest of the three but he was actually the oldest, which made him more daunting than the other two, in a way.",neutral
+"""What were you saying, Winter?"" he asked.",neutral
+"""You two will go with me,"" he said.",neutral
+"""To the border of North Black and East Black. We need to save people.""",neutral
+"Before we could ask more questions, he started walking away and we had no choice but to follow.",neutral
+"It took us almost three hours before we arrived at our destination, and fortunately, we didn't have to hide because there was already a huge crowd gathered near the boundary.",neutral
+"""What do you mean?""",neutral
+It's been three days since we went to the border.,neutral
+"The Huntres were back to their usual business—training their bodies, improving their abilities with respect to their attributes, and monitoring the Flame Spectre's movements.",neutral
+"Leo, who was a weapon provider for the rebellion force, chose to live quietly but he promised he would still lend a hand if needed.",neutral
+"""Winter.""",neutral
+"""What is it?""",neutral
+"""Hilda is calling you.""",neutral
+"I went out of the window and walked with Hale. Looking at him, it looked like he grew at least a few centimeters taller.",neutral
+"When we got to the training grounds, Hilda and Riyo were already there as several children approached them.",neutral
+"""Those who came from a pure bloodline can manifest their clan's attribute in 
+its pure form. Like this,"" Riyo explained.",neutral
+"""We call them veinas,"" Hilda added.",neutral
+"""They say veinas will choose their master, not the other way around.""",neutral
+"""Why aren't you picking your weapon?"" I asked.",neutral
+"""You came from a pure bloodline?""",neutral
+"""Are they?""",neutral
+"My purple eye only lasted for two days and that was after our first day of training. It turned into a mixture of blue and violet, but these days, blue was becoming more dominant. However, it wasn't as light and clear as Isaz and the rest of the most powerful people here.",neutral
+"From the far end of the training grounds, I saw a guy waving a wooden sword. If I remembered correctly, that was Gerald, one of Dad's righthand men.",neutral
+"I walked toward his direction and bowed at him. He doesn't stay in the village, unlike most of the top brass in the force. They said he owns a dojo in the White Division and he was being monitored by the Flame Spectre, so he could only visit when the security is low.",neutral
+One of the reasons why he could still continue living in the White Division was the position of his second wife. She was one of the most influential humdrums in the White Division and harming him would cost Flame Spectre the support of the people.,neutral
+"""Gerald,"" I called.",neutral
+"""Yes?""",neutral
+"""You said you're one of Dad's righthand men."" He nodded. ""Who's the other one? And where is he?""",neutral
+"""Winter,"" called Hale, who was about to go to a mission.",neutral
+"I finished donning my furred coat and armor. Isaz went to find Leo to mass produce veinas that could help our faction train their abilities, while Gerald didn't return anymore after our last training.",neutral
+"""I will.""",neutral
+"This was used to be the assembly hall but the absence of Isaz, Riyo and the other counselors made it look like an abandoned shack. Isaz left the village a week ago to find Leo and Riyo was busy with gathering Water attribute users in the Black Division.",neutral
+"That got my attention. I craned my neck and saw a map, several places marked with dots, mostly in East and North Black.",neutral
+"""Ah, right."" She reached for the folded paper beside her. ""That kid wants to give you this.""",neutral
+"After that exchange, I left the quarters and headed to my room. I continued reading Hale's letter where he detailed what happened during his mission.",neutral
+That piqued his interest and decided to follow her for now. He said he was sorry for not sending a report for a while since he got busy saving the kid at without her knowledge.,neutral
+"""I'll try to find your sister, too,"" he said in a gentle tone.",neutral
+"""Describe her to me.""",neutral
+"""Send me a letter once you found her.""",neutral
+"""Of course.""",neutral
+"""Winter,"" called Isaz. ""It's time.""",neutral
+"""I will take everything back,"" I mumbled as I looked at the clear sky.",neutral
+"""Yes, Lady,"" she said. ""Riyo is already waiting for you.""",neutral
+"""I'll be there in a minute.""",neutral
+"Lady Winter is here,"" one of the guards announced and the door swung open.",neutral
+"""What do you mean?""",neutral
+"""I know you have a lot on your plate,"" he continued, ""but you have to stay rational."" A gentle wind brushed my skin, sending pleasant thoughts in my head. ""You should protect everyone who shares the same beliefs as yours, even if they are from divisions you hated all your life.""",neutral
+"""Of course,"" he replied while bowing. ""I will.""",neutral
+"""I'll go ahead,"" Hale mentioned and he started walking away.",neutral
+"Dale slightly bowed and looked at me. ""They're clean,"" he reported.",neutral
+"After he apprehended the two fire attribute users, Riyo and Hilda interrogated them and asked for some information that we could use against Flame Spectre.",neutral
+"""Let's go, Lady.""",neutral
+"""We can proceed,"" added Faye.",neutral
+"Faye and Reya exchanged looks but before they could volunteer to scout, I started walking toward the crowd.",neutral
+"After training more rigorously, the burden on my body wasn't that bad compared to the first incident. This time, I wouldn't be able to move only for a few hours instead of weeks.",neutral
+"He laid me on my bed, lit the fireplace to keep the room warm and closed the curtains.",neutral
+"As the door closed, I fell asleep and dreamed about Krystal.",neutral
+"""Thank you.""",neutral
+"Hale said most of the gangs against Flame Spectre went to the War of Best. Isaz, Riyo and Hilda were also deployed as reinforcements.",neutral
+"""How about Gerald?"" I asked.",neutral
+"""Yes. Apparently, his daughter is one of your sister's members.""",neutral
+"""Let's go.""",neutral
+"Three people stood between the fighters and the center of the battle. According to Dalan, those were the leaders of gangs with wind, water and earth attributes. Our allies.",neutral
+"""Sleep first, My Lady,"" he whispered. ""Leave the rest to us.""",neutral
+"""How's White Division?"" I asked.",neutral
+"""The Senshins agreed to help. They said they could erase their memories from that day using some sort of devices.""",neutral
+"""I'll go now,"" she said. ""See you in a few days.""",neutral
+"Dalan stood by the door, watching the two marched on the hallway.",neutral
+"When I looked at my window, they were already outside and Hale continued following her.",neutral
+"Both of them wanted to focus on their family and even though their retirement meant loss of powerful commanders, I respected their wishes. Besides, I already had people in mind as their replacement.",neutral
+"I walked back inside and realized Krystal and Hale weren't there anymore. Maybe she went to her friends and he followed her. Meanwhile, Dalan remained standing near the balcony. I turned and met his gaze.",neutral
+"Mom, Dad, as long as I am here, this place will never be in hell again. The ice and snow will never melt. I promise.",neutral
+They were tasked to clean the mess in that place while the Commander gave me a special mission.,neutral
+I just wanted to see her awake and okay before I go.,neutral
+"After the visiting hours, I retired to my room and stared vacantly at the ceiling.",neutral
+Jett quietly followed me as I entered my room and he remained standing while I sat on the side of my bed.,neutral
+"As someone who had lived there for quite some time, he asked me to bring the criminals to that place.",neutral
+I was admiring the device as I walked to my room when I saw a figure standing on the doorway,neutral
+It's time to go home.,neutral
+Nel would surely be awake by now.,neutral
+"""Because they can use your thoughts and memories against you.""",neutral
+"Farallon was never fazed with anything. Even when Vince brought her here, he remained inexpressive.",neutral
+"""Why are you here?"" he questioned without answering mine.",neutral
+"""I have a special delivery.""",neutral
+I didn't have any friends of my age in this place and all the Executioners were busy with their jobs and missions so I befriended these two.,neutral
+"Among the natives of this island, only me and Aristus could snuggle with these deadly predators.",neutral
+It was always dark in the woods as the canopy of trees blocked the sunlight.,neutral
+My arms accidentally brushed against the leaves of a poisonous plant and rendered me motionless.,neutral
+"Farallon wounded himself, his blood trickling from his finger and it dropped onto the boulder at the forest's threshold.",neutral
+"He disappeared from my sight, and the next thing I knew, the tip of his blade was already piercing through my right shoulder.",neutral
+"The Executioners, as well as Yuma and Farallon, bowed to him and that got me confused.",neutral
+I stayed at the shore of the island as they decide what to do with me and the prisoners I had to transfer using the Senshins and Custos technology.,neutral
+She walked toward my direction and Shira started snarling at her.,neutral
+Most of the Executioners who were fighting against each other halted and dashed here.,neutral
+Farallon arrived a minute later and stood beside me.,neutral
+They were transferred to the keimusho while I stayed there with Kyo.,neutral
+"""We can extract information from their brains. Give us at least a day.""",neutral
+"""Okay. I'll be counting on you.""",neutral
+He silently walked away and I was left alone.,neutral
+I wanted to contact the CIA but communication outside was forbidden in this island.,neutral
+"Well, the absence of the prisoners would probably be enough as a report.",neutral
+I immediately went out of the cabin and ran toward the bridge. Farallon was on his way to the shore so I went with him.,neutral
+"""They just landed.""",neutral
+"We both dashed toward the shore and Kyo, as well as Kiyoko, was already talking to the two people who just got out of the boat.",neutral
+"""Naia?"" she called.",neutral
+He looked exactly like Vince.,neutral
+"Nathalie and Kyo went to the huge shack in the middle of the island to talk about 'stuff' that, according to them, we don't need to know.",neutral
+Kiyoko went to the prison with Lionel to transfer the captives they just tortured.,neutral
+I stared at him for a few seconds. I wasn't sure if he was confident or just foolish.,neutral
+"""Kiddo? You seem like just a few years older than me,"" he commented.",neutral
+"""No filters and sugarcoating, huh? I like that,"" Kyo commented.",neutral
+I started walking away from them.,neutral
+He should have prepared himself before setting foot here.,neutral
+I was on my way to my cabin when I saw Aristus standing near it.,neutral
+"""Aristus!"" I called as I ran toward his direction.",neutral
+The temperature in this place took up a notch and I started sweating profusely.,neutral
+"After an excruciating walk, we finally arrived at keimusho.",neutral
+"The guards opened the gate when they saw Aristus and when we stepped inside, a wave of nausea hit me.",neutral
+"""You sure you can handle this?"" Aristus asked.",neutral
+"""I could see that.""",neutral
+We navigated the narrow hallway until we arrived at a lift.,neutral
+"Since the prisons are underground, we had to use it to reach the zero/rei level, where convicted Erityians were placed.",neutral
+"""That's the rule, kid,"" he said. ""You can't communicate with others within the island.""",neutral
+I was left alone in the middle of the sea and I realized there was a brewing storm nearby.,neutral
+"""The criminals have been transferred successfully, Commander,"" I reported.",neutral
+"""I'd like to know the details.""",neutral
+"""Roger that, Commander.""",neutral
+"He ended the call and a second after that, the raft was pulled into the fog. The island and Farallon came into view and he hauled the raft to the forest.",neutral
+We walked back to the inland and Shira and Hyora greeted me.,neutral
+"""Yeah. It was like coming back from hell.""",neutral
+"It slowed me down but I thought I could control my mind. However, something made it much more complicated.",neutral
+I couldn't sleep.,neutral
+"""I see. And after Vince died, Ise once again recommended Kyo as the chief.""",neutral
+"""Uhm, I just want to ask . . .""",neutral
+"At daybreak, I went out of my shack and walked toward the shore.",neutral
+I already did my mission and gathered information. It would be the best to leave Shima before it gets hectic.,neutral
+"For a moment, I think I could understand what he wanted to happen.",neutral
+". Yes, Executioners are physically strong, but they rarely follow strategies. Only a couple of them could really lead.",neutral
+I guess he wanted more people like that.,neutral
+"""I learned that here.""",neutral
+"""Thank you, Commander,"" Nel said.",neutral
+"After Nel informed me about the meeting of the next-generation leaders, I 
+tried contacting them again but that girl was probably driving and I knew 
+Cliff and Jett wouldn't risk their lives to answer my call.",neutral
+"Several minutes later, she sent me the message of that Shinigami that we saw during the fight. I forgot his name.",neutral
+"I was still in the middle of the Pacific Ocean and it would take me a day to reach Japan. Fortunately, my devices were working well.",neutral
+"I could track their location and keep enemies away from them, if there were any.",neutral
+"Commander Priam also messaged me, asking my whereabouts, so I told him my current coordinates.",neutral
+Nothing. I tried calling them again but to no avail. They weren't responding.,neutral
+"""Yeah. That kid is cool.""",neutral
+"They were descending the mountains and Nel seemed to forget her exhaustion because she couldn't stop talking about what happened during their talk. She said she liked the other tribes' representatives. When he mentioned Hiro, I asked her what she thinks of him.",neutral
+"I ended the call and their faces twitch for a few seconds and finally faded. A new holograph appeared, only it was a note about my next mission, along with a voice mail.",neutral
+"It was already 8:30 P.M. and the sun was about to set. Those three were on their way here but they might arrive later than I expected. I crept around the palace, waiting for the right time to sneak in without getting any attention.",neutral
+"When darkness loomed over the city, I moved toward the tower at the right and prowled inside to investigate.",neutral
+"With my remaining strength, I walked at their direction. Finally, we were together again.",neutral
+The flight back to Philadelphia was quite awkward.,neutral
+That kind of fighting style was highly offensive and would leave your defenses down to zero. Your only goal was to attack and overpower your opponents by brute force and killing techniques.,neutral
+"Commander Priam's face had aged beyond his years, but he still wore the same stern expression.",neutral
+Our pilot changed course and announced that we were approaching France.,neutral
+"""I don't think so,"" Jett replied. 'They said it was destroyed. Maybe they just borrowed it from a humdrum and marked it so we would know how to find them.""",neutral
+We reluctantly walked toward their direction until we stood in front of the boat.,neutral
+We watched from our respective rooms as Commander Priam addressed his people.,neutral
+"After his speech, he informed them the Executives were currently resting due to the injuries they got. He also gave new missions to the teams present and said he would be counting on them.",neutral
+"""Your Dad really has a way with words,"" I said as I stared at the ceiling.",neutral
+"I was woken up by the sound of my device. When I looked at Nel's bed, she was still asleep. I sat up groggily and pulled my device from my pocket and there was a message from the Commander.",neutral
+I changed the topic and talked about Dale and Zeno. They examined the remote and pondered the technology behind it.,neutral
+"""You guys should sleep,"" I said. ""I'll take first watch.""",neutral
+She lay down beside me and heaved a deep sigh.,neutral
+That made him relax for a bit.,neutral
+The Shinigami removed his hood and a guy who looked like a teenager came into view.,neutral
+She ignored me and continued munching her snack while Jett started inspecting all his guns.,neutral
+"He stood there as a father, not a Senshin or an Executioner.",neutral
+We're going home.,neutral
+And he did.,neutral
+She continued running while hugging the child tightly. She didn't look back and boarded Miyu.,neutral
+And those were the last words we heard from her.,neutral
+Nabaling ang tingin ni Rin sa katawan ni Akemi. I wasn't sure if the rain was distorting my vision but her expression softened.,neutral
+I walked aimlessly as I tried to take in everything that happened.,neutral
+Nanatili si Mayu kasama ng medical teams nang makabalik siya. They gathered everyone who needed medical attention while Akira stayed with Akemi and Mitsuo.,neutral
+"I was several steps away from the hut when something suddenly appeared in front of me. The next thing I knew, I was already face to face with a Shinigami.",neutral
+"Just this once, I am going to help an enemy.",neutral
+Hindi man ako part ng medical department ay kaya kong mag-diagnose kahit papaano. I had been obsessed with physical and weapons training and I received a lot of injuries in the past because of that.,neutral
+Hinanda ko ang mga gamit at agad na tinanggal ang cloak na suot niya. I had to cut his shirt dahil dumikit na iyon sa sugat niya.,neutral
+Bigla naman siyang naglakad patungo sa pintuan kaya agad kong humarang sa dadaanan niya.,neutral
+"I wasn't expecting any answer from him. At okay lang din kung hindi niya sagutin dahil technically, we were enemies.",neutral
+Sinubukan kong bumangon pero may nahagip ang mga mata ko. I turned to my bed and almost yelped when I saw someone lying there. Ilang segundo akong napatigil at napatitig doon.,neutral
+Pagdating ko sa campus ay nakita ko kaagad ang ilang staffs ng Medical Department sa labas. They were busy transporting the injured. Paniguradong karamihan sa kanila ay hindi pa nakakapagpahinga matapos ang nangyari.,neutral
+Nang makarating kami sa harapan ng bahay niya ay tinapik ko ang balikat niya.,neutral
+Dinala naman namin si Akemi sa grassland at nagsimula kaming maghukay. We placed her casket under the ground and made a simple cross from thick tree stems.,neutral
+Chineck ko ang oras at 6 A.M. pa lang. Tumayo ako at dahan-dahang lumabas mula sa cabin. I activated all barriers and alarm systems to prevent any problems.,neutral
+Muli siyang tumingin sa elders at nagulat ako nang sinugatan niya ang kamay niya. He splattered his blood onto them and on the pavement.,neutral
+"This time, I wouldn't let anyone hurt any of them.",neutral
+"This time, I'd make sure they would live the life they deserve.",neutral
+Naghintay ako ng ilan pang minuto at mukhang nawalan na ng interes ang oso. Nakahinga ako nang maluwag nang tuluyan na itong umalis.,neutral
+Buti na lang at may natira pa akong bandages kaya agad kong nilinis at tinakpan ang mga sugat na natamo ko mula sa Green's Bane. I checked the Shinigami but he was still unconscious.,neutral
+Pagkatapos ng nangyari kahapon ay nanatili lang siya rito. Facing the Shima head must have been frightening but he did well.,neutral
+That guy was finally awake.,neutral
+Dahil hindi ko siya madala sa Medical Department ay hindi ko alam kung papaano matitingnan ang internal organs niya.,neutral
+"""Gusto mo ba siyang makita?"" tanong ko at marahan siyang tumango. ""Then get well. Once you can move again, I'll bring you to her. Pwede ka na ring umalis pagkatapos.""",neutral
+He gave me a dirty look and his eyebrows almost became one. Asar-talo pala. Feeling ko tuloy kaharap ko sina Hideo at Mitsuo . . .,neutral
+Now I have another person to take care of. What a life.,neutral
+That was right. I was still weak. I needed to train more.,neutral
+"Agad akong tumalon papunta sa isang puno nang sumugod iyon sa akin. It was fast and agile and if I was just a second late, my foot would have been torn apart by its teeth and powerful jaws",neutral
+Nasa bahay ako ngayon ni Mayu. Hiroshi was with Reina and Hayate kaya mas sumakit ang ulo ko. Buti na lang at nandito rin si Akira para tumulong pero dagdag din sa babantayan si Vivien. Ugh. Ang daming bata.,neutral
+Pagkatapos kong magluto ay inilapag ko sa tabi niya ang share niya. We quietly ate as thoughts lingered in my head.,neutral
+"""Oo nga. May bahay ka naman sa village,"" added Akira. ""Ang layu-layo mo tuloy.""",neutral
+"Two weeks ago, napag-alaman namin na wala na sa campus sina Sir Kyo at Sir Tora. According to Hideo, there was a council meeting involving all the administrative divisions that day.",neutral
+"For sure, pinag-usapan si Rainie.",neutral
+"Tumayo ako at pumunta sa kusina para magluto. Tamang-tama, may itinuro sa akin si Mayu noong nakaraan. I hope I could do it right.",neutral
+Halos umikot ang mga mata ko nang marinig ko iyon mula kay Sir. Paano ba naman kasi ay siya ang naka-assign para mag-train at monitor sa akin bilang teacher.,neutral
+"In-explain niya sa akin na nawala ako sa radar nila pagkapasok ko pa lang sa hallway. I didn't know that the suit was equipped with a tracker. They tried tugging the rope, too, but I wasn't responding. Hindi ko naman iyon naramdaman noong nandoon ako.",neutral
+"""Ayaw kong magkaroon ng utang na loob sa'yo,"" dagdag niya.",neutral
+"He stared at me for several seconds before answering. ""Kid.""",neutral
+"""How was it?"" tanong ko matapos muling maglakad papasok sa hallway.",neutral
+"Bumangon naman siya at humarap sa akin. ""So, kailan ka pala magsisimula sa pagtuturo, Ma'am?""",neutral
+Lumabas ako mula sa room at naglakad palabas ng building. Mamayang hapon pa naman ang next class ko kaya may time ako para magpahinga.,neutral
+"""Malamang,"" sagot ko naman. ""Mukha siguro akong ewan kanina.""",neutral
+Lumabas ako mula sa office niya at nakita ko namang naglalakad papunta sa class nila sina Reina.,neutral
+Napalingon agad ako nang marinig ko ang boses ni Mayu. I walked toward her direction and I noticed that she was loading some stuff into Miyu. Pumasok kaming dalawa sa loob at namangha ako sa naging improvement nito.,neutral
+"Halos mapailing na lang ako dahil hindi man lang nag-ingat ang mga ito kung sakaling may makakita sa kanila. Humdrums are, indeed, careless and quite soft in the head. Everything became easier after that. I only needed to follow him to their hideout.",neutral
+"""You're okay now. Let's go back to your father.""",neutral
+"Ngayong nasa itaas ako ng puno ay pwede kong makita kung saan banda sila magbubukas, pero may blind spots din sa posisyon ko.",neutral
+Nang makita ko ang mukha niya sa harapan ko ay itinulak ko siya kahit na halos wala nang lakas ang mga kamay ko.,neutral
+Napatingin ako sa direksyon niya. He had already removed the hood from his head and the cloth covering his face.,neutral
+Hindi na ako nagtanong pa at dumiretso sa kotse. Kid disappeared from my sight but I had no time to see if he was still around.,neutral
+"Makita ko lang sila, okay lang na hindi ako makagalaw ng ilang araw o buwan.",neutral
+Naglakad ako palayo sa gubat pero napahinto ako nang naramdaman ko ang paghawak ni Hideo sa braso ko.,neutral
+A council of war was immediately held in the Council House. The Elders wanted our injuries treated but Hideo and I declined.,neutral
+"""Magkikita pa naman tayo.""",neutral
+"""In that state?"" tanong niya.",neutral
+Muli kaming tumahimik at hinayaan ko siya sa ginagawa niya. I just stared vacantly as my mind drifted back to the time I was still with Mayu and Akira.,neutral
+"Tumayo ako sa harap ng salamin. I always wore my hair in pigtails because I wanted to look young and I was a kid at heart. This time, I tied it in a low ponytail. This time, I had to grow up and be matured enough to support Hideo.",neutral
+Naglakad ako patungo sa Council House at naroon ang ilang Elders. We were supposed to wait for Hideo but I wanted to give him more time to mourn and lessen his burden.,neutral
+"""It seems like the security of our borders has been compromised,"" Sir Arai remarked, breaking the silence.",neutral
+Nang makaalis siya ay agad akong nagpalit ng damit. I stood in front of the mirror and tied my hair in a ponytail.,neutral
+"Sa nagdaang mga taon ay itinuon ko ang atensyon ko sa pagtuturo. I wanted to help the kids learn about basic techniques in fighting to survive in the real world. I never wanted them to experience what we had gone through. If they strive to be strong, they could protect themselves and their loved ones.",neutral
+"Pagkatapos naming mag-training ay bumalik kami sa kanya-kanya naming bahay. Well, I went to my cabin instead. I was more comfortable here than my house in the campus.",neutral
+"""Are you sure you want to take this mission?"" tanong ni Hideo kay Naomi nang makarating kami sa office niya.",neutral
+Umalis si Naomi para pumunta sa Intelligence Department. She wanted to do it right away. Naiwan naman kaming dalawa ni Hideo at napatingin siya sa akin.,neutral
+At iyon na nga ang nangyari.,neutral
+Nang makabalik si Rainie sa hallway ay nakahinga rin nang maluwag si Hideo. He was ready to risk everything to save her but thank goodness Demi was with her. Kinailangan pa naming pigilan si Hideo para lang hindi siya sumugod mag-isa pero naiintindihan ko siya.,neutral
+Hindi na siya nakipagtalo pa at agad na tumakbo nang tinawag siya ni Dr. Miwako. The day was already breaking when we finished our tasks. I was so tired that I was already half-dragging my body back to my cabin.,neutral
+wala na siya roon.,neutral
+"""Hindi naman malala ang mga nakuha ko,"" I replied.",neutral
+"Bigla naman siyang tumitig sa akin. It was the kind of stare that you wouldn't want to see from her. The kind that could make you feel naked, because you knew she could read your mind despite desperately hiding your thoughts from her.",neutral
+Hindi ko na namalayan ang panahon sa sobrang daming ginagawa lalo na sa administrative stuff. I just realized it was already Christmas Eve when Naomi visited me and told me that we would be having a campfire in the campus.,neutral
+He was silent for a minute. I tried reading his expression and mind but I didn't get anything. He rested his head on the headboard and stared vacantly at the ceiling.,neutral
+"Iyon pala ay hindi siya makaalis sa cabin dahil activated na ulit ang detectors sa gubat. It seemed like last night, somehow, most of the markers and detectors around this area were turned off and that was how he got in easily.",neutral
+"Nandito kami ngayon sa sarili kong storage room sa armory. Naomi said she wanted to get back her senses in fighting. Of course, she wouldn't give up her fan but I thought it would be better to have additional weapons.",neutral
+"""Oh, I know what you mean.""",neutral
+"Pagkatapos naming mag-training ay bumalik na rin kami sa kani-kaniya naming trabaho. Speaking of the devil, I wonder how he's doing.",neutral
+"""They're asking me to return to the base,"" he said.",neutral
+"""Do you want to know the answer?"" dagdag niya.",neutral
+"Nagtanong ako tungkol sa second floor at puro kwarto pala ang nandoon. One was his room, the other one empty and the largest was his man cave. It turned out it was his workspace for Shinigami matters.",neutral
+Pinanood ko lang siyang umakyat sa hagdan. It took me several seconds before deciding to tell him what I wanted to say earlier,neutral
+"Nagpaalam sila sa akin matapos ang ilang minuto. Few moments later, Naomi emerged from the southern part of the forest.",neutral
+"Sabay kaming pumunta sa campus pero dumaan muna kami sa Intelligence division. She brought the relics and documents she recovered from a fallen village. From what I remember, that was the hometown of the Hansen clan who got annihilated by Shinigamis.",neutral
+Naabutan namin doon sina Hayate at Hiroshi na mukhang may bago na namang dinedevelop na device. It turned out Hiroshi was asking for advice regarding teleportation devices.,neutral
+"I think they were trying to replicate that Custos technology they had seen before to see the possibility of ""human teleportation.""",neutral
+Sumandal na lang ako sa pader habang nag-uusap silang tatlo at nagbibigay ng ilang advice si Naomi.,neutral
+Napailing na lang ako nang marinig ko 'yon. Hindi ko naman sinabing agad agad siyang mag-training pero isa rin itong si Reina na hindi alam ang salitang moderation.,neutral
+"Pagkatapos namin doon ay dumiretso kami sa bahay niya. The house was empty when we arrived and I told him Nathan went to Shima, according to Rainie.",neutral
+Habang hinihintay ko siyang matapos ay chineck ko rin ang schedule ko para sa ilang missions na nakapila para sa akin.,neutral
+Pakiramdam ko talaga ay ginagantihan lang ako nito sa lahat ng pang-aasar ko sa kanya noong mga bata pa kami.,neutral
+And that led me to live in that place.,neutral
+"Magtatanong pa sana ako pero pumikit na siya. Few seconds later, he was already asleep.",neutral
+"We stayed like that for three hours. I fell asleep for a while, too, but woke up when he bolted upright.",neutral
+"Since then, he was actively trying to persuade the council to end the bad blood between the Senshin and Shinigami tribes and start to build the bridges again.",neutral
+"""I heard that,"" she commented.",neutral
+"""Totoo naman,"" I returned.",neutral
+"""Hmm, wala na for this week.""",neutral
+Sakto namang pagbangon ko ay nakita kong pumasok si Hideo.,neutral
+Agad akong bumaba at ang naabutan ko na lang ay ang pagkaing nakahanda sa lamesa.,neutral
+"Without second thoughts, I ate the food he prepared and took a bath afterward. Medyo um-okay na rin ang pakiramdam ko matapos makatulog at makakain.",neutral
+Nasaan kaya siya?,neutral
+Ah. He must be with Darwin.,neutral
+Kinuha ko ang first aid kit at agad na nilinis ang sugat niya.,neutral
+"""How is he?"" tanong ko.",neutral
+"""We just drank . . .""",neutral
+"""Really? I didn't notice.""",neutral
+"""Uhh . . . so what were they doing here?"" tanong ko habang nakatingin sa bandang bintana.",neutral
+"""They're asking me to return to the base,"" he said.",neutral
+Bumalik ang tingin ko sa kanya. His face turned serious and it looked like he was contemplating about that.,neutral
+"""So, you'll return there?"" tanong ko.",neutral
+"""Huh?""",neutral
+"""Sure,"" he replied.",neutral
+Agad kong binago ang topic at nagtanong muli tungkol sa cabin dahil ayaw kong maging mabigat ang atmosphere.,neutral
+"""Nasaan na siya?""",neutral
+And he did.,neutral
+Hinatak ko ang upuan sa gilid at umupo sa harapan niya.,neutral
+"Agad akong tumayo at naglakad papunta sa kusina. 'Yeah, yeah. Dahil mabait ako, ipagluluto kita.'",neutral
+"""O, eto,"" sabay lapag ko ng pagkain sa tabi niya.",neutral
+"Natawa naman ako sa sinabi niya. ""Siguro? 'Yon lang din ang alam ko.""",neutral
