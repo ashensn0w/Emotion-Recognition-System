@@ -5,9 +5,7 @@ from preprocessing.narrative_features_eng import *
 from preprocessing.narrative_features_fil import *
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont
-from PyQt5.QtWidgets import QFrame, QSpacerItem, QSizePolicy, QApplication, QMainWindow, QWidget, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, QFileDialog, QScrollArea
-from rich.console import Console
-from rich.table import Table
+from PyQt5.QtWidgets import QProgressDialog, QFrame, QSpacerItem, QSizePolicy, QApplication, QMainWindow, QWidget, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, QFileDialog, QScrollArea
 from utils.save_load import *
 import json
 import nltk
@@ -19,6 +17,7 @@ import spacy
 import stopwordsiso as stopwords
 import string
 import sys
+import fitz
 
 # List of resources to check
 resources = ['tokenizers/punkt', 'corpora/stopwords']
@@ -91,7 +90,7 @@ class MainWindow(QMainWindow):
             }
         """)
         upload_button.clicked.connect(self.open_file_dialog)
-        upload_text = QLabel("Only .TXT Format is Supported\n\nCLICK TO BROWSE")
+        upload_text = QLabel("Only .TXT and .PDF Format\n is Supported\n\nCLICK TO BROWSE")
         upload_text.setFont(QFont("Arial", 13))
         upload_text.setAlignment(Qt.AlignCenter)
         upload_button_layout = QVBoxLayout(upload_button)
@@ -125,8 +124,8 @@ class MainWindow(QMainWindow):
 
     def open_file_dialog(self):
         options = QFileDialog.Options()
-        file_name, _ = QFileDialog.getOpenFileName(self, "Open Novella", "", "Text Files (*.txt);;All Files (*)", options=options)
-        
+        file_name, _ = QFileDialog.getOpenFileName(self, "Open Novella", "", "All Files (*.txt *.pdf);;Text Files (*.txt);;PDF Files (*.pdf)", options=options)
+
         if file_name:
             # Extract the file name from the full path
             base_name = os.path.basename(file_name)
@@ -141,12 +140,58 @@ class MainWindow(QMainWindow):
             # Set the destination path
             dest_file = os.path.join(dest_dir, base_name)
             
+            # If it's a PDF file, extract text content
+        if file_name.lower().endswith('.pdf'):
+            text_content = ""
+            with fitz.open(file_name) as pdf_document:
+                for page in pdf_document:
+                    # Extract text from page
+                    page_text = page.get_text("text")
+                    
+                    # Split the page text into lines for further processing
+                    lines = page_text.splitlines()
+                    
+                    paragraph = ""
+                    for line in lines:
+                        # Strip leading and trailing spaces
+                        stripped_line = line.strip()
+                        
+                        # Check if line is part of the current paragraph
+                        if stripped_line:
+                            # New paragraph detected if line starts with a capital and paragraph is not empty
+                            if paragraph and stripped_line[0].isupper():
+                                # Add completed paragraph to text content with double newline
+                                text_content += paragraph.strip() + "\n\n"
+                                paragraph = ""  # Reset paragraph for the next one
+                            
+                            # Add line to current paragraph
+                            paragraph += " " + stripped_line
+                        else:
+                            # An empty line indicates the end of a paragraph
+                            if paragraph:
+                                text_content += paragraph.strip() + "\n\n"
+                                paragraph = ""
+                    
+                    # Append any remaining paragraph
+                    if paragraph:
+                        text_content += paragraph.strip() + "\n\n"
+            
+            # Save the extracted text to a .txt file
+            txt_file_path = os.path.join(dest_dir, base_name.replace('.pdf', '.txt'))
+            with open(txt_file_path, 'w', encoding='utf-8') as text_file:
+                text_file.write(text_content.strip())  # Write the final text content
+            
+            self.file_path = txt_file_path
+            self.file_name_label.setText(f"Selected file: {base_name} (converted to .txt)")
+        
+        else:
+            # Copy .txt file directly
+            dest_file = os.path.join(dest_dir, base_name)
+            
             # Copy the file to the destination directory
             shutil.copy(file_name, dest_file)
-            
             # Store the file path for later use
             self.file_path = dest_file
-            
             # Update the label to show the file was selected and saved
             self.file_name_label.setText(f"Selected file: {base_name}")
     
@@ -204,18 +249,20 @@ class PreviewWindow(QMainWindow):
         self.content = ""
         self.paragraph_count = 0  # Initialize paragraph count
         self.word_count = 0  # Initialize word count
+
         try:
             with open(file_path, 'r', encoding='utf-8') as file:
-                lines = file.readlines()
-                if lines:
-                    self.title = lines[0].strip()  # First line as title
-                    self.content = "".join(lines[1:]).strip()  # Remaining lines as content
+                text_content = file.read().strip()  # Strip whitespace and newlines at start and end
+                paragraphs = text_content.split('\n\n')  # Split by paragraphs (double newlines)
+                
+                if paragraphs:
+                    self.title = paragraphs[0].strip()  # First paragraph as title
+                    self.content = "\n\n".join(paragraphs[1:]).strip()  # Remaining paragraphs as content
                     
-                    # Count the number of paragraphs
-                    self.paragraph_count = self.content.count('\n\n') + 1  # Add 1 to account for the last paragraph
-                    # Count the number of words
+                    # Count the paragraphs, excluding the title
+                    self.paragraph_count = len(paragraphs) - 1  # Exclude title paragraph
+                    # Count words in remaining paragraphs only
                     self.word_count = len(self.content.split())
-
         except Exception as e:
             print(f"Error reading file: {e}")
 
@@ -263,22 +310,41 @@ class PreviewWindow(QMainWindow):
             border-radius: 10px; 
         """)
         self.back_button.clicked.connect(self.back_to_main)
-        right_layout.addWidget(self.back_button, alignment=Qt.AlignCenter)
 
         # Process Novella button
-        self.process_button = QPushButton("Process Novella")
-        self.process_button.setFixedSize(250, 40)
-        self.process_button.setFont(QFont("Arial", 12, QFont.Bold))
-        self.process_button.setStyleSheet(""" 
+        self.process_with_tfidf_button = QPushButton("Process with TF-IDF")
+        self.process_with_tfidf_button.setFixedSize(250, 40)
+        self.process_with_tfidf_button.setFont(QFont("Arial", 12, QFont.Bold))
+        self.process_with_tfidf_button.setStyleSheet(""" 
             background-color: #1338BE; 
             color: white; 
             border-radius: 10px; 
         """)
-        self.process_button.clicked.connect(self.process_novella)
-        right_layout.addWidget(self.process_button, alignment=Qt.AlignCenter)
+        self.process_with_tfidf_button.clicked.connect(self.process_novella_with_tfidf)
 
-        # Add stretch at the bottom for vertical centering
-        right_layout.addStretch(1)
+        # Process without TF-IDF button
+        self.process_without_tfidf_button = QPushButton("Process without TF-IDF")
+        self.process_without_tfidf_button.setFixedSize(250, 40)
+        self.process_without_tfidf_button.setFont(QFont("Arial", 12, QFont.Bold))
+        self.process_without_tfidf_button.setStyleSheet(""" 
+            background-color: #1338BE; 
+            color: white; 
+            border-radius: 10px; 
+        """)
+        self.process_without_tfidf_button.clicked.connect(self.process_novella_without_tfidf)
+
+        # Create a horizontal layout for the back and process buttons
+        button_layout = QHBoxLayout()
+
+        # Add the back button to the left and the process buttons to the right of the layout
+        button_layout.addWidget(self.back_button, alignment=Qt.AlignLeft)
+        button_layout.addStretch(1) 
+        button_layout.addWidget(self.process_without_tfidf_button, alignment=Qt.AlignRight)
+        button_layout.addWidget(self.process_with_tfidf_button, alignment=Qt.AlignRight)
+
+        # Add the button layout to the right layout
+        right_layout.addStretch(1)  # Add stretch above the buttons to push them to the bottom
+        right_layout.addLayout(button_layout)
 
         # Add widgets to the main layout
         main_layout.addWidget(left_widget)
@@ -294,16 +360,27 @@ class PreviewWindow(QMainWindow):
         if self.parent:  # Check if parent is set
             self.parent.show()  # Show the main window again
 
-    def process_novella(self):
-        print("Processing novella...")
-        # Use self.file_path instead of self.file_path
-        with open(self.file_path, 'r', encoding='utf-8') as file:
-            text_content = file.read()
+    def process_novella_with_tfidf(self):
+        # Create and show loading screen
+        self.loading_dialog = QProgressDialog("Processing novella with TF-IDF...", None, 0, 0, self)
+        self.loading_dialog.setWindowTitle("Processing...")
+        self.loading_dialog.setFixedSize(350, 10)
+        self.loading_dialog.setCancelButton(None)  
+        self.loading_dialog.setModal(True)
+        self.loading_dialog.setWindowFlags(
+        self.loading_dialog.windowFlags() | Qt.WindowTitleHint | Qt.CustomizeWindowHint
+        )
+        self.loading_dialog.setWindowFlags(
+            self.loading_dialog.windowFlags() & ~Qt.WindowSystemMenuHint & ~Qt.WindowContextHelpButtonHint
+        )
+        self.loading_dialog.show()
 
-        # Split the text into lines based on double newlines and store in sentences
-        sentences = [line.strip() for line in text_content.strip().split('\n\n') if line.strip()]
+        # Use self.content directly instead of reopening the file
+        paragraphs = self.content.split('\n\n')  # Split `self.content` by paragraphs
 
-        remaining_sentences = sentences[1:] if len(sentences) > 1 else []  # Get the rest of the sentences for analysis
+        # Exclude the title for `remaining_sentences`
+        remaining_sentences = paragraphs if len(paragraphs) > 0 else []  # `self.content` already excludes the title
+
         # print(remaining_sentences)
 
         # Print the sentences variable to see the output
@@ -471,7 +548,7 @@ class PreviewWindow(QMainWindow):
                 final_combined_df.drop(columns=['emotion'], inplace=True)
                 
             # Load the saved emotion recognition model
-            emo_recog_model = load_model_with_name('best_emotion_recognition_glm_model.pkl')
+            emo_recog_model = load_model_with_name('emotion_recognition_model_with_tfidf.pkl')
 
             # Check if the model was loaded successfully
             if emo_recog_model is not None:
@@ -487,13 +564,128 @@ class PreviewWindow(QMainWindow):
             output_df = data[['sentence', 'predicted_emotion']]
 
             # Save the output to a new CSV file
-            output_df.to_csv('./backend/data/feature vectors/new_input_predictions.csv', index=False)
+            output_df.to_csv('./backend/data/feature vectors/new_input_predictions_with_tfidf.csv', index=False)
 
         # Simulating processing and then opening the results window
         self.results_window = ResultsWindow(self.parent, self.parent.file_path)
         self.results_window.show()
+        self.loading_dialog.hide()
+        # Once processing is done, hide loading screen and show results
         self.close()  # Close the preview window after opening results
 
+    def process_novella_without_tfidf(self):
+        # Create and show loading screen
+        self.loading_dialog = QProgressDialog("Processing novella without TF-IDF...", None, 0, 0, self)
+        self.loading_dialog.setWindowTitle("Processing...")
+        self.loading_dialog.setFixedSize(350, 10)
+        self.loading_dialog.setCancelButton(None)  
+        self.loading_dialog.setModal(True)
+        self.loading_dialog.setWindowFlags(
+        self.loading_dialog.windowFlags() | Qt.WindowTitleHint | Qt.CustomizeWindowHint
+        )
+        self.loading_dialog.setWindowFlags(
+            self.loading_dialog.windowFlags() & ~Qt.WindowSystemMenuHint & ~Qt.WindowContextHelpButtonHint
+        )
+        self.loading_dialog.show()
+
+        print("Processing novella without TF-IDF...")
+        # Use self.content directly instead of reopening the file
+        paragraphs = self.content.split('\n\n')  # Split `self.content` by paragraphs
+
+        # Exclude the title for `remaining_sentences`
+        remaining_sentences = paragraphs if len(paragraphs) > 0 else []  # `self.content` already excludes the title
+
+
+        # print(remaining_sentences)
+
+        # Print the sentences variable to see the output
+        # print(sentences)
+
+        # Create a DataFrame from the list of sentences
+        data = pd.DataFrame(remaining_sentences, columns=['sentence'])
+
+        def format_list_as_string(token_list):
+            return str(token_list).replace("'", '"')
+
+        # Check if the dataset is loaded successfully
+        if data is not None:
+
+            # Combine Filipino and English feature vectors using element-wise maximum
+            def combine_features(fil_features_df, eng_features_df):
+                # Ensure both DataFrames have the same structure
+                assert fil_features_df.shape == eng_features_df.shape, "Feature dataframes must have the same shape"
+                
+                # Element-wise maximum between Filipino and English features
+                combined_features = np.maximum(fil_features_df.values, eng_features_df.values)
+                
+                # Convert back to DataFrame with the same column names
+                combined_features_df = pd.DataFrame(combined_features, columns=fil_features_df.columns)
+                
+                return combined_features_df
+
+            def process_data(df):
+                # Extract Filipino and English features
+                fil_features_df = extract_fil_features_from_dataframe(df)
+                eng_features_df = extract_eng_features_from_dataframe(df)
+
+                # Combine the features
+                combined_features_df = combine_features(fil_features_df, eng_features_df)
+
+                return combined_features_df
+            
+            with open(self.file_path, 'r', encoding='utf-8') as file:
+                text_content = file.read()
+
+            # # Split the text into lines based on double newlines and store in sentences
+            sentences = [line.strip() for line in text_content.strip().split('\n\n') if line.strip()]
+
+            remaining_sentences = sentences[1:] if len(sentences) > 1 else []  # Get the rest of the sentences for analysis
+
+            # Print the sentences variable to see the output
+            # print(sentences)
+
+            # Create a DataFrame from the list of sentences
+            data = pd.DataFrame(remaining_sentences, columns=['sentence'])
+    
+            # Apply the feature extraction and combination process
+            combined_features_df = process_data(data)
+
+            # # Concatenate TF-IDF features and combined narrative features
+            # final_combined_df = pd.concat([tfidf_df, combined_features_df], axis=1)
+
+            # Print the final combined DataFrame
+            # print("Final combined DataFrame:")
+            # print(final_combined_df.head())
+
+            # Remove any columns that were not part of the model's training
+            if 'emotion' in combined_features_df.columns:
+                combined_features_df.drop(columns=['emotion'], inplace=True)
+                
+            # Load the saved emotion recognition model
+            emo_recog_model = load_model_with_name('emotion_recognition_model_without_tfidf.pkl')
+
+            # Check if the model was loaded successfully
+            if emo_recog_model is not None:
+                # Ensure that the final_combined_df matches the expected feature set
+                predictions = emo_recog_model.predict(combined_features_df)
+                print("Predictions made successfully.")
+                data['predicted_emotion'] = predictions  # Add predictions to the DataFrame
+            else:
+                print("Model not loaded. Unable to make predictions.")
+                return
+
+            # Prepare the output DataFrame
+            output_df = data[['sentence', 'predicted_emotion']]
+
+            # Save the output to a new CSV file
+            output_df.to_csv('./backend/data/feature vectors/new_input_predictions_without_tfidf.csv', index=False)
+
+        # Simulating processing and then opening the results window
+        self.results_window = ResultsWindow(self.parent, self.parent.file_path)
+        self.results_window.show()
+        self.loading_dialog.hide()
+        # Once processing is done, hide loading screen and show results
+        self.close()  # Close the preview window after opening results
 
 # Third Window (Results Page)
 class ResultsWindow(QWidget):
