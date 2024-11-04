@@ -19,6 +19,7 @@ import spacy
 import stopwordsiso as stopwords
 import string
 import sys
+import fitz
 
 # List of resources to check
 resources = ['tokenizers/punkt', 'corpora/stopwords']
@@ -125,8 +126,8 @@ class MainWindow(QMainWindow):
 
     def open_file_dialog(self):
         options = QFileDialog.Options()
-        file_name, _ = QFileDialog.getOpenFileName(self, "Open Novella", "", "Text Files (*.txt);;All Files (*)", options=options)
-        
+        file_name, _ = QFileDialog.getOpenFileName(self, "Open Novella", "", "All Files (*.txt *.pdf);;Text Files (*.txt);;PDF Files (*.pdf)", options=options)
+
         if file_name:
             # Extract the file name from the full path
             base_name = os.path.basename(file_name)
@@ -141,12 +142,58 @@ class MainWindow(QMainWindow):
             # Set the destination path
             dest_file = os.path.join(dest_dir, base_name)
             
+            # If it's a PDF file, extract text content
+        if file_name.lower().endswith('.pdf'):
+            text_content = ""
+            with fitz.open(file_name) as pdf_document:
+                for page in pdf_document:
+                    # Extract text from page
+                    page_text = page.get_text("text")
+                    
+                    # Split the page text into lines for further processing
+                    lines = page_text.splitlines()
+                    
+                    paragraph = ""
+                    for line in lines:
+                        # Strip leading and trailing spaces
+                        stripped_line = line.strip()
+                        
+                        # Check if line is part of the current paragraph
+                        if stripped_line:
+                            # New paragraph detected if line starts with a capital and paragraph is not empty
+                            if paragraph and stripped_line[0].isupper():
+                                # Add completed paragraph to text content with double newline
+                                text_content += paragraph.strip() + "\n\n"
+                                paragraph = ""  # Reset paragraph for the next one
+                            
+                            # Add line to current paragraph
+                            paragraph += " " + stripped_line
+                        else:
+                            # An empty line indicates the end of a paragraph
+                            if paragraph:
+                                text_content += paragraph.strip() + "\n\n"
+                                paragraph = ""
+                    
+                    # Append any remaining paragraph
+                    if paragraph:
+                        text_content += paragraph.strip() + "\n\n"
+            
+            # Save the extracted text to a .txt file
+            txt_file_path = os.path.join(dest_dir, base_name.replace('.pdf', '.txt'))
+            with open(txt_file_path, 'w', encoding='utf-8') as text_file:
+                text_file.write(text_content.strip())  # Write the final text content
+            
+            self.file_path = txt_file_path
+            self.file_name_label.setText(f"Selected file: {base_name} (converted to .txt)")
+        
+        else:
+            # Copy .txt file directly
+            dest_file = os.path.join(dest_dir, base_name)
+            
             # Copy the file to the destination directory
             shutil.copy(file_name, dest_file)
-            
             # Store the file path for later use
             self.file_path = dest_file
-            
             # Update the label to show the file was selected and saved
             self.file_name_label.setText(f"Selected file: {base_name}")
     
