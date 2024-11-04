@@ -564,7 +564,7 @@ class PreviewWindow(QMainWindow):
             output_df = data[['sentence', 'predicted_emotion']]
 
             # Save the output to a new CSV file
-            output_df.to_csv('./backend/data/feature vectors/new_input_predictions_with_tfidf.csv', index=False)
+            output_df.to_csv('./backend/data/feature vectors/new_input_predictions.csv', index=False)
 
         # Simulating processing and then opening the results window
         self.results_window = ResultsWindow(self.parent, self.parent.file_path)
@@ -678,7 +678,7 @@ class PreviewWindow(QMainWindow):
             output_df = data[['sentence', 'predicted_emotion']]
 
             # Save the output to a new CSV file
-            output_df.to_csv('./backend/data/feature vectors/new_input_predictions_without_tfidf.csv', index=False)
+            output_df.to_csv('./backend/data/feature vectors/new_input_predictions.csv', index=False)
 
         # Simulating processing and then opening the results window
         self.results_window = ResultsWindow(self.parent, self.parent.file_path)
