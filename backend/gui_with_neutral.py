@@ -182,7 +182,7 @@ class MainWindow(QMainWindow):
                 text_file.write(text_content.strip())  # Write the final text content
             
             self.file_path = txt_file_path
-            self.file_name_label.setText(f"Selected file: {base_name} (converted to .txt)")
+            self.file_name_label.setText(f"Selected file: {base_name}")
         
         else:
             # Copy .txt file directly
