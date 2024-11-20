@@ -25,7 +25,7 @@ def load_dataset(file_path):
     except Exception as e:
         print(f"An error occurred while loading {file_path}: {e}")
 
-file_path = './backend/data/training_data.csv'
+file_path = '../backend/data/training_data.csv'
 data = load_dataset(file_path)
 
 sentences = data['sentence'].tolist()
@@ -81,13 +81,13 @@ if data is not None:
         return combined_features_df
 
     # Read narrative features data from CSV
-    narrative_file_path = './backend/data/training_data.csv'
+    narrative_file_path = '../backend/data/training_data.csv'
     narrative_features_df = pd.read_csv(narrative_file_path)
 
     # Apply the feature extraction and combination process
     combined_features_df = process_data(narrative_features_df)
 
-    combined_features_df.to_csv('./backend/data/feature vectors/trained_complete_vectorized_data_without_tfidf.csv', index=False)
+    combined_features_df.to_csv('../backend/data/feature vectors/trained_complete_vectorized_data_without_tfidf.csv', index=False)
 # <-------------------------------------------------------------------------------------------------------------->
     # RANDOM RESAMPLING
 
@@ -107,7 +107,7 @@ if data is not None:
     resampled_df = pd.concat([pd.DataFrame(X_resampled, columns=X.columns), pd.DataFrame(y_resampled, columns=['emotion'])], axis=1)
 
     # Save the resampled DataFrame to a CSV file
-    resampled_df.to_csv('./backend/data/feature vectors/resampled_combined_df_without_tfidf.csv', index=False)
+    resampled_df.to_csv('../backend/data/feature vectors/resampled_combined_df_without_tfidf.csv', index=False)
 
     print("\nData after resampling:")
     print(resampled_df.head())

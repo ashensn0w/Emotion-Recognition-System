@@ -1,4 +1,3 @@
-from preprocessing.text_processing import *
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 def vectorize_with_tfidf(data):

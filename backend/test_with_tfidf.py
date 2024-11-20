@@ -45,7 +45,7 @@ def load_dataset(file_path):
     except Exception as e:
         print(f"An error occurred: {e}")
 
-file_path = './backend/data/training_data_with_taglish.csv'
+file_path = './backend/data/training_data.csv'
 data = load_dataset(file_path)
 
 sentences = data['sentence'].tolist()
@@ -206,7 +206,7 @@ if data is not None:
         return combined_features_df
 
     # Read narrative features data from CSV
-    narrative_file_path = './backend/data/training_data_with_taglish.csv'
+    narrative_file_path = './backend/data/training_data.csv'
     narrative_features_df = pd.read_csv(narrative_file_path)
 
     # Apply the feature extraction and combination process
@@ -223,7 +223,7 @@ if data is not None:
     final_combined_df.to_csv('./backend/data/feature vectors/tested_complete_vectorized_data.csv', index=False)
     # <-------------------------------------------------------------------------------------------------------------->
     # Load the original dataset and make sure the 'emotion' column is intact
-    file_path = './backend/data/training_data_with_taglish.csv'
+    file_path = './backend/data/training_data.csv'
     data = load_dataset(file_path)
 
     # Check if the 'emotion' column is present in the original data
@@ -234,7 +234,7 @@ if data is not None:
         print("The 'emotion' column is missing from the dataset.")
 
     # Load the saved emotion recognition model
-    emo_recog_model = load_model_with_name('best_emotion_recognition_glm_model.pkl')
+    emo_recog_model = load_model_with_name('emotion_recognition_model_with_tfidf.pkl')
 
     # Prepare the data for prediction (drop the 'emotion' column from feature data)
     X = final_combined_df.drop(columns=['emotion'])
@@ -256,8 +256,8 @@ if data is not None:
     })
 
     # Save the output to a new CSV file
-    output_df.to_csv('./backend/data/feature vectors/final_predictions.csv', index=False)
-    output_df.to_csv('./frontend/backend outputs/output.csv', index=False)
+    output_df.to_csv('./backend/data/feature vectors/with_tfidf_final_predictions.csv', index=False)
+    output_df.to_csv('./frontend/backend outputs/with_tfidf_output.csv', index=False)
 
     # Display the first few rows in the console for review
     print_table(output_df, title="Sentences with Actual and Predicted Emotions")
