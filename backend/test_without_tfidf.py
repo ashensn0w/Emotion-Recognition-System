@@ -14,23 +14,6 @@ import spacy
 import stopwordsiso as stopwords
 import string
 
-# List of resources to check
-resources = ['tokenizers/punkt', 'corpora/stopwords']
-
-# Check if the resources are already downloaded
-for resource in resources:
-    try:
-        find(resource)
-        print(f"{resource} is already downloaded.")
-    except LookupError:
-        print(f"{resource} not found. Downloading...")
-        nltk.download(resource)
-
-nlp = spacy.load("en_core_web_md")
-
-filipino_stopwords = stopwords.stopwords('tl')
-english_stopwords = set(stopwords.stopwords('english'))
-# <-------------------------------------------------------------------------------------------------------------->
 def load_dataset(file_path):
     try:
         data = pd.read_csv(file_path)
@@ -72,117 +55,7 @@ def print_table(data, title="Table", num_samples=20):
 # Check if the dataset is loaded successfully
 if data is not None:
     print_table(data, title="Original Data")
-    # <-------------------------------------------------------------------------------------------------------------->
-    def convert_to_lowercase(data):
-        if 'sentence' in data.columns:
-            data['sentence'] = data['sentence'].str.lower()
-            # print("Sentence has been converted to lowercase.")
-        else:
-            print("Column 'sentence' not found in the DataFrame.")
 
-    convert_to_lowercase(data)
-    # print_table(data, title="Data After Lowercase Conversion")
-    # <-------------------------------------------------------------------------------------------------------------->
-    def remove_punctuation(data):
-        if 'sentence' in data.columns:
-            data['sentence'] = data['sentence'].apply(lambda x: x.translate(str.maketrans('', '', string.punctuation)))
-            # print("Punctuation has been removed.")
-        else:
-            print("Column 'sentence' not found in the DataFrame.")
-
-    remove_punctuation(data)
-    # print_table(data, title="Data After Punctuation Removal")
-    # <-------------------------------------------------------------------------------------------------------------->
-    def remove_numbers(data):
-        if 'sentence' in data.columns:
-            data['sentence'] = data['sentence'].str.replace(r'\d+', '', regex=True)
-            # print("Numbers have been removed.")
-        else:
-            print("Column 'sentence' not found in the DataFrame.")
-
-    remove_numbers(data)
-    # print_table(data, title="Data After Numbers Removal")
-    # <-------------------------------------------------------------------------------------------------------------->
-    def tokenize_sentences(data):
-        if 'sentence' in data.columns:
-            data['sentence'] = data['sentence'].apply(lambda x: word_tokenize(x))
-            # print("Sentences have been tokenized.")
-        else:
-            print("Column 'sentence' not found in the DataFrame.")
-
-    tokenize_sentences(data)
-    # print_table(data, title="Data After Tokenization")
-    # <-------------------------------------------------------------------------------------------------------------->
-    def remove_stopwords(data):
-        if 'sentence' in data.columns:
-            all_stopwords = english_stopwords.union(set(filipino_stopwords))
-            
-            data['sentence'] = data['sentence'].apply(lambda tokens: [word for word in tokens if word.lower() not in all_stopwords])
-            # print("Stopwords have been removed.")
-        else:
-            print("Column 'sentence' not found in the DataFrame.")
-
-    remove_stopwords(data)
-    # print_table(data, title="Data After Stopwords Removal")
-    # <-------------------------------------------------------------------------------------------------------------->
-    def lemmatize_filo(data):
-        with open('./backend/data/filipino_lemmatizer.json', 'r', encoding='utf-8') as json_file:
-            lemma_dict = json.load(json_file)
-
-        token_to_lemma = {}
-        for lemma, tokenval in lemma_dict['lemma_dict'].items():
-            for token in tokenval:
-                token_to_lemma[token] = lemma
-
-        for index, row in data.iterrows():
-            tokens = row['sentence']
-            
-            if all(len(token) == 1 for token in tokens):
-                tokens = ''.join(tokens).split()
-            
-            updated_tokens = [token_to_lemma.get(token, token) for token in tokens]
-            data.at[index, 'sentence'] = updated_tokens
-
-    lemmatize_filo(data)
-    # print_table(data, title="Data After Lemmatization in Filipino")
-    # <-------------------------------------------------------------------------------------------------------------->
-    def lemmatize_eng(data):
-        if 'sentence' in data.columns:
-            data['sentence'] = data['sentence'].apply(lambda tokens: [nlp(token)[0].lemma_ for token in tokens])
-            # print("Tokens have been lemmatized.")
-        else:
-            print("Column 'sentence' not found in the DataFrame.")
-
-    lemmatize_eng(data)
-    # print_table(data, title="Data After Lemmatization in English")
-    # <-------------------------------------------------------------------------------------------------------------->
-    def join_tokens(data):
-        if 'sentence' in data.columns:
-            data['sentence'] = data['sentence'].apply(lambda tokens: ' '.join(tokens))
-            # print("Tokens have been joined back into sentences.")
-        else:
-            print("Column 'sentence' not found in the DataFrame.")
-
-    join_tokens(data)
-    # print_table(data, title="Data After Joining Tokens")
-    # <-------------------------------------------------------------------------------------------------------------->
-    # Load the saved TF-IDF vectorizer
-    tfidf_vectorizer = load_model_with_name('tfidf_vectorizer_model.pkl')
-
-    # Check if the TF-IDF vectorizer was loaded successfully
-    if tfidf_vectorizer:
-        # Transform the sentences using the loaded TF-IDF vectorizer
-        tfidf_matrix = tfidf_vectorizer.transform(data['sentence'])
-
-        # Convert the TF-IDF matrix to a DataFrame for better visualization (optional)
-        tfidf_df = pd.DataFrame(tfidf_matrix.toarray(), columns=tfidf_vectorizer.get_feature_names_out())
-
-        # print("TF-IDF transformation successful!")
-        # print_table(tfidf_df, title="TF-IDF Features")
-    else:
-        print("TF-IDF vectorizer could not be loaded.")
-    # <-------------------------------------------------------------------------------------------------------------->
-    # Combine Filipino and English feature vectors using element-wise maximum
     def combine_features(fil_features_df, eng_features_df):
         # Ensure both DataFrames have the same structure
         assert fil_features_df.shape == eng_features_df.shape, "Feature dataframes must have the same shape"
@@ -203,6 +76,8 @@ if data is not None:
         # Combine the features
         combined_features_df = combine_features(fil_features_df, eng_features_df)
 
+        combined_features_df['emotion'] = df['emotion']
+
         return combined_features_df
 
     # Read narrative features data from CSV
@@ -212,15 +87,7 @@ if data is not None:
     # Apply the feature extraction and combination process
     combined_features_df = process_data(narrative_features_df)
 
-    # Concatenate TF-IDF features and combined narrative features
-    final_combined_df = pd.concat([tfidf_df, combined_features_df], axis=1)
-
-    # Print the final combined DataFrame
-    # print("Final combined DataFrame:")
-    # print(final_combined_df.head())
-
-    # Save the final combined features DataFrame to CSV
-    final_combined_df.to_csv('./backend/data/feature vectors/tested_complete_vectorized_data.csv', index=False)
+    combined_features_df.to_csv('./backend/data/feature vectors/trained_complete_vectorized_data_without_tfidf.csv', index=False)
     # <-------------------------------------------------------------------------------------------------------------->
     # Load the original dataset and make sure the 'emotion' column is intact
     file_path = './backend/data/training_data.csv'
@@ -229,7 +96,7 @@ if data is not None:
     # Check if the 'emotion' column is present in the original data
     if 'emotion' in data.columns:
         # Add the original 'emotion' column from the data to final_combined_df
-        final_combined_df['emotion'] = data['emotion']
+        combined_features_df['emotion'] = data['emotion']
     else:
         print("The 'emotion' column is missing from the dataset.")
 
@@ -237,22 +104,22 @@ if data is not None:
     emo_recog_model = load_model_with_name('emotion_recognition_model_without_tfidf.pkl')
 
     # Prepare the data for prediction (drop the 'emotion' column from feature data)
-    X = final_combined_df.drop(columns=['emotion'])
+    X = combined_features_df.drop(columns=['emotion'])
 
     # Check if the model was loaded successfully
     if emo_recog_model is not None:
         # Assuming 'X' is your feature data (without the 'emotion' column)
         predictions = emo_recog_model.predict(X)
         print("Predictions made successfully.")
-        final_combined_df['predicted_emotion'] = predictions
+        combined_features_df['predicted_emotion'] = predictions
     else:
         print("Model not loaded. Unable to make predictions.")
 
     # Select the columns you want for output
     output_df = pd.DataFrame({
         'sentence': data['sentence'],  # From the original dataset
-        'emotion': final_combined_df['emotion'],  # Actual emotion
-        'predicted_emotion': final_combined_df['predicted_emotion']  # Predicted emotion
+        'emotion': combined_features_df['emotion'],  # Actual emotion
+        'predicted_emotion': combined_features_df['predicted_emotion']  # Predicted emotion
     })
 
     # Save the output to a new CSV file
