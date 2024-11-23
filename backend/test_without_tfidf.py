@@ -234,7 +234,7 @@ if data is not None:
         print("The 'emotion' column is missing from the dataset.")
 
     # Load the saved emotion recognition model
-    emo_recog_model = load_model_with_name('emotion_recognition_model_with_tfidf.pkl')
+    emo_recog_model = load_model_with_name('emotion_recognition_model_without_tfidf.pkl')
 
     # Prepare the data for prediction (drop the 'emotion' column from feature data)
     X = final_combined_df.drop(columns=['emotion'])
